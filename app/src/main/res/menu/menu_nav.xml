@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.adlemgames.pbk.MainActivity">
+    <item
+        android:id="@+id/fr_teory"
+        android:orderInCategory="100"
+        android:title="Теория"
+        android:icon="@drawable/ic_baseline_library_books_24"/>
+    <item
+        android:id="@+id/fr_calc"
+        android:orderInCategory="100"
+        android:title="Калькулятор"
+        android:icon="@drawable/ic_baseline_calculate_24" />
+    <item
+        android:id="@+id/fr_tables"
+        android:orderInCategory="100"
+        android:title="Таблицы"
+        android:icon="@drawable/ic_baseline_table_chart_24" />
+    <item
+        android:id="@+id/fr_blocks"
+        android:orderInCategory="100"
+        android:title="Блоки"
+        android:icon="@drawable/ic_baseline_construction_24"/>
+</menu>

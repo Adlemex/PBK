@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CalcFragment">
+
+    <fragment
+        android:id="@+id/TeoryFragment"
+        android:name="com.adlemgames.pbk.TeoryFragment"
+        android:label="@string/teory_fragment_label"
+        tools:layout="@layout/fragment_teory" />
+    <fragment
+        android:id="@+id/CalcFragment"
+        android:name="com.adlemgames.pbk.CalcFragment"
+        android:label="@string/calc_fragment_label"
+        tools:layout="@layout/fragment_calculate"/>
+    <fragment
+        android:id="@+id/TablesFragment"
+        android:name="com.adlemgames.pbk.TablesFragment"
+        android:label="@string/tables_fragment_label"
+        tools:layout="@layout/fragment_tables"/>
+    <fragment
+        android:id="@+id/TablesResultFragment"
+        android:name="com.adlemgames.pbk.TablesResultFragment"
+        android:label="@string/tables_fragment_label"
+        tools:layout="@layout/fragment_result_tables">
+        <argument
+            android:name="result"
+            app:argType="string" />
+    </fragment>
+
+    <action
+        android:id="@+id/to_calc"
+        app:destination="@id/CalcFragment" />
+    <action
+        android:id="@+id/to_teory"
+        app:destination="@id/TeoryFragment" />
+    <action
+        android:id="@+id/to_tables"
+        app:destination="@id/TablesFragment" />
+    <action
+        android:id="@+id/to_result_tables"
+        app:destination="@id/TablesResultFragment" />
+</navigation>

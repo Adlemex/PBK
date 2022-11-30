@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/keyboard"
+    android:columnCount="5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CalcFragment">
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_7"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="7" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_8"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="8" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_9"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="9" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_F"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="F" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_AC"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="AC" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_4"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="4" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_5"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="5" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_6"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="6" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_E"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="E" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_clean"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:gravity="top"
+        android:text="←" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_1"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="1" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_2"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="2" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_3"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="3" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_D"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_columnSpan="2"
+        android:text="D" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_0"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="0" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_A"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="A"/>
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_B"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="B" />
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/button_C"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="C" />
+    <Button
+        android:id="@+id/button_itog"
+        android:layout_margin="1dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="=" />
+</GridLayout>
