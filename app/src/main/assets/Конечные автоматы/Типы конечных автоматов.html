@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>
+	</title>
+	<style>
+        body {
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-size: 11pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TableofFigures {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+<p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><strong><em><span style="font-family:'Times New Roman';">Типы конечных автоматов</span></em></strong></p>
+<p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">Конечный автомат M -&nbsp;</span></p>
+<p style="line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">Система с конечным входным алфавитом&nbsp;</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAAAnCAYAAABZnUc9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS3SURBVHhe7ZqLsdQwDEW3ABqgARqgASqgAjqgA1qgBWqgCbqgGcjZN3fweGxHthPFZHVmNG+z+fjKlmQ7+x435dtmv94+BsHjy2YvEw/vN/uz2afnURC88Xuzz28f7w3VnwQIgpSXWRXgZCRAkPN1s5eIC5yMBAhylAAfnkc3JhIgKPFzM+Li4/PoxigBbu9o0AWbYOLi3fPoxrxMpgddqDAOQdYQULnxylHwOT9/xXpLb4Fov0aus2Ye1aLUbsnuVrlKPpbsKL+JCYrjELxT1xQi42FpgPOONb+GjYc3/OhB23ReCTpUs4SMY1n6/dmspMWTK/zmWRTHKSSOvyW0077yBwcCHw3p7FRCWknaFAaHV6k1H89gJS2eePpNO9MFmZmgJBiYDRC9F3hnY/3ZW51fqgok0XRndbCSFk88/f6+2fQMAAjG0uWPpjT+Xg06LP8G8WMz/Chdi2+e+5eVtHji6bf+RWY6RiWaSgsrBX9PluMDJtA/44NeAoxwtBYxo8nKin7XYGlOjEy1oU0micCDCP6RTOUeOs5qe0srlmXWvYeWcukak3tnKo4GU4XByhlaxKimHlb0u4XaHW6HG+X0aPADlZr7rbYX3Jxn7W/RQxXIB620r+lB/vT2xxlaxKimHlb0uwYFm8LN3mJqFkBoLn4FGAS07TmX6idxlGRXsJIWT67wm+DfK6QmqLSIX/HtBJWlpYskQTtGh1/py0paPLnCb5bRtDMNGYtoiV8NMhxtNehkzqebZSpD6U3E2aykxZMr/NbSZwqCiwqrV0qtQNuDKpBvdFu2twkWXIsunl9C1SbtbDpmak04yEpaPLnCb9qbSgAFv9AajoAbQZsnq1nXbjhZ01VL3EPWhZ2spMWTq/ymvTR+u6CaEoQpBDAPncqqE5CuUgLQyZxjOqxBFcorEfdRtUaTvcSMFu7D0iXE/8Ko37PQZh7DJhT8uSCmLx56yMbiQNCKrlKw0umcYxBq5J3EczRlH5kAI1qonlQxxkIbydUK0B4jfh8BbWJdsOFl8EvZyHd6qHV97kHN0T29nKfja1WV+1oJwDOtCTKqJd8kcr4VLC1NJFBpn9T7vYffR6B2aaMJwhT43ICg3HGOtdbGuJaMLjnljTQJHCZw5A/GMYOGoZuqqnOlQQbOtYJJ97fWmUdpEYxBLQFamtJzaRsz33v5jb9cwz36zLP2MO9Z9eDU8oxU5cmNe68GJ9EiSv7UrDWIrc5jgJnaeQYdXRvAo7QIxqHW5y1NOofxWYx+X2oj5Ui/KbKMBb7Tvl7L78E1pgT432EgLB3Si7XzqMoenazgs+ChyctvkokxViLSZk8C3B5VpKOxJsAZbZegAlqXnB6avPxmfNNZj8TLVygl0McS7PbQOWdk+l4CEIxM363161Gw5rW046HJ029Ix5ZZgNnAUgi4j2R5CeiU2tp4BDqaDqxtthgA1qKals8kD378LAWfhyZPvwHfqeK0R9t8toyziqKXzsshIPYqthWewbNkV1YRDWRqJPurwEyT+m15+6NYsFx7KwhcOokKFdwD63JHqGC8XPCn9HRYsC4UtN5NbIx9cAtYdmrpY331GwRBEARBEARBEATBPx6Pv+mo36vGtoLHAAAAAElFTkSuQmCC" width="192" height="39" alt=""><span style="font-family:'Times New Roman';">&nbsp;и конечным выходным алфавитом</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAnCAYAAABuU4gJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARqSURBVHhe7ZgLsRQxEEVXAAYwgAEMoAAFOMABFrCABkzgAjMwZx+3qiuVyT89myGnKvV2dybpTzrdnfdYnE/H+HOM989vm5X4cYxvbx/vxe9j3NKw/wASye0SirLkx+e3zYr8OsatkgrG7KBcm5//xm3AmB2Ua6M9vA07KNeH/btVUHJ7w6Cvz2+b1dBFh77yNhCMOyjXhQrH/hX1lO+OwYRwfDiGSD3zQrdvBSU6hHox7L8c+Bw+x94WvOV54mEb7xcnFRTi/39M0CDFfjmGUD+nccW1Hj2RLaNUzu1A78/HEHy2z7GTdVrwlueJh20KSpJLMfqXy1nN5znPrjz56GcdhS5ykj1EFmXY789vfXjL82S2bUoqBGcxpGcmcQJCWJBseWVAyqhQB35LGYsDRwaItzxPZttGbFVlSiATolSYlglI219cAWU71jbIkTFwwFnmb8VbniezbaPKFV10LKRtlLKbTzCcpXMvMCbmEFtyQnjGySw9TGrkU4yUJ0rk9nKVbTHItFXxpBKpEo4StZEtB5SOMCuHpEoG89E3piPNe43x2pDUnJHyRIncXq6y7QySnmKsCF5GOdI1ytSeDqXo0hEryRacxXv2giPQMeZIHIjuNaAH66QOyUh5okRuL1fZFgMdkBHbz1MwAOUIzpGnoweVj9CptBboagObQ8S7zBmNtzxPPGxjHdqw6gMo5cITczWxJlm68ldgNNl1Bt7yPPGwjbVt0BdDqka5V8mSglOLXvaUEaT8RumBZqML8ZbniYdtrN8U5Exk1PaSgnkILh01qRy97GGRI7UOJ3tmGfWW58ls21hX61eBMkykj2hl9EVHyChbXvjOUO9TE+AteMvzZLZt2r+qCw6QhZjY81/7Weh2GAtKAjvXbuCM3h6pVp59/9Wpsa2FWFIpgk1jYnU0O4Ax1igZySDjpuBd2dYalDXyyDYcbMqfqk/1ZjhSY1srklG1Po6UYnx+NXQBU1BZR5b2PnZ+CDafPYMaebosCLLP2Wak5BLQsTJa+/tI21qRDJJDFozAicokDE51yogrYFPRTU5XqxEGQArej9nFmrL9rHVpkSfwZywoU3LtM9kMPb+Ptk0tCrGDjamAs0kvi05xbLwS6GMNwiG1vRrzY0FJdiATI+OsyW+RJ5gXa4lScvWMYbNX6++jbVNAsp4CLteL8o7dw+XhlPcaxPxcBRhdJRQUOTyq0ygZ2IQvFeDh9zN459WSXRcqMT2UBOVop5GByCQ5PDZrlAz2wrYCZE2ycA7831ptXhKViNxpTJEKStbH0T3rh9Cj5dabITdktAyCW34kSxKQuWBDdklSWA4ca09oDSoxsWaeTeP0884owoAkm4RBMUNuyAwZtCNaUxec3CWJfbtV6RY4gVOJQ2rgdBKQGjhyJroE2FFS3laBAMQmgoyg53MK+YN3bwmG4YySy8NmPgRcai/IkGTSme3Jy3DbU7cQVC4CksA8Y+/Txo2wJdpsNpvNZrPZbDabzRuPx1+YIrZnMmOyzgAAAABJRU5ErkJggg==" width="165" height="39" alt=""><span style="font-family:'Times New Roman';">, конечным множеством состояний</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAAAnCAYAAACv1MKlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATcSURBVHhe7ZqLkdQwDIavABqgARqgASqgAjqgA1qgBWqgCbqgmSPf3v2MxuOHnI3zcPTNePZ2k9iS/Et2knu5OF+W9rq0j49vwax8WtqU8/x3aT/e/gwm5+d7mwZV38+Pb8HsaL4/PL5NAJU3BHwfmOep5vv30kLA90EC/vb4NgEh4HvxfWnMN59T8GtpUzkUVOEGjvlmLzwF02VkUOXpFZdncVzMpyX9vhe6Kw0B3wMJuBtEy/NWLqaTP+/f2UwjIpbyI9DD7RDwPZD2upBIEKl9/qbfaUe+SGD8r29/BpODBhFxFyrbuVd4eqxx1KZaSTTNg+2gCoWquwIjEFqJkrj3gK1DvEa+F2xdu27iJODSMn3Uu+mebMThVmtVcZKU83qh33SsXOthrS09rB2DVdH6lWvPFDz6Z1fg7kPP3mhcnOLZf3qcsq1lnOefOuhDz4k9rYXO874Fwg8SzI5Rar03wbpu5BupnjFIUr3W97Scjnrgeiqx694H454dHOfIGm9rGYY4aufxu+zFUcTOdkP987dtnj28fPD4b5MeEXMt41hbbOuNaY8ta/GOwXH5SiMZ8Qk/8Tf1dYukox/GcVfh1MiRgfNCYhGg1BYrXoRuUTK6MnclEi/CTQOMPWeJ3xZYXeSESQIQjy1hnFV9nlHECJEgCQTTsk/bCsS8NUoexFvqn+PW5itDAcGfUkFAbBxPC8laVIBWz50VMcaPEEEPEqzEqurHElOCY5wzogprQmsThng5x738nRQlay0ZteJsVYVJCHfylwKs17c0734GgeGMt/VMrrVDdtUSSxXYa7sX7Kbf1pMR2XiGFewZlIi1+wdV4N6b1BKM6RZwbVAZ7zVs65s4IdFQVY8WkCo7vpawK9jVkR97Fgu0wSrXhArIySU0WVtl1lq0GlgB1+yuLXscQ/z0swbFhM8SrS2O7KPVEuEMyM4S2t7RttpqMm+1Mf9DIGtK10R4K+UoUtEoYDlsQNMtCqJFvBxbK2BV11JSK9lKKwQ2EVcmW33VkuFoVF1LK5ni6XlE6UUCbs4R2c+JudIvIZzhJk5BlEPac6U3DRzHXoJa2zrUgoPfrcDJnjSx7V6wFLN0orXtylGzBf9yPvb+3vKXa/CJmFqfuE5C21K84O6XE3UyQecCnNEShxhyTu+NbLS2IBbso3GcANM8qwV95SZNk0Wr3VEzkUp+xmR87CCGLfGnUH25PqVmiz1mY/LM7zV/8Qk/OQ9b5S+2e4qb9EQfXMNnDWzh/ObKpMqLEQzCBGAcn3z3GLcH2IRDW0FfOaHhr2KwV/KSCLmkq9miYzQ7R2t/H+mvxEvfWtVzK74F4boEfBWUkVtRErCF4PVW014koBZ72DJiDPyTeCH9XkICHu3zbmhvuRWe4FCVRkP1pSq12MOWEWMwb3ZrQjWm0reQgO1qcWm09Gy1xNUEzFgEfcRyauF+ozXGHraMHIOkUJwRI+IlaVtoWzMVBNlm81q0jOXucJlMqsbozE/FS2VKBbSHLaPHQIjqn6rKzVvryQI2eVbIy0EQyGACshaCQnDUCOre6KbGNs+yekUQK/5RTSXMGswxIvdU6UtCEAiG58YnOBckbm3eWIEQ+BFFZXcQcnAdqKyIFxGX4BxaEJyKdNsWBEEQBEEQBEEQzM/Lyz+Je7nfAdSjCQAAAABJRU5ErkJggg==" width="176" height="39" alt=""><span style="font-family:'Times New Roman';">и двумя характеристическими функциями</span></p>
+<p style="margin-top:10pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,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" width="222" height="32" alt=""></p>
+<p style="margin-top:10pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAAgCAYAAABAbae4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATrSURBVHhe7ZmNkdA4DEa3ABq4BmiABqjgKqADOqAFWrgargm6oBnIG/ZjhMY/ii0nWcZvxrNLbMvyZ0lOlpfNZrPZbDabzWazuZh3R3v/69cwjGfe38aIFj1GbT5B41W+P2Fvf/DxaN9ff55hdN5V/HO0L0f7erSo4Cv2NGNzhT9nWOn7jO10/j3at6MRNCOQ1T+Ohp0nIb/UPh2tx6wWJTJs3qXxFb4/In5YHCdmrydt5hGZ/cp/R/twNPbG75+P1iJLC0umzas1vtL3W+OHLGfxrEyk4mIvs5qOgqDWD/7dSoRsLWCFzas0vsP32+KH92YWzgR72H0aHGgrEVZoscImXKHxXb6n7I1MKmUwzwkCe8Up41uLMh57/mqkutbetyXg5Vndgf3zmlQiooWoaYJtq/EqfaGmsW49b89DP/btWKtNVI8R/3vx0etvwsJ80GCA5pOBDfOcn0LXkB8LPXt6XtosY2t9d6GDrSVCSwuBDb4ztHcbJPxVSs+l8Sp9oaax5tlz9kgL1mcce2Iv0diAlfHR62+iasSfoTDCwVj4EKHPbvb/ozG2FByyRz/NVwb6eW7tCfVh/wlQrXRoNVpaCAKI/api0VRZFVQ0VcdV+kJNYwLU+lBC/tuKix3mip4eM/7XfBe9/hBspmaETLOZyzhaC22Wg/awhhVTcAhnbEfbqDDMk40avX6PgokkoKKWiNgc0ReiGpfQrWaDnN/tWlHbK+JjZm+/0Z+gSkHjDyyymOz5cTyvBQBEbF+BApYDayXSWX9VcGi16huxOaovROyXUMUleGd8h1Xx0esPUTJC5bJXH0QX8+MQr1WtIGp7JXrXJBk4mMxEAMbzulkjatOPi+gLUfsl9E1TquRwxrYfmxEfvf4Q3ggO+Xc4iC6GWIzTVYqIvQ+ZqO1VqGLroPGdW6HGiL/6HqsdeNTmiL4QtV+DYGW+/56EM7ZXxMeZ9avogARXVOkK1GK161FIMDZKlS0llUe270DXNTpob/gdSYSeFkI6MMd+d1miNkf0BdmPgn2btPhV87H2vMSK+Oj1h7COlV6JhB3XQgeOLbK/Jw72GI/9FvrQiraePcA3FQISQrCW1YFxtj+qBTAXewQVc+y7sA20VfpCVGMLldrHAs9KPp7RIzs+RvZWRJvAsdK1J+hnXK2iCRuwkUPCnta/EnzTNe0PnD1Yf9DFBm1PC5JGNpkrHezty1y77ip9oaYxz7FXskNc+A9YBbEfH/UdsuOj1x9GWd7LKFW03lWmjdoK2kLr20C7AluZPNoDP9HFF4ieFiou9FsdtFcS0AfNKn2hpLEqqfzxsAd84SdrkhSMLQV71HfIjo+0+MGx6BXLRlm0BQKfOSSqZETATHQYtXWp1PS3xrS0YP+s4Q8HjXlee4VYoS/UNKYI4A/B7n3Sv7UXxraCLeI7ZMdHWvxgJJIEwDg2O30NvaJrbTqbF8BhtfzK1gJW2IxoTFU9m1yeO3xPi58RAVQts4QrXbVvhSwtLJk2IxozpvWfWWe40vep+OFawlmYqQLKxNH5ZHDpPfktMqtFiQybEY3pO/NGEOEK36fjBwdpGVchCcX7mRIryui8J7NiTzM2I3MJpszktaz0fcb2b5hMFmVVAOycFZPxmRXoKYxo0WPU5hM0XuX7E/a22Ww2m81ms9lsNpvNW+bl5Sd/sylKZE2sMwAAAABJRU5ErkJggg==" width="194" height="32" alt=""></p>
+<p style="margin-top:10pt; text-align:center; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">которые называются&nbsp;</span><u><span style="font-family:'Times New Roman';">функциями порядков</span></u><span style="font-family:'Times New Roman';">&nbsp;и&nbsp;</span><u><span style="font-family:'Times New Roman';">функции выходов</span></u><span style="font-family:'Times New Roman';">. Следующая блок-схема автомата имеет вид:</span></p>
+<p style="margin-top:10pt; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmcAAADUCAMAAADurXTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACuUExURf///9ra2mVlZbOzs87OzoCAgOfn56enpyYmJoyMjBMTEwAAAF5eXvPz80NDQ5ycnEhISHJyctvb21dXVyIiIjU1Nebm5rW1tZubm3R0dFZWVsPDw4mJiXp6esLCwkdHRzQ0NBEREd3d3dDQ0CMjI2lpae/v79/f32BgYK+vr+zs7JiYmCAgIDAwMJ+fn8/Pz0BAQHBwcI+Pj46OjiEhIQEBAXx8fBAQEJWVlQAAAIXHUUgAAAA6dFJOU////////////////////////////////////////////////////////////////////////////wA3wP8KAAAACXBIWXMAAA7EAAAOxAGVKw4bAAASa0lEQVR4Xu2dy46rMBBEI4TEAokVEgpiASzY5P//71Z3m4cTSAiDnZuZOovwJjNNpWy3wVwIIYQQQgghhPx1+qRycyPpdXBzhJxEVmZubqbpHtcR8gOaLnVzS6qucXOEnECT3xeaRpVTaOQ00q52c/fUXe/mCPkpRb6lpr5r2Rgg55DlhZt7YCg2SlRCXjHcCqv2X61BWYy1sP5Wl7JhKKaWZpMXYQ2tT+4atUyn/BKaHIiyYFYiojR3njVtSLvJ4ap8tSV6Giv5lFvOdMrvoC9zrfj3bYvPZpZSlpt99eXYMIDkQjY5V/MpTKf8FmrnV+lVF8qppGrdfD3WyobOJBmGjXzKx9MpYuxkxoXlbZq81BZmIm5SuAXhludaQUtsEXPldiPhx2zmU+qwhfVLDgf2d3I4HJXZViV2NoweJmS5JsyaqYaEIjZcQ8A1Rx7pu8CtjxdQZx4/0JnY1mAXc+lnfSeV8GqyM/WzUJd8O58C7X80nUKdeRwOR9qJbTV6LdHqnP0M9lWN+lMgvPPKzaGqNWHSt9qkfJJPuYVOpzyHOvP4gc5woUfXQjtg8jPYV3O5LkozrDitHYA2Bdqzql056bN8CsrvT9bQqDOPw+HAFa+GUT+LvIYUWM1tWWSdnNeApDLouJfMxbN8CqT4ySYndeZxXGdlfq3Hi6zmNlLkfvLq7DztQsfP8iljhu9DUGcex3UGOc2u1eY3NycXf54XmpPTGre8HBsZq/kUpzz8ECSF/CmoM4/j4Ziq4EKVzzdl1JLqmIEgzy2/rAUiPM2nSDrFzX4C6szjeDhqTz3t5l1m6emXu5gK6cd8SjaJXPxsEmF8qDOPw+FIfZPqN+9zTM5u9mVTP9ZKPqVeLv9WP0urtGqufrHxn3M0HLc5D2s0i5bAkuzsVt+QpN1Y8XqWTzkznXKAfYEtJB8DZL5qLTXzCs3h5FZL+BoO6Gwo2iF5/DHdVh9tSk+/cSLJBq2gSZif5VPSfVctFDsD29d53qpiqg46K3XlUxJVWTs2d76EAzrL8G+ueXbWrYhv5Vm74wxFmSYQj1TQVFJWJ3Pc5VNC3/a2yaCy2RvY6eeASKXN6784zZOvMjLHAZ313apzgev9+vR6akykN0DqXE3eWisEHrbMp3j+dXY6ZTd9XuO/3htY6yfGdIeVCVNO57s4oLMPcs01yn07Kn07n3J6OmU3Pfy+7t/wMy3s/eb7Jv1OOf5vhNTZmUXmFpv3BaXdp1qbojOw08mdn6X5vvrW1c+Bfw0hdda14YOyeZ9jYsWRcLULH5t9/7z52bAMVYW2Qam1MG1aOsGilZBUlzYdmhK1B/kNQ6KgcA1QdwevW8I/3yfYsRWbtFZtha8Cje3Q2Fr9Md5w7rYRoeum6Rz+ccsz4i9ucJCw7+ccUmf4o8rgStu4b/v0dMp+DvhZ1i5qXQnaNgOutJwAFVD3j+BiyxXNhxK1v7S0CgTanrIXziF1hptpWxKH0EwvOR/sKIenlnIcas2GjN0o+P1J7IayTaXdqzUQ/xz40sVxyzOKStOp0H9NUD+TcAf3tNWhYs5Pp+xHdFakb9TPJEpyjQ2XiHRCE/OSxUtSiM76olCJoEUkykrzTjda2YuJnsZqptYOupnfuC4U1zZqTKX4apm4R7wLS6p458BEdWTHLc9oCoPAZfNrYhQpoTM9K/mUtaGLotFDZft/wOJnKVxrDNLgLh2UJGJoGkvdDK1e5cr0Jddc1FGZbpwxQSPy6TRSqTG5Xr/ChDjpTHYQr8QkdbcbQDnyRd45/OOWZ1QblmNk8w727ncE/BTxy9a/Nyz3+ZT0oymmwbxF51+jxtB3Uwda5iwKZaLMNKhOyXVtMp1ib4snTBMX3a75FQv2nZ5GQA8Fyh5YtfAl09mQmBslZm5yuaSMvNfZ8jgwntHu7tvtZ6F1Vmjt8i+yN7BmDBls35ab8W4mOJZ8NiaiFjU2XF8sOA3pjOosSbHgdOawfaqiuznHe/SzoRjMjYox6a4F8905xn4xO+6StuV4RvzFTf9/+FlX3P6qyvYHVv1MksxWg3LymmaaRg0nuzqN+DqTa57huLVyc0hmx8Oqez+7ps6NTF7TjHcOTBb69M4ojQNB51+zd78jVH9XZfsDa34mvf7WMY4GnxX6ZmzQGZQ4FL271vXoeyotXHORGRacn8mn08j1af1MOmrMjeqxU9WM7YnO7IzOz+To2//hZ3+avYHFpVIjw1QLzKlktKsKneFi16g52bVGcaW/XjQXMEV7Uw9e8zPT3lRu+n6mz4aZSnBG1dKlVYHf62xxnO3olItWRO0ccQ979yNvsjewuFSjrsyqrs7YSm0ZiM5MCU4jre1uI9VU93kNPXLUGXSKoi6Xfpl7P9PktlNJa4bW20rvHJiojkedLc5YylH0s4+zM7B6X5BqACVnrg/2JHmLFqiN2zB0cuNmCTVhs95rJw29Yczl4GDZC4KRRRS5Ig7sITlWbEuuLda1jZik7n9VSUkZLRp26RBxpv5StWOednEOHCffL8+C4LsXZ4Ta5O9DHVL97jXUWSD2BXZsz8k81GLtuqzN81Ib6riOoqQms40mgUSeXRV5wU10nZ0EdqMTPQYHSRL/KiIadzDaynaobH/5Pu3Jal0BLLhzVHZcOn63nnHQM2IZ++t6dciXUGeB+D8D21uKNj7UWSD+18BW1Nmv4r8NLHX2q2BgPRiOQDCwHgxHIBhYD4YjEAysB8MRCAbWg+EIBAPrwXAEgoH1YDgCwcB6MByBYGA9GI5AMLAeDEcgGFgPhiMQDKwHwxEIBtaD4QgEA+vBcASCgfVgOALBwHowHIGIF9jhKs8TVDpyFbBHCWyDe7RF1+j9//rwiQxqpU8ZlPHueaTOAhEtsEPb9jLwFMSDTxvdRR9iSctmGG72RFIyPS9iGuxlKOneDTEVA+osENECa895FvokZ6rPgLqhwGwkW/gXPkWB8ojUJSt02R7IdINWxYA6C0SswLoBBSt7mj2DfSU2MkJlwkKZCUNLCzdgQotlXStaHIfKiAB1FohYga1NTiNzAYk5B4RYFak+G1wl8yPkqRtiKgrUWSBiBdaNgDHRjtpxQx0YaXEpxcISGWzWrZmGmIoBdRaIeDrz6vJDOb7e1hNgVaBILS9964bE8IeYikCgcKTj21Z3ktY64kN6lc9fQSyd1eO4fKlEfGgzqaLJcmLjsqBtKS3RQl8AbQMoYJ03aFUMwoTjvfFhh6zM3QvBGv3/fwOxdHazAbKhMPmUtxK5AYegN4tlgSXoTNqY0xA/4/gv362zxg0Vt5MMjaFxfNbqgwNln0osncm7iG7DpdJh/Ru1MDfQlAzbekttyHiUm25ktVFnmB2HmIpBiHBsDOn/jPkFh5Vf3/haYulMhCOImmxQNMRf3zAlOTOgw03VEt5Efv6FWtly0KooBAhHOg5t+QbJ/MJWG/jr64mmM9hSZ6NKyWhSkM04MJVu6KTGq1JsLimui25DZW0eYioO54dj2Hzl0kS9eC2D0bhBDEHfPWz9RuLp7Cs4PxzZ68pl/bBHM/vZcJ8R+k6oM4+TwoHGTd4M+tboKaHT39zYl/N78x3Jip+N9TOZ/w2GRp15nBMOfWEQjAz6QF3A7EirCSI5rLnzr6d+hpbAVIZ+MdSZxynhgGOJccno41DMVD2DyYnyLkPpMoYjz/0M7aRYtdOAUGce5+is05SgDklZL5zJvX/vct858NzPcLY7XX4j1JnHOeFI3PsSgA0Bbtws7Tzcv7HuuZ8N9u7HL4c68zgnHLAgpy4UobMzZVaGNlMzQJoLC2a5Lf1M3jHqZmPS13etlVTeTXMY6szjpHD0EJoJBTqbLg/W4tpVD2nbxHX9zizyZ+JnH2hw3h67ZFffILsX6szjrHCg8q6VqmGskwlwpgoO9yCa5/Wzj/hZs5Zc/kkfGHXmcUI4Mr0YYzsz8Wta+gK+e+oH6d3Vz6K3Aza6ZH8gNOrM44Rw2E0CcnuTLs15DX3py23lAj73s9TSbjFJuw1lJ9qQOQJ15nFCOBKtmQ2lVdBQgM61GjQ+1ySTPPjZfL+G5mmPXtyDDO1WZjjtjjZ9qTOPn4cDptX2cgOAM652cativX7b4kO5iSrZvKd7eV9Equ1EykOf2V6oM48TdHa9yP2wctemUi1ai7V79fYddzqTW/UEs77h7o73UNzkG7VLdr49pr8V+gZUrHG/msOip848AoRjsxDaB4oqNxcUfdepdcn2rmqJdU7tKPzdT6Fyz9f6uB/GE67U2RIbkuFN5qrUKv1WpXofx6ve7zAU+muoJbe30iXbj12y652tO0REnXkcCcerY5qjdRrBPV8dGk25wK7kox5zzAAtF50fu2TXkyzU2buE0NlPEulprOdQIK5RSsuuMudtw9iHIS9wdrMLqLN3CaKz8fXd7/PeA3k/AUY1FtDLrjKXVJm6ZLHbSicYdfYuYXR2uVwP6SVNftSEeAvUvMzGvK4yu00zm34maAvTz04glM6+ABSJVvVa+hn8K7sM9aQ7LK/k1qizd/mbOvO7ZJe3ZvYy3MmiSxbLbAecwN/UmeuSFe+SpWWOrPC7ZJnXOIe/qbNaDazvzMegpUlZqKx5Ld5s9aEY6uxd/qbOtEY2JKO8lj1die9ft9V7Lqmzd/mTOuvvumSt+8nwu2Rhb2t3AlBn7/IndfbA5lANG/cFUWfvQp0Jm/c51uv3BFBn70KdKRtdslv3bVNn70KdGc3Y27kk3ZAZdfY21Jkj05HCPLY7W6mzd6HOJpI7R3vS2UqdvQt1dgTq7F2osyNQZ+9CnR2BOnsX6uwI1Nm7UGdHoM7ehTo7wh6dEQ8XlnegzhiBGDDKjEAMGGVGIAaMMiMQA0aZEYgBo8wIxIBRZgRiwCgzAjFglBmBGDDKjEAMGGVGIAaMMiMQA0aZEYgBo8wIxIBRZgRiwCgzAjFglBmBGDDKjEAMGGVGIAaMMiMQA0aZEYgBo8wIxIBRZgRiwCgzAjFglBmBGDDKjEAMGGVGIAaMMiMQA0Y5QATccCffgvurg0KdhdCZm34H1FkUqDM3DQp1Rp25aVCoM+rMTYNCnVFnbhoU6ow6c9OgUGfUmZsGhTqjztw0KNQZdeamQaHOqDM3DQp1Rp25aVCosw/orHAdizOF24Jt0wsc+6bEluWLRJPFrlktW5UidTOOpnEzGy+Kv4M6i8IHdHbp61kEEEk9vxw0za9uDgwdROPmwQDpJKa7AVJtcNRN11T5Na1SzN8wueKQAUpbe6nyKtRZFD6hMxHXKIPK850k7xYOBjWVbhaITbldr9CUTHEerKlUjOM5b7IE8cr8HqizKHxEZwtxLSQHo4OUVEBG0eb59L7tIUdJabvC2TqdwXmwRpxtcU7T2cbr4B+hzqLwEZ0txGWW5EiKculgBapo02JWwtBsVxxj1bTlwZ5gqbP/jY/obOFny3Jz6KpsqZaiWSyW2aQzHGM6Wx68nD+gs2E+OADU2Ud05vvZJKymlLr/ovHZXKbFrJPavdsVDQStxi0P/pGf4dy7DzgCdfYRnW34WYnK2GRaADqbFpfzF9ic1vNP8rPh6rdsz4c6+4jO1v0sE5NCUyBxy6It+Jsuptg2+9nl1uVlNjzzM6Etbsv82zr5RVSWLxMq50Od6QU5mdlXNlj3s1YtJZmTs9CZLEpzMoHallY3QGn+dz36WYoD9OCn2GlC81rvv5z52pzGQT8Ty9LJVISJzszfetHLws80hZZ5HnbnZ3qOfqzIPSGXbC8YvzQIAaJMXuts1c8W3VG2QnVm/pZIdWzpZ6ihQX5LD3v0M6BqfI58mRhf0HKTBOCYn/WjTCAhpw3VmfjboNsWfpZ2eQujeuVncq5XPmV/beD2JgnAMT9LpnwGNGQzqjPxuatum/0MrYNOKl4v/QxF4j6dQaduSr6FQ35mlqVMejKdQUBmcLOfQXo6t0jjrvsZCt095Sb5Rnb52Wgzo6iuc38Tqv7mbdYAvYydT5P+oB6rTc0Op+d80BnWLbqx1qHOvpWXV07uC2pNIGkLUfWX4ba4kQculScoFtO81axEZp7UY9d6uAwVplawyhp3p9BlwDmx1eahP+isx6SbdLgFdfatvLpyY8MSs26u0FWuguY2W7ZBzyVV/mlX+dDK2bRG5t1BYz3OsS9PS76T77py1Nm3Qp2RGFBnJAbUGYkBdUZiQJ2RGFBnJAbUGYkBdUZiQJ2RGFBnJAbUGYkBdUZiQJ2RGLibcr4F91cTQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh5Pu4XP4B1vGRDdcX09kAAAAASUVORK5CYII=" width="615" height="212" alt=""></p>
+<p style="margin-top:10pt; margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">В широком смысле конечный автомат &ndash; это математическая модель, отображающая физические или абстрактные явления самой разнообразной природы. В определении автомата участвует 3 конечных множества X, Y, S и 2 функции&nbsp;</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADRSURBVEhL7dTRDYJAEIRhCrABG7ABG7ACK7ADO7AFW7AGm7ALm9H9IGsIOQgnD8aEP5mEg9wwe7vQrPwv29AldA09Qq/QLbQLVcOM0aZddVgzfbarSs6hQ3f5gfk9dGxXldikzH7CxTgvpl+dWQnpshl7N5YgVXaYIX2VVCqlkk5DgxhqSBUS2ChVH8aZcjZ5XmMzVm2YZZVmLBM6htlIZlNp7k4hz4aDPokNSh7iBV5WlQ5jhvljKCWfxEj0y2LAzCxWmyENGJPrxV/Hys9omjd4Hy5GxoUrmQAAAABJRU5ErkJggg==" width="20" height="26" alt=""><span style="font-family:'Times New Roman';">и&nbsp;</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADFSURBVEhL7dRhDcIwEMXxCsAABjCAARSgAAc4wAIW0IAJXGBm3I/RpFmWkez2Zcn+yUubZnm99l5XNtbNIfQIPUN7CxmYdaHXb7yGUtxDu376NUsZqq494jGUrrDlHLr002W4hVS5CKeQpriGNLXTlEaH3yFmxhTMav5UKdgpZJCZ7oqP1zIbeWNWc5fKoIqYqbBibZZh+3brkwOz1lDA//4oGDCj1gzMbOLozIR8kmFHh9RrGKt+FB/YfeolqIzxxjoo5QOe2Sai4krIlgAAAABJRU5ErkJggg==" width="20" height="27" alt=""><span style="font-family:'Times New Roman';">, задающие соотношения между элементами множеств. Поэтому составление конечного автомата можно представить в виде:</span></p>
+<p style="margin-bottom:0pt; text-align:center; line-height:normal; font-size:14pt;"><img src="data:image/png;base64,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" width="218" height="37" alt=""></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">Автомат, у которого выходные переменные являются функциями входных переменных и состояния &ndash; автомат первого рода или автомат Мили.</span></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">Автомат, у которого входные переменные являются функцией только состояния &ndash; автомат второго рода или автомат Мура.</span></p>
+<p>&nbsp;</p>
+<p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

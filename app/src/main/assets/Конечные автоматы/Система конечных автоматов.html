@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { line-height:115%; font-family:Calibri; font-size:11pt }
+			h1, h2, h3, h4, h5, h6, p { margin:0pt 0pt 10pt }
+			li, table { margin-top:0pt; margin-bottom:10pt }
+			h1 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:16pt; font-weight:bold; color:#000000 }
+			h2 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:14pt; font-weight:bold; font-style:italic; color:#000000 }
+			h3 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:13pt; font-weight:bold; color:#000000 }
+			h4 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:14pt; font-weight:bold; font-style:normal; color:#000000 }
+			h5 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:13pt; font-weight:bold; font-style:italic; color:#000000 }
+			h6 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:11pt; font-weight:bold; font-style:normal; color:#000000 }
+			.Heading7 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:normal; color:#000000 }
+			.Heading8 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:italic; color:#000000 }
+			.Heading9 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:11pt; font-weight:normal; font-style:normal; color:#000000 }
+			.BalloonText { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:8pt }
+			.BlockText { margin-right:72pt; margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyText { margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyText2 { margin-bottom:6pt; line-height:200%; font-family:Calibri; font-size:11pt }
+			.BodyText3 { margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:8pt }
+			.BodyTextFirstIndent { margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyTextFirstIndent2 { margin-left:18pt; margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyTextIndent { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyTextIndent2 { margin-left:18pt; margin-bottom:6pt; line-height:200%; font-family:Calibri; font-size:11pt }
+			.BodyTextIndent3 { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:8pt }
+			.Caption { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Closing { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.CommentSubject { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:bold }
+			.CommentText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Date { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.DocumentMap { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt; background-color:#000080 }
+			.E-mailSignature { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.EndnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:11pt }
+			.EnvelopeAddress { margin-left:144pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.EnvelopeReturn { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Footer { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.FootnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:9pt }
+			.HTMLAddress { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt; font-style:italic }
+			.HTMLPreformatted { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Header { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index1 { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index2 { margin-left:10pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index3 { margin-left:20pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index4 { margin-left:30pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index5 { margin-left:40pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index6 { margin-left:50pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index7 { margin-left:60pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index8 { margin-left:70pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index9 { margin-left:80pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.IndexHeading { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:11pt; font-weight:bold }
+			.List { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List4 { margin-left:72pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List5 { margin-left:90pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue2 { margin-left:36pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue3 { margin-left:54pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue4 { margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue5 { margin-left:90pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Macro { widows:0; orphans:0; font-family:'Courier New'; font-size:12pt }
+			.MessageHeader { margin-left:54pt; margin-bottom:10pt; text-indent:-54pt; line-height:115%; border:0.75pt solid #000000; padding:1pt; font-family:Arial; font-size:12pt; background-color:#cccccc }
+			.NormalWeb { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:12pt }
+			.NormalIndent { margin-left:35.4pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.NoteHeading { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.PlainText { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Salutation { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Signature { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Subtitle { margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOAHeading { margin-top:6pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOC1 { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC2 { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC3 { margin-left:42pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC4 { margin-left:63pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC5 { margin-left:84pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC6 { margin-left:105pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC7 { margin-left:126pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC8 { margin-left:147pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC9 { margin-left:168pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TableofAuthorities { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TableofFigures { margin-bottom:10pt; text-indent:-10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Title { margin-top:12pt; margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:16pt; font-weight:bold }
+			span.CommentReference { font-size:10.5pt }
+			span.Emphasis { font-style:italic }
+			span.EndnoteReference { vertical-align:super }
+			span.FollowedHyperlink { text-decoration:underline; color:#800080 }
+			span.FootnoteReference { vertical-align:super }
+			span.HTMLCite { font-style:italic }
+			span.HTMLCode { font-family:'Courier New'; font-size:10pt }
+			span.HTMLDefinition { font-style:italic }
+			span.HTMLKeyboard { font-family:'Courier New'; font-size:10pt }
+			span.HTMLSample { font-family:'Courier New' }
+			span.HTMLTypewriter { font-family:'Courier New'; font-size:10pt }
+			span.HTMLVariable { font-style:italic }
+			span.Hyperlink { text-decoration:underline; color:#0000ff }
+			span.Strong { font-weight:bold }
+		</style>
+	</head>
+	<body style="background:#ffffff">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; font-size: 14pt;"><strong><em><span style="font-family: 'Times New Roman';">Система конечных автоматов</span></em></strong></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">Реализация конечных автоматов сводится к синтезу соответствующей комбинационной схемы, преобразующей входные переменные </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAfCAYAAACh+E5kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHKSURBVFhH7ZbtTQQhEIa3ABuwARuwASuwAjuwA1uwhavBJuzCZu54JG9COIYdYJf7w5MQuWUZ5uMd1m2xWJzCaxjPcdrMSxhPcfoYvsL4C6M3gLcw2M/f6fyE8R2nQ1CFaxjv/78mgeOXOD0EBTGlEhzCYb2ysfgIA7un9wSaPUI6JQjgM07bIXJ0mGeAzKi0yr5VaqqCDStAbLNm6R1ZYr8JDtVGhg7nsN8w9BxYY16SD8+4lfQ+us7Rft4rQfZZb+oFDmZjGgTO85sDWZNB5MN6Db3D9yFHCcmrLNjDuhXgLlyNGLDKzBpO1JCNPAASxfNSZYQCwEYX0rhlwGPcCoCK7t31wwEABqwse4xLiqmOrYrmHFIB6bTUqDxH4zXUiLoOcdzjPAwFQGNxZXIYRkqHepo4DQAb2PSiANxNTEOp1BxIEGo2yg4Y062ha7BUHaEAqKRseNHXOJVfFemVg9LbQTKilOlzNXlNEnKi1XlQgqxr9g6cI2N5RvW8ZGjvXwlk0OM84DznnoqqUJNRD+o9d/ZHIMN7H7QWcBrn3do/AoKgh0YzRiVJRq2vTgO90hO9ciLj7J+a+Ryc7w2Ay2KK5heLxcPZtht3RnrEIFJxFgAAAABJRU5ErkJggg==" alt="" width="48" height="31" /><span style="font-family: 'Times New Roman';">и </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAfCAYAAAClDZ5ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHzSURBVFhH7ZZtUQQxDIZXAAYwcAYwgAIU4OAcYAELaMAELjBz5JnjZTqZpNuPheNHn5nM3X60yZuk7W6LxeKmPJjdX/92cTK7u/49FiY+f9uTmZzwS7ARL2afZiNCHs0Yy+8hEOi72cWMwBDyaoYTrj/MIiGM4b0ZSB5+Sdw0b2YE7ctMlrmPIw8CGHcEEjNdGSahChFkisyX4JAxI+2U8WzGnFNrhglonwhayoukSrMtFVFLaBNqnyg4sl5mXtXI2oA2IbtZQIyjJaPMc5+5h1GPSkytvDznvaitqJ42Dd+OwLzyE/lAPM+m1kophjbLxGSLXyCG57zn0bOsWnrOTjkFYhQoxrWH+9l6gjLrHgKMKiUkpPZOSFRCApGYKOAWR5EQksK4rNIwLCQrYdlmTF7S4khjBcHvrT0YEsKg2oHGZJmQqP9LSiEEn+1SniEhbJG1gNRefnfS/Rq0pN4hqGitRUhI12LXNhqdHZzm2YS17VeomoxvFQE63bu2X7LGNsgvWcYp1zqUsqzghOe1j7ysLfdQklra8IfSCVnTaUyAtWwDwqNKCoSMfM0iIjtjfgVVZU9wD2rnrmocARWpHYw9EDwipj5NZkBM69aaQVVJyEgrHgo9zZoZaTMqwNibVcKDiBEhbDJ/viYWi8W/Z9u+ANDijIvlhj8/AAAAAElFTkSuQmCC" alt="" width="50" height="31" /></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="font-family: 'Times New Roman';">&nbsp;</span><span style="font-family: 'Times New Roman';">в выходные </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAfCAYAAACh+E5kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHLSURBVFhH7ZZrUQUxDEZXAAYwgAEMoAAFOMABFrCABkzgAjPQw8430ylJu0kve/nRM5O53UfSvJq922Kx+FPui9zuyxB3RW725fV4KfJZJBPAQxF0+b0K70Ve92UaqvBV5PHn6kRw/G1fTqMgTqsEG7Fhpm08nopg85QzQd/Oto4FATzvyzhk0+pDsl2XVtn3ys1Ewgmvp9Gj9axMcx/bITD4UQRFhH6s0X1B5rm22genZcs6H+jInhUAgfPMS46JMibDbQmVcUH71NctBMFzJlSLbHltgi88ZzSH0caW8brfeYcse8gJKwDs9M5OT3eIp0xAPBOjDTw7tCaB96bMVADqz1qZe21FRhtoptdV4h46oxE5FQC0G1vTgnc4Bz14BwH0aZuR83CRALQxmW8nEowOMcgOTnsj00IBpA4xEDkGmBZ8GS16Y1QoAOxZSfDQ1zg0RmsUQC8DGoXehwoUQMR5UHKOVuwXGOiNSDH6K0HbRJ0HnPe+EUMih01V6LVRFH2H0tkn8ojy0WodgX1xPtT7lFh9TM9nSk4QkSljQRVJRO9MmdQHNuO8oHKciUw7kXF0U1MHJcbWTPYEzmcCIHGX2H+xWPxvtu0babx9AnXON9kAAAAASUVORK5CYII=" alt="" width="48" height="31" /><span style="font-family: 'Times New Roman';">и</span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAfCAYAAACmupBxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVGhD7ZaLTcQwEERTAA3QAA3QABVQAR3QAS3QAjXQBF3QDPjpbiRj7a4dJxdiyU9a5c6Jf+Px2stkMplMduMxxf3l5xA8pLi7/NwPGn29xnMKdcATgSzeUnynOKt4jJv55DylYMw8N4M4nyl+UiAGnb2noAP+f6WwxKMO350NFvIjBfNRlGAUyjHJJugIoUorMwjKrc4RjXpnhHHjKkzgiQcScJMDaaC0tmBlcFgOnVFnhDwXiQcvKXjfnQOpzNa0sHIGbjxyu0Y5t0ZNPOC9Z54q2pqWILgrd5hc51mdb3GrJy5C8G6NGHxbE8CDerW6yo9daO8TTCyyMO/5ztqylHHAqC2rHQ2U7dLKrcVTbuzOfbmAbGFPQO8AyVE7lrsotw6niFuLp/ZZ+G4QUOIQ/C+h3MuPQteeUjyc6bUbcZR45cEYYtkUR0hAS6SWTjzx2LI14RCYennoRCzLiZqDqUdE0E7LvP7g2TTfwjSc09KJJR65siWn6GqUB4uofsuoLYbmEbFaPCpEl1waKgUAynBmhA4V1eX/lpu8JtcD9Wp1V4vHVohE0NYtT1WVR+j04oloW4SDo8RrPjDkDp4lTNZrTPWsq4qQeGy3NVcSj17xyIfUq9VVTm2+qjAxJskTNyEU/3UP81aBDngfuUniWQvTQ494jEGpR2PxxixDNF+fGJAg6aI+HdJB5CpA7EgY2thLOGB8zfnoCnMpwxMP4Xh/CHJfTeQRQNBVrtsDnGXdA0dCObE51+0JApIjD121nWDXsPjeVj4EcgU5cKQtjNMY8784rgThRhKPA2jE3TKZTCaT87Isv2UWxhUQPtz2AAAAAElFTkSuQmCC" alt="" width="79" height="31" /><span style="font-size: 11pt;"> </span><span style="font-family: 'Times New Roman';">в соответствии с заданными характеристическими функциями. Для сохранения состояния </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAfCAYAAACmupBxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVGhD7ZaLTcQwEERTAA3QAA3QABVQAR3QAS3QAjXQBF3QDPjpbiRj7a4dJxdiyU9a5c6Jf+Px2stkMplMduMxxf3l5xA8pLi7/NwPGn29xnMKdcATgSzeUnynOKt4jJv55DylYMw8N4M4nyl+UiAGnb2noAP+f6WwxKMO350NFvIjBfNRlGAUyjHJJugIoUorMwjKrc4RjXpnhHHjKkzgiQcScJMDaaC0tmBlcFgOnVFnhDwXiQcvKXjfnQOpzNa0sHIGbjxyu0Y5t0ZNPOC9Z54q2pqWILgrd5hc51mdb3GrJy5C8G6NGHxbE8CDerW6yo9daO8TTCyyMO/5ztqylHHAqC2rHQ2U7dLKrcVTbuzOfbmAbGFPQO8AyVE7lrsotw6niFuLp/ZZ+G4QUOIQ/C+h3MuPQteeUjyc6bUbcZR45cEYYtkUR0hAS6SWTjzx2LI14RCYennoRCzLiZqDqUdE0E7LvP7g2TTfwjSc09KJJR65siWn6GqUB4uofsuoLYbmEbFaPCpEl1waKgUAynBmhA4V1eX/lpu8JtcD9Wp1V4vHVohE0NYtT1WVR+j04oloW4SDo8RrPjDkDp4lTNZrTPWsq4qQeGy3NVcSj17xyIfUq9VVTm2+qjAxJskTNyEU/3UP81aBDngfuUniWQvTQ494jEGpR2PxxixDNF+fGJAg6aI+HdJB5CpA7EgY2thLOGB8zfnoCnMpwxMP4Xh/CHJfTeQRQNBVrtsDnGXdA0dCObE51+0JApIjD121nWDXsPjeVj4EcgU5cKQtjNMY8784rgThRhKPA2jE3TKZTCaT87Isv2UWxhUQPtz2AAAAAElFTkSuQmCC" alt="" width="79" height="31" /><span style="font-family: 'Times New Roman'; font-size: 11pt;"> </span><span style="font-family: 'Times New Roman';">до следующего такта в цепь обратной связи вводится необходимое количество элементов памяти.</span></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">При реализации автоматов в двоичном структурном алфавите используются методы синтеза комбинационных схем. Для этого состояния схем кодируется, и представляются в виде булевых функций двоичных переменных. Такое кодирование можно осуществить преобразованием общей таблицы соответствия в двоичном структурном алфавите. Если элементы множеств Х;Y пронумерованы порядковыми числами, начиная с нуля, то им соответствуют коды, представляющие собой двоичные эквивалентны этих чисел.</span></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">Пример: для автомата, заданного выше, таблицу переходов можно</span></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="font-family: 'Times New Roman';">преобразовать к виду:</span></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+<table style="margin-bottom: 0pt; border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="width: 58.8pt; border-top: 1pt solid #000000; border-right: 2.25pt solid #000000; border-left: 0.75pt solid #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAfCAYAAACh+E5kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHKSURBVFhH7ZbtTQQhEIa3ABuwARuwASuwAjuwA1uwhavBJuzCZu54JG9COIYdYJf7w5MQuWUZ5uMd1m2xWJzCaxjPcdrMSxhPcfoYvsL4C6M3gLcw2M/f6fyE8R2nQ1CFaxjv/78mgeOXOD0EBTGlEhzCYb2ysfgIA7un9wSaPUI6JQjgM07bIXJ0mGeAzKi0yr5VaqqCDStAbLNm6R1ZYr8JDtVGhg7nsN8w9BxYY16SD8+4lfQ+us7Rft4rQfZZb+oFDmZjGgTO85sDWZNB5MN6Db3D9yFHCcmrLNjDuhXgLlyNGLDKzBpO1JCNPAASxfNSZYQCwEYX0rhlwGPcCoCK7t31wwEABqwse4xLiqmOrYrmHFIB6bTUqDxH4zXUiLoOcdzjPAwFQGNxZXIYRkqHepo4DQAb2PSiANxNTEOp1BxIEGo2yg4Y062ha7BUHaEAqKRseNHXOJVfFemVg9LbQTKilOlzNXlNEnKi1XlQgqxr9g6cI2N5RvW8ZGjvXwlk0OM84DznnoqqUJNRD+o9d/ZHIMN7H7QWcBrn3do/AoKgh0YzRiVJRq2vTgO90hO9ciLj7J+a+Ryc7w2Ay2KK5heLxcPZtht3RnrEIFJxFgAAAABJRU5ErkJggg==" alt="" width="48" height="31" /></p>
+</td>
+<td style="width: 15.95pt; border-top: 1pt solid #000000; border-left: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.9pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 1pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 1pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 7.65pt; border-top: 1pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 17.55pt; border-top: 1pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 17.55pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 20.65pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 7.35pt; border-top: 1pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 17.55pt; border-top: 1pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 10.45pt; border-top: 1pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 13.3pt; border-top: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 13pt; border-top: 0.75pt solid #000000; border-right: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 58.8pt; border-right: 2.25pt solid #000000; border-left: 0.75pt solid #000000; border-bottom: 2.25pt solid #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAfCAYAAAClDZ5ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHzSURBVFhH7ZZtUQQxDIZXAAYwcAYwgAIU4OAcYAELaMAELjBz5JnjZTqZpNuPheNHn5nM3X60yZuk7W6LxeKmPJjdX/92cTK7u/49FiY+f9uTmZzwS7ARL2afZiNCHs0Yy+8hEOi72cWMwBDyaoYTrj/MIiGM4b0ZSB5+Sdw0b2YE7ctMlrmPIw8CGHcEEjNdGSahChFkisyX4JAxI+2U8WzGnFNrhglonwhayoukSrMtFVFLaBNqnyg4sl5mXtXI2oA2IbtZQIyjJaPMc5+5h1GPSkytvDznvaitqJ42Dd+OwLzyE/lAPM+m1kophjbLxGSLXyCG57zn0bOsWnrOTjkFYhQoxrWH+9l6gjLrHgKMKiUkpPZOSFRCApGYKOAWR5EQksK4rNIwLCQrYdlmTF7S4khjBcHvrT0YEsKg2oHGZJmQqP9LSiEEn+1SniEhbJG1gNRefnfS/Rq0pN4hqGitRUhI12LXNhqdHZzm2YS17VeomoxvFQE63bu2X7LGNsgvWcYp1zqUsqzghOe1j7ysLfdQklra8IfSCVnTaUyAtWwDwqNKCoSMfM0iIjtjfgVVZU9wD2rnrmocARWpHYw9EDwipj5NZkBM69aaQVVJyEgrHgo9zZoZaTMqwNibVcKDiBEhbDJ/viYWi8W/Z9u+ANDijIvlhj8/AAAAAElFTkSuQmCC" alt="" width="50" height="31" /></p>
+</td>
+<td style="width: 15.95pt; border-left: 2.25pt solid #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.9pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 15.85pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 15.85pt; border-right: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 15.85pt; border-left: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 15.85pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 7.65pt; border-right: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 17.55pt; border-left: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 17.55pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 20.65pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 7.35pt; border-right: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 17.55pt; border-left: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 10.45pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 13.3pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 13pt; border-right: 0.75pt solid #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 58.8pt; border-top: 2.25pt solid #000000; border-right: 2.25pt solid #000000; border-left: 0.75pt solid #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAfCAYAAACmupBxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVGhD7ZaLTcQwEERTAA3QAA3QABVQAR3QAS3QAjXQBF3QDPjpbiRj7a4dJxdiyU9a5c6Jf+Px2stkMplMduMxxf3l5xA8pLi7/NwPGn29xnMKdcATgSzeUnynOKt4jJv55DylYMw8N4M4nyl+UiAGnb2noAP+f6WwxKMO350NFvIjBfNRlGAUyjHJJugIoUorMwjKrc4RjXpnhHHjKkzgiQcScJMDaaC0tmBlcFgOnVFnhDwXiQcvKXjfnQOpzNa0sHIGbjxyu0Y5t0ZNPOC9Z54q2pqWILgrd5hc51mdb3GrJy5C8G6NGHxbE8CDerW6yo9daO8TTCyyMO/5ztqylHHAqC2rHQ2U7dLKrcVTbuzOfbmAbGFPQO8AyVE7lrsotw6niFuLp/ZZ+G4QUOIQ/C+h3MuPQteeUjyc6bUbcZR45cEYYtkUR0hAS6SWTjzx2LI14RCYennoRCzLiZqDqUdE0E7LvP7g2TTfwjSc09KJJR65siWn6GqUB4uofsuoLYbmEbFaPCpEl1waKgUAynBmhA4V1eX/lpu8JtcD9Wp1V4vHVohE0NYtT1WVR+j04oloW4SDo8RrPjDkDp4lTNZrTPWsq4qQeGy3NVcSj17xyIfUq9VVTm2+qjAxJskTNyEU/3UP81aBDngfuUniWQvTQ494jEGpR2PxxixDNF+fGJAg6aI+HdJB5CpA7EgY2thLOGB8zfnoCnMpwxMP4Xh/CHJfTeQRQNBVrtsDnGXdA0dCObE51+0JApIjD121nWDXsPjeVj4EcgU5cKQtjNMY8784rgThRhKPA2jE3TKZTCaT87Isv2UWxhUQPtz2AAAAAElFTkSuQmCC" alt="" width="79" height="31" /></p>
+</td>
+<td style="width: 15.95pt; border-top: 2.25pt solid #000000; border-left: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 15.9pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 2.25pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 2.25pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 15.85pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 7.65pt; border-top: 2.25pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 17.55pt; border-top: 2.25pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 17.55pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 20.65pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">2</span></p>
+</td>
+<td style="width: 7.35pt; border-top: 2.25pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 17.55pt; border-top: 2.25pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 10.45pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 13.3pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+<td style="width: 13pt; border-top: 2.25pt solid #000000; border-right: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">3</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 58.8pt; border-right: 2.25pt solid #000000; border-left: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAfCAYAAACh+E5kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHLSURBVFhH7ZZrUQUxDEZXAAYwgAEMoAAFOMABFrCABkzgAjPQw8430ylJu0kve/nRM5O53UfSvJq922Kx+FPui9zuyxB3RW725fV4KfJZJBPAQxF0+b0K70Ve92UaqvBV5PHn6kRw/G1fTqMgTqsEG7Fhpm08nopg85QzQd/Oto4FATzvyzhk0+pDsl2XVtn3ys1Ewgmvp9Gj9axMcx/bITD4UQRFhH6s0X1B5rm22genZcs6H+jInhUAgfPMS46JMibDbQmVcUH71NctBMFzJlSLbHltgi88ZzSH0caW8brfeYcse8gJKwDs9M5OT3eIp0xAPBOjDTw7tCaB96bMVADqz1qZe21FRhtoptdV4h46oxE5FQC0G1vTgnc4Bz14BwH0aZuR83CRALQxmW8nEowOMcgOTnsj00IBpA4xEDkGmBZ8GS16Y1QoAOxZSfDQ1zg0RmsUQC8DGoXehwoUQMR5UHKOVuwXGOiNSDH6K0HbRJ0HnPe+EUMih01V6LVRFH2H0tkn8ojy0WodgX1xPtT7lFh9TM9nSk4QkSljQRVJRO9MmdQHNuO8oHKciUw7kXF0U1MHJcbWTPYEzmcCIHGX2H+xWPxvtu0babx9AnXON9kAAAAASUVORK5CYII=" alt="" width="48" height="31" /></p>
+</td>
+<td style="width: 15.95pt; border-left: 2.25pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.9pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 15.85pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 15.85pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 15.85pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 7.65pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 17.55pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 17.55pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 20.65pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 7.35pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 17.55pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 10.45pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 13.3pt; border-bottom: 0.75pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 13pt; border-right: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">Заменяя десятичные числа их двоичными эквивалентными, читаемым сверху вниз, получаем таблицу соответствия, в которой значение функции </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAfCAYAAACmupBxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVGhD7ZaLTcQwEERTAA3QAA3QABVQAR3QAS3QAjXQBF3QDPjpbiRj7a4dJxdiyU9a5c6Jf+Px2stkMplMduMxxf3l5xA8pLi7/NwPGn29xnMKdcATgSzeUnynOKt4jJv55DylYMw8N4M4nyl+UiAGnb2noAP+f6WwxKMO350NFvIjBfNRlGAUyjHJJugIoUorMwjKrc4RjXpnhHHjKkzgiQcScJMDaaC0tmBlcFgOnVFnhDwXiQcvKXjfnQOpzNa0sHIGbjxyu0Y5t0ZNPOC9Z54q2pqWILgrd5hc51mdb3GrJy5C8G6NGHxbE8CDerW6yo9daO8TTCyyMO/5ztqylHHAqC2rHQ2U7dLKrcVTbuzOfbmAbGFPQO8AyVE7lrsotw6niFuLp/ZZ+G4QUOIQ/C+h3MuPQteeUjyc6bUbcZR45cEYYtkUR0hAS6SWTjzx2LI14RCYennoRCzLiZqDqUdE0E7LvP7g2TTfwjSc09KJJR65siWn6GqUB4uofsuoLYbmEbFaPCpEl1waKgUAynBmhA4V1eX/lpu8JtcD9Wp1V4vHVohE0NYtT1WVR+j04oloW4SDo8RrPjDkDp4lTNZrTPWsq4qQeGy3NVcSj17xyIfUq9VVTm2+qjAxJskTNyEU/3UP81aBDngfuUniWQvTQ494jEGpR2PxxixDNF+fGJAg6aI+HdJB5CpA7EgY2thLOGB8zfnoCnMpwxMP4Xh/CHJfTeQRQNBVrtsDnGXdA0dCObE51+0JApIjD121nWDXsPjeVj4EcgU5cKQtjNMY8784rgThRhKPA2jE3TKZTCaT87Isv2UWxhUQPtz2AAAAAElFTkSuQmCC" alt="" width="79" height="31" /><span style="font-size: 11pt;"> </span><span style="font-family: 'Times New Roman';">и </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAfCAYAAACh+E5kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHLSURBVFhH7ZZrUQUxDEZXAAYwgAEMoAAFOMABFrCABkzgAjPQw8430ylJu0kve/nRM5O53UfSvJq922Kx+FPui9zuyxB3RW725fV4KfJZJBPAQxF0+b0K70Ve92UaqvBV5PHn6kRw/G1fTqMgTqsEG7Fhpm08nopg85QzQd/Oto4FATzvyzhk0+pDsl2XVtn3ys1Ewgmvp9Gj9axMcx/bITD4UQRFhH6s0X1B5rm22genZcs6H+jInhUAgfPMS46JMibDbQmVcUH71NctBMFzJlSLbHltgi88ZzSH0caW8brfeYcse8gJKwDs9M5OT3eIp0xAPBOjDTw7tCaB96bMVADqz1qZe21FRhtoptdV4h46oxE5FQC0G1vTgnc4Bz14BwH0aZuR83CRALQxmW8nEowOMcgOTnsj00IBpA4xEDkGmBZ8GS16Y1QoAOxZSfDQ1zg0RmsUQC8DGoXehwoUQMR5UHKOVuwXGOiNSDH6K0HbRJ0HnPe+EUMih01V6LVRFH2H0tkn8ojy0WodgX1xPtT7lFh9TM9nSk4QkSljQRVJRO9MmdQHNuO8oHKciUw7kXF0U1MHJcbWTPYEzmcCIHGX2H+xWPxvtu0babx9AnXON9kAAAAASUVORK5CYII=" alt="" width="48" height="31" /><span style="font-size: 11pt;"> </span><span style="font-family: 'Times New Roman';">представлены двоичными входами.</span></p>
+<table style="width: 481.8pt; margin-bottom: 0pt; border: 0.75pt solid #000000; border-collapse: collapse;">
+<tbody>
+<tr style="height: 28.15pt;">
+<td style="width: 114.6pt; border-right: 2.25pt solid #000000; border-bottom: 0.75pt dashed #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: top;" rowspan="2">
+<p style="margin-bottom: 0pt; text-align: justify; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,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" alt="" width="109" height="73" /></p>
+</td>
+<td style="width: 12.7pt; border-left: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.7pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 3.45pt; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 1pt; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 12.7pt; border-left: 2.25pt solid #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.7pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 3.45pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 1pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+<tr style="height: 29.65pt;">
+<td style="width: 114.6pt; border-top: 0.75pt dashed #000000; border-right: 2.25pt solid #000000; border-bottom: 2.25pt solid #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: top;" rowspan="2">
+<p style="margin-bottom: 0pt; text-align: justify; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,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" alt="" width="109" height="71" /></p>
+</td>
+<td style="width: 12.7pt; border-top: 0.75pt dashed #000000; border-left: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.7pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 3.45pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 1pt; border-top: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 12.7pt; border-left: 2.25pt solid #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.7pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 3.45pt; border-bottom: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 1pt; border-bottom: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 114.6pt; border-top: 2.25pt solid #000000; border-right: 2.25pt solid #000000; border-bottom: 0.75pt dashed #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: top;" rowspan="2">
+<p style="margin-bottom: 0pt; text-align: justify; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,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" alt="" width="153" height="64" /></p>
+</td>
+<td style="width: 12.7pt; border-top: 2.25pt solid #000000; border-left: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.7pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 3.45pt; border-top: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 1pt; border-top: 2.25pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 12.7pt; border-left: 2.25pt solid #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.7pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-right: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-left: 0.75pt dashed #000000; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 3.45pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 1pt; border-bottom: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 114.6pt; border-top: 0.75pt dashed #000000; border-right: 2.25pt solid #000000; padding-right: 4.28pt; padding-left: 5.03pt; vertical-align: top;">
+<p style="margin-bottom: 0pt; text-align: justify; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAAjCAYAAACaX1R3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN0SURBVGhD7ZgLkRQxFEVHAAYwsAYwgAIU4AAHWMACGjCBC8wsfQZuVUi9vE+6p5vZyqlKsT2Tfsl9v2S4LRaLxSG838bXbXy6Py2eho/beN0GwSOIiyfhZRsEblXcE/J9G7/+/Ll4Jt5tg6r7cX9aHArOrVJ558M2/pfgPVrrabCpb9ugpVX5vA2CwVkWoeD9vD9dw1laT4GNcAZ9uT/NweUjcwnBccxjXMGZWh+OnHnERiSKnwEeOO+K4F2h9aHQvmbaxwh+tyHK++3GelcE7wqtD4P+ffTiym7vQkLLOvvMu0prCQwyeuj1/ecsHDnRssczF48RqqzRHNpm1G6sdcHSkSGjFax1eR5pibSGkE2UMJvDUH8YI7jfvHq2dXD39sjaFm14lHHKcm50LTiBz7BtMaMjg6cV9ugdaU3D5jCMEWsRNqfvBIvxbGVMb693lpzY2mvBZv8971BxXobO6MjgaYU9ei2tU+g/e0eGcJ7Qjc9zprLKsofg0eHfOhnhQNWR+TiJ7z0qOjJktMKMXkvrNKPF2XjbNkbzWnC45vUbI5s9Z+i9fo4qsD9XevR+T68jw8hWz6xeveP5I4UM9c7pW5DmRVhZS2WMqk7IviWId6MA6P1IRwbZyjCjV/Z3B0+9uzWEo3rDWjBC9nSI0yY4E7KVYwliP1Hry+rIoL1kmNEr+zN7+4deNOVv3e60YNSncRjz+BcBCIneAdm3BJHFfOeR1QHsK+PczL5n9Mr+7uDpZsUBy+Kjcrcy26IVgy3sRiBWgiynqjV5ZHTweXSThKxWqOqNtJZoF0fY6Ganm5Xawwg2r81hM4Nui/2VGxAoex4ZHapG5nmByWqFql5PaxmJJrs9QbrijipTYIN5ODCL9mA5S/aoBo+sDmDeEVqhqtfTWkaLZ9qbWo6HsrsCWYhdq41of1FWV3QwzwseZLRCVa+ntQwZkBEMyshDsuYvcvrIptaMglfRgb0oeFdoLUHW0IMrqMfz7hGQiVFLpBV62V3VkQkeXKF1CKVKRsFM4IT69l5RtCYERS0EJxJAzdurIxs8OFvrEDaBEyjb2cAJOTTbqlpwBEK4EGTFMFfz9+qoBA/O1mpC9Bl7s0iQ/TP9G4dXnCd0zccRMzpwHmtjg4pS9WY4W+ubhADMZjDB5szRmKmkxWKxWCwWh3G7/Qbd5l2gTRXkbgAAAABJRU5ErkJggg==" alt="" width="111" height="35" /></p>
+</td>
+<td style="width: 12.7pt; border-top: 0.75pt dashed #000000; border-left: 2.25pt solid #000000; padding-right: 5.4pt; padding-left: 4.28pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.7pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-right: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; border-left: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.03pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="width: 12.75pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 3.45pt; border-top: 0.75pt dashed #000000; padding-right: 5.4pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+<td style="width: 1pt; border-top: 0.75pt dashed #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p style="margin-bottom: 0pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 14pt;"><span style="font-family: 'Times New Roman';">1</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 18pt;"><span style="height: 0pt; display: block; position: absolute; z-index: 0;"><img style="margin-top: 73.85pt; margin-left: 119.7pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQcAAABdCAYAAACoyaOCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUYSURBVHhe7dSBjhs3EIPhvP9Lt2HJMYSB5N04uXZ783+AUIszvgjJlT9++ovD4XCW8/IXAIj6wLVgiQFMpz5wLVhiANOpD1wLlhjAdOoD14IlBjCd+sC1YIkBTKc+cC1YYgDTqQ9cC5YYwHTqA9eCJQYwnfrAtWCJAUynPnAtWGIA06kPXAuWGMB06gPXgiUGMJ36wLVgiQFMpz5wLVhiANOpD1wLlhjAdOoD14IlBjCd+sC1YIkBTKc+cC1YYgDTqQ9cC5YYwHTqA9eCJQYwnfrAtWCJAUynPnAtWGIA06kPXAuWGMB06gPXgiUGMJ36wLVgiQFMpz5wLVhiANOpD1wLlhjAdOoD14IlBjCd+sC1YIkBTKc+cC1YYgDTqQ9cC5YYwHTqA9eCJQYwnfrAtWCJAUynPnAtWGL8Kv7u8N3od/qfVojEz6D37M7qlH+l9c9cD/Cd5Pf6JfGz6F27t1V2mn+F+rP6Ab6b/G6/JH4Wvau/7b9661P/joA/Lf/fvSR+Fr2rv+3OW+t7u+/Lu/lutv63z8pp1vN+ylfl/ZRTLp/Met5P2eW7rPTZet457e7yXVbu5Hdnp/xp8r6XxM+id61vu/PO3Xd236u8z3b5u2y1y6Tnn+5d3cune9KzOzul53f2+s67meyyru9c3aXfZfe9Vc3v5Ff3J8nbXhI/i97VzzunnV1e2Z18tyf/9t7Vvfyf9vrOu5nsstVp/u7nnPbffUfqftpb86v7k+RtL4mfRe+qt62fT047u7zu62yXSb+XO3uVXe3JKZearfPT/p29yq725Kv3SuXr7OreXc1X73ZrtjulPq/5Lutqdpr/1/K2l8TPonetb+v37jTf5XVfZ7tM+r282zt9lrqfzmrN+rzfy7u902fp93LaO52ym62nrPc+k8rWc3I17067d35OzdfdXVb6Xp8/Rd72kvhZ9K7+tl1WTrNdXvd1tsuk38tpr++e9rqrvat7Oe313dNe95V7faffZc1289XVfFW7u/07P6fm6+4uk6v7k+RtL4mfRe/ave1P5Ou9z6/u5d/eu7qX/9Ne3/nVe1fzvvPufto/5aV//p37k+RtL4mfRe/ave2US5+ddt/t7L7zyU7p+ad7V/fy6Z707M5O6fmdvb7zbia7rKud9az6XU57/azWe5//6v1J8raXxM+g9+zO6pTLOruar/f185qVT2Y976fczX/3lFMun8x63k/Z5T1bz+rdrDvt7fI1W3O5m+8+r5n0vM7T5F0vifFd6N+Uf1d8Ir87L4nxnfDvik/o9+afVojEAKZTH7gWLDGA6dQHrgVLDGA69YFrwRIDmE594FqwxACmUx+4FiwxgOnUB64FSwxgOvWBa8ESA5hOfeBasMQAplMfuBYsMYDp1AeuBUsMYDr1gWvBEgOYTn3gWrDEAKZTH7gWLDGA6dQHrgVLDGA69YFrwRIDmE594FqwxACmUx+4FiwxgOnUB64FSwxgOvWBa8ESA5hOfeBasMQAplMfuBYsMYDp1AeuBUsMYDr1gWvBEgOYTn3gWrDEAKZTH7gWLDGA6dQHrgVLDGA69YFrwRIDmE594FqwxACmUx+4FiwxgOnUB64FSwxgOvWBa8ESA5hOfeBasMQAplMfuBYsMYDp1AeuBUsMYDr1gWvBEgOYTn3gWrDEAKZTH7gWLDGA6dQHrgVLDGA69YFrwRIDmE594FqwxACmUx+4FiwxgOnUB64Fq4DD4XB0fvrx429/FPLD/M9QtQAAAABJRU5ErkJggg==" alt="" width="263" height="93" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 2;"><img style="margin-top: 202.2pt; margin-left: 193.75pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAtCAYAAAAeA21aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC7SURBVGhD7ZJRCoMwFARz/0vbBiYlpBb68zZCZkBxVdh1sL25Dj/adSoKUIACFKAABShAAcR6KCTtRwFpAU9DAWkBFJL2ExUwPj7V9w/s8Q8g1qOAGwHjXnLHgN59Atbu5JYOe/YJWElu6bBHAcR6KCR9k9zSYc8zBCR3DNizX0Bywwx7assp+VyvzPeqt6ywLSPgrmd+9uudSujMlj4JBShAAQpQgAIUoADieShAAQpQgAI4nXzIwbT2AqqjzlaHpg8LAAAAAElFTkSuQmCC" alt="" width="64" height="45" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 1;"><img style="margin-top: 158.4pt; margin-left: 193.75pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAtCAYAAAAeA21aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACySURBVGhD7ZLBCoMwFATz/z9tW5hqDob28vYJmYGIq4ddB8ebY/Mzjl1RgAIUoAAFKEABCiDWQyGpHwWkBTwNBaQFUEjqJyrg+/Gpvn9gj38AsR4FLAQkN8ywp1fA3bMUdPcK+JDcMMMeBRDroZB0kdwwwx4FEOuhkHSR3DDDntpySs77O6o3rGBbRsCq59f7Sujtsf8EFKAABShAAQpQgAKI+6EABShAAQrgsvORjRnjBX7R3UcoAAddAAAAAElFTkSuQmCC" alt="" width="64" height="45" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 3;"><img style="margin-top: 173.35pt; margin-left: 241.05pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAICAYAAAC8nHJvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVEhL7dAxCgAgEAPB/P/TiuAVHhECWu5AulQr/DX2EKhYRAv0WDUYLhS77+AOawgQ7QHRLGkCOD9jnckpvg8AAAAASUVORK5CYII=" alt="" width="77" height="8" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 4;"><img style="margin-top: 133.2pt; margin-left: 99.95pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAICAYAAADqSp8ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAuSURBVDhPYxjq4D8U0w3ALKSbxegWwjAKwKaAVpjqAJslIEwzQDeLYICARQwMAK/5Ms53oW8GAAAAAElFTkSuQmCC" alt="" width="28" height="8" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 5;"><img style="margin-top: 107.2pt; margin-left: 38.85pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAICAYAAADzwXG/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA7SURBVEhL7dExCgAgEAPB/P/TiuBZyGFlkcAOpEq5AvDH2EOQika8IHe02tGdzHsw1IVagzFiBXrEkia7XIR86ZvtNAAAAABJRU5ErkJggg==" alt="" width="109" height="8" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 6;"><img style="margin-top: 84.6pt; margin-left: 38.85pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAICAYAAADzwXG/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA7SURBVEhL7dExCgAgEAPB/P/TiuBZyGFlkcAOpEq5AvDH2EOQika8IHe02tGdzHsw1IVagzFiBXrEkia7XIR86ZvtNAAAAABJRU5ErkJggg==" alt="" width="109" height="8" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 7;"><img style="margin-top: 84.6pt; margin-left: 315.15pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAICAYAAAAGP/oPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA7SURBVEhLYxgFo2C4g/9QPAoGCMAiYDQiBgigRwAMwwE2yVFMPzwKaAywBToIjwI6gdGAH2CAJ+AZGADY1HeJNWsxJQAAAABJRU5ErkJggg==" alt="" width="96" height="8" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 8;"><img style="margin-top: 135.77pt; margin-left: 314.77pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAABCAYAAACYJC2PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAQSURBVBhXYwCC/0MXM/wHAL/wL9H3TvgfAAAAAElFTkSuQmCC" alt="" width="48" height="1" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 9;"><img style="margin-top: 136.15pt; margin-left: 349.95pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA3CAYAAAAmAZs6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAWSURBVChTYwCC/yACBEYZQDCMGQwMABfCNsqWKO5fAAAAAElFTkSuQmCC" alt="" width="2" height="55" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 10;"><img style="margin-top: 175.98pt; margin-left: 290.48pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAABCAYAAACmAULBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVChTYwCC/6OYEszAAADBQ0+xU5HI+AAAAABJRU5ErkJggg==" alt="" width="81" height="1" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 11;"><img style="margin-top: 175.98pt; margin-left: 99.57pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAABCAYAAAD3lXGiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVChTYwCC/6N4JGKG/wAOzX6C+YjMngAAAABJRU5ErkJggg==" alt="" width="127" height="1" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 12;"><img style="margin-top: 136.15pt; margin-left: 99.6pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAA3CAYAAAAmAZs6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAWSURBVChTYwCC/yACBEYZQDCMGQwMABfCNsqWKO5fAAAAAElFTkSuQmCC" alt="" width="2" height="55" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 13;"><img style="margin-top: 109.82pt; margin-left: 314.77pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAABCAYAAACmAULBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAARSURBVChTYwCC/6OYEszAAADBQ0+xU5HI+AAAAABJRU5ErkJggg==" alt="" width="81" height="1" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 14;"><img style="margin-top: 110.2pt; margin-left: 374.25pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAACUCAYAAAC5ifh6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAjSURBVDhP7caxEQAADIJA91/aYJMp+IIj6DIOHDhw4OAHyQHnWJJuFCFI9QAAAABJRU5ErkJggg==" alt="" width="2" height="148" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 15;"><img style="margin-top: 216.85pt; margin-left: 241.05pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAAICAYAAABQxdU8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA9SURBVFhH7dKxCQAgFEPBv//SiqCF4gLRO3hdyhT8os0g2jqyQxPtPPIKotxOLCW2uQ1GEM2heZJDE6aqA4BLyjYrZKI8AAAAAElFTkSuQmCC" alt="" width="180" height="8" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 17;"><img style="margin-top: 219.48pt; margin-left: 66.93pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKsAAAABCAYAAAChb16RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAATSURBVChTYwCC/6N4FA9+zMAAAPIlqVcANmC4AAAAAElFTkSuQmCC" alt="" width="171" height="1" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 18;"><img style="margin-top: 122.8pt; margin-left: 66.95pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAACCCAYAAABsBhn8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAgSURBVDhPYwCC/yACBEYZQDDKAIJRBhCMMoCAzgwGBgA/l4F/jQ/BPAAAAABJRU5ErkJggg==" alt="" width="2" height="130" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 16;"><img style="margin-top: 119.85pt; margin-left: 67.3pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAICAYAAACrvuKmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVEhLYxgFowAX+A/FowALgAXOaCBhAeiBA8NwgE1yFEPwiAbYAgSERwEQjAYKHoAnUBgYACNnXqLRfIIWAAAAAElFTkSuQmCC" alt="" width="71" height="8" /></span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Отсюда следует, что комбинационная схема должна иметь 4 входа, соответствующих </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAhCAYAAACSllj+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVFhH7daPTfMwEIfhDsACLMACLPBNwARswAaswArM8C3BFiwDfohOiir/D1Ur4Vc6NY3j8/18d05Oi8Visbgyj8nut8shHpLdbZe3x2uyz2Qzwv4lM9fvTfE/2dt2OY2sfSV7+vl3AxD0vl0eJsRdPXMCEMhM+ZV4TsbnVXtOXxwtwRyEvWyX49gR9Xy+M3aspxQiW7lnwzfRpZ4RuN7MobT5HkLZxEQWOy6Yj2Rxv4V5nsuVoV4JX7n+i14qrUO0saFeE4iJe3FE+S9YYz0OlWEpMMiU8VxWYqyUTe9D414hU1iUg1rJlDBPVkpEcDlh1otKyVGb20X0yYyD1rxScO7XROGwMHBQ2/kSrYWjj/bPuNcT7K9kLJp89F1kjj6r4RkG/gV6fgrnOCTMAo72ViOXBLcOD4Qwaym/HlEIYd2Hh1KIE8/pZyGBcxJ1z5n7nq29TzxvrJZp46w3U0F8fXQf9xGooAQeRDkKIO5zWhMWB0/tNDXO9mv1EJvWvRkWkKnzXY77546iJEq0PqlszKgoWFM8F6MlLLJWK8dRoudHSneYljDI2MzrIgcx1uvurVl6hIE4ZXdkl2XdBo1+AU3RKwx6Qs/NlKUMmXvxTMHuC3akNIiaEeaAuWhP7bGY4z9ssVj8CU6nb59wiNopE1+MAAAAAElFTkSuQmCC" alt="" width="54" height="33" /><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAhCAYAAACMX2hNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIESURBVFhH7daNTcNADAXgDsACLMACLMAETMAGbMAKrMAMLMEWLAP3EVmKorv0flqUSvckq2kudvz8bLeniYmJiYkbxmOy++WyCQ/J7pbL4+It2XeyHoJPyfj6PCQ+k70vl92g4k+y579vBwJiH8vlMILkYZSUiIR62rKEl2RiHmImzc1oa+aA4Oty2QZV0ePb6qhaa1uEejk/ioqpdbVdDpZSqbXdF7saXhhOLKqO6FeyuN8CMfjk2jPIs5wSiuzMu3Pg47y66JLgtCaJnO8SddaqoPYUpwQKOc8RjLOSun5PnXuuGVY6Z8RGVrIYJQUgVMgRVJy9dwdBuTYj2qfLeYVzMUoEzWaO9BpDBIHzXvVrcC6BXCGpVrN1hxWMxTLy+8Vfq5WwTdK81ZCDboIWixaJLVaaAy8oLYDAuSWzTlKsloURvlU+gseG1PtIUk6AqKhA7jMJsUiuBL6eKXVBJKkQ4ohdi/g3U7XZ46dBQmtVok2jwiCpSMQ95yWVY8ZK51FE72khB1G8Kj+JUm5b6bi/FwR51SyBOntz1UMOkDu3aS8CCe4tolBx75lWxH7oKUwTKFwz5BRUiEsAKeSqZm8EXrTXelt41qyPVF0XKFRppi8Kc9earJkxkz3tSjG+V1cOtKUX2ag+W5REroegcbj6zIH2sDnX9i8tMzExcQs4nX4BG0iIlr7LZWkAAAAASUVORK5CYII=" alt="" width="56" height="33" /><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAhCAYAAACMX2hNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIQSURBVFhH7ZaBTUMxDEQ7AAuwAAuwABMwARuwASuwAjOwBFuwTPFTe1L0ZSexU5CQcpL12+bH8flsp6eNjY2NjX+KR7P7y8cUHszuLh9vB5y+Xu3ZTAfwJNAs3sy+zSoEn8zYy3MZEPg0O5sRFATfzTiA719mWYL4w8cKSDgxkewlfJhB5lgSZJ7fOSQDiOHzFhDJJSVxgGoeyB5qzIJA8FcpywgvZvgs9ySbKUMPlGZE3gOKr5amh54IQ6gMvcBQYlYNqeeVEz5QgtKl7DzQ71Fp8zu+S1Cdi2S1FNiLDy8hIo95StAKrEWVxB7Wy73YkuSQCsnRQEIh1j2CWovUpVVY570ycK4ge4dFYE+kAJAKHkHO7V0HIpgZeK7cKCeSvWA9jAKICNKbHukWJYKR3G25Zi74UQDqw/YdVJuZummCbOhdxjiqEET9CMcgSeTslZImSFn0glGZHidi78rQnghtkJDLDAztnd6jke5lUCO7dUZAo7uod00ABUkiIJmZ1Po3M31NMEBobJ4cCBm+i8QxUzgeEVSPRdMQ4qxXriElb3of2RRQR5OM4EYK9ECyen1VIQc4dzRplzFDUCr2ejULtUwlMSnMEAQomL1DI0CKM6d7bwWzBAEk6dmVrFMFJCrq6ZsjQxDQM/RkpVxRjL1/ohxACQLOlgvkKgQZfL/ecy04kLtLtrGxsXHF6fQDNMaaUegSRJgAAAAASUVORK5CYII=" alt="" width="56" height="33" /><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAhCAYAAABjnQNzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAItSURBVFhH7ZYBTQRBDEVPAAYwgAEMoAAFOMABFrCABkzgAjMwL8dPlkk723Y2m0DmJ80e7E3b3/527rKwsLCw8E9x3+z2+jGFu2Y314/HAIfPP/bYTM55kmQVL80+m1VIPjTjLM8pQOK92VczEoLkazOc8/dHsypJ/OJrBhSf3Ch8GW/NINTLgsrzfwJUADl8HwERLXeUw3TPAtWjG1mQDH4rEvXw1AyfpRnlIJK0gEy9AoyAAmZlamHUkCEkSSspOpHthrpoSQvZ0RFkzOcedIl3HhHe4TsN6V1ES3LYAB/4soqjAmDWMmPRKQ8LkOd9aTa3RJHuDNG9ZaVNbnVL77z4FIb3FKMEiCpBzJJTBJz1ZhyoGz1JiO3FFcnwMrRaTiARHSU6wl4SHkkkuncXpkl6Ld9K15qbPVRIsowil32KJF8eXdQ4mSGJGjzovhNJyPVd9ZAiSaBRIpJsvyEJsjerOutBiUIMgt4mtaCzocWjNW8FIHDviFmleurwqJLy7d2vSpSZz25JqSB0hRCASvKk8gTjb122fXAS01rXzHozpLvQey+SIcl1UAG9K+YXCCSQNBWSfCK/cEiQMx4onCdDYlPcUKIdIBid32mQ5KgY6makYFFojCrFSYPOR2aJTlKMIwAxCJZ+zmVBME+GFvgucz5TfdRAsbwZPxzMYTZhZogZrUiXznH2lA4CJEowFgfPTEchWCHJaJwygwCp6J6UnSafhYWFv4bL5RvIm5oOQiVvFQAAAABJRU5ErkJggg==" alt="" width="57" height="33" /><span style="font-size: 11pt;">&nbsp; </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">и 3 выхода, соответствующих </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAhCAYAAABHhIyzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVGhD7deBjdwgEIXhLSANpIFrIA2kglSQDtLBtZAWUkOaSBdpJuHT3UgOAQzYu/JK/NLIe8YMzGMGuNtisVgsFovFqXxK9vHt5+V5Sfbh7ed5cPrt3b4kiwE8iTPCa7Lfya4qqHjEGXxOZr6ehyHYz2R/khHCQN+TGcDfv5KNCMqX/lfD4v5IJs6wLRLKO8l0CIMQL095E/A+H7gFIfm7IuKRgRKmJChC1EOZysE2/bdYLRnXg0nw9Qz7Zk1QfE2mbXpP1VlZl8j3mhay+ZGlbuFk1AwtQaGtN+7/iLIuiWHSPRkX2VkrlViYWrYTRttIqbX87bEnaOy1U8S+wYg6k+r66V8Sn78oo9o3EcDIgXBPQfnWPr2XbkVV/qOi9hxe4b90Y4hxR7inoOao3S1nGqKGMGxkf/L9niCC910uaEx+dBEfIeiQ/1I6CypEHcmYnsFrgnq/t3ja9duabcYc8/dsD/NgNfjoiekfaum8Lf+eyaFn8JKg5tBTCb7Tf2ux8Pl7tkfEV2NYUB1aF3CO8uBb+FaALYiy9SnDpjf9xKVK3qnbEiBWPz+Ra1eo+L5FnJxOcr+P/ot3qUMprjmeOQLNnSnL1t2sdW0KQlD73lExMSuoc8I8arEgrnndFSQoE/KUXcTzd4iWrwzHLUG1a2sJFYKWFnGGGUGjj3nEXEpzjgTpvnls90bZZ0UMxnkty6IMaliYllh8nyUm+OsuyXfEmFtJUHFquyt7gkaWtsr+GSDwUHbOsicoZODI/fVqxP565PbRTY+gIKr99u4rfDIq66wDs4teQWH/sac+S/nLSPN9SGZCthFppByI+SyCOpgfWlEGdN0IWywWi8VigtvtLya00vaTo4s4AAAAAElFTkSuQmCC" alt="" width="84" height="33" /><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAhCAYAAABDcVyOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKjSURBVGhD7dcBbd0wEAbgB6AERqAESmAIhmAMxmAUSmEYRmIsRmbzp+6qzLId23mNUtW/dEpfHJ/vfv93dm8LCwsLCwsLC5fBU7JPL39eHo/JHl7+vA84/PbPviQL556ImcX3ZL+TXZFYecl3i8/JxOt5CIj7mexPMiRY6DkZ537/SjZLLL98XQk2+Ecy+YblIDLvCWwaFkFiLn8BeF9auAcI5ftqkBc1ElCNWAhyp5Vrcl4OATtGdaMQDL9X76stYuFrMuNTPddE5V5CqQf1gNLPbAHUNbOJe8SC8RkOXsu9RIRgRwMOtZZKyM6rAmvV+pckRluIqppJvofY6MfDiF7CJDwl+w344Ku0IdZSHcZL5G1jGcFbEsuvb6Z67TYhiR8hd+/Ao1Tjpd4dPW30NH5LYrVD37ghTQG5QQrzewbm1no2RKAlYql4JoEziC3FW0StBwa5LXJa2AuiFqh4eg4883MTq7n5+z1xiIO1wM9eTv+hpoxtW+B0FHtBlAK1Zg+pYF5u/BFE/n5P/ZFnC0PE+rh18nLC2SyxkmxhmxBSrXekr5t/iVbgkGglH+0gP9ktsldeMbeFSAiZ97iJnEFsV++PK1Gp/OLU3jqSuOCZsdbuhe/W/dc4UzVHSYUZYq0bcbQQN5Wu65ZmLxBPCkOi33EZznfHrgUB0YNrVyIBtMbBONtTfy9GifVtiIQRQy3eEEqXALa9U3J2xWKc9/ynJShzarBZpWoImH8vUoEQWhuZQ6651eYj1fgpoPTWBoRqezbpykB2t1qPgtJ6GjnFzt6Fr4DowV299Sgs1irxHL691wF1JlQaUYy0l0PQV0dJ0p/03PfSFihUvKcoFZS/xRx8niPKRep7IVarO63ClISTfGunlcnCwsLCwkfD7fYXFE/TqU9r3pkAAAAASUVORK5CYII=" alt="" width="86" height="33" /><span style="font-size: 11pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">и </span><em><span style="font-family: 'Times New Roman';">y</span></em></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 14pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAgCAYAAABdP1tmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHWSURBVFhH7ZaLTcUwDEU7AAuwAAuwABMwARuwASuwAjOwBFuwDPj0caUSxYmdtnog5UhWv0l8bcftMplMJpMTuP85Rrkzu7mc/i1uzd7NXtarOA9mX2bZQJwKUcapx/Uqz97xh0K5fJg9rVfjSBTHq0KJIegIns0+L6fXgX1zZKkMz8fAchD3iFCm4/A+DjC2Rm0dSory9NYh2+GMs8CbGU5sI6H6xXAyCgszpoTOpWfY1nkFwVvn1YznXpB+oSzQXhmEOBajbrmPZTYlczBXCS2YvcVzDIFCTcQTxP1yTAhFkIVHOouyWhMkFO3Sedb0MiBBnmAX6piBo+2WLPQE6aOJMEGGWs4OC1KEs192EckQWSjfaTUE2JUh9k64o1ToCYLtOwSh94sjQak9ROQQpI1bixj3JNrD63JbFDTmizgpn7pdjuhoQpWZapyjOqCQmJbDvNNbnOzwTvTnE/GhqtH3hw0qB4ga95igVrPa+B7Mw3OEeSAo5KCh+UJ/CmQIp8vyIjveBD1BQLZbZcnctZKugX+tuXYTEYSzXoYzqGtyPI2IIIiUXgtEEJRQqe0hKgjIFPsl+12j5CkzNaxTUReM7gEgCBnITmb+YZQd2WQy+dcsyzcBVH2oGRvbFAAAAABJRU5ErkJggg==" alt="" width="52" height="32" /><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAgCAYAAABdP1tmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHjSURBVFhH7ZaBTcQwDEU7AAuwAAuwABMwARuwASuwAjOwBFuwDOS19yVjxYnT3nEg5UlW27vEsZ0ft8tkMplMLsD96ZrhrtjNdvv3uC32XuxlfcrxUOyr2EgRfgUqTWCP69MYR+ZeBCTzUexpfdqHkuJ6dZAYCR3ludjndns9ODfnksthXzjgUFqQD5XKdh7GEgS+avC7DxBZIc/aGuz08G6TBFtLID4Yug2/va5PfVic8R7W0H+YDV5F4OphXf6LClSFoOUU8y0Tp2/bbRfm06o9+ORsaQ2rBDWRWkKKyysnRVQpnGV0rM5US0io4n4Nkq3tQhRTCsnLT87ujua3EqI4jLES1jmtcZaE7Judw+olGJHZIXbBj4kaAhxKyC/G86ijXkJgx1CEVsGU0K4zBHYxZGErxz3VbL3soi5nYT7j8NcLVI1kqMtZmMyCVMZ/diiZVsCM6QVAwRiTkTKJY7tRhaOupnMWIdmSWAQJZYKUr0NfHSxmO5CnlxAgk5YsCTBqAhZU0vLThUV6LTqTEH7YgV2d6YQ6ppf9EL4J1MgkBBnpRZAEBRmWGhM1CZlkZJBNCPCHhO17rQddD5ntatPqNrWOFqE3fSZ5QRGyEMeI7x8QHJLIOtDuyCaTyb9mWb4BsiOAOEHaJCwAAAAASUVORK5CYII=" alt="" width="52" height="32" /></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 18pt;"><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAgCAYAAABZyotbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVFhH7ZYLUcQwEIYrAAMYwAAGUIACHOAAC1hAAyZwgZkjX49/JhOyye6l1ysz+WZ2+kz2ve0ymUwmk4Pw+Hv08pDk7nx6TO6TfCZ5W6/8PCU5JYkGZBeIOsY9r1dxRtdfBcroK8nLenU5co7jIaD0cGwLXpN8n09vC321ZQkN7cficiH3iFZ0OrEGQ1hfo6aLUqNsLV1kP1QBKPlIgiF5VFTbCIZGwADWlTDp9AzJnVAwLF3vSXhuBesPygojmYU4iUJqmvtItHHZh/1KGN30Hs8RHBUaNpZj3C/XuFE0UX7pFFKma44JRb90Ar1WRuSY5XgTapzFIyOarPQc08cXBwUZaxk95JiiHf1LyPFkjKyU77QGBwxnjN4KTZ8KPccgf4dg9H6d5Fi4x4gijqm5rejlzW9Fz5qKOQogejzGSq9rKhIpbaryU/1z1MQU3FNk+SzwXi3S6tWWEWTLWl+DILgrSd8vmlhGEEHusUmvnjGu9g57sUdrCLHWa6j2c/95kDEMK8uOzHg2wTj2qEEFtP7v2L81LHKwcbd/RYxS89fguSfrPTRlrQBuDuXbi7inJFvgDMFxl+AoKPJGUJnVcPJCO1B+HHcBRXIKo73Z8E4/gY5eRWwGmaK0colmYjKZ/DuW5QfsUn3WDWYGoAAAAABJRU5ErkJggg==" alt="" width="54" height="32" /></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 18pt;"><em><span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></em><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAgCAYAAABdP1tmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHmSURBVFhH7ZbhTcQwDEY7AAuwAAuwABMwARuwASuwAjOwBFuwzJFX7pNMFCd22vuBlCdZvd6ljj/bcW9bLBaLxQ14vF4jPBS7+/14Hk/FXq/GBiITGNwX+yz2tt/FYO9LsexeTQj+q9h3MQniXkG9F4uCLwJ73u9yHHn2Dwq+BjGZDWgZfL3sd3NIlO2QFHJAVVpQtahzEoCgoxAL+05BzyLIa6uP63UE5+aUdikc8kWb8LDnIHpIySo+CKYF39f+qTzt2ZpuVHq62mzUExWBzXm+huml3zAbvJLQanc6ht+8BA2xojJTTfBca7BQYQ0XDIFCQ6QlSGLt+jSzojRYWoKEMl4Hj9hWFXrVSzHTfhosPUF6cdpEUSEv4ClB3oGXs16AlkiFNLnsGm8gQFoQG3iLIxmviay3a0hCb4JKUPgM0U7eO6ZuD7JINnsvO2/KWXiedfgbBapBEp5yvb81ZNE6k5hewKwZBSC/vcoIhGNhcE5ZCVSfdc+mdQbVhh46IwjzYJ9IkPIVHUo7Nkv0swQhpHVQR4KAqvfakgC9IWBRYm9KRBDBUgECmkUTk+tNiQiCSOt5IIKEpFptlqggoFKcF1owCq1Om42m32mwEYIiZ0DYczqC6mR8H0LVkS0Wi3/Ntv0AVaWOSA/xFcsAAAAASUVORK5CYII=" alt="" width="52" height="32" /></p>
+<p style="margin-left: 70.8pt; margin-bottom: 0pt; text-indent: 35.4pt; line-height: normal; font-size: 14pt;"><span style="height: 0pt; display: block; position: absolute; z-index: 20;"><img style="margin-top: 11.45pt; margin-left: 155.85pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAnCAYAAACPFF8dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALlSURBVGhD7ZcBseIwEEAxgwtMoAELWMABDlCAAgxgAAMYQECvL5udy3USSEi3MNy+mcz/DW2yed0sYTUyeDNvgcGxA7+i2UWbgl/R7KJNwa9odtGm4Fc0u2hT8CuaXbQp+BXNLtoU/IpmF20KfkWzizYFv6L5i0Sfz+fhdDrFq8/A/JfLJV71g1/R3CmaoNbrdRiQv8h6PB7D8XiMd9Sx3++H3W4Xnl2C+/0epG42m39iZX76iGcO8BIsj8SudpDM89frNVwTPAHS15IVLBjJS0KcmiDTpFDZJE0vjD+2QOxqZ7vdDofDIV79hQXUZib3EQMvaWlIEObO7T7i4bPeHcYYYwvErnbIwpzUnPwSLHLubGb+2+0Wr8o8Ew0kUumzWhg/WB6JXe1o6WCbvfvmeVHTxbBAxqWlwnghNbWT57WcPeOVaPqJr4e4jkDseg/qGGMguyaLUnR75qQwFp+lEpgLia+YS7QmUk9Z4/mxBWLX+2jAtBbZ+lxJCtmUlhUWXJKSMpfoV/HVEL0EYlcfGlRNximvFsJY6XjU3lyJ0vu0MSY7LO3LnSB0/q8VTdbmgtNF1vJqIcyhNRJRpfvoTxuSOTKmfbntTz/zf61oFpE7WSC65ctDa3TpzI0APufFtpxpiaNGTq3oj9Vo6ibPpYtHPn1TaQTLQkoLz506FB2z5bgItaL1y640PnF99NTBEYtaqRlHY7vmJHMvC+Ge3BclYyAmhz7fSo1o7tHYtU0hoVpf8pQ4diB2zU+65Qg4l7m8MGLo2Z5TeKHvnusVLWu9cTEGkiF22YLknGigBPX86LGAbKZ09YJf0byQaDL6WXZQIr5BNvPX/gKtAb+ieQHRtacGavwcWdQD888ZA35Fs7FoMqTmBPCr4Fc0G4pGMt/uWp9Lp4tfBr+i2VA0pUAl0/7HzMavaDYU7bjoxcCvaHbRpuBXNLtoU/Arml20KfgVzS7aFPyKZvnHm21znJ9itfoDhC7CQLbbeVwAAAAASUVORK5CYII=" alt="" width="90" height="39" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 21;"><img style="margin-top: 10.35pt; margin-left: 19.65pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAAoCAYAAABtla08AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL0SURBVGhD7ZeBzfIgEEBdxi1cwhlcwRXcwA2cwAlcwAVcwAUcoF8fd/eHmEKBI+qf8BKSivV6PA6om5lpNHcLTIN28Ccah0gX+BONQ6QL/InGIdIF/kTjEOkCf6JxiHSBP9E4RLrAn2gcIl3gTzQOkS7wJxqHSBf4E43/mcj7/a5XdTwej+n1eumnfuBPNHYUebvdpvP5HBqJG62Dj3k+n9N+v59Op5P21EFujLVHLjHEDBZntKsdpO12u2m73f4TyWcb+PF41DvbID55Xq9X7WmjV5wY4iERtKsdk/YOEonvSZzlSPzL5aI9PkxmvGI8EAuJoF1tWGJU4RJUqSdpJgORPSFX8uoBYw8WZ7SrDfYcYqSW7+Fw0Kt62BeJ3XMpQs+4xJlbQLvaYOkRg7aUmGdzp3KIy8BT8N37c1kBbAW5U5oq71HpOvaAdrXDQIhD61k9DDSVH6ewfU+LpdkEpLYbYAVxT26SStDnB7TLRyzTe0obxFo6xIBKt8OMhljDDqicSJMd/64FfX5Au/z0lGmHWEqkYZX1Lg3JuWorqdoSdLwB7epDr2Vuh9iaSHvRjieOilwT9FMiUweJJbkmIUdpRdoJHN+3dtDAz4hkAKkkSqtpjdIY8X1MQMmbgon8+h7Jsk29Iy4tt5j4kMhVRO7UjuHlmnupwlIxlsPXT21LZGkfpDr4bilJBmoVY/tpqoJYoqk4Mfa8kko0EE/zwnPnFtCuOkieaqIa7No+E7O0Muy3S9j+t/Y/mxg1Uiyu5zA0iDO3gHbVEc8++5KJRODaRh+DBH6fgspf+1+MkJpn2oT3AH+isVFkDxg8InNwD9WWqtpa7G0gN3k1ECtYnNGuz8NhVFJJpUt8DeQxKT2WtEFeweKMdn0WBlNTFVa9LPUW2HJYzqV7dyn4E41fEMlgTCKCaiqt5mSO4Xkl1V8L/kTjh0XaK0/cWqvsF9AxBLRr0AL+ROMQ6QJ/onGIdIE/0ThEusCfaJSL0XxtMPgpNps/BtODzVbhqbkAAAAASUVORK5CYII=" alt="" width="82" height="40" /></span><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+<p style="margin-left: 70.8pt; margin-bottom: 0pt; text-indent: 35.4pt; line-height: normal; font-size: 14pt;"><span style="width: 35.4pt; text-indent: 0pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; text-indent: 0pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; text-indent: 0pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; text-indent: 0pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; text-indent: 0pt; display: inline-block;">&nbsp;</span></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 18pt;"><span style="height: 0pt; display: block; position: absolute; z-index: 19;"><img style="margin-top: 17.1pt; margin-left: 284.15pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAAA4CAYAAADth5acAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJQSURBVHhe7ZiLUQQhEEQvABMwARMwASMwAjMwA1MwBWMwCbMwGeWd11VIAQurCGv1q5rybn/XTDMD68kYY4wxxhhjjDHGtPIY4uHr43Kga0ltVyFI3HuIj8tfvuv4TYgWuP41xPPl80zuQjyFYCy3HLiArpcQ6Jyt8RsIegshsUo+hhCtyIDZMNPRIv2xCQKdXLMEzHKEMnNSeoSqklZCEylnAhNNFT8dBJZM4FyLSAbEM+7P38aAjt6E1UwA9HJ+eltSJdCOUjGIz5mTQvnnBsN3BkoPTtsUv0e0MsKE6xCcX2KhJkEyonURjuG+XCtSEhQx+s1WRpgA6O6ZDENRUoheI7intHZQDQw0l4zZlQBawJchNqImPEbtrLaAs1Xkmri1YU5PUkebsKcDDEPCibTH52CAXFszQQtgnET6cOn5emZL1IzpMaF10v0qtZnYI6ylEpRU/R739A6ae2sJz9FjwpRKQFhpUC3iY7ZMwPDYhD1bWe4t6S3RMg6ZMAUEll6uJCxuF8yUdJspSrujGJ7HVnXvu8QoE6bujpRoEqNSVIvieJwsvQcQOXSefXcJzvObpXVgiz0maENQMl4VOu09QbMagcwExChR6QsaYjnG+Rwtg+H8T/pujwnMfI0njhTGzvG9E+PP0cBKYAClfZgBBdDbW11T2TIBcv+eWBV0UvWHosUEqgAjiFUrAl0y4EhVe6bFBEFrmrbYbYCuQ7WgmB4TzADY1WgHdbg++l+gd1IJCmOMMcYYY4wxxhhjjDHGGGOMMcYYY8yROZ0+AUHes9WvX+YeAAAAAElFTkSuQmCC" alt="" width="97" height="56" /></span><span style="height: 0pt; display: block; position: absolute; z-index: 22;"><img style="margin-top: -29.5pt; margin-left: 65.25pt; position: absolute;" src="data:image/png;base64,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" alt="" width="416" height="100" /></span><em><span style="font-family: 'Times New Roman';">&nbsp;</span></em></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 18pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="width: 35.4pt; display: inline-block;">&nbsp;</span></p>
+<p style="margin-bottom: 0pt; line-height: normal; font-size: 18pt;"><em><span style="font-family: 'Times New Roman';">&nbsp;</span></em></p>
+<p style="line-height: 115%; font-size: 14pt;"><span style="font-family: 'Times New Roman';">Синтезировав комбинационную схему, соответствующую таблице и ввода 2 элемента задержки j</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 9.33pt;"><sub>1</sub></span><span style="font-family: 'Times New Roman';"> и j</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 9.33pt;"><sub>2</sub></span><span style="font-family: 'Times New Roman';"> получим структурную схему автомата.</span></p>
+<p style="line-height: 115%; font-size: 14pt;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+<p style="text-align: justify; line-height: 115%; font-size: 14pt;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+<p>&nbsp;</p>
+</body>
+</html>

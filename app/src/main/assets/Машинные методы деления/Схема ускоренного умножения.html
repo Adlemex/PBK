@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li,
+        table {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            text-align: justify;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p style="margin-left:17.85pt; text-align:center; line-height:115%; font-size:16pt;"><strong>Схема ускоренного умножения</strong></p>
+    <p style="margin-top:10pt; margin-left:17.85pt; text-align:center;"><strong><em>Умножение по модифицированному алгоритму Бута</em></strong></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Из построения схем умножения видно, что основную задержку в процессе выработки произведения выносит суммирование частичных произведений. Уменьшение кол-ва слагаемых позволяет сохранить время суммирования. К этому приводит модифицированных алгоритм Бута (E. Boot) &ndash; умножения сразу на 2 разряда.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Пусть требуется вычислить произведение:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Р = А х В = А(b<span style="line-height:115%; font-size:9.33pt;"><sub>n-1</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>n-1</sup></span>+ b<span style="line-height:115%; font-size:9.33pt;"><sub>n-2</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>n-2</sup></span>+&hellip;+ b<span style="line-height:115%; font-size:9.33pt;"><sub>0</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>0</sup></span>)<span style="width:24.46pt; display:inline-block;">&nbsp;</span>(1)</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Это связано с выработкой частичных произведений, число которых равно разрядности множителя n</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Выражение (1) можно видоизменить с помощью соотношения</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">B<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>i</sup></span> = b<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>i+1</sup></span> - 2b<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>i-1</sup></span></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Это соотношение позволяет разреживать последовательность(спектр) степеней в сумме частичных произведений. Модно, например, исключить четные степени согласно схеме.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><img src="data:image/png;base64,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" width="577" height="145" alt=""></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Исключение четных (или нечетных) степеней позволяет сохранить кол-во произведений примерно вдвое, что увеличивает скорость выполнения операцию. Для разнесения члена b<span style="line-height:115%; font-size:9.33pt;"><sub>0</sub></span> введем слагаемое b<span style="line-height:115%; font-size:9.33pt;"><sub>-1</sub></span>∙2<span style="line-height:115%; font-size:9.33pt;"><sup>-1</sup></span>.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Оставшиеся частные произведения имеют вид:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">R<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span> = A(-2b<span style="line-height:115%; font-size:9.33pt;"><sub>i+1&nbsp;</sub></span>+ b<span style="line-height:115%; font-size:9.33pt;"><sub>i&nbsp;</sub></span>+ b<span style="line-height:115%; font-size:9.33pt;"><sub>i-1</sub></span>)2<span style="line-height:115%; font-size:9.33pt;"><sup>i</sup></span></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Для всех возможных сочетаний b<span style="line-height:115%; font-size:9.33pt;"><sub>i+1</sub></span>; b<span style="line-height:115%; font-size:9.33pt;"><sub>i;</sub></span> b<span style="line-height:115%; font-size:9.33pt;"><sub>i-1</sub></span> составляем таблицу частных произведений.</p>
+    <p style="margin-top:10pt; text-align:left;"><br style="page-break-before:always; clear:both;"></p>
+    <table style="margin-right:auto; margin-left:auto; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse;">
+        <tbody>
+            <tr>
+                <td style="width:27.45pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">b<span style="font-size:9.33pt;"><sub>i+1</sub></span></p>
+                </td>
+                <td style="width:23.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">b<span style="font-size:9.33pt;"><sub>i</sub></span></p>
+                </td>
+                <td style="width:23.6pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">b<span style="font-size:9.33pt;"><sub>i-1</sub></span></p>
+                </td>
+                <td style="width:45pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Значен.</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">скобки</p>
+                </td>
+                <td style="width:42.8pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">R<span style="font-size:9.33pt;"><sub>i</sub></span>/2<span style="font-size:9.33pt;"><sup>i</sup></span></p>
+                </td>
+                <td style="width:247.8pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Операция получения R<span style="font-size:9.33pt;"><sub>i</sub></span>/2<span style="font-size:9.33pt;"><sup>i</sup></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Заменить А&rarr;0</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">А</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Скопировать А</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">А</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Скопировать А</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">2</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">2А</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Сдвинуть А влево</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">-2</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">-2А</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Сдвинуть А влево и преобр-ть в доп. код</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">-1</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">-А</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Преобразовать А&rarr;А<span style="font-size:9.33pt;"><sub>доп</sub></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">-1</p>
+                </td>
+                <td style="width:42.8pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">-А</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Преобразовать А&rarr;А<span style="font-size:9.33pt;"><sub>доп</sub></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:27.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:23.6pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:42.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">0</p>
+                </td>
+                <td style="width:247.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">А&rarr;0</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Схема реализующая алгоритм быстрого умножения имеет вид:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><img src="data:image/png;base64,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" width="562" height="394" alt=""></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Множимое А поступает на ряд преобразователей, реализующих все возможные варианты частных произведений (-2А;-А;2А). Множитель поступает на логический преобразователь ЛП, который анализирует тройки разрядов, декодирует их и управляет работой мультиплексоров. Окончательных результат получается суммированием частичных произведений с учетом из взаимного умножения 4х4.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Пример: Требуется множить 1010<span style="line-height:115%; font-size:9.33pt;"><sub>2</sub></span> на 0111<span style="line-height:115%; font-size:9.33pt;"><sub>2</sub></span> т.е. 10х7</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Удаляем четные произведения, запишем:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:0;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAABOCAYAAAAjB/rxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPUSURBVHhe7dSNais7DIXRvv9L34vgCIyQ/NOMlLH6LTBMbEfyzrj9AQAAAAAAAAAAAAAAAAA87L9/I1OHHh0yiOweFRm+RsPNRqaKPh16ZNcXHXpk13+NKGRFeHrs6ZBBZPeoyPB1UciK8PTY0yGDyO5RkeHropAV4cce+vx0zw49suuLDj2y679CFGonrO5ZjYi3Z/WdUx16ZNcXHXpk13+FMaQd2aI+T/bv0CO7vujQI7v+K3wzZEXvDj2y64sOPbLrv8IszCqorq9GJFr35nXO2z8TfWc2f2qnhz57+1ai79l5/eztXYm+Z+d/U1vt9NBnb99K9L2der/p9xWzMDtBPxHVt/OfnGG3h4j2rkTf03m75u2d8WqIcd6ue/tnxlqjcT7asyv6vs7bNW/vjFdDRPNqtf4qs8NmB4nq2/lo347ou3Zen729K7aWms2fOK0vsnqc1h2tetg1b++MV0NE86PTXl/zSchPeT1mfX9znt0e+tnO74jqebWy66vTPrs9TuuOVj28tRNjLeXNeU57ldMgs1HhtO9q3WPr2xrjZ7u2a6ytw4rmd4x1d+qs1j22vlfDmzth64/1xmdhP+8Y6+rYsbsPh57+YW29iheX3SOzfmXtinehKnv9KU//sFLPG5ky63c6e0YvqaljlNHrz6v4UW/uMdat6PE0Wzuzl1XZqzX5IXVUyOgzZsjKYXtk9MmsrSp6WN/oCQA1qv6zZfWZ1a3IltnDq12RSWT1qTp/W50vQEW2zB5e7YpMIqtP1fnb6nwBKrJl9vBqV2QSWX2qzt9W5wtQkS2zh1e7IpPI6lN1/rY6X4CKbJk9vNoVmURWn6rzt9X5AlRky+zh1a7IJLL6VJ2/rc4XoCJbZg+vdkUmkdWn6vytyY9484jM1p6S2cOrXZFJZPWpOj8uJJfj5hHx9t40gMd1vFz8wfxxXS+A5uqUrWMmHOh+ATpm6/y+sKHzBeiYrfP7wobOF2DMps+3Z+2YCQc6XwAvz+35OmbCgc4XIMpxc76OmXCg8wXYyabP3r43is46zuuztw+Xi15shxe+ymbXvL1v451b6Lxd8/biYt5LFtG8uOUSnGa7Idcqk13z9uJi3ksWp/NvdJrhhlyrTHbN24uLeS9ZzF6+t/+NogzR+W/ItcrkraGR8WUrb07onLf2VpplHJ5o/o1snvHs47Own9HA+OJ1WOOct36zTnlslm7vChs6X4IxS4dcnd8VNslL98btOmYS3fLgQ1wE4CL8wQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7vfz8z/w26t/WoaQfQAAAABJRU5ErkJggg==" width="236" height="78" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Тогда В = 0001110</p>
+    <ol style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:51.35pt; margin-bottom:0pt; padding-left:2.5pt;">Первая тройка: b<span style="line-height:115%; font-size:9.33pt;"><sub>1</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>0</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>-1</sub></span> = 110=&gt;значение скобки = -1, зн. -А∙1=-А</li>
+    </ol>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">А<span style="line-height:115%; font-size:9.33pt;"><sub>пр</sub></span><span style="line-height:115%; font-size:9.33pt;"><sub>&nbsp;&nbsp;&nbsp;</sub></span>= 0001010</p>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">А<span style="line-height:115%; font-size:9.33pt;"><sub>обр&nbsp;</sub></span>= 1110101</p>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">А<span style="line-height:115%; font-size:9.33pt;"><sub>доп&nbsp;</sub></span>= 0001010 = А<span style="line-height:115%; font-size:9.33pt;"><sub>х</sub></span><span style="line-height:115%; font-size:9.33pt;"><sup>(1)</sup></span></p>
+    <ol start="2" style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:51.35pt; margin-bottom:0pt; padding-left:2.5pt;">Вторая тройка: b<span style="line-height:115%; font-size:9.33pt;"><sub>3</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>2</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>1</sub></span> = 011=&gt;значение скобки = 2, зн. 2А∙2<span style="line-height:115%; font-size:9.33pt;"><sup>2</sup></span>=А∙2<span style="line-height:115%; font-size:9.33pt;"><sup>3</sup></span></li>
+    </ol>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">А<span style="line-height:115%; font-size:9.33pt;"><sub>8</sub></span><span style="line-height:115%; font-size:9.33pt;"><sup>(2)</sup></span> = 1010000</p>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">Для получения результата складываем частные произведения:</p>
+    <p class="ListParagraph" style="margin-left:53.85pt;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:1;"><img src="data:image/png;base64,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" width="408" height="92" alt="" style="margin: 0 0 0 auto; display: block; "></span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAB0CAYAAADJu93qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIESURBVHhe7dOhAYBAAMSw339pMMXCGVziOkDPBXw6jxp40S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLoaBRbsYBhbtYhhYtIthYNEuhoFFuxgGFu1iGFi0i2Fg0S6GgUW7GAYW7WIYWLSLYWDRLgDwi3NuT5J9K8UAEGUAAAAASUVORK5CYII=" width="204" height="116" alt=""></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">При удалении нечетных произведений имеем:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAABOCAYAAAAjB/rxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPASURBVHhe7dSBiuwwCIXhff+XvhdhhRA0NbPVNs7/QaCbpNrTZvYHAAAAAAAAAAAAAAAAAHCzf78jU4ceHTKI7B4VGR6j4VYjU0WfDj2y64sOPbLrv4YXsiI8PWI6ZBDZPSoyPM4LWRGeHjEdMojsHhUZHueFrAg/9tDru3t26JFdX3TokV3/FbxQkbC652p4rD1X9+zq0CO7vujQI7v+K4wh55HN63Nn/w49suuLDj2y67/CkyErenfokV1fdOiRXf8VVmGugur61fB466v7VvUskR56be2L8O4d5/Xa2nfFu8+a/6S+iPTQa2tfhHfvVc1ov0/q65q3/jqRMFm8+rvzK1e15jVr7xWrjtD5ec3au2LVEPO8ty/Cu1fn5zVr7xWrjvDmxWpt5u1dzY+sPa/jhRGrtTt49a15/dvav2LVEqv5Xdk9durv1lZXPeY1a+8Vq47w5lW016f1VbTPo/4a8i+sHl5fnbPWVqx61pzYra12eojdPjv1d2urqx7W2q6xnrLmZtFen9ZX0X2P0CCrUSHSd5yz1q+MtXXMvPmosfZVrdWaZ67t1fDmI+b6Y63xWsx/R421dVyJ7FFz7d178UfzS8x+qdS3VX+HUUWvyjytyYu0RpZTa6usHnPdjD5SU8forl7Z9WHIfrlZ9ce6mRkqnl9kZphVva/KTF/j7pcq9caRYe5R0SdDdn1LZs+xdlYPAHhW1X+2rD6ruhXZMntYtSsyiaw+Vc/fVucDUJEts4dVuyKTyOpT9fxtdT4AFdkye1i1KzKJrD5Vz99W5wNQkS2zh1W7IpPI6lP1/G11PgAV2TJ7WLUrMomsPlXP31bnA1CRLbOHVbsik8jqU/X8bXU+ABXZMntYtSsyiaw+Vc/fmrzEk4dntXaXzB5W7YpMIqtP1fPjQHI4Th4ea+9JA7hdx8PFD+bLdT0AmqtTto6ZsKH7AeiYrfP3QkDnA9AxW+fvhYDOB2DMptenZ+2YCRs6HwArz+n5OmbChs4HwMtxcr6OmbCh8wGIZjspZzTT7KSMWPj0AJwgks3b81be865yrNZwGO9jzvP6t7X3rbznnec7ZpqdlBELkQMwr1v732jMMJrnT8kjoplmJ2XEwicH4JSPb2Xw5k4RzTQ7KSMWdg/AaR9es4xjZs292Zwn8vyRPTjE/PG9j7taO1mnTPqN5kwdvxuCun38bzjM/GC/WKePL1l0dPUNGbHAhwdebPwPzY8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANDDz89/pSSkhqPiZ4AAAAAASUVORK5CYII=" width="236" height="78" alt=""></p>
+    <ol style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:51.35pt; margin-bottom:0pt; padding-left:2.5pt;">b<span style="line-height:115%; font-size:9.33pt;"><sub>0</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>-1</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>-2</sub></span> = 100=&gt;значение скобки = -2, зн. -2∙А∙2<span style="line-height:115%; font-size:9.33pt;"><sup>-1</sup></span>=-А</li>
+    </ol>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">А<span style="line-height:115%; font-size:9.33pt;"><sub>доп&nbsp;</sub></span>= 1110110 = А<span style="line-height:115%; font-size:9.33pt;"><sup>(1)</sup></span></p>
+    <ol start="2" style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:51.35pt; margin-bottom:0pt; padding-left:2.5pt;">b<span style="line-height:115%; font-size:9.33pt;"><sub>2</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>1</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>0</sub></span> = 111=&gt;значение скобки = 0, зн. А<span style="line-height:115%; font-size:9.33pt;"><sup>(2)</sup></span>=0</li>
+        <li class="ListParagraph" style="margin-left:51.35pt; margin-bottom:0pt; padding-left:2.5pt;">b<span style="line-height:115%; font-size:9.33pt;"><sub>4</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>3</sub></span>b<span style="line-height:115%; font-size:9.33pt;"><sub>2</sub></span> = 001=&gt;значение скобки = 1, зн. А∙2<span style="line-height:115%; font-size:9.33pt;"><sup>3</sup></span>=-А</li>
+    </ol>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;">А<span style="line-height:115%; font-size:9.33pt;"><sup>(3)</sup></span> = 1010000</p>
+    <p class="ListParagraph" style="margin-left:53.85pt; margin-bottom:0pt;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:2;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAABcCAYAAADH2p/dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVpSURBVHhe7diBbiUnDAXQ/P9Pt3gWS17XxnggFJh7pFFezDXBw6tU7c8/l/vpUKNwuE9c5jNkoEbhcJ+4zGfIQI3C4T5xmc+QgRqFw33iMp8hAzUKh/vEZT5DBmoUDveJy3yGDNQoHO4Tl/kMGahRONwnLvMZMlCjcLhll6n/TPT7TDRjpEbhcEsuU/8J+t36s791lLJvqEbhcFMuk7ZobWOt9dZmKPuGajSF2qLWGRle78219O4R5XZVzjx+6tbws+ojyp6hGu1CcflYZmeYleWatcYyGdbK7qqcd+zE3E4/ra287bP1EWXPUI2mUFvUOpqx6q2st8ZaGase7bebct6xE3M7/bS28rbP1keUPUM1mkJtUetIZlZdyvZ69V2Vs74/rWylz9ZW3vbZ+oiyZ6hGU6gtah3JzKpL2V6vvqty1ven1a30u1WzZOsjyp6hGk2htqh1JDOrLmV7vfquylnfndZqo5pXlzhn1X9D2TdUoynUFrWOZGbVpWyvV99VOeu70/Kg1qNZNUtvLqvsG6rRFGqLWkcys+pStter76qc9d1pvTaqW2vRn3l5jC5l71CNplBb1DqSmVWXsr1efVflrPnTtlpo7cWWv4pmjNRoCrVFraMZq97KemuslbHq0X67KefNnZjirRZeT277q8pZQjWaQm1R62hGr2Wylkx/K7urct7+E/OA/Gh63cr8H8o5QjXaheLWI1nr9EjWOj1adp0fyVqnR4vWd1fOfOCpk54hAzUKh/vEZT5DBmoUDveJy3yGDNQoHO4Tl/kMGahRONyyy5R/hj7zw37zGGXvUI3C4ZZcpvwT+s+11mYp+4ZqFA435TJpi9Y2vWsTjmIq+4ZqtBu1yMdya2Zn5czjp24NH22v1ycc5z/KnqEa7UJx2aJ/J7dmdlfOO3Zibqef1lbR9no9yr9R9pzN2lPXbs3sr977K9xOP62tWttn82+VPWd6zvjn419k/dbMGeq9p8lW+mxt5W2frY8oe870nPHPx7/I+q2ZM9R7T9Ot9LtV02StJz+q7DnTc8Y/H/8i67dmzlDvPcVqo5pXZ5yRD5OfZyr7zsTn1mT91swZ6r2nUJv3aFbN0pvLKvvOxHNqsn5r5mrekK0X03LKS2vNx/VbM9dqDfiFF2DNp2u3Zq5DA7aG5PWbX4Sez5r31sxVeEBvUL1uZW7RM+etGQAAAAAAAAAAAIAdyX/TtP6d88R/89QzaLzem/PIPbzcysznyRejX1JrbVd0TvlY9JqV5Zq1xvSalV2Z+YRo8N61015ea26r3sqO7LMy8wk0tDd464Wc/gK9uVfWV2Y+oeeFWLL5HbVmWFVfmfmEnhfSotej/E5aM6+qr8xcTw7aeiEtej3K76Q186r6ysz19KDW8NHLyOZ3Ys1LVtZXZq6WGV7WOGNl9e+7s2YgK+srM1fjQa1Hs2qW3twuvHlJ5j2M7rMycy1vUKq/eTEnvjhvVqLXMllJr1nZlZkrtYb8wkvgGfWjZdf50aJ1sjJzlWjQT70MOJv8slpfWL1uZQBgI9Z/tF98AAAAAADeiP5/Uv4/p5eblSHROundI8rBRXouXa9Z2dkZa41lMqyVhQu1Ltyq69qsDKO6t8ZaGase7QcX8b4cPfVZGcmrS9lerw4Xyn4JZH1WRvLqUrbXq8OFsl8CWZ+Vkby6lO316nCh7JdA1mdlJK8uZXu9Olwo+yWQ9VkZyatL2V6vDhfKfglkfVZG8upStterw4Val+19OaRZGUZ1b421MlY92g8uEn055JqVnZVhrTWW6W9l4SJ80frRonUyI6PX+ZGsdXq0aB0AAAAAAAAAAAAAAAAAAAAAAAAADvfz8y9qM/G5D8lJzAAAAABJRU5ErkJggg==" width="180" height="92" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p class="ListParagraph" style="margin-left:53.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

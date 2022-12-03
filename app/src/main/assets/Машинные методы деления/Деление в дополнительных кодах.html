@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li,
+        table {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            text-align: justify;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p style="text-align:center;"><strong><em>Деление в дополнительных кодах</em></strong></p>
+    <p style="margin-top:10pt; line-height:normal;">Основой деления чисел в дополнительных кодах является схема деления чисел без восстановления остатка. При этом для облегчения процесса деления предполагается, что делимое по абсолютной величине меньше делителя, поэтому первой значащей цифрой частного будет цифра, записанная после запятой.</p>
+    <p style="margin-top:10pt; line-height:normal;">Тогда последовательность выполнения деления будет иметь вид:</p>
+    <ol style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:33.5pt; line-height:normal; padding-left:2.5pt;">Выполняется пробное вычитание. Если знак ДМ &ne;знаку ДТ, то остаток &Delta;<span style="font-size:9.33pt;"><sub>1</sub></span>=[ДМ]<span style="font-size:9.33pt;"><sub>доп</sub></span>+[ДТ]<span style="font-size:9.33pt;"><sub>доп</sub></span> , иначе</li>
+    </ol>
+    <p style="margin-top:10pt; margin-left:35.4pt; line-height:normal;">&Delta;<span style="font-size:9.33pt;"><sub>1</sub></span>=[ДМ]<span style="font-size:9.33pt;"><sub>доп</sub></span>+[-ДТ]<span style="font-size:9.33pt;"><sub>доп</sub></span></p>
+    <ol start="2" style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">Формируется очередной остаток. Если знак &Delta;<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span> &ne;знаку ДТ, то</li>
+    </ol>
+    <p class="ListParagraph" style="margin-bottom:0pt;">&nbsp;&Delta;<span style="line-height:115%; font-size:9.33pt;"><sub>i+1&nbsp;</sub></span> = &Delta;<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span>∙2+[ДТ]<span style="line-height:115%; font-size:9.33pt;"><sub>доп</sub></span>, иначе</p>
+    <p class="ListParagraph" style="margin-bottom:0pt;">&Delta;<span style="line-height:115%; font-size:9.33pt;"><sub>i+1&nbsp;</sub></span> = &Delta;<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span>∙2+[-ДТ]<span style="line-height:115%; font-size:9.33pt;"><sub>доп</sub></span>.</p>
+    <ol start="3" style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">Формирование очередного разряда частного. Если знак &Delta;<span style="line-height:115%; font-size:9.33pt;"><sub>i</sub></span>∙&ne; знаку ДТ, то в очередной разряд частного записывают нуль (ЧТ(n)=0), иначе - 1 (ЧТ(n)=1).</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; line-height:normal; padding-left:2.5pt;">Если достигнута необходимая точность операции или &Delta;<span style="font-size:9.33pt;"><sub>i+1&nbsp;</sub></span> =0, процесс закончен, иначе переходим к п.2.</li>
+    </ol>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:normal;">&nbsp;</p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:normal;">Пример: Выполнить операцию деления</p>
+    <p class="ListParagraph" style="margin-bottom:0pt;">-0.1011:0.1101</p>
+    <p class="ListParagraph" style="margin-bottom:0pt;">ДМ=-0.1011 <span style="width:29.04pt; display:inline-block;">&nbsp;</span><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="width:35.4pt; display:inline-block;">&nbsp;</span>[ДМ]<span style="line-height:115%; font-size:9.33pt;"><sub>доп</sub></span>=1.0101</p>
+    <p class="ListParagraph" style="margin-bottom:0pt;">ДТ=0.1101=[ДТ]<span style="line-height:115%; font-size:9.33pt;"><sub>доп</sub></span><span style="width:19.57pt; display:inline-block;">&nbsp;</span><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="width:35.4pt; display:inline-block;">&nbsp;</span>[-ДТ]<span style="line-height:115%; font-size:9.33pt;"><sub>доп</sub></span>=1.0011</p>
+    <p class="ListParagraph">Изменения содержимого сумматора и формирование разрядов частного будет иметь вид:</p>
+    <table style="margin-left:30.35pt; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse;">
+        <tbody>
+            <tr style="height:18.8pt;">
+                <td style="width:22.4pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">№</p>
+                </td>
+                <td style="width:81.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Частное</p>
+                </td>
+                <td style="width:145.1pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Сумматор</p>
+                </td>
+                <td style="width:164.65pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Операция</p>
+                </td>
+            </tr>
+            <tr style="height:18.8pt;">
+                <td style="width:22.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                </td>
+                <td style="width:81.35pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:3;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAADuCAYAAADleVNFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANESURBVHhe7dHRittIEEDR+f+fTiwoL16nTTwZS9CXc0APblpWUfdrV782MiOzMjvawozMyuxoCzMyK7OjLczIrMyOtjAjszI72sKMzMrsaAszMiuzoy3MyKzMjrYwI7MyO9rCjMzK7GgLMzIrs6MtzMiszI62MCOzMjvawozMyuzor46rj8/dq/PDq/N/dfsfXpkdveW4vnpldf58tnrvu27/wSuzo7cc11evPJ+v7q3Ovuv2Pq/Mjt5yXF+98nx+/716fuL2/iX+GHqH5ztW7z8+d8+/P+XxWyc8//nfj13Mjt5yXF+98nz+6t5P3f7zEpd96JNmR285rq9eeT6//36++/z7u27vX+KyD33S7Ogtx/XVK6vz+9nj81O3/7jEZR/6pNnRXx1XH5+7V+eHV+f/6vY/l7jsQ580O9rCjHw6IU82I59OyJPNyKcT8mQz8umEPNmMfDohTzYjn07Ik83IpxPyZDPy6YQ82Yx8ui1D8ichI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAghI4SMEDJCyAght/f19RtU6JiPNJw9RQAAAABJRU5ErkJggg==" width="114" height="238" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:1;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAACxCAYAAABA3np+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ2SURBVHhe7dALiuNIFEXB2v+mpyX6GYxGbnd9YshkToAMTtLW5Xwo/2xi5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9i9v5u5n9v/Ree35eXh1fnp1/lXH/+xp9r91Xr27fnd+Pbv73Wcd/7Gn2f/WefXu+vX87t7d2Wcdv9/T7H/rvHp3/Xr++H73fMfxe+5fg3/i+Vt3v31+Hq7ff8rzu9Dz++Onzf63zqt316/nr+591/GfHHnJ7H/rvHp3/Xr++H69e/3+WcfvOfKS2f/WefXu+t354+z5+a7jPzjyktn/R+e15+fh1fnp1flXHf/DkZfM/uXNXKrAWIGxAmMFxgqMFRgrMFZg7D95yf9ZgbECYwXGCowVGCswVmCswFiBsQJjBcYKjBUYKzBWYKzAWIGxAmMFxgqMFRgrMFZgrMBYgbECYwXGCowVGCswVmCswFiBsQJjBcYKjBUYKzBWYKzAWIGxAmMFxgqMFRgrMFZgrMBYgbECYwXGCowVGCswVmCswFiBsQJjBcYKjBUYKzBWYKzAWIGxAmMFxgqMFRgrMFZgrMBYgbECYwXGCowVGCswVmCswFiBsQJjBcYKjBUYKzBWYKzAWIGxAmMFxgqMFRgrMFZgrMBYgbECYwXGCowVGCswVmCswFiBsQJjBcYKjBUYKzBWYKzAWIGxAmMFxgqMFRgrMFZgrMBYgbECYwXGCowVGCswVmCswFiBsQJjBcYKjBUYKzBWYKzAWIGxAmMFxgqMFRgrMFZgrMDMx8cvKP/FVMyqOa4AAAAASUVORK5CYII=" width="88" height="177" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:5;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABwCAYAAAC0L5b9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHdSURBVHhe7dDRasMwFATR/P9PtxKsi6vKjidpfVGZA36IkONlHs98LCSTa2XLEjK5VrYsIZNrZcsSMrlWtiwhk2tlyxIyuVa2LCGTa2XLEjK5VrYsIZNrZcsSMrlWtiwhk2tlyxIyuVa2LCGTa2XLEjK5VrY81a/un83ReXd0/qr2P/Wy5ZJ+ffbK7Hw8m71Htf+oly2X9OuzV8bz2b3ZGdXer5ctl/Trs1fG8+337HlHe/8WP0bvH2L2/v7ZjL9/y/5bf/B8+fZjlC2X9OuzV8bzo3vvav95i9MPZcsl/frslfF8+z3eHX9T7f1bnH4oWy7p12evzM63s/3zrvYftzj9ULY81a/un83ReXd0/qr2P7c4/VC2LCGT/5zBIINBBoMMBhkMMhhkMMhg0G0f+i8MBhkMMhhkMMhgkMEgg0EGgwwGGQwyGGQwyGCQwSCDQQaDDAYZDDIYZDDIYJDBIINBBoMMBhkMMhhkMMhgkMEgg0EGgwwGGQwyGGQwyGCQwSCDQQaDDAYZDDIYZDDIYJDBIINBBoMMBhkMMhhkMMhgkMEgg0EGgwwGGQwyGGQwyGCQwSCDQQaDDAYZDDIYZDDIYJDBIINBBoMMBhkMMhhkMMhgkMEgg132eHwCyHL1JAVtFdMAAAAASUVORK5CYII=" width="76" height="112" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:6;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA0CAYAAAA5bTAhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVGhD7c+BCoMwDIRh3/+ltxr+jhEU7dzBQfJBhUrbu2zTyxT1NMiwQz0NMuxQT4MMO9TTIMMO9TTIsEM9DTLsUE+DDDvU0yDDDvU0yLBDPQ0y7FBPgww71NMgww71NMiwQz0NMi7tR+c62k9n/1eN+zpk3JKPr+5XjLs6ZNySjx/t8/rVuKtDxi378by+5f0T4y2J5ZL5/NX+idnvz4vPgnx8db9i3JWIh8m4xPnPIHk/nf1fNe5LxMNk2ImGAj20m2go0EO7iYYCPbSbaCjQQ7uJhgI9tJtoKCB72FkPXUUPXUUPXUUPXUUPXUUPXUUPXUUPXUUPXUWxobftDZ5RqFWic4PbAAAAAElFTkSuQmCC" width="61" height="52" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp;&nbsp; 1 . 0 0 1</p>
+                </td>
+                <td style="width:145.1pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp; <span style="font-size:9.33pt;"><sub>+</sub></span>1.0101</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>0.1101</u></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>0</u>.0010</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:2;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAGCAYAAABThMdSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVDhPYyAB/IfSQwqAHD3kHD7qaHqCIR3aQwgz/AcATlY2yqjeKm8AAAAASUVORK5CYII=" width="47" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp; <span style="font-size:9.33pt;"><sub>+</sub></span>0.0100</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>1.0011</u></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>1</u>.0111</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:4;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAGCAYAAABThMdSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVDhPYyAB/IfSQwqAHD3kHD7qaHqCIR3aQwgz/AcATlY2yqjeKm8AAAAASUVORK5CYII=" width="47" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp; <span style="font-size:9.33pt;"><sub>+</sub></span>0.1110</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>0.1101</u></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:0;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAGCAYAAABThMdSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVDhPYyAB/IfSQwqAHD3kHD7qaHqCIR3aQwgz/AcATlY2yqjeKm8AAAAASUVORK5CYII=" width="47" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span> &nbsp; <u>1</u>.1011</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp; <span style="font-size:9.33pt;"><sub>+</sub></span>1.0110</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>0.1101</u></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp; <u>0</u>.0011</p>
+                </td>
+                <td style="width:164.65pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Подача делимого [ДМ]</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Подача делителя [ДТ]</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;<span style="font-size:9.33pt;"><sub>1</sub></span></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;&rsquo;<span style="font-size:9.33pt;"><sub>1</sub></span>= &Delta;<span style="font-size:9.33pt;"><sub>1</sub></span>∙2</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Подача делителя [-ДТ]<span style="font-size:9.33pt;"><sub>доп</sub></span></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;<span style="font-size:9.33pt;"><sub>2</sub></span></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;&rsquo;<span style="font-size:9.33pt;"><sub>2</sub></span>= &Delta;<span style="font-size:9.33pt;"><sub>2</sub></span>∙2</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Подача делителя [ДТ]</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;<span style="font-size:9.33pt;"><sub>3</sub></span></p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;&rsquo;<span style="font-size:9.33pt;"><sub>3</sub></span>= &Delta;<span style="font-size:9.33pt;"><sub>3</sub></span>∙2</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Подача делителя [ДТ]</p>
+                    <p class="ListParagraph" style="margin-left:0pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&Delta;<span style="font-size:9.33pt;"><sub>4</sub></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

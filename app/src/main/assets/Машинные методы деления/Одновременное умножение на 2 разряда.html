@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            text-align: justify;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p style="margin-left:17.85pt; text-align:center;"><strong><em>Одновременное умножение на 2 разряда</em></strong></p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Общее количество циклов умножения определяется количеством разрядов множителя. Это количество может быть сокращено, если в каждом цикле анализировать содержимое 2-х разрядов множителя, после анализа выполняя в сумматор одну передачу множимого с последующим сдвигом содержимого множителя и сумматор на 2 разряда. В этом случае содержимое множителя разбивается на группы по 2 разряда и каждая из этих групп последовательно анализируются. При этом возможны следующие сочетания содержимого разрядов группы и выполнения соответствующих операций:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">00 &ndash; А х 0 &ndash; соответствует блокировке передачи множимого в сумматор.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">01 &ndash; А х 01 = А &ndash; соответствует обычной передаче множимого в сумматор.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">10 &ndash; А х 10 = 2А &ndash; сдвиг множимого на один разряд влево с передачей его в сумматор.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">11 = А х 11 = 3А = 2А+А &ndash; на специальном дополнительном сумматоре выполнение операции сложения с последующей передачей промежуточной суммы в сумматор.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Использование указанного алгоритма позволяет значительно сократить время выполнения умножения, однако усложняет схему операции.</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Пример: Выполнить операцию:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:1;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVFhH7dAxCgAhDEXB3P/SK8LayC6K/nKmSSG8BAsAAABWnnem9e5xO31UpJeIXP3Kl9Ng/JDZWPC3aPW+qaoB9EET7ZHNsfIAAAAASUVORK5CYII=" width="36" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:5;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVFhH7dAxCgAhDEXB3P/SK8LayC6K/nKmSSG8BAsAAABWnnem9e5xO31UpJeIXP3Kl9Ng/JDZWPC3aPW+qaoB9EET7ZHNsfIAAAAASUVORK5CYII=" width="36" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:0;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVFhH7dAxCgAhDEXB3P/SK8LayC6K/nKmSSG8BAsAAABWnnem9e5xO31UpJeIXP3Kl9Ng/JDZWPC3aPW+qaoB9EET7ZHNsfIAAAAASUVORK5CYII=" width="36" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span>П = А х 111001</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Представим множитель с &laquo;разбавкой&raquo; по 2 разряда: 11 10 01</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:3;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVFhH7dAxCgAhDEXB3P/SK8LayC6K/nKmSSG8BAsAAABWnnem9e5xO31UpJeIXP3Kl9Ng/JDZWPC3aPW+qaoB9EET7ZHNsfIAAAAASUVORK5CYII=" width="36" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:2;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVFhH7dAxCgAhDEXB3P/SK8LayC6K/nKmSSG8BAsAAABWnnem9e5xO31UpJeIXP3Kl9Ng/JDZWPC3aPW+qaoB9EET7ZHNsfIAAAAASUVORK5CYII=" width="36" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:4;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVFhH7dAxCgAhDEXB3P/SK8LayC6K/nKmSSG8BAsAAABWnnem9e5xO31UpJeIXP3Kl9Ng/JDZWPC3aPW+qaoB9EET7ZHNsfIAAAAASUVORK5CYII=" width="36" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:6;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADySURBVHhe7c8BCsNACETR3P/SLYUKIqO7abKhLv9BaKNWOwcAAAAAAACw3uv7PMlu+tv+P6h+5ex8S0+HU/ey/2B11TMzM+1ZuKeCVndU3eaz33zMzLRn4VYEVfuqO9m8ff7S34IPtiqo2mm3Zu7ZTDY/6m8hBlsVVu20W6ObvhfnYq/a05YKlYW1+tVHGc34WpypetuwYOq528zO7L5/j/2qt40s1N2B465qt7qt3rO5WGuvCnRnYLWn2q966j2bi7XWRoGsvyp0tj+7eaam6i1ZmCxU7KuZq/zO6lbs+X78rh4AAAAAAAAAAAAA+DfH8QbOCMBAk0K88gAAAABJRU5ErkJggg==" width="106" height="40" alt="" style="margin: 0 0 0 auto; display: block; "></span>Процесс умножения выполняем, начиная с анализа содержимого младшей группы разрядов множителя: 11 ** 01</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:7;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAAA5CAYAAAAlQIlUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEZSURBVHhe7dRbasUwDAXA7H/TLYUaglH8KLGc28yAfmwRC47IAQAAAAAAAP/D12+1jPTcbfTNHbMxaSSk0pMZ5uh72XMxqYQzE2iGMk/vvXI/0ssmsyFlBDkz00wvG5xD6YU0EmLp6VXL+b7XP9PLJnUoTwjq/H5vnvqu10+yKIzdIdVvt+aJzlv9bFACieqvom9FFYnOe/1XxUNchbErqPLuVdWisx9X/SRrhfCkkK5m+ZT5X6sXQrl/QlDRHL3Zyn2rh4XOAUQh1PdRT6Z6hvNc5/Oivo96AO6V+bfxZ3shC8YylotlLBfLWC6WKYGvqFrUc1fxATLDshgvZ9lIY9lIY9lIYdEAAAAAAAAAAAAAAAAAHuQ4vgER//IO6efS/QAAAABJRU5ErkJggg==" width="153" height="57" alt="" style="margin: 0 0 0 auto; display: block; "></span>Сдвигаем содержимое множимого и множителя одновременно на 2 разряда</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:8;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXwAAABRCAYAAADRoh2WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARxSURBVHhe7dWLjiQnDAXQ/f+f3oTNIBHWgOvZjzpHQtnGF1yjrnZ+AQAAAAAAAAAAAAAAAAAAAAAAAAAAAPC7W5FMZiRzZs+9xepcra9yAF+vH4TRYMxkIjU3y2cykcy5vjbLAny9aAD2e5nMTMmu8plMZHYu2t/TA+DjjYZlu5/JrGSyW+5rjc5t3Qf4apmhmMmsZLJb7muNzm3dB/hqmaGYyaxkslvua43Obd0H+GqZoZjJrGSyW+5rjc5t3Qf4aplhmcmsZLJb7muNzm3dB/hqmaGYyaxkslvua43Obd0H+HqjodjKZGZKdpXPZCKzc9H+nh4AH2M25PqB2X8uZpm+FjmSWe2NzhV9bZYtVnWAj5AZdLOB12fqqtp/V322rlZUb9dIlC2rt6pXsxrAxzljqM0G59X39+7uB/BR9g647Lmr7+/dfQ7g49SBNxp8q/rK6vyqvtXqvlUd4DGuHohX39+7ux/AV7lrcBrSAG/gzmFs8AO8gbuG8Rl9/E8D4ASfMPgNfICT3DX0iz29DHyAf9UBeuYaibJHV0Y2B8DCluF71J5eBj7ACe4a9kf6GPgAB9w16IujvQx8gB0+adBXBj7ARp826CsDH+AhDHyAhzDwAR7CwAd4CAMf4CEM/Pdy5ffhu4aHMwTex+y7KLXMd7XKZe44S32W1TOdqe+Z6ZvNnal9vtq7fYaoPrM1z0N5Od7D6nvI/pAzucw9R7U96jNd3TfqkembyZwp6jd6hrof1apMBv7wkrze6sda66vvqtZX2cxdR0R3X92ziHqs+tbaKneWWZ9ov+ZHZ4pMBv7wkrze6sdc/7v6rvZkZ+o97X3RXsbW/B5Rj1XPWo/OHhXdN+szytf/7qnD/3hJXmv2Q233Z7liS7bIZIoolznXy/SrmdWaaTOZbNWeO1N0Z+2V6Vczo/yqDv/jJXmt2Q+13Z/lir6Wyc/qrTabPdPbe26P+ryrnn09c2aP6M7aa9WzrfW5vja7B/540kvyjn/r6Ifa741yxej8KF+s6r2t+dbec3u0zzl75mh/lK/7R1dklWn3+sysBqEnvST1R/FOP47oWaJnmz1zrUVrZFWPbM0XW/rU7GqNRPXRmbofrbNl7hz1bz/39VkNQk96SX63yuduvULUu32maPWivWKUL2a1SM1vOVNszR8RPd/omUfPNcrv1d81uzvqHX0e5fo9+MuTXpKfUR8r9WbdJdtvlJudnd09q/Xa3N5zVfbsHtGzjfZGovxe0T2z+6Na9HmU6/fgL+0L9PUrKzh7lez9UW51ttajzOpstfdszUTrKlGP1ederc8yR4zuH/Xcshftw2P9jPO1ku3WlTL3989RP/f7VV/vM/3nSHS23Wv3W32mXVeb9ZvVir4eZY5q75z16mttvf93tODxfsb530qtW3e6u+cr/kaAW/2M9/+Uz816tTuf4R3+XoBLtQP+HYfeHc/0jn83wCNdOZANewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4GP8+vUPibtT5QI9cDAAAAAASUVORK5CYII=" width="380" height="81" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:10;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXwAAABRCAYAAADRoh2WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASjSURBVHhe7dUBjts4DAXQuf+l2zU6AggtJdFOnDjOe4DQifgluvWE/QEAAAAAAAAAAAAAAAAAAAAAAAAAAADgT7cylUymcq6SGameOXI3wK30gzAbjJVMpnKuksm03CpfzQHcXjYE+71KJnPm3c2WreSrOYBbGg3BuF/JZCrnKpmVanbPnQC3MxqCcb+SyVTOVTIr1eyeOwFuZzQE434lk6mcq2RWqtk9dwLczmgIxv1KJlM5V8msVLN77gS4ndEQjPuVTKZyrpJZqWb33AlwO6MhGPcrmUzlXCWzUs3uuRPglrIh2O9VMpkz7262bCVfzQF8tNmg6wdhNhhnmb4W9bUsu8r0+c0sP1LJVe8CuLTZIGuDbjbw+kxbTfw5GuWjLBN/zsR8XL0ss61etgfwsZ4x1EYDc3P2/b1X9wP4KEcHXPXc2ff3Xn0O4OO0gTcafKv6yur8qr7X6r5VHeBrnD0Qz76/9+p+ALfyqsFpSANcwCuHscEPcAGvGsbP6OM/DYAn+ITBb+ADPMmrhv7mSC8DH+A/bYA+c41k2UdXRTUHwMKe4fuoI70MfIAneNWwf6SPgQ/wgFcN+s2jvQx8gAM+adA3Bj7ATp826BsDH+BLGPgAX8LAB/gSBj7AlzDwAb6EgX8tV3gffifgpny5ryN7F9te9R21bCW/ylXueIb2HKvnOcusb3yuWS6q5p4pPl/rHZ8hq8/szfNBvNBr6N9D/MKt3lE1F1XvPUvfv30+s2dm1DPbH2WjSuaZsn6jZ2j7Wa2pZPhgXuz7zb5gqy/fqp5p+TPursruPbNfpvWrPsso27TaKvcssz7ZfsuPzmwqGT6YF/t+lS9gZlabaWcq5yv1uDbZXsXe/CNan1HPbD/LRa2enX1Udt+szyjf/jxS5wa82Pdafblm9bbfMqNcFDOVM0czqzO9Sp9Ny63WTKzP8rE2yjSxHs89U3Zn61Xp1zKj/KrODXix77X6co3qbT/WRtmor6/OVO7cxFwlH7Wz8Y4zxR6rnq0+y2z6euXMEdmdrdeqZ6z1ub42u4cP9k0v9op/19WXa1Tfu7/Zm9+s6tGebKadf+SOlf7uWb9YW+V6o3zbf3RlVpm412dmNW7km15s+0W+0i/06llG9b37m1bL1siq3tuTzVSfZ7Uy2f4on+2vstl6tsqdo/7xc1+f1biRb3qxf6Ltc7feYdV7VN+7v5ntH6n1Wraazzx6fiY+X7ai6t4m29uM8kf1d83uznpnn0e5fo+b+KYX+zvqc1s9rFdZ9RvVj+yPjM5sZrUoZqpnMo+cPWLUL9sf7Y1k+aOye2b3Z7Xs8yjX73ET8aXfflUlZ8+yun9W72uj7Gi/afUjZzdHzmX11ZkzjHq2/Vhbfe61+izziNH9o5579rJ9+Ci/43xty3brTNn9ff+2es+u95n+cy87F/fiftRnRrmzzXrHZ+szs9qmr2eZR8U7Z736Wqz3P2cLPtLvOP+/rdatV3pHz4qrPhfA0u94/2f7HNa7XXGwXvGZAErigDdg56747wNwK1cYtIY9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwdj8/fwG81KyMRa2BwAAAAABJRU5ErkJggg==" width="380" height="81" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:9;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUMAAAApCAYAAACvK0uPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVHhe7dSNigMhDEbRvv9L7yI0ICF/OpnpTHsPyLLmUzNgfQEAAAAAAAAAAAAAAAAAAAAAAADAKf7ef1ftrgN+3vjxZD8gL1NZe4bquZVcda9O2ZlHe87WnyHraSbZLL+yJ3DYyqXUOW/+bNUzKznJVPbrEp1X6aPSb2WfDtJLtadKTqxkgUPkolUvnZe58sJKr9mZUq9kh0qmg/RjnefNz6SeZSt7deruR7Kr64AtqxfOy1x1WVf6XckOlcxRWU8rfXp7zCr7dYn6qfSqSX5nLbBkvmDZhfPq2bpBMtnIzJlszWo2qg+SyUZkrlv5jj20lUw2MlFO5iXj5cRcr+SBQ/QFu/ulm3vLetW1LH+F+Xyrn0qPq2sqe3bxzpL5ueZlha5leWCbdbHufOF0X1Gv1nyUv4I+2+on69GqVdZE9U7eWTvzmpcFDpPLZY1u1hnW8Fi1aI3UrLHL2ssaFmveykd7DFK3hierD/M+0ch4ud15awDtvIt1x0snPXlDs+YGL382OdcbQv+vebVoXbZnJ++snXmLlwe2RRfqKRfO6/Mp32b1EvUX9Z2ti9Z28s5ambdywtsH2JJdKKnf/dJZPWZ9Sz3KXMXqw+vNmxdS31nbKTpL16ysNTeTepQBSubLZF0oXbcyd6H7m3ue54WuW5kreT3oOclF+Sij/z+DPl+GFtWj2qDrVgbAF+n8ofNoAF+u60d+18eiq6c7fhuABp2PV+deZzja252/DcABXY9X1z5X2O3zKd8HYEHX49W1DwBcikcQwE+Tx2t1WKzc7gCAj+h6hHjMAHwFHkUAmPAoAsBb50PGowjg8boeMh5EAAAAAAAAAAAAAACAD3q9/gGkGxsCPyVapQAAAABJRU5ErkJggg==" width="323" height="41" alt="" style="margin: 0 0 0 auto; display: block; "></span>Аналогично выполняем последний цикл:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">Таким образом, в итоге имеем:</p>
+    <p style="margin-top:10pt; margin-left:17.85pt;">П = 48А + 8А +А = 57А</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

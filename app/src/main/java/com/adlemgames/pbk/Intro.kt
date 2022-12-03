@@ -2,6 +2,8 @@ package com.adlemgames.pbk
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.github.appintro.AppIntro
@@ -22,6 +24,11 @@ class Intro : AppIntro() {
         // You can use AppIntroFragment to use a pre-built fragment
         setColorSkipButton(resources.getColor(R.color.text, application.theme))
         setColorDoneText(resources.getColor(R.color.text, application.theme))
+        when (baseContext.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+            Configuration.UI_MODE_NIGHT_YES -> setIndicatorColor(Color.GRAY, Color.DKGRAY)
+            else -> setIndicatorColor(Color.DKGRAY, Color.GRAY)
+        }
+
         setBackArrowColor(resources.getColor(R.color.text, application.theme))
         setNextArrowColor(resources.getColor(R.color.text, application.theme))
 

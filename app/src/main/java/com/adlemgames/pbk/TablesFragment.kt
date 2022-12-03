@@ -1,18 +1,24 @@
 package com.adlemgames.pbk
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import com.adlemgames.pbk.databinding.FragmentTablesBinding
 import okhttp3.*
 import java.io.IOException
+import java.util.concurrent.TimeUnit
 
 
 /**
@@ -22,6 +28,7 @@ class TablesFragment : Fragment() {
 
     private var _binding: FragmentTablesBinding? = null
     var keyboard: List<Button> = ArrayList<Button>()
+    var text: String = ""
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -32,13 +39,18 @@ class TablesFragment : Fragment() {
     ): View? {
 
         _binding = FragmentTablesBinding.inflate(inflater, container, false)
-
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE)
+
+        if(prefs.contains("exp")) {
+            binding.inputText.text = prefs.getString("exp", "B")
+            text = prefs.getString("exp", "").toString()
+        }
         // region adding buttons
         keyboard += binding.keyboard.buttonA
         keyboard += binding.keyboard.buttonB
@@ -60,22 +72,27 @@ class TablesFragment : Fragment() {
         // endregion
         for (key in keyboard) key.setOnClickListener {
             val buttonText = (it as Button).text.toString()
-            val text = binding.inputText.text.toString()
-            if (text.length > 40) {
+            val textt = binding.inputText.text.toString()
+            if (textt.length > 40) {
                 Toast.makeText(requireContext(), "Слишком длинная формула", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-            binding.inputText.text = text + buttonText
+            text = textt + buttonText
+            binding.inputText.text = text
         }
         binding.keyboard.buttonAC.setOnClickListener {
             binding.inputText.text = ""
+            text = ""
         }
         binding.keyboard.buttonItog.setOnClickListener {
             binding.progressLoader.visibility = View.VISIBLE
-            val client = OkHttpClient()
+            val client = OkHttpClient.Builder()
+                .cache(Cache(requireContext().cacheDir, 10L * 1024 * 1024))
+                .build()
             val request: Request = Request.Builder()
                 .url("https://pbk-psu.ml/api/truth?funcs=" + binding.inputText.text)
                 .get()
+                .cacheControl(CacheControl.Builder().maxStale(365, TimeUnit.DAYS).build())
                 .build()
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
@@ -95,11 +112,19 @@ class TablesFragment : Fragment() {
             })
         }
         binding.keyboard.buttonClean.setOnClickListener {
-            val text = binding.inputText.text
-            binding.inputText.text = text.subSequence(0, text.length-1)
+            val textt = binding.inputText.text
+            binding.inputText.text = textt.subSequence(0, textt.length-1)
+            text = textt.subSequence(0, textt.length-1) as String
         }
     }
 
+    override fun onPause() {
+        val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE)
+        val edit = prefs.edit()
+        edit.putString("exp", text)
+        edit.apply()
+        super.onPause()
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

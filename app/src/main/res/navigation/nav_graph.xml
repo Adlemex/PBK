@@ -11,6 +11,18 @@
         android:label="@string/teory_fragment_label"
         tools:layout="@layout/fragment_teory" />
     <fragment
+        android:id="@+id/TeoryViewFragment"
+        android:name="com.adlemgames.pbk.TeoryViewFragment"
+        android:label="@string/teory_fragment_label"
+        tools:layout="@layout/fragment_teory" >
+        <argument
+            android:name="FilePath"
+            app:argType="string" />
+        <argument
+            android:name="Name"
+            app:argType="string" />
+    </fragment>
+    <fragment
         android:id="@+id/CalcFragment"
         android:name="com.adlemgames.pbk.CalcFragment"
         android:label="@string/calc_fragment_label"
@@ -42,4 +54,7 @@
     <action
         android:id="@+id/to_result_tables"
         app:destination="@id/TablesResultFragment" />
+    <action
+        android:id="@+id/to_view_teory"
+        app:destination="@id/TeoryViewFragment" />
 </navigation>

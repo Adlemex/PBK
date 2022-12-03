@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>
+	</title>
+	<style>
+	.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+        body {
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li,
+        table {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-size: 11pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TableofFigures {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+<p style="margin-bottom:0pt; text-align:center; line-height:normal; font-size:16pt;"><strong><span style="font-family:'Times New Roman';">D &ndash; триггер</span></strong></p>
+<p style="margin-bottom:0pt; text-indent:35.4pt; line-height:normal; font-size:14pt;"><span style="font-family:'Times New Roman';">Работа D &ndash; триггера основана на совпадении логического сигнала после переключения сигналу на входе D до переключения.&nbsp;</span></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="font-family:'Times New Roman';">Схема одноступенчатого D &ndash; триггера и его условное обозначение имеет вид:</span></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXsAAAEVCAYAAAABwEUhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABqgSURBVHhe7d19jFRXHcbxU6rWRBt8pSlt2gbQlMRQbIVWWxCJLtR3LSa0hhffCKBCsQ01hmqJ2HQJaGmUtvhCoX/QaqL1LYBtaoWmpjSBtkbBpqzGFGKbiPKi0dSwznN6Dk6X2dnZ2XPvPeee7ye5uTt3BnZm584z5/7uueec0d9gAAC1NsqtAQA1RtgDQAYIewDIAGEPABkg7AEgA4Q9AGSAsAeADBD2AJABwh4AMkDYA0AGCHsAyABhDwAZIOwBIAOEPQBkgLAHgAwQ9gCQAcIeADJA2ANABpiWMJAzzjjD/ZQedgGg/gj7QBT2Kf4pU33eAIaHMg4AZICwB4AMEPYAkAHCHgAyQNgDQAYIewDIAGEPABkg7AEgA5WE/aOPPmov5mm1rF271j0KABBKpS373t5ee/WmX3bv3m1uuukmG/p9fX3uUfU38Avvvvvuc/cAQBhRlXGuuuqqU5fujx8/3q7rTuG+ZMmSU194+vnaa6+1Rz8AEEqUNftt27bZdd1LOr4Ff91119m1+J+fe+45uwaAEKIM+6lTp9r1ww8/bNd11xzsjz32mF2ff/75dg0AIUQZ9uPGjbNlnGeffdZtebmZM2eaUaNGRbNcfPHF7pkNz9y5c+161apVdq0jGZ2zUClHJS0ACCXKsB+KWvwnT56MZjlw4IB7ZsOnktXBgwdt7V5Br9sbN2509wJAGEmGfZ3cc8897qeXgt+39mXChAlm6dKl7hYAdC/KsFe3S7V2FXZ1Nnv2bLNz5077WmfNmnVaLxxtv+iii9wtAOhelGG/Z88eu164cKFd15F64ijo1ZrXOYodO3bY8xTTpk2zge9D/4ILLrBrABiJKMNeLVwFX3NJo27+8pe/2LXveSQ6Ie0DX4vU+W+Al2u+sC61BfGLKuxVvvE7zmA9cerCt9gPHz5s154PfNEVxsiLv7gupQVpqGTCcZUofMt1oIEnKVOhL6nh/in9F1vzv/N1fE+Bv3LlSncrvG6eN4qR6nvBPpSGSlr2fliEVktOZQu9Xp2Y1YfFL2rZ+7+FHyuIHjkARqqSln0d0SrDSLEPoUhRnqAFAIRF2ANABgh7AMgAYZ+hvXv3mmXLlpkrrrjC3tZ6+fLldjuAeiLsM3PnnXeaKVOm2P7969atM8ePH7frQ4cO2e26H0D90BsnkBR6JNx1111m69atdlTNyZMnu63/9+STT9punvPnzzeLFy92W1EWeuOgSIR9ILHv8C+88IIdd3/79u3m8ssvd1tP9/jjj5urr77a7N+/35xzzjluK8rQ7T6kf9es7AsTCfs0UMbJhEo1ixYtahv0ovv1uPXr17stiJmCljmM0QnCPhNPPfWUmT59urvVnh739NNPu1uIFXMYYzgI+0wovCdNmuRutafH6csBaWAOY3SCmn0gsdctzz33XPPMM8+Ys88+220ZnMJDI2+++OKLbguKpvfl2LFjw96HtN/pvdKYSs1zGJc5tSU1+zTQss/EJZdccmpSmKHoKGDGjBkt59stepFW2+u+HD161L724dLJWOYwRicI+0yoNPPggw+6W+3t2rXLfjkgfsxhjE4R9pm44YYbzKZNm2zXynZ0vx534403ui2IFXMYx0Xvh46wmhdtiwVhnwn1mb/11lvNihUr7MVTrWi77tfjxowZ47YiRsxhHA/9rRXszXNR+EXbdF8UXWEbTwgBpPKn3LhxY/+oUaP6r7nmmv7du3f3Hz9+3K51W9t1f5UaHwz3U36Gsw/19vbaxzda727LSxqBb7f7pQxl/Z5Y6fU3jqzcrdP596RqtOwzo54aTzzxhDnvvPNsqUa9QLQeO3as3a77ET/mMI6DekDJqlWr7LqVNWvW2LV/bFXoehmIDtVS/FPG9rwbRxe2d0qOhvte6PHS/G/KnsNYUt33Q/B/73avv6+vz34B67yKym1VoWUPJEoBwxzG1VLQ+yOpweiciui9qRIt+0BSbd3E9rxp2bMPpUSvXWE/VJB3+rgi0bIHgAwQ9gDQJbXWdT1DO6rZS09Pj11XhbAHgC75AG/Xj94PU9LpqLNFoWYfCPXWMKjZp7EPab5iDdWgINNV15oHQcuCBQvMpZde6h5Vf530tImhXi+1bNnr7LdCo6zlrLPOcr8ZqD/mMf4/ZY26t6pXTquhERT04vvaV6mWLfsqWkgptcqaxfa89eVJyz5ezGM8OB/szfRFoLGmfF2/yveXsA+EsA+DsI93H2Ie4+41X+xWxoVurXCCFkBHmMe4e6rnD9Vrp2iEPYCOMI/xyKi+ryO3Klr1QtgD6AjzGKeNsAfQsdGjR7ufhnbkyJGX9VqLYdE5B80BkCPCHkBHqprHWFpt72Y5cOCAndErR4Q9gI4wj3Ha6HoZCF0vw9ChtlpgOYp9H3r++efNxIkTO+56qVZ0iOktc94nQqJlD6AjzGOcNsIeQMd0Vey8efPMZZddZubMmWMHADtx4oRd67a26/7crp5NAWWcQCjjhJHaIbv6Tv/5z392t7qnuYCPHTuWzD6kgdC2bNliSzZ+ILSpU6eahQsXBh8IjTJOGIR9IIR9GKl9sEP+/diHWiPsw6CMAwAZIOwBIAOEPQBkgLAHgAwQ9gCQAcIeADJA18tA9DtTFdMuQNfL9D6OdL1MA2GPqBD2hP1AhH0YlHEAIAOEPQBkgLAHgAwQ9gCQAcIeADJA2ANABgh7AMgAYQ8AGSDsASADhD2i8Y9//MNObwcgPMIeUdA8rm9/+9vN7Nmz3RYAIRH2qNyTTz5p3vOe95jly5ebr33ta24rgJAYCA2VUtB/6lOfskG/cOFCtzUdDITGQGipoGWPyijoP/axjyUb9EBKCHtU4pFHHrFB/61vfYugB0pA2KN0CnqVbhT0H/3oR91WAEUi7FGqe+65h6AHKsAJWpTm9ttvNxs2bDCbN282M2bMcFvTxglaTtCmgpY9SuGD/te//nVtgl4+/vGPmy1btrhbI6fgTG1BGmjZo3AKegXiT37yE3PRRRe5rfXw29/+1p5gnjNnjvnGN77htiIkWvZhEPYo1OrVq80DDzxQy6D3/va3v9nAf/WrX23PSbzmNa9x9yAEwj4MyjgozIoVK2zQq3RT16CXN77xjebnP/+5ufDCC8273vUus2/fPncPEA/CHsFpQDP1uNFFUwr6173ude6eelu3bp35/Oc/bwP//vvvd1uBOFDGQVAKerXoNbCZSje5BH0zXUegss5nPvMZc/PNN7ut6BZlnDBo2SMY36KXXINe1NvoscceM7t37zbz5s0z//3vf909QHUIewThg161eV0wlWvQe2PHjjW/+tWvzOjRo82VV15p/vCHP7h7MBw6SkIYhD1GrDnoNURx7kHf7Nvf/rb55Cc/aQNfJ6vRGV8O1PK9733PbcVIULPHiOhDqbHoVbpQix6t7dixw9bxv/SlL5mVK1e6rWjFD3utxoOutqbxEAYte3TNzy6lMW4I+vY0A5fq+L/4xS/MZz/7WbcVA+kCPI2GumDBgqzP+xSBsEdXmF1q+MaNG2d27dplf54+fbrp6+uzP+P/pcCf/vSntrvu9ddf7+5BKIQ9hs0fZivk+VAOn2rQH/zgB21/fJV3cqeTsDpCVCu+zldaV041+7qp6cuKwr59+/obH8b+zZs3uy3o1gMPPNDfCLj+DRs2uC15+fvf/97faCzY/akR8m4risIJWnSMSUfC279/vz1xO2XKFNtzJxc6OtS4SSrf6CQsrfniUcZBRwj6YkycONGeuD169Kjp6ekxhw4dcvfUlwaL00nYd7/73bUfNykmhD2GxOxSxTrzzDPNvffea6ZNm2b74ysA68j3nde8BqrNc76nXIQ92lJXOB1u68NJ0BdL4+j09vaa97///ebuu+92W+vBn4QVfZlNnjzZ/ozyULPHoJpnl+JQuzwaIll1/Pe+971m/fr1bmu6/H6k3lt6XagGYY+W6jy7VAr++c9/2mD897//bctoGjM/Nb7vPCdh40AZB6dR2Yagr5Zmu/rRj35kJk2aZPvja/rDlKhso4vudBKW/SgOtOzxMjqBpg+qSjdcqh4HffGqhazWsYYRiJla8X4qSk7ox4Wwh+V7SuQ86UjM1LJX4F9zzTXRTmzur6z2V8KyD8WFMg4I+gS8853vtP3xf/e735lPfOIT5sSJE+6eODQPYMZRYZwI+8z5k2hC0MftDW94g/nZz35mJzZXf/y9e/e6e6rj9x9/joe+8/Ei7DPmP6g6eab6KkGfBj+xuQL/vvvuc1vL5/vOa7+h73z8qNlnamDQIz0KW3XP/PSnP22++tWvuq3F077DSdj0EPYZ0oeV2aXq4fDhwzbwx4wZY/vjv+IVr3D3FIMBzNJFGSczzC5VL35ic5VS1B+/yInNdSThBzBTfZ6gTwst+4yoVaYPq2aX4kRa/dxxxx22nKMWfsjSii/bKOzVmqc2nyZa9pnwQc/sUvW1bNkye8J28eLFZu3atW7ryGi/UclPgc9J2LTRss9Ac9AzEFX9aW5bnXx/y1veYqdA7BYDmNULLfua83VW1ef5wOZBE5v/5je/sY0eTWx+8OBBd09n1IrXPuMn/2a/qQfCvsYU9Grh0T0uT9/97nfNhz70Idsff/v27W5re9pnGMCsplTGqZuavqxh2bx5MxM5w/ITm99+++1uy+mY/Lv+qNnXkK+1qmXGCTWIn9j8He94h/nOd77jtr5E53R0BKjum9pnuJK6nijj1IwPenpOoJmf2PzYsWPmfe9736mJzf3k3wxgVn+07GtEQc+kIxjK17/+dbNp0ybztre9zfz1r3+l73wmaNnXBLNLoVPTpk0z//nPf8xDDz1k5s+fT9BngrCvAdVbNSiVDsMJegxGXSo1b4H2F7Xs9+zZY8s4N9xwg3sE6owyTsL8h5dJRzAU7SsKea2bBzBrnthc29/0pjfZ7agfWvaJ8h9egh5DUd95DX7Xqu9888Tm6o+vk7ioJ1r2CfJBr4DXBVMEPVrRfuIHMNN+oiGt2/ETm//gBz/gqtkaomWfGB/0ap0R9BjMwAHMhgp6UfdLtexvu+0285WvfMVtRV3Qsk/IwKAHWhnpAGZHjhyx/+5Vr3qVPYH72te+1t2DlNGyT4SCXi01gh6D0T4SYgAzP7G59jVNiBLDxOYYOcI+AcwuhaH4k7DqMx/qWgtNbP6FL3zBBn6VE5sjEJVx6qZOL2vfvn12cCoNbAYMVMYAZo2jhP4LL7ywf/Xq1W4LUkTNPmJMOoJ2tH/oOgspuvtt2RObIzzKOJEi6NGOH8DsIx/5SCkDmA2c2Pz3v/+9uwfJUMu+blJ/WTpsLvKwHOlS2abx5d8/efJkW+KrwoYNG/pHjx7d/+Mf/9htQQpo2UdGY9yoe6VOxDK7FJr5k7BqXas1X9UAZn5i86VLl5re3l63FbGjZh8R3z+aoEczdanUfqHSTUxlvT/96U/2uUyYMMF8//vfd1sRK8I+EswuhVb8hXRaNw9gFpPPfe5z5sCBA/bLaPz48W4rYkMZJwLMLoVW2g1gFhNNbP7hD3/YnrjtdGJzlI+WfcWYXQoDqRXvBzBT2SaVkp6u3FVZ55ZbbjHLly93WxELwr5C+kD7SUcY0AziJ//WF7/KNqntF+0mNke1KONURB9ogh7NdJTnJ/8u+iKpogw2sTmqR9iXzJ9w03g3BD3E7xN+ALPrr7/e3ZOmM88809x7771m+vTpto6v14TqEfYlau5ZkWrLDWE1952v23mbm2++2axdu9Z84AMfMHfffbfbiqpQsy+JD3p9mHXSjaDPm/YHf86m7tdV7Nu3z+77M2fONN/85jfdVpSNsC8BQY9mOgmroNd+EWvf+dA0sbk+A//6179sf3wmNi8fZZyCNQe9WnAEfd78AGbqO69adg5BL5rY/Ic//KG9jkR1fCY2Lx8t+wLpJKw+2Jr/k0lH8ubLNqrRqzWf88VzW7dutd0zmdi8XLTsC6JDdU0jyOxS8CdhRa353K+Snj9/PhObV4CWfQEYix6eHwqDfeF0TGxeLlr2gRH0EJVttB+MdPLvOmNi83IR9gH5oFfZhg93vlS2UQkv9gHMYsHE5iVRGaduqnhZjdYbs0tlzk/+PXnyZPaDLvjP0GomNi8ENfsAVG9UT4u6XxyDwemoTl1s/ZWwdLHtjiY219/xzW9+s+219MpXvtLdg5GijDNCOgFH0OeteQAz1ecJ+u5pYvOdO3ea17/+9ebKK69kYvOQ1LKvm7JeViPg7WFnVRM/o3q33HJLsMm/td+muhThjjvuYGLzgGjZd8l3qaPfNELuA43PZHJLUb74xS+a+++/386EhZGjZt8FBT2zS0FGjRplTp486W6NTGxjOnWq6Oed6t8lNoT9MK1YscJ2raM2CyHsCftUUMbpkB/QjKAHkCLCvgMKerXomV0KQKoI+yH4Fr3W9J8GkCrCvg0f9DoJm+JM/wDgEfaDaA56ZpcCkDp647SgoNcVkeo7zVj0aIfeOHn3xtFzG4kyXxct+wF0ElYTTRD0AIaisB7JUibCvomfXUrDExP0SIVal80LwwSjFcLeaZ50RAuQAoX7kiVLTrUU9fO1115rHn30UfcI4CWEfQOzSyFFvgV/3XXX2bX4n5977jm7BjzCvkEXTKlsQ9AjRc3Brom85fzzz7drwKM3TkPIHhXIS9W9cfRvxo8fb5599lmzdu1ac9NNN9lSzsaNG90jitfN8x6Oov//XBD2DYQ9ulV12KuUoxq9t23bNjN37lx3qxyEfRoo4wAJ05SY3sCgnzBhglm6dKm7hdwR9kCiZs+ebafwO3jwoJk1a9ZpvXC0nfkWqqH3RkckzYu2VYmwBxKk8o2CXq35cePGmR07dtja/bRp02zg+9C/4IIL7Brl0N9dwa5zKCo9NS/apvuq6hZLzb6Bmj26VVXN3p+MVetdYe+pdKNtXhkf7+F+3oar6P8/JD1XHWXpy7cV//5U8Xpo2QeiNznVBenxLfbDhw/btafWo1r40tvba9coh76AZdWqVXbdypo1a+zaP7ZMtOwbQrTOhvs7Y5Hq845Flb1x/Bd187/xdXxPgb9y5Up3qxhF70Op7KP+b9/uufb19dkv43at/6LQsgcSpVBRaCgM/dJcK969e7ct9dAjpxwKen9UNRhfctP7VDZa9g207Gu3C5SmypZ9LIp+3qn8XfQ8/QVu7XT6uNBo2QNABgh7AAhArfXmnlCtqGYvPT09dl0mwh4AAvAB3q4f/Z49e+x6+vTpdl0mavYN1OxrtwuUJtea/d69e+1QDQqvxx9/3Fx++eV2WbBggbn00kvdo8JI5e/SSU8bvZYq6vVCyx4YAV0ko8Af6TJ69Gj3P8bvzjvvNFOmTLF9/NetW2eOHz9u14cOHbLbdX+O1NNGXV3VK6fV0AgKevF97ctGy75BHzZa9qhaCu/FXXfdZbZu3WqHUNY8zQNpIiB19Zw/f75ZvHix2zoyKe6jes4D6Ytg06ZNp+r6Zb8mwr6BsK/dLpCk2N+LF154wVx88cVm+/bttmQzGJV1rr76arN//35zzjnnuK3dq9s+2nzhWxkXvXmUcSKgnbl5YcJoxEilmkWLFrUNetH9etz69evdFjRTPX+oXjtFIOwrpnBnwmik4Kmnnuq4F4ke9/TTT7tbGEj1fX3ey2rVC2FfISaMRkoU3pMmTXK32tPj9OWAeBD2DZrgoblnxHCXs846y/1P3WHCaKRiOL2Gjhw50vLzMtxFR7+ttnez6JyD5gDIUuNQonaqeFnd/k79u/Hjx9ufe3t77e0lS5bY22Wo6S6QpNjfi1mzZvU/9NBD7lZ7v/zlL/t7enrcLcSAln3F1MrQyRq1XjRCoW6rWxsQG5VmHnzwQXervV27dplLLrnE3UIM6HoZSLe/s7kbVqsJo3UJdpHhX8XfCq3F/l48//zzZuLEiR13vTxw4IAZM2aM24qq0bKvkA96tex1iTUTRiNm6jN/6623mhUrVtiLp1rRdt2vxxH0cSHsK8KE0UiRroqdN2+eueyyy8ycOXPsfnrixAm71m1t1/2hrp5FOJRxAhnu74xlwmjKOPFI6b3QQGhbtmyxJRs/ENrUqVPNwoULgw+EhjAI+0CG+zvVslfZRlPHXXXVVW7rS3zg12H+UHQu1feCfSgNhH0g3fxO/Rtp/nfNJ2yl6MDngxqPVN8L9qE0ULOvkD4gTBgNoAy07ANJtXWT6vOuI/YhFImWPQBkgLAHgAwQ9gCQAcI+Q+ojvWzZMnPFFVfY21ovX77cbgdQT4R9ZpgsGsgTvXECSaFHQhWTRaNz9MZBkQj7QGLf4auaLBqdI+xRJMI+kNh3eF2Fq5l6brvtNrdlcF/+8pfNyZMn7fg9KA9hjyJRs88Ek0UDeSPsM8Fk0UDeKOMEEvuh7LnnnmueeeYZc/bZZ7stg9ME6Bpb/8UXX3RbUDS9L8eOHaOMg8LQss+E5gPds2ePu9WejgJmzJhh6/Ys5SxHjx51f32gGIR9JpgsGsgbZZxAYj+UZbLo+KVaDqGMkwZa9plgsmggb4R9RpgsGshX8LDX5fY6rGteuDgnHkuWLDFPPPGEOe+888yNN95oe4FoPXbsWLtd9wOon2A1+76+PttdT4um1mumCbR7enrsmCxlqKKGWMXvDCHV511H7EMoUrCwV6DLwKCvAmHfOT6o8WAfQpGClHFUpjl48KBZs2aN2wIAiEmQsH/44Yfteu7cuXYNAIhLkLBX6Ua1egBAnIKEvUo4AIB4Be96CaB7OtmZ2oI0BOmNo544at3HckZeO2DZz6WK3xlCqs8bwPAEadkvWrTIrnUlJgAgPkHCXpfaC10vASBOQcJ+3LhxZtu2bWbnzp2nLq5qNnv2bDuMAgCgGsFO0KqPva/9+hM3fpk5c2ZpQyUAAE6X5Hj2+vJ45JFH3K3T6SXpS6Ysb33rW80f//hHTtACiFYtJy+pQqqhSdgDeaCfPQBkgLAHgAwQ9gCQAcIeADJA2ANABgh7AMgAYQ8AGSDsASADhD0AZICwB4AMEPYAkAHCHgAyQNgDQAYY9TKQModUDo1dAKg/wh4AMkAZBwAyQNgDQAYIewDIAGEPABkg7AEgA4Q9ANSeMf8DIP8frEB6dYoAAAAASUVORK5CYII=" width="379" height="277" alt=""><img src="data:image/png;base64,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" class="center" width="228" height="200" alt=""></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">Переключение состояниё D &ndash; триггера определяется выражением:</span></p>
+<p style="margin-bottom:0pt; text-align:center; line-height:normal; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAAAjCAYAAAApO74oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR6SURBVHhe7ZiNjdYwDIZvABZgARZgASZgAjZgA1ZgBWZgCbZgGehz+t6TZcX5aZO238mPZJ2+NnXsN47T60uSJEmSJEmSJEmSJEkS82+nJUmSJEmSJEmSJBP59rC7cde4WuyJ+1lzvTXfN/u7GV8S+MvvD4+/nzbz/HwYY67iy2Y/NiPez1x4QEy/NyO+qzhLzz25ftwM3f5spq9HvzZDQ2IjxtVo3pKRT+8Gn54LQuJMBaVFk3OPFu5KEAvRFKPdDAJRrojzCj17c6VwiIGxdlPSWGparoCYmc8WLMUtrdCw1hym54ITHsKBh0koOAvj6HSjHWwVEqSUNDFGua3iKj1buXJf3fMrFwpwnftnrW1t7ciDe14vWJYLgUQBcc0fMyzcynfUUhw11EWi57hPzGdxpZ61XHWK1uZSkZ2FCjpCMXstl+WixePI8nDPdhrtNo6yVdTEKdHaDOrUUQeZzZV6RrlqnlKX9ZRetSgs+xpSg1x68sFnpJPQ2tqYjubShG7iJy2hdzwPiREk970PdufIDi35r9HaDMD9muizOaon7NW0lKviqWnUAh89Rd47TkVd6+6lwp+RSxV1FKy2gD4woWNLZsGfv1ZjZCz0bAbFF0H+PN+y3u54VE/Yq6nPVe/eFNER8NNqKBQ2/wf0oBxqmvrNMCuXJq0F1LEWLZ7uY74zXH0yqECIsQQLyJiW9S40HNUT9miKP8YrV/2TWtuUveA70pn5KNJIY486fA2trTSamUsTu4B+4RHBBlZCwVrBWESSKsF8jLWm571FjGyG2pgVHNUTRjX1uep3NH4EfEbx4r93DuInplZRc59xepWamUsXdgFtN+pZPB1r/BUEHnULFhp/1jSHtwj884wtFg/Pt8as4oieMKqpz1W/ZxUQ/ryOo6cCxe1zKsEYTLrNzuUNAo+cakfapBnPtdriaYHll99euBY8PwJz+Vg9EjFarNIJVTLGRazQE3iGcb2a+lw1dxTbKBSmf2dnjlZhW/ThwDYHj5qA1Wd2Lm8gaOSU60zqRffBebTA8lv7UhDB8yNEsVpUIBGlE6pk/lXHskJPGNUUfzbXUlGVYKPbz741bPGXNkcL4qk9g0/GYHbDrMjlFcSNApKg6i6i9ilQcB/fezYCtPx7okKzcL/1JeQoq/QExvRqWsqVuLgedW/iqm10j90Ao6eCvgjxXAkKmY8DjCmdxLNzeUULhHCaFEc6ikqTaWeWghTcx4df+F54fgQVVCSAuszIgu1hlZ7AmB5No1zxz3WMTaVuiz/GEvvoeuGHXHm2F+ZQodsYiYdNIq1q8azI5XViwIECxEiw1mXZmQQRgY/W4tboFZcYFbM1D9006tgzWaUn4KdH01quFAjzqLNixLn3BMcfa1XLzcLcmrdkxIKGPf5m57IbHXPDu+8CiBHBht4fT2aWns+Q67uEHUzHuzvEqY59Z2bo+Sy5vksQftf72QkQE8X1TMWxV89nzPVdwjva6e9pHdw1rhZ74n7WXJMkSZIkSZIkSZIkuS8vL/8BaQzy6RKtkJYAAAAASUVORK5CYII=" width="195" height="35" alt=""></p>
+<p style="margin-bottom:0pt; text-align:center; line-height:normal; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+<p style="margin-bottom:0pt; text-align:center; line-height:normal; font-size:14pt;"><span style="font-family:'Times New Roman';">Таблица состояний D &ndash; триггера.</span></p>
+<table style="margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse;">
+	<tbody>
+	<tr style="height:17.45pt;">
+		<td rowspan="2" style="width:43.2pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH4SURBVFhH7ZbhUcMwDEYzAAuwAAuwABMwARuwQVdgBWZgCbZgmeLX5uOMkBW5Tq8/8LvzOXFsKZ8kO1kmk8nNuSvt4XzZBWtYuyv3pb2U9rr23Iuntffg2dfa9zKy1uVQ2rG0t9IQwj0O3tdreo/n0j5Lq0X3Qlbwja0heHEMeaWBMJ6RIQuOebZHaUjMUGaI/Mf58g+8JA5sxLlnfDiKFQTL85WGxYhpQVYsytTeYNPzlwIRkYHHtRfKRuSQTJItW3aUjlemQgG6KCsYZ3E2GioBr6ywxeaXPTtH4y0x2neR2BAZoCEm2sDsJ+bZTAFjOjxkq4bnjDPHQ89bezZFLYaotsRoToTEYMfCS7ZKR4fLlv1NrBiPjCMdp3Ye461vksjY/4VXGlCL4dqSdWTnEe0oGyJr/4eoDrUPvOhlHWnTK2D8IWQ2cdb+CVIcCVGNR0KiAwEUDISQ2cyJCLKfQkdo62V0nnulVb9ghGzgKzo8arpPLTmhtw60UVubXUHwRNbUx3BGBGh/pr8jKMYRPV926pd7CWS85TzzZQcJITBZ9Bee/rLXZcEiIoBj+oxjCY7AR48IIKhbAdoVsoWQdAkkUFmls7EX+kfrjbqHArO1766GojgihgxwsNxMhCAz1DZ9LyNrrwKlcUlWWJM9mieTyf9gWb4B+b2bJzWkgEEAAAAASUVORK5CYII=" width="50" height="32" alt=""></p>
+		</td>
+		<td colspan="2" style="width:97.2pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">D</span></p>
+		</td>
+	</tr>
+	<tr style="height:17.45pt;">
+		<td style="width:43.2pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+		</td>
+		<td style="width:43.2pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+		</td>
+	</tr>
+	<tr style="height:17.45pt;">
+		<td style="width:43.2pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+		</td>
+		<td style="width:43.2pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+		</td>
+		<td style="width:43.2pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+		</td>
+	</tr>
+	<tr style="height:18.35pt;">
+		<td style="width:43.2pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+		</td>
+		<td style="width:43.2pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+		</td>
+		<td style="width:43.2pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+			<p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+		</td>
+	</tr>
+	</tbody>
+</table>
+<p>&nbsp;</p>
+<p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

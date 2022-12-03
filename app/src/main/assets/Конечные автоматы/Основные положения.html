@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { line-height:115%; font-family:Calibri; font-size:11pt }
+			h1, h2, h3, h4, h5, h6, p { margin:0pt 0pt 10pt }
+			li { margin-top:0pt; margin-bottom:10pt }
+			h1 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:16pt; font-weight:bold; color:#000000 }
+			h2 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:14pt; font-weight:bold; font-style:italic; color:#000000 }
+			h3 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:13pt; font-weight:bold; color:#000000 }
+			h4 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:14pt; font-weight:bold; font-style:normal; color:#000000 }
+			h5 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:13pt; font-weight:bold; font-style:italic; color:#000000 }
+			h6 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:11pt; font-weight:bold; font-style:normal; color:#000000 }
+			.Heading7 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:normal; color:#000000 }
+			.Heading8 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:italic; color:#000000 }
+			.Heading9 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:11pt; font-weight:normal; font-style:normal; color:#000000 }
+			.BalloonText { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:8pt }
+			.BlockText { margin-right:72pt; margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyText { margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyText2 { margin-bottom:6pt; line-height:200%; font-family:Calibri; font-size:11pt }
+			.BodyText3 { margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:8pt }
+			.BodyTextFirstIndent { margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyTextFirstIndent2 { margin-left:18pt; margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyTextIndent { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.BodyTextIndent2 { margin-left:18pt; margin-bottom:6pt; line-height:200%; font-family:Calibri; font-size:11pt }
+			.BodyTextIndent3 { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:8pt }
+			.Caption { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Closing { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.CommentSubject { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:bold }
+			.CommentText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Date { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.DocumentMap { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt; background-color:#000080 }
+			.E-mailSignature { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.EndnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:11pt }
+			.EnvelopeAddress { margin-left:144pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.EnvelopeReturn { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Footer { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.FootnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:Calibri; font-size:9pt }
+			.HTMLAddress { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt; font-style:italic }
+			.HTMLPreformatted { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Header { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index1 { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index2 { margin-left:10pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index3 { margin-left:20pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index4 { margin-left:30pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index5 { margin-left:40pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index6 { margin-left:50pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index7 { margin-left:60pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index8 { margin-left:70pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Index9 { margin-left:80pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.IndexHeading { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:11pt; font-weight:bold }
+			.List { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List4 { margin-left:72pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.List5 { margin-left:90pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListBullet5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue2 { margin-left:36pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue3 { margin-left:54pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue4 { margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListContinue5 { margin-left:90pt; margin-bottom:6pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.ListNumber5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Macro { widows:0; orphans:0; font-family:'Courier New'; font-size:12pt }
+			.MessageHeader { margin-left:54pt; margin-bottom:10pt; text-indent:-54pt; line-height:115%; border:0.75pt solid #000000; padding:1pt; font-family:Arial; font-size:12pt; background-color:#cccccc }
+			.NormalWeb { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:12pt }
+			.NormalIndent { margin-left:35.4pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.NoteHeading { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.PlainText { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Salutation { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Signature { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Subtitle { margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOAHeading { margin-top:6pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOC1 { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC2 { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC3 { margin-left:42pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC4 { margin-left:63pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC5 { margin-left:84pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC6 { margin-left:105pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC7 { margin-left:126pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC8 { margin-left:147pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TOC9 { margin-left:168pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TableofAuthorities { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.TableofFigures { margin-bottom:10pt; text-indent:-10pt; line-height:115%; font-family:Calibri; font-size:11pt }
+			.Title { margin-top:12pt; margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:16pt; font-weight:bold }
+			span.CommentReference { font-size:10.5pt }
+			span.Emphasis { font-style:italic }
+			span.EndnoteReference { vertical-align:super }
+			span.FollowedHyperlink { text-decoration:underline; color:#800080 }
+			span.FootnoteReference { vertical-align:super }
+			span.HTMLCite { font-style:italic }
+			span.HTMLCode { font-family:'Courier New'; font-size:10pt }
+			span.HTMLDefinition { font-style:italic }
+			span.HTMLKeyboard { font-family:'Courier New'; font-size:10pt }
+			span.HTMLSample { font-family:'Courier New' }
+			span.HTMLTypewriter { font-family:'Courier New'; font-size:10pt }
+			span.HTMLVariable { font-style:italic }
+			span.Hyperlink { text-decoration:underline; color:#0000ff }
+			span.Strong { font-weight:bold }
+		</style>
+	</head>
+	<body style="background:#ffffff">
+<p style="margin-bottom: 0pt; text-align: center; line-height: 115%; font-size: 14pt;"><strong><em><span style="font-family: 'Times New Roman';">Основные положения</span></em></strong></p>
+<p style="margin-bottom: 0pt; text-indent: 35.4pt; line-height: 115%; font-size: 14pt;"><span style="font-family: 'Times New Roman';">В контактных и логических схемах значения выходных переменных определяется только комбинацией переменный на входах в данный момент времени, поэтому их называют комбинационными схемами. В более общем случае выходные переменные зависят от значений входных переменных не только в данный момент времени, но и от их предыдущих значений или значения выходных переменных определяется последовательностью значений входных. Схемы с такими свойствами называются </span><u><span style="font-family: 'Times New Roman';">последовательными.</span></u></p>
+<p style="margin-bottom: 0pt; text-indent: 35.4pt; line-height: 115%; font-size: 14pt;"><span style="font-family: 'Times New Roman';">Если входные и выходные переменные принимают значения из конечных алфавитов, то такие схемы называются </span><u><span style="font-family: 'Times New Roman';">конечными автоматами</span></u><span style="font-family: 'Times New Roman';">.</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 14pt;"><span style="font-family: 'Times New Roman';">Если зависимости между входными и выходными переменными выражаются булевыми функциями, то конечные автоматы определяются двоичным структурным алфавитом. В реальных условиях сигналы представляются непрерывными функциями времени, поэтому для надежного различения сигналов требуется, чтобы новые значения на входах появлялись после окончания переходных процессов, связанных с предыдущему значениями.</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">При рассмотрении логической структуры автоматов обычно отвлекаются от существа динамических процессов и считают, что переменные изменяются мгновенно, в некоторый интервал времени называемый </span><u><span style="font-family: 'Times New Roman';">тактами</span></u><span style="font-family: 'Times New Roman';"> (</span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAYAAAAv3j5gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD4SURBVEhL7ZRbDQIxEEUrAAMYwAAGUIACHOAAC1hAAyZwgZllzu5e0izTboeEL3qSG0of8+p0U6cTZT///py76TgNm/gqsJ1pMD3Gf+sQ0GEaxriacIRwWkNBhdmanqaTCQM49WDfxcQe9p/nuWYwjJONSVkxXkKplDn3GXKEQaKTYRnCsQd3w/paeT8gKiRUf5x73Eysh1hmIygLxryuYr50h0Uog3dI5SH6HN4N85G3NkI2pcvEIMrXKTFzXqMUKWUjZJR2Fjzm1gf9hgO1ziETZQVkIcesNX0VVGsuvSY5Inudoe3zLKsQEQdbpcxxEm6Ezl+S0gtId0CGpAigMwAAAABJRU5ErkJggg==" alt="" width="26" height="25" /><span style="font-family: 'Times New Roman';">).</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><u><span style="font-family: 'Times New Roman';">Тактовые моменты</span></u><span style="font-family: 'Times New Roman';">: </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAhCAYAAAAFx/8kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJASURBVGhD7ZeNUcQgEIVTgA3YgA3YgBVYgR3YgS3YgjXYhF3YjPJd7s1wGQjhJxjMfjM7l7sjhMfbBTIZhmEYhmEYhmEkub9+GgPz7OJ1vjRG5tPF93y5L5T943w5LEfV8ODi5xpbxlelg4wZfQ3fS0PtkvjugrFhJNcpinW8uehS9juypwYMKOXOBffrU9cxinSwAXOTHkAmsAyMRA8N9FsK1ayKphrp6+Xy7ZYqHTSkU3XOuryWLa3RSS4VtIvRQwN9l4I5WiYZG319Xb7dUq2DieLmngaKFkYCbfbUUGok417uiaq6ULVV6SA7QhkyEi01hJKLyV3+RqRgTEvDVHWhQ0+xDpzXIEeltYZWRrI0ss8t0XgJv/KqdDy54GYe+he0WFp7aKD/XKi42Lg/XNCn/3+VDp2iWrP1HaiFkXtp8MntH/3shTFkml+xVTp4GNnRCrKJPpn8XrTWECJ3gpWAa+jQo6Qv1kEHdMTmq+NuDqH1n0xjs+5lZK2GreQaSXte7GVoKJgntavSQWNuJgswQNApZe53xoP9NhAyEjTQHsQ0AP/xu3+g4LsqIIccPfSvOdgSMi6mYxMcjUPCMImHCMrenxA4gpEQ0wBMjhKSdrExH4E1HcVQkTKDDNG7EL8xOcvwJ6i3kWuQgDKSzF8m479HZmBgrNSPUpFrMEaM5NTbPNtHACNS6/UoRnKY0IpyOjBi7d0NQkaS9SRA6aGiNYzjtCZC6V6C+RhMpBKhB6fbEw3DMAzDMAZnmn4BHWm3uq0c8HQAAAAASUVORK5CYII=" alt="" width="114" height="33" /><span style="font-family: 'Times New Roman';">определяются синхронизирующими сигналами.</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 18pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 14pt;">Дискретное автоматное время: </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAhCAYAAACYyvasAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVGhD7ZeNTcQwDEY7AAuwAAuwABMwARuwASuwAjOwBFuwDOSp90m5kDR2+pdDeZJ1FWlS54vtmGkwGAwGg8E/4CHY0/zYPfiJv13wHOwrWDcOXbgLhlDvwWLfeP4Jht+nIuFwtCfwC4Fkj8Fi8Be/Vwt4Hyxd3IJOkPm9ocMk6nLigfxflTGfwVoEYN7b/Ngtr8FK4gHiso8m2Pz3/OgCZ0qnplqTOxDGXi6/R1ATT/sojWch1xGNiRjqe8JX6ZCCaFozV08+gjHmcnYFNfGAcfZjBqGIACbyy+KeaED4UrgTzayL4yn8vZYmiM7cmlmKPe/VxOPicGefFm5JoSURtC6/MSrQte8dLR774B0XKI55wZEl8TSO4zGk7KqbrQGPeEvvXMHp5zZooUW8tFE9il3EU2E3T4jgFvWIR021pJg4K23N7VrptrRiEY9xNugRDs4Szwy3CzWolaUPqiRgOH8mFvGWOoc/KO1IJ7UpXtTmlEKdMVfvtBNqm0pRqoNmPyaUVkQetU8gBBuOxeTk4neEPlpy6ux/27iclB2yXHThP2O19ukKFs9FDR+IU21pYd5zN5cHgc8EQWop6X5XQTRqMU6l1l7QJ2728YMhVVv63CIIgSFa7qRSOOFbFFDCudK1BiKktbAGDjDHXHRPBj/xd1PhAPEs/VOOzZ3Zid38vBUBBoPBYDDoiWn6BdsInja+26rUAAAAAElFTkSuQmCC" alt="" width="79" height="33" /><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 14pt;">, в котором зависит не от физического времени, а от номера такта </span><span style="font-family: 'Times New Roman';">&upsilon;</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 16pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 14pt;">Выходные функции последовательных схем в качестве своих аргументов кроме входных переменных обязательно содержат совокупность промежуточных переменных </span><span style="font-family: 'Times New Roman';">S</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 10.67pt;"><sub>1</sub></span><span style="font-family: 'Times New Roman';">, S</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 10.67pt;"><sub>2</sub></span><span style="font-family: 'Times New Roman';">,&hellip;, S</span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 10.67pt;"><sub>k</sub></span><span style="font-family: 'Times New Roman';"> </span><span style="line-height: 115%; font-family: 'Times New Roman'; font-size: 14pt;">характеризующих состояние схемы.</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">Набор всех возможных состояний, присущих данной схеме &ndash; </span><u><span style="font-family: 'Times New Roman';">множество состояний</span></u><span style="font-family: 'Times New Roman';">.</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">Таким образом, состояние конечного автомата в любой тактовый момент характеризуется значениями такой совокупности переменных, которая вместе с заданными значениями входных переменных позволяет определить выходные переменные в данный тактовый момент и стояние в следующий момент.</span></p>
+<p style="margin-bottom: 0pt; line-height: 115%; font-size: 14pt;"><span style="width: 35.4pt; display: inline-block;">&nbsp;</span><span style="font-family: 'Times New Roman';">Поэтому автоматы должны обладать способностью сохранить предыдущее состояние до следующего такта, в связи с чем их называют </span><u><span style="font-family: 'Times New Roman';">автоматом с памятью</span></u><span style="font-family: 'Times New Roman';">. В качестве памяти широко используются элементы задержки, на выходах которых повторяется входные воздействия со сдвигом во времени на интервал между тактами </span><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAYAAABvCO8sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEGSURBVEhL7ZRtDcIwEIYnAAMYwAAGUIACHOAAC1hAAyZwgZlxT+mbNE0H10tY+NEnuWxd2/u+TYPBLznl5ypsTGaTbVqtANFh8JJWPg75GeJpgkHEAw6e36/94OnN5GGCwW+e7004t0urABjDiNLKugX1vZooE0SI8S5QQjpBjYO0mgflGGH/nt+7DdIk5TgogqURIRPsH9OqEyIiOp5CChV1DQ6yX95xg5dEVKOObaWLPZorBBdbnaY61c5QV76HxgHvKXwLKa5Tpy4OjQPefyo8zqC8PMO48K2bchSWwBDKy3qxxlGi7korhz0XMIDgICWQQRl1oy70in7o1DA0f4PBPzFNL365SWW3KMFEAAAAAElFTkSuQmCC" alt="" width="28" height="27" /><span style="font-family: 'Times New Roman';">, например триггер.</span></p>
+<p>&nbsp;</p>
+<p style="margin-top: 10pt;">&nbsp;</p>
+</body>
+</html>

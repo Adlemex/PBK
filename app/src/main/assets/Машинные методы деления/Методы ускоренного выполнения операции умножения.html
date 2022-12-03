@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            text-align: justify;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p class="ListParagraph" style="margin-top:24pt; margin-left:0pt; margin-bottom:36pt; text-align:center; line-height:200%; font-size:16pt;"><strong>Методы ускоренного выполнения операции умножения</strong></p>
+    <p class="ListParagraph" style="margin-top:36pt; margin-left:0pt; margin-bottom:12pt; text-align:center; line-height:normal;"><strong><em>Умножение с использованием прямых и инверсных передач множимого в сумматор</em></strong></p>
+    <p style="margin-top:12pt;"><span style="height:0pt; margin-top:-12pt; text-align:left; display:block; position:absolute; z-index:0;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAmCAYAAACWGIbgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD/SURBVGhD7dXBCsMwDAPQ/v9Pb/RgMEHqZDstlOlBL44cZacdZmYGfYqfmZn9qzf9Izz+1qui/BCWYTo7J2Wve3cZK1rnLLeKnJoPlT0lswUrUmcMu/cXZa97dxkqYuXrnOVOd5wFJbMFKmLl65zlTnecBSWzBSpi5WyOVLKZste9uwwVsXI2RyrZTNnr3l2Gilg5myOVbKbsde8uQ0WsnM2RSjZT9rp3l7Eidcawe39R9rp3l7GidY5yaBbuOAtKZourojhjGXSWZ/nL0DzP8odcnW21o6i7P9mbvlkyLZr8wK7pm2WToqf3wuTNJVH0WOHAm95qZmZmZmZvdhxfcyvXKW5/p0sAAAAASUVORK5CYII=" width="71" height="38" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-12pt; text-align:left; display:block; position:absolute; z-index:1;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAmCAYAAACWGIbgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADRSURBVGhD7dXBDsMgDANQ/v+nu1OkCo3gOInGkJ/EoZQ4wIUhInKgJzhERETulX3pjngpO57sSJ7Xv3pfMNuUtzkGmoX2R/Na7DYXwWTtapjMMpXNmRykf9X+wlabs/ndMPM3Cqljs9OqGrM5SB2bnVbVeJVj87v/HmRNi1Vjm98NM3+b91rvvwdZ06KqMZuD1LHZaVWN2Rykjs1Oq2rM5iB1bDbNGs4jI1I/97XxzWr+r3gHZHVk/kzH5Vyl6kDXXYzJHuzaixERERERkYON8QG1sZdpGIkNyQAAAABJRU5ErkJggg==" width="71" height="38" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-12pt; text-align:left; display:block; position:absolute; z-index:6;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAA7CAYAAACzM4J9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF+SURBVHhe7dfBrsQgCEDR/v9Pz8SFieFpBwSjT+5JXLQFRXEx8wAAAAAAAAAA8NdHDC/NPFFraa2qqebM5B5BFu7ZSM19m0MTE0mzniamR8Zb84/QK9i7Cc1BaGIiraipF2vJ32604dF7LU2+dw2r6JpGsZY5tlu1CU2+dw2r6JpGsZY5tlu1CU2+dw2r6JpGsZY5tlu1CU2+dw2r6JpGsZY5tlu1CU2+dw2r6JpGsZY5tlu1CU2+dw2r6JpGsZY5jjDahIfmEDQxkVbU1Iu15B9Bblo+z9DM8Stm9N36vvr1vdDEtGS8Nf8YtXDvBuQ8dbR638uQot/L0ep9L6Mln6u3nHRuPoD0zdXgAuDag+ICKN14UDTf6KYDo/mTbjg4mu9UDtAzZvXmmhnYzNIMSyz+obfG0vQkeo2m+cm0Daf5SZXG0/zEuADJcQGS4wIAAAAAWdRf/vwLSKg2vW08lyAZ2XAuQDJcgOS4AImVZtdRyGcAAAAAAAAASON5vrvUMN5kyuYaAAAAAElFTkSuQmCC" width="128" height="59" alt="" style="margin: 0 0 0 auto; display: block; "></span>Общее количество передач множимого в сумматор определяется количеством единиц в разрядной сетке множителя, а от этого напрямую зависит общее время операции умножения. Уменьшить это количество передач, а значит и повысить быстродействие умножения можно за счет использования как прямых так и инверсных передач множимого в сумматор. Для реализации такой операции запись множителя из двоичной формы с использованием знаков [0;1] преобразуется в двоичную форму с использованием знаков&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , в которой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . При умножении на преобразованный множитель последовательно анализируются все его разряды. В случае, если содержимое разряда множителя равно 1, то в сумматор множимое передается прямым кодом, а если (-1) &ndash; обратным.</p>
+    <p style="margin-top:10pt; margin-bottom:12pt; line-height:200%;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:2;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAA/CAYAAAAoosBrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHPSURBVHhe7deBagMhEEXR/P9Pt1iwmMHR5zpZs3oPSIn7HM2OLfQFAAA+7aczAAAAAAD4VlH/u5b/B3v1lEwkZT8l4+mtKeu2cktEHs7WqNVUMpGU/ZRMTc618vZZK7tUxMFq6+2ckol0x5lS1svP1r5N60sovPXlvJKJpOynZHpGa3jzS80eyltfziuZSMp+SqZntIY3v9Tsobz15bySiaTsp2R6Rmt480vNHspbX84rmUjKfkqmZ7SGN7/U7KG89eW8komk7KdkekZrePNLzR7KW1/OK5lIyn5Kpme0hje/VMShvC9bUjKR7jhTynr52dq3aX0Jla1Rq6lkkk/N13JKpqWVt89a2SXygey4Qq0zkrFG55P8bCbjzdWG1Xu+jZ2/3NaNi8IFOBwXAFu+KJo/gAuArV4Yzb9ohxdH8yc9+QXS/CDpRebxBE866+OUl2FkXFGrowx8oZHm0MiN9RpL4w/gNZnmH8Q2m+YfhguA/6bT/ENxAfDXfC7AwWj+4bgAh+MCAHjHX4WDpeZzAQ7HBdhMbqj6280F2EhuetnUXoO5AJuxDeUCHMa7AOlnHiX7GQ832mAuwEZSM/NI7Ger9xwAAAAAAADYxev1C++slHqWuRnnAAAAAElFTkSuQmCC" width="128" height="63" alt="" style="margin: 0 0 0 auto; display: block; "></span>Любую группу единиц в разрядной сетке множителя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; можно преобразовать к виду&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; содержащую только 2 значащие цифры.</p>
+    <p style="margin-top:12pt;"><span style="height:0pt; margin-top:-12pt; text-align:left; display:block; position:absolute; z-index:3;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABACAYAAABiBZsIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVHhe7dMBi8MgDIbh/v8/vUNYoGTJ1WQ21fk+IKO9ROO32wEAAAAAwKfXe0VV9klPpvdW2cGe6hPR/hLZoar6rNrMubeKXkpU9Hm1kT1KZAeq6PNqI3uUyA5U0efVRvYokR2oos+rjexRIjtQRZ9XG9mjRHagij6vNrJHiexAVX1Wbebcr/13aPRS4s6+8991fU//LaxDZRi9rlg9bV2xetqy6Pc9PSUePTxo2llXCXHqOQlxAEIcZPYBV/mipx10mQCbNuyMAy8Vophl6Fm/1G5PXmD58DS5kLeyrL1kbSd68W2D6tETDOF18ELivy/ICosAE86hEWASIQ7SwiPALxHiAIQ4ACECP0d+1vy0k3RwBDnA9iFKAO3zHIY866VZ77ZihRMJRfduS4cgzxKQXhbv/TZ0AJlACPH9KQgxqF1eVqOfPee6q1oAAAAAQNJx/AF78vQMtdEk3gAAAABJRU5ErkJggg==" width="81" height="64" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt;">Например: В =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1∙2<span style="line-height:115%; font-size:9.33pt;"><sup>3</sup></span>+1∙2<span style="line-height:115%; font-size:9.33pt;"><sup>2</sup></span>+1∙2<span style="line-height:115%; font-size:9.33pt;"><sup>1</sup></span>+0∙2<span style="line-height:115%; font-size:9.33pt;"><sup>0</sup></span>=14</p>
+    <p style="margin-top:10pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:4;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGsAAAA8CAYAAABhNERDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGySURBVHhe7diBasMwDEXR/v9PbxhqECJK9Gw5teEeCKOd/ORJG4N+EPobeAAAAAAAADBk1ccr9qOb2fzKrGYkx/ZXz05b2dxnzvRYkaVm+Hr1fJkVja/yRntUZnXtvJKx4g5D1Is/ifJG+lRmWcr5qFbJKFPdNMob6VOZZSnno1olo0x10yhvpE9llqWcj2qVjDLVTaO8kT6VWZZyPqpVMspkm2YvFuVl+1gjWZked+e9qFbJKJNtmr1YlJftY41kZXrcnfeiWiWjjNJ0pm70B1OzMn1ajXIf9Q7LKBdX6myt0sNTszJ9njI8X6+en9Yb+ufO0/ctJfdJNuupj8/pT8bImZ/b+aLHDPFNOw6FRQV2G0y7D8u6scuAWJLgV8Pa5ZflOH1w/qmyMhtfM8OdOYtJ2cGzoI3cLYIlbehqKSxqY345LGtjdjks6gB9SSzrAG1JLOoQLOswLOsgLAtYpf/v4q9sc35BLOwgLOslfdDtqx16f+2fK9H7KHS1BHXwLOpFftj9dft69XhX72ERP2xl+CzqZaPLsnUs7QVtyP1p/OuIrcvUAwAAAAAA4AWfzz+7xTfX7iUrRwAAAABJRU5ErkJggg==" width="107" height="60" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt;">Можно преобразовать: В&rsquo; =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1∙2<span style="line-height:115%; font-size:9.33pt;"><sup>4</sup></span>+0∙2<span style="line-height:115%; font-size:9.33pt;"><sup>3</sup></span>+0∙2<span style="line-height:115%; font-size:9.33pt;"><sup>2&nbsp;</sup></span>- 1∙2<span style="line-height:115%; font-size:9.33pt;"><sup>1</sup></span>+0∙2<span style="line-height:115%; font-size:9.33pt;"><sup>0&nbsp;</sup></span>=14</p>
+    <p style="margin-top:10pt;">Отсюда следует, что можно организовать операцию умножения следующим образом:</p>
+    <ol style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">Анализируя содержимое множителя, начиная с младших разрядов, сдвигать содержимое сумматора без передач всего множимого вплоть до первой значащей единицы.</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">На первой значащей единице содержимого множителя, передать множимое в сумматор обратным кодом и перейти в новый режим &ndash; сдвига по единицам.</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">В режиме сдвига по единицам сдвигать содержимое сумматора не передавая в него множимое вплоть до первого нуля в разрядной сетке множителя.</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; padding-left:2.5pt;">На первом нуле в разрядной сетке множителя, рассматриваемом как начало группы нулей, передать множимое в сумматор прямым кодом и перейти к режиму сдвига по нулям, то есть к п.1.</li>
+    </ol>
+    <p style="margin-top:10pt; margin-left:18pt;">Таким образом, множество передач множимого в сумматор будет определяться количеством групп единиц или нулей на которые модно будет разбить содержимое разрядной сетки множителя.</p>
+    <p style="margin-top:10pt; margin-left:18pt;">Пример: Выполнить операцию:</p>
+    <p style="margin-top:10pt; margin-left:18pt;">А х 1110001110</p>
+    <p style="margin-top:10pt; margin-left:18pt;"><img src="data:image/png;base64,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" width="386" height="63" alt="" style="float: left; ">Представим множитель с разложением по степени основания 2</p>
+    <p style="margin-top:10pt; margin-left:18pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:18pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:8;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAeCAYAAAC2Xen2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVGhD7dDbCoAgFERR//+nCyHDsPI282DtDQefPMoK5Gs7TtJ1moKrDVhTwBq6WAKrq7AEVxOwhh4NwZ0LWENVO3D7azYDt71uK3DrDRvFiwCXyVzSoj8j2w3yBxTj6u6tmVku5eeVuz7VKAqYjfUgAdpZCxiog73BgTrZHSCogoA1lkOCKi6BAisugoJqCFhTwJoC1tgisCHscX5qlhxXhlYAAAAASUVORK5CYII=" width="86" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:9;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAeCAYAAAC2Xen2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVGhD7dDbCoAgFERR//+nCyHDsPI282DtDQefPMoK5Gs7TtJ1moKrDVhTwBq6WAKrq7AEVxOwhh4NwZ0LWENVO3D7azYDt71uK3DrDRvFiwCXyVzSoj8j2w3yBxTj6u6tmVku5eeVuz7VKAqYjfUgAdpZCxiog73BgTrZHSCogoA1lkOCKi6BAisugoJqCFhTwJoC1tgisCHscX5qlhxXhlYAAAAASUVORK5CYII=" width="86" height="30" alt="" style="margin: 0 0 0 auto; display: block; "></span>В =</p>
+    <p style="margin-top:10pt; margin-left:18pt;">&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:18pt;">Анализируя&nbsp; распределение нулей и единиц в разрядной сетке множителя, отмечаем наличие двух групп единиц, что соответствует шести передачам множимого в сумматор. В итоге получим:</p>
+    <p style="margin-top:10pt; margin-left:18pt;">П = А х В = А х (512+256 +128+8+4+2) = А х 910</p>
+    <p style="margin-top:10pt; margin-left:18pt;">Используя рассмотренный метод, преобразуем запись множителя к виду:</p>
+    <p style="margin-top:10pt; margin-left:18pt;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:7;"><img src="data:image/png;base64,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" width="428" height="63" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; margin-left:18pt;">В =</p>
+    <p style="margin-top:10pt; margin-left:18pt;">Что соответствует четырем передачам множимого в сумматор.</p>
+    <p style="margin-top:10pt; margin-left:18pt;">В итоге имеем:&nbsp;&nbsp;&nbsp; П = А х В = А х (1024-128+16-2)= А х 910</p>
+    <p style="margin-top:10pt;">Этот алгоритм применим в случае наличия в разрядной сетке множителя выраженных групп нулей и единиц. Изолированные единицы и нули рассматриваются как группы, каждая из которых увеличивает общее количество передач множимого в сумматор, например при коде множителя 01010101 соответствующий четырем передачам множимого в сумматор. Его запись преобразуется в код <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAAYCAYAAACGLcGvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANTSURBVGhD7ZdPKHxRFMdHJBobhURK2aBIWSBLpUlmZ2UhCyuJWDAbGxElpSSlJE2JZsn4s/KnLCjypyj/NqIpikTkz5yfc9654+HeN29+PdncT52md/rMve99u3fmPhdoHEOH6SA6TAeJOcxAIGBZd3d3bNpjbm5OOo65YkU2hrmOj4/ZtMfm5qZ0HHMhMYfZ3t5uWZeXl2zao7u7WzqOuWJFNoa5VldX2bSH3++XjmMuRG9zB/kR5v39PdTV1UFbWxt31ASDQcjOzoZQKMQdOSsrK5CbmwsXFxfckfP8/AwNDQ1QW1vLHTlvb2/Q1NQEFRUV3FGzv78PBQUFcHJywh05p6enUFRUBIeHh9xR09raChkZGXz1yZcwJyYmIDU1FVwul2WYDw8PUFJSQh6WKsyXlxcoLS2NeFZhLiws0A2iZxXm+vo6ZGZmkhctzPLy8sjcVmFWVVVFPKswt7e3IScnhzxlmK+vr3SD4+PjcHZ2RrIqTHwYXGXodXV1kSsLc29vD9LT0+kh+vv7yVOFiat7cHAQrq6uyFOFWVhYCL29vXB9fU2eKkz8g3G73XB0dAQzMzPkysLEZ0hJSYHd3V1YXl4mTxVmTU0Nrcjb21vyLFdmOBymz5ubG5LtbPOenh5yo23zkZER8lRhirkfHx/JU4UpPFzx6NnZ5ouLi+RG2+ZbW1vkqcIUcyPoRd3myF+EKYgWpuAvwjSDng7TAh2mDlONDvPD1WEa6DCZXw2zubmZO2pEmNFCEmGen59zR44I0+PxcEeOCLOsrIw7akSYBwcH3JEjwtzZ2eGOGvTS0tL46pNImDgYHtqLi4tJTkxMhJaWFpiamoKnpye2jAM+9jo6OiApKYnc/Px8GBsbg42NDbYM0PP5fJCcnExeXl4ejI6OwtraGhsG+Mo3OTlJ4aCXkJAAjY2N9H08JAtw1WCvsrKSvPj4eKivr6ceHuTNTE9PQ19fHx3e0c3KyoLh4WFYWlpiw2B2dhYGBgbo8I4evmgMDQ3B/Pw8Gwa4EHCe6upq8uLi4sDr9VJPLKZImO/v7/TOK6vvyBwsHMOMzMH67uGBWOZhmbHyzIdqROZg/cY9irl/bHPN/6PDdBAdpoPoMB3E9fHj2anLiQp3/gPL8Sz8ho5rzwAAAABJRU5ErkJggg==" width="83" height="24" alt="">&nbsp;соответствующий восемью передачам множимого.</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

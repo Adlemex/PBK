@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li,
+        table {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: justify;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: 'Times New Roman';
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 200%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            text-align: justify;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            text-align: justify;
+            line-height: 115%;
+            font-family: 'Times New Roman';
+            font-size: 14pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p style="text-align:center;"><strong>Машинные методы деления</strong></p>
+    <p style="margin-top:10pt;">Различают деление:</p>
+    <ol style="margin:0pt; padding-left:0pt; list-style-type:lower-latin;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:32.71pt; margin-bottom:0pt; padding-left:3.29pt;">С восстановлением остатка</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; padding-left:2.5pt;">Без восстановления остатка</li>
+    </ol>
+    <p style="margin-top:10pt;">Алгоритм деления <strong><em>с восстановлением остатка</em></strong> аналогичен делению столбиком в десятичной системе.</p>
+    <p style="margin-top:10pt;">Порядок выполнения операции:</p>
+    <ol style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-top:10pt; margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">Делитель заносят в регистр делителя (RGA); а делимое &ndash; в регистр B+C, при этом в регистр В заносят старшие разряды, а в регистр С &ndash; младшие разряды делимого. Количество разрядов RGB равно количеству разрядов делителя.</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">Производим вычитание содержимого RGA из содержимого RGB.</li>
+    </ol>
+    <p class="ListParagraph" style="margin-bottom:0pt;">Если результат вычитания &Delta;&gt;0, то в старший разряд делимого заносят 1 с одновременным сдвигом содержимого В+С.</p>
+    <p class="ListParagraph" style="margin-bottom:0pt;">Если &Delta;&lt;0, то в старший разряд частного заносят 0, предыдущий остаток восстанавливают с одновременным сдвигом содержимого В+С.</p>
+    <ol start="3" style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; padding-left:2.5pt;">Процесс деления в п. 2 циклично повторяют до тех пор, пока остаток &Delta;=0 или будет достигнута необходимая точность.</li>
+    </ol>
+    <p class="ListParagraph" style="text-align:center;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApIAAAHkCAYAAACNG88nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAACm3SURBVHhe7diBkqQqsgDQ/f+f3tdsQT3bUQsttCE5J4KYFhUxMwu59z8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDbf080AAD4x9ZG0QYSAICPbCQBALjk7EaynFufX/bXtGKrf6uvuHpuqeYaAAA+2NpM7W2y1v3ra7aO19evr0m2+kvf2f5i65pk6zoAAC6o2WwlNX0159fXJFv9pa+mf+u6pOa6rT4AACpsbaKONlxbrVj+nWyd37tmq7/8u/y7/Fv+TtbHxd51Ww0AgBP2NlBbm6uaDdene5bHe38Xe9eVf8vfyfq4qL0OAICT9jZVWxuumk3Yp3vK8afrknK8PLfVl6yPi9rrAAA4aW9TtbXhKn1b/cXePcX6uNjqP7rv03Gxd9362vUxAAAHjjZPW5utpPRvtaT8WyzPJevjYqv/6L696z9dk5T+ZQMAoNLWZuqoLa3718fFsn+rFVv9e8fJ8lzpK47OLdVcAwDAhpqNVM01AABMpnaDaCMJAMAvZzaHNpIAALzZSAIAMLS0SbVRBQDgNBtJAAAusZEEAOASG0kAAC6xkQQA4LTlBtJmEgCAajaSAACctt442kgCAFBla+NoMwkAwKGjDaPNJAAAmz5tFG0kAQD4R+0m0WYSAIC3s5vDdL0NJQDA5L7ZENpMAgBMqNX/VWw1DgAAnbtr42dDCQAQUNnkPbHRe/JZAEADy4+3pq3bX9mai6aVBsAfsiADI7OGATzMwgtEZG0DuJkFFpiBtQ6gIf+VDszGugfQgIUUmJk1EOAiCyiAtRDgNAsnwP+zJgJUsmAC/MvaCFDBYskM1DlnqRmADyyUzEKtc4W6AdhhgWQm6n1e3+Ze7QBssDgyE/U+LxtJgBtYHJmJep+XjSRAYxZGZqPm59Ui9+oHYMGiyGzU/LxsJAEasygyGzU/LxtJgMYsisxGzc/LRhKgMYsis1Hz87KRBGjMosiRiPWh5ucl9wCNWVg5YiNJJHIP0JiFlSM2kkQi9wCNWVg5YiNJJHIP0JiFlSM2kkQi9wCNWVg5YiNJJHIP0JiFlSM2kkQi9wCNWVg5YiNJJHIP0JiFlSM2kkQi9wCNWVg5YiNJJHIP0JiFlSM2kkQi9wCNWVg5YiNJJHIP0JiFlSM2kvdKc1nPJ2rft8cttB4PYHoWVo5ErI+e3inNZT2fqH3fHrfQejyA6VlYORKxPtT8vOQeoDELK0dsJIlE7gG+kBbR9UK6tbBabOdUUwvpePT6UN/zknuAL21tDJbSscV2Tlu5/3Q8IvU9L7kH+FJaSJeL6fpvC+3cZqiPCO/ANXIP0MB6c1BYZEmi14c6n5fcAzSQFtOyoC7/7W2R3ZpTy76ta/gdl+W/UWIV5T04T+4BGlluEJb/9iTNaT2vln1b1/BS4rL+NwI5n5fcAzSUFtVlg2JdG5HqI9K7cI7cAzQUcZNAO1HrQ73PS+4BGou4UaCNqLWh3ucl9wANlY2Cph21aCK+E3XkHgD4is3EvOQeAPiKzcS85B4A+IrNxLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+4B+MWHgbPUzLzkHoBffBg4S83MS+55nKKLQy5jklfOUjPzknsep+jikMuY5JWz1My85J7HjVJ0aZ61bVYzv3tk8spZamZecs/jRiu6rfmmPj8eMYhKXjlLzcxL7nncaEW3Nd/U58cjBlHJK2epmXnJPY8brei25pv6at+jXFvbRjLafKkjr5ylZuYl9zwuwmYp9Z15j/W16/vPjteLEefMZ/LKWWpmXnLP40Yruq35pr4z77G+dn3/2fF6MeKc+UxeOUvNzEvueVxPRZfmsmxbtvq3ri99e+eW1tds3TOCEefMZ/LKWWpmXnLP43oqujSXZVvbm+vW9aVv79zS+ppyvG69G2GOnCevnKVm5iX3PG6kotuba+o/8x7ra9f3b4231deb3ufHNfLKWWpmXnLP40Yqur25pv4z77G+dn3/1nhbfb3pfX6jKrnXNE3TzjeCGyXJR/OsKdblNetr1/evj5Otvt70Pr9RiWt80XKsZufVY+7VY3AjJDjN8Uzbsnd+2f+p9W6EOY5IXOOLlmM1O68ec68egxshwWmOpe2puSa6md/9TuIaX7Qcq9l59Zh79RjcCAlOc6yZZ+11Uc387ncS1/ii5VjNzqvH3KvH4EZI8Jk5zlywfqz3ENf4ouVYzc6rx9yrx+BGSPCZOc5csH6s9xDX+KLlWM3Oq8fcq8fgJDgOubyHuMYXLcdqdl495l49BifBccjlPcQ1vmg5VrPz6jH36jE4CY5DLu8hrvFFy7GanVePuVePwUlwHHJ5D3GNL1qO1ey8esy9egxOguOQy3uIa3zRcqxm59Vj7tVjcBIch1zeQ1zji5ZjNTuvHnOvHoOT4Djk8h7iGl+0HKvZefWYe/UYnATHIZf3ENf4ouVYzc6rx9yrx+AkOA65vIe4xhctx2p2Xj3mXj0GJ8FxyOU9xDW+aDlWs/PqMffqMTgJjkMu7yGu8UXLsZqdV4+5V4/BSXAccnkPcY0vWo7V7Lx6zL16DE6C45DLe4hrfNFyrGbn1WPu1WNwEhyHXN5DXOOLlmM1O68ec68eg5PgOOTyHuIaX7Qcq9l59Zh79RicBMchl/cQ1/ii5VjNzqvH3KvH4CQ4Drm8h7jGFy3HanZePeZePQYnwXHI5T3ENb5oOVaz8+ox9+oxOAmOQy7vIa7xRcuxmp1Xj7lXj8FJcBxyeQ9xjS9ajtXsvHrMvXoMToLjkMt7iGt80XKsZufVY+7VY3ASHIdc3kNc44uWYzU7rx5zrx6Dk+A45PIe4hpftByr2Xn1mHv1GJwExyGX9xDX+KLlWM3Oq8fcq8dAtpK57kvHkt4/uXyOGMYXLcdqdl495l49BpKSuU7o8njrPH36lMtELtsQx/ii5VjNzqvH3KvHYNYJXR5L9lg+5VI+2xDH+KLlWM3Oq8fcq8dgUkKXSS1/r/vpn1w+Qyzji5ZjNTuvHnOvHgNaJrX8LdFjSnlb51Au2xLP+KLlWM3Oq8fcq8egSmLTv6WNZGvOtX3RlPcr7xr9fZ8mnvFFy7GanVePuVePQaXELttotuZd2xdNeccZ3vUviGl80XKsZufVY+7VY2ApuaUxNrm8T9SYbtVLbV800d4ver7Y12Pu1WNgKbkSHINc3idqXLdqprYvmmjvFz1f7Osx9+oRBuHHeg9xjS9ajtXsvHrMvXoEpmYRjM9GkihsJAE6YxGMz0aSKGwk2ZUSoWlPN8RhBtFyrGbn1WPu1WMn/juy0effykhxSHNNhYc4TCBajtXsvHrMvXrsRP68j2n0+bcyUhzSXFPhIQ4TiJZjNTuvHnOvHjuRP+9jGn3+rYwUhzTXVHiIwwSi5VjNzqvH3KvHTuTP+5hGn38rI8UhzTUVHuIwgWg5VrPz6jH36rET+fM+ptHn38pIcUhzTYWHOEwgWo7V7Lx6zL167ET+vI9p9Pm3MlIc0lxT4U1m651r+xhDtBynea7nOvL7UG+U3Ku9TuTP+5hGn38rI8UhzTUV3mS23nvreMbYRBExx5/eJxnpfag3Qu7VXify531Mo8+/lZHikOaaCm9C6/deHs8cl0ii5Xg95/X8R3wn6tTk/q+pvU7kz/uYRp9/KyPFIc01Fd6E1u++9zfjipjjo/cZ9Z2os8xxj7nvYQ78yJ/3MY0+/1ZGikOaayq8SS3fvfw9e0yiiZbj5dyX7zDq+3BOz7lXg53In/cxXZl/uueo1dq779MY6+tbaD3enfL7z2r5/ut/iSFijrfeZ/R3ok7JdY+572Ue08uf9zF9M/907/r+rb61vWtK/9X7v9F6vDvl95/ZuwYWjVgi5nj5HhHeh3q95l4ddiJ/3sf0zfzTvVv37/UnR+eKo/PlXM04Z7Qc62753Wf3roH/HRFRtBwv3yfKO1Gn19yrw07kz/v30ljL9oRvnrM3z6P51zzv6Jpy7ugZV7QYq8yp9dzW8vizW8aamCLmV83Oq8fcq8VO5M/7d9I4y7HWx3f55hl7czzbX2t577djrX071no+ree3lMdGHGYQLcd+v/PqMe9qsRP58/6dNM5yrPXxXb55xtYcj+Zdc27dlraO131XfTvOei4t57aWx+7Z+/01TdO0j+2v/OWzWcif93bSmKXd7ZtnLOdZ2pFvrtnr+zRerVbjJGVeLcdcymP3LM90PCPPvbWosYj0Xup13yixSfP8aX/lL5/NQi6H76WxynjLv+/0zTPWc/w050/nk71rSv9Wa6HFOMv5rOdWjpd9V+VxepZnOp6R595a1FhEei/1um+U2KR5/rS/8pfPZiGXw3fSOMux1sd3+eYZW3M8mnc5t3c+2Tu/d8+n8Wp9O8Z6Hsvj9djr47Py2D3LMx3PyHNvLWosIr2Xet03SmzSPH/aX/nLZ7OQy+E7aZzlWOvju3zzjL05Hs396Fyydf7s9Vd8O8Z6Hsvj9djr47Py2D3LMx3PyHNvLWosIr2Xet03SmzSPH/aX/nLZ7OQy+E7aZzlWMvj9d8tfTPecl5rNee2zq/7964ryvmja2q0uH85xvJ4Pfb6+Kw8ds/yTMcz8txbixqLSO+lXveNEps0z5/2V/7y2SzkcvheGmurLc+Vv1u5MlaZy7qtHZ1LlueXrdjrL9bnt66p9c29xXouy7a0Pj4rj9mzPNPxjDz31qLGItJ7qdd9o8QmzfOn/ZW/fDYLuRzutXxOy2c+Nf/e3RmH9djfPivd/9N6lmc6npHn3lrUWER6L/W6b5TYpHn+tL/yl89mIZfDvZbPafnMp+bfuzvjsB7722el+39az/JMxzPy3FuLGotI76Ve940SmzTPn/ZX/vLZLORyuNfyOS2f+dT8e3dnHNZjf/usdP9P61me6XhGnntrUWMR6b3U675RYpPm+dP+yl8+m4VcDvdJzyhtedxCq3FGd3ccSs5aPCeP07M80/GMPPfWosYi0nup132jxCbN86f9lb98Ngu5HMY0+vxbGSkOaa6p8DqWZ3pdGmPZihZjH7k6/nKuW63W3n3rvz+1FlqMszevFmNfdeezl++6fM5dz/x23OVct1qtvfuOxrhyzxktxlnObzlei7GLPPZf+ctns5DLYUyjz7+VkeKQ5poKr2N5puele7fuL/3fjF3j2/G35lgz771rSv/RubW9/rO+GePT3L4Z+1t3PHvvnUr/Hc9MWo27Nceaee9dU/qPzq0d3XPFN+PszaP0fzP2Wh7vr/zls1nI5TCm0effykhxSHNNhdexPNNz0n2f7r06dq1vx997h73+5OhccWbMmvFqXB2j5vkt5ndV62f/5fu2GnfvHfb6k6Nzxfr8lXuuujrOk3NM8vP+yl8+m4VcDmMaff6tjBSHNNdUeB3LMz2n5r6rY9f6dvx0/9YYe/1JzTPPjLnXf9bVMWruazG/q1o/+y/ft9W4aZytsfb6k5pnr6+5cs9VV8d5co5JGuun/ZW/fDYLuRzGNPr8WxkpDmmuqfA6lmdaL91z5b7Wvp3D3nuc7a9xx5hLV8Zo9ew7tZzfX79vq2fvvcfZ/iNX7vnGlWc9PcckP/Ov/OWzWcjlMKbR59/KSHFIc02F17E803rpniv3tfbtHLbe4+jdas6tW7F1rrQWrozT8vl3aTm/v37fVs/eeo+jd6s5t9eecuVZT88xyc/85D23/x2103o8LsrlMKbR59/KSHFIc02F17E803rpniv3tfbtHMp7LNuRb64523/WlTFaPftOLef31+/b6tnlPZbtyJVrau5p6cqznp5jkp+55z2n/x21d9e4nJTLYUyjz7+VkeKQ5poKr2N5pvXSPVfua+3bOazf49N7fTqf7F1zdO/RuVpX7r/y3DPXL6+9Mr/k6n1b0lhX599Cq/HW77E+Xvt0PllfU3NPS1eedXaO5forzyry/VuOzrVy9/hUyuUwptHn38pIcUhzTYXXsTzTeumeK/e19u0ctt7j6N3Kub3zyd75o/uOztW6cn+L5yZ7Yyz7rz6nxfyKNFbL8c5q9eyt9zh6t3Ju73yyPv/p+tauPOvMHNfXXX23/Myl0rfuv8MTz6BCLocxjT7/VkaKQ5prKryO5Zmek+77dO/VsWt9O/7eO+z1J0fnkr3zR/cdnat19f6aZ185v+z7dP+Rb+7dksb7NGbrZxatxt17h73+5OhcsnX+0z3Jp/O1ro5TO8f1NV8+L3mP+7+jZzz5LA7kchjT6PNvZaQ4pLmmwutYnul56d69+5f9y+vW/d9ocf/eGDXnts636j/rmzGO5rDs37vuU9/W+Vrf3Lsnjbk3buk/uuaqVuMdza3m3Nb5s/3JXv8V34xVM8f1+avPy89Kyt+tWo3a67hZLocxjT7/VkaKQ5prKryO5Zlek+7famvL/vXfV129tzx/3daOziXL88u2tHV+3Vr4dpz1nEpbK33r65atnC+Wf5/1zb1HylzXbWl9/K1vx1vOc9nWjs4ly/PLtmfr2tRa+na89dxKK5Z/J+vjWnncohwv+66ovf/b59BILocxjT7/VkaKQ5prKryO5Znea/mcvb/PemruI/iLPBaf+r6Z21PvtaX1s//yXXp3d2zW4199Xrrvp62V/q1zNWrvuzo+jeVyGNPo829lpDikuabC61ie6b2Wz9n7+6yn5j6Cv8hj8anvm7k99V5bWj/7L9+ld3fHZj3+1eel+37annL+6JottdefHZeb5HIY0xPzT89YP6e27yl/9dwrcpx6lmd6r+Vz9v4+66m5j+Av8lis+5bH387rqffa0vrZf/kuvbs7Nuvxrz4v3ffTPqm9rqi99syY3CiXw5iemH96xvo5tX1P+avnXpHj1LM80/ukZ5S2PF7/fdbV+yJ6IhYlV5+etTz/7by+vf+q8p4tn/9X7zKCJ2LTIqf5/hq11yV3jMmNcjmMafT5tzJSHNJcU+F1LM90PCPPvbWosYj0Xup13yixSfP8aa3VjnnHs7kgl8OYRp9/KyPFIc01FV7H8kzHM/LcW4sai0jvpV73jRKbNM+f1lrtmHc8mwtKIWjak61neYkcz8hzby1qLCK9l3rdN0ps0jx/Wmu1Y97xbDoiwXHMlsu8RI5n5Lm3FjUWkd5Lve4bJTZpnj+ttdox73g2HZHgOGbLZV4ixzPy3FuLGotI76Ve940SmzTPn9Za7Zh3PJuOSHAcs+UyL5HjGXnurUWNRaT3Uq/7RolNmudPa612zDueTUckOI7ZcpmXyPGMPPfWosYi0nup132jxCbN86e1VjvmHc+mIxIcx2y5zEvkeEaee2tRYxHpvdTrvlFik+b501qrHfOOZ9MRCY5jtlzmJXI8I8+9taixiPRe6nXfKLFJ8/xprdWOecez6YgExzFbLvMSOZ6R595a1FhEei/1um+U2KR5/rTWase849l0RILjmC2XeYkcz8hzby1qLCK9l3rdN0ps0jx/Wmu1Y97xbDoiwXHMlsu8RI5n5Lm3FjUWkd5Lve4bJTZpnj+ttdox73g2HZHgOGbLZV4ixzPy3FuLGotI76Ve940SmzTPn9Za7Zh3PJuOSHAcs+UyL5HjGXnurUWNRaT3Uq/7RolNmudPa612zDueTUckOI7ZcpmXyPGMPPfWosYi0nup132jxCbN86e1VjvmHc+mIxIcx2y5zEvkeEaee2tRYxHpvdTrvlFik+b501qrHfOOZ9MRCY5jtlzmJXI8I8+9taixiPRe6nXfKLFJ8/xprdWOecez6cgMCb7rR9Sb2X6seYkcz8hzby1qLCK9l3rdN0ps0jx/Wmu1Y97xbDoyQ4Lv+hH1ZrYfa8mrpmma9rm1VjvmHc+mI9ETXN4v/TvLu/IcMY9hljyq1/iezHHts9RdcNETXN4v/TvLu/IcMY9hljyq1/iezHHts9RdcJETvHy39Hf0YvZjfZ6YxzBLHtVrfE/muPZZ6i64yAlev1s6nul9uZ+YxzBLHtVrfE/muPZZ6i64UROc5r1sa3t9W/1RRH63Xol5DLPkUb3G92SOa5+l7oIbNcFp3su2tj6/bFFFfrdeiXkMs+RRvcb3ZI5rn6Xugoua4L33Sv2zvTP3EfMYZsmjeo3vyRzXPkvdBRcxwUfvlM5FLWo/1ueJeQyz5FG9xvdkjmufpe6Ci5bg9D5H71TOR3vvJOI79U7MY5glj+o1vidzXPssdRdcpASnd1m2tfX5rWtGFu19RiDmMcySR/Ua35M5rn2WugtOguOQy+eJeQyz5FG9xvdkjmufpe6Ck+A45PJ5Yh7DLHlUr/E9mePaZ6m74CQ4Drl8npjHMEse1Wt8T+a49lnqLjgJjkMunyfmMcySR/Ua35M5rn2WugtkK5nrvnQs6f2ryWUil/cS3xhmyaN6je/JHNc+S90FspXMdZ+EjyHl6VPutq7huq1Yivl4ZsnjLO85s638beXzrhzXjnvX8/kDKZnrhC6Pt87TL7l81lZMPx3Tnx7zeMfzenxP2lvneSvHV/Jcc0/tuFeeT8fWRbX3N/2Ty+d9irm4j2Gdp7/O413P6+09ucc6r0tXc1xzX+3YV+dAx5ZJLX+nfyV7PHL5vK2YJ2I+lp7yeNcz07hb77buZ2zLfC7z+k2ea+6rHfvqHOjYsrjW/zIWuXzeXszFfSw95fHOZy7HXr4nsWzl9ps819xbO/4386BjJbHp39IYk1w+bxnz5b+MZZm/0v7Cnc9dvlf5+87n8TfWuf0mz7X3tb6OwZQiK41xyeXz1jEX9zH1lMM7n9/Te3KfZX6/yXPtva2vY0ApuRIcQ8mlfD5HzGPoJY93P7+X9+Q+rXJce3/r6xhQi4KjH3L5LL+fGHrK453zUK9z+DbPZ+6tvVbdAeywQMbQSx7vnseo9ZrmvZ57bR/nnIlf7bVy0onyA9E0TdP6b1d9c29UWzGt7aPe2djVXi8nnfgvAP1L6/Vr2b7ER5e/cKXuau9R053ISxQAPUvr9WvZvsyHl6ddqbnae9RzJ/ISBUDP0nr9Wra/4uPLU67WWu19arkTeYkCoGdpvX4t21/zAeZu39RY7b3quBN5iQKgZ2m9fi3bTbQeD5IWdVV7v/rtRF6iAOhZWq9fy3ZTPsa00qqWasdRu53ISxQAPUvr9WvZbu7OsYmvdf3UjqVmO5GXKAB6ltbr17J9m/KMJ57FuO6uk9ox73g2F+QlCoCepfX6tWw/pjwzQvtrW3Matd2t9hlPzIUKeYkCoGdpvX4t21xQ4vdUHJ9+XiS18RLXTuQlCoCepfX6tWzTwF3xlKfv1cZPnDuRlygAepbW69eyTUOt4io/7dTGUbw7kZcoAHqW1uvXss0NvomtvLRVG09x70ReouA7qZaWrVBj0Eb+bXGfK/GVk/ZqYyr2nchLFFyTamirjkq/GoM28u+Je52JsXzcozau4t+JvETBeal+PtWQGoM28u+N+9XEWS7uUxtbOehEXqLgvJr6SddstWLdtzwufcXWua2+Yu/cXn+yPlfa2tH5Zd/eNXBWriOecRRrebhXbXzloRN5iYJzUu2crZ+9e9Z95bo7+o+OP11XbJ0rx+XvZV+yPoazcg3xnK14y8H9amMsF53ISxSck2rnbP3s3bPuK9fd0f/puPimv+YaOCvXD8/Zircc3K82xnLRibxEwTmpdq7Uz/q+rTFK3/Larb5i69xW31o5t3X+m/6aa+CsXD88axlz8X9GbZzloxN5iYJzUu1cqZ/1fVtjlL7ltVt9xda5rb5ifd36fPJNf801cFauH561jLn4P6M2zvLRibxEwTmpdq7WT7l37/7Sv7xmq6/YOrfVl3w6Lr7pr7kGzsr1w/PE/lm1sZaTTuQlCs5L9fOphrbOl/v27l32r6/buu/M9Z+Oi2/6a66Bs3L98Dyxf1ZtrOWkE3mJgmtSDe3V0VF91d63vm7rvjPXfzou9vqT9bm946Nr4KxcQzxP7J9VG2s56UReouC6VEdb7cje+fX9W3/v9S2Pl38v+5J1f2nFXv/S0TXLvr1r4KxcRzxP7J9VG2s56UReouBZkWsvvZvfFq3luuJ5Yv+s2ljLSSfyEgXPiV536f38tmgt1xXPE/dn1cZbXjqRlyi4V6q1ZYtshnfkebmuILraOvd76EReouBeqdZKi2z5ntHflWflmoLoauvc76ETeYkCoGdpvX4t2xCajeRg8hIFQM/Sev1atiE0G8nB5CUKgJ6l9fq1bENoNpKDyUsUAD1L6/Vr2YbQbCQHk5coAHqW1uvXsg2h2UgOJi9RAPQsrdevZRtCs5EcTF6iAOhZWq9fyzaEZiM5mLxEAdCztF6/lm0IzUZyMHmJAqBnab1+LdtTKu+/bMlWf2qMqzZ/8tyJvEQB0LO0Xr+W7antxUF84qjNo3x3Ii9RAPQsrdevZXtqe3EQnzhq8yjfnchLFAA9S+v1a9me2l4cPvXvnU+OrlmfKy3Z6kv2+pOjc0s110RV+84zxqZLeYkCoGdpvX4t21Pbi8NW/7rv7DV7/cnymmV/sdW/7tu6Jtm6bia17ztbXLqVlygAepbW69eyPbW9OGz1r/s+HRd7fd/0f3PdVl9kte86U0y6lpcoAHqW1uvXsj21rTiUvqP4bF3z6Z6lvWtr+89et9VmUfuuM8Wka3mJAqBnab1+LdvTK7FYxmT599LRNevjI3vXlv69VqyPi9rrZlL7/rPHqRt5iQKgZ2m9fi3bbNiKz7rv0/GRvWtr+7+9bia17z97nLqRlygAepbW69eyzYat+Kz79o6Xfcn6ONm6LqntP3vd+tr1cWS17zpTTLqWlygAepbW69eyzYat+Kz7jq5Zti175870r/u2rklK/7LNpPZ9Z4tLt/ISBUDP0nr9WrZZKHFZt2LrXGpLe/3F8vzymrP9ydG5pZproqp95xlj06W8RAHQs7Rev5ZtCM1GcjB5iQKgZ2m9fi3bEJqN5GDyEgVAz9J6/Vq2ITQbycHkJQqAnqX1+rVsQ2g2koPJSxQArdyxtqYx/7dqQ2w2kgMqC5SmaZrWd4Poauvc72Eikg3MxroH19hI8g/JBmZj3YNrbCT5h2QDs7HuwTU2kvxDsoHZWPfgGhtJ/iHZwGyse3CNjST/kGxgNtY9uMZGkn9INjAb6x5cYyPJPyQbmI11D66xkeQfkg3MxroH19hIDiwlZdmSFolqMQbASKx7cE3tb8dvrDMpIeukbPVdIdnAbKx7cE3tb8dvrCMpGXsJaZEoyQZmY92Da2p/O35jHUnJ2EtIi0RJNjAb6x5cU/vb8RvrTEpIaa1JNjCbu9e95ZpdnnX3M+EJtXWs3jtUFqTSWpFsYDZ3rntba/RWH4yoto7Ve8fKglTatyQbmM1d697RumytJYLaOlbvAygL1rfJkmxgNnete0drsrWWCGrrWL135CgZ6dy3yZJsYDZ3rntlXba2ElFtXav/jhwtSEfnakk2MJu7172yNpcGUdTWs7rvyN5itOxb/33G2esBRvfUulfW5tJgdLV1rN47skxGWYxKW1r2rc8dOXMtQARPr3tlfV4+d6sPeldbr+p6QMuknUmgZAOzuWvdOxo3nSvn19fdNR9orbZW1fSAlkk7k0DJBmZz17qXxt0be3lufc3ePdCb2lpV0wNaJu1MAiV7fCmH6zxG7Wt9nETta30cyV3vVWK2Hn/dt3UeRlBbq2p6MClhpSXLvz+pvY5+beU7al/r4yRqX+vjSO56r634lbb06Rh6VVuranoikg3M5q/XvfXzrcOMorZW1fREJBuYzV+ve+vnW4cZRW2tqumJSDYwm79e99bPtw4zitpaVdMTkWxgNj2se2kOpcEoautVXU9EsoHItta42j7gt9rfid/TRCQbiCytcet1buvYWgif1f5O/J6C2krsui8dKwAgkq11bsmaB3Vqfyt+U0GlxB4toFvnAUa3Xtuse3BN7W/FbyqwdXKXxxIPRLW31ln3oF7t78XvKrCU3K1FdN0PEMlyjbPuwTW1vxe/q+CWCS5/SzoQ3XK9Kw2oV/ub8dsKbrmAlr8lHYhuud5Z8+C82t+N39cElouphAOzsO7BdbW/G7+vSVhQgRlZ8+Ca2t+O39gEygZSsoHZWPfgmtrfjt/YBMomUtM0TdM0rWVjAhINAJxh78CbYgAAzrB34E0xAABn2DvwphgAgDPsHXhTDADAGfYOvCkGAOAMewfeFAMAcIa9A2+KAQA4w96BN8UAAJxh78CbYgAAzrB34E0xAABn2DvwphgAgDPsHXhTDADAGfYOvCkGAOAMewfeFAMAcIa9A2+KAQA4w96BN8UAAJxh78CbYgAAzrB34E0xAABn2DvwphgAgDPsHXhTDADAGfYOvCkGAOAMewfeFAMAcIa9A2+KAQA4w96BN8UAAJxh78CbYgAAzrB34E0xAABn2DvwphgAgDPsHXhTDADAGfYOvCkGAOAMewfeFAMAcIa9A2+KAQA4w96BN8UAAJxh78CbYgAAzrB34E0xAABn2DvwphgAgDPsHXhTDADAGfYOvCkGAOAMewfeFAMAcIa9A2+KAQA4w96BN8UAAJxh78CbYgAAzrB34E0xAABn2DvwphgAgDPsHXhTDADAGfYOvCkGAOAMewfeFAMAcIa9A2+KAQA4w96BN8UAAJxh78BbD8WQ5qC9GgD0zveKtx6K4b/810YSgFH4XvFmI9mJFIdXOACga75XvNlIdiLF4RUOAOia7xVvNpKdSHF4hQMAuuZ7xZuNZCdSHF7hAICu+V7xZiPZiRSHVzgAoGu+V7zZSHYixeEVDgDomu8VbzaSnUhxeIUDALrme8WbjWQnUhxe4QCArvle8WYj2YkUh1c4AKBrvle82Uh2IsXhFQ4A6JrvFW82kp1IcXiFAwC65nvFm41kJ1IcXuEAgK75XvFmI9mJFIdXOACga75XvNlIdiLF4RUOAOia7xVvNpKdSHF4hQMAuuZ7xVvIjWQac6sdnattd8njA0DvfK9466EY8laqvTT23vh75z7dc5f8XADone8Vbz0UQ95KtZfG3ht/79yne+6SnwsAvfO94q2HYshbqfbS2Hvj753b6t8bo6X8XADone8Vbz0UQ95KtZfG3ht/79xW/94YLeXnAkDvfK9466EY8laqvTT2p7a2dU1qd8vPAYDe+V7x1kMx5K1Ue2nsvfH3zm31743RUn4uAPTO94q3Hoohb6XaS2Pvjb93bqt/b4yW8nMBoHe+V7z1UAx5K9VeGntv/L1zR/fcKT8XAHrne8VbD8WQt1LtpbH3xt87d3RPcnTuG/m5ANA73yveeiiGvJVqL429N/7euU/33CU/FwB653vFW9nA/GlrbesZqR2dq2132XqWpmmapnXWkvIvdFEMeSs1txSHVzgAAKiVt1JzS3F4hQMAgFp5KzW3FIdXOAAAqJW3UnNLcXiFAwCAWnkrNbcUh1c4AAColbdSc0txeIUDAIBaeSs1txSHVzgAAKiVt1JzS3F4hQMAgFp5KzW3FIdXOAAAqJW3UnNLcXiFAwCAWnkrNbcUh1c4AAColbdSc0txeIUDAIBaeSs1txSHVzgAAKiVt1JzS3F4hQMAgFp5KzW3FIdXOAAAqJW3UnNLcXiFAwCAWnkrNbcUh1c4AAColbdSc0txeIUDAIBaeSs1txSHVzgAAKiVt1JzS3F4hQMAgFp5KzW3FIdXOAAAqJW3UnNLcXiFAwCAWnkrNbcUh1c4AAColbdSc0txeIUDAIBaeSs1txSHVzgAAKhVNlEaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABw3X/+839yQtWn2TD1nwAAAABJRU5ErkJggg==" width="658" height="484" alt="" style="float: left; ">Блок схема реализации деления с восстановлением остатка</p>
+    <p style="margin-top:10pt;">Пример: Выполнить операцию деления с восстановлением остатка : (49:5)</p>
+    <p style="margin-top:10pt;">Представляем запись делимого и делителя в двоичной системе.</p>
+    <p style="margin-top:10pt;">(49)<span style="line-height:115%; font-size:9.33pt;"><sub>2&nbsp;</sub></span>=110001=0 110001</p>
+    <p style="margin-top:10pt;">(5)<span style="line-height:115%; font-size:9.33pt;"><sub>2</sub></span>=101</p>
+    <p style="margin-top:10pt;">[5]<span style="line-height:115%; font-size:9.33pt;"><sub>доп</sub></span>=1011</p>
+    <table style="margin-right:9pt; margin-left:9pt; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse; float:left;">
+        <tbody>
+            <tr>
+                <td style="width:15.9pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">№</p>
+                </td>
+                <td style="width:88.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">RGA</p>
+                </td>
+                <td style="width:95.5pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">RGB</p>
+                </td>
+                <td style="width:102.6pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">RGC</p>
+                </td>
+                <td style="width:136.3pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Операция</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:44;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAnCAYAAAC/mE48AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVGhD7dIxCsAgAMVQ739p20KcSqmzSUA+uPlw3E2OugBYbQGw2gJgtQXAaguA1RYAqy0AVlsArLYAWG0BsNoCYLUFwGoLgNUWAKstAFZbAKy2EwGeN22/69QfsI1wKsDqF+J0gNUnhAVg9YJYF7Iz5gWl3G+Rl03CaAAAAABJRU5ErkJggg==" width="64" height="39" alt="" style="margin: 0 0 0 auto; display: block; "></span>1011</p>
+                </td>
+                <td style="width:95.5pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;">0110</p>
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;">+</p>
+                </td>
+                <td style="width:102.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>0</u> 001</p>
+                </td>
+                <td style="width:136.3pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Запись исход. данных</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">2</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:45;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAGCAYAAABXcRdvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVDhPYyAB/IfSQwKAHDtkHDzqWFqCIRm6QwAzMAAA2XAzzZrgC3QAAAAASUVORK5CYII=" width="45" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>Знак остатка</p>
+                </td>
+                <td style="width:95.5pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; display:block; position:absolute; z-index:47;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAjCAYAAADPPrcpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dLbCsMwDAPQ/P9Pd/GDQQg7w1tJmkYHTJdLqS3WREREROS5Lirjz6NEQ2MoxxgNrDAS/k/hMtm+4T1cR7VUpQG8y++N1r+eTVf5eGWI7K79zs6WqzQzGsLWWMjX/DR8d6lRM3w2GuLb3exdfm+5qCHe+2ddOXsEawoL8RmWyfYN7+EaaxtZs1sNcReFQY4dHFkIXkdTCJ1C6BRC5yHsUFNM/dguFApRIAGFElAoIm/V2geleKxUr/tSWAAAAABJRU5ErkJggg==" width="67" height="35" alt="" style="margin: 0 0 0 auto; display: block; "></span><u>1011</u></p>
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; display:block; position:absolute; z-index:46;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAAAcCAYAAACeVHjHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACMSURBVHhe7dM7CsMwAAVB3f/SCQIbgjBOGkdbzMBDn37H4XWcQIQoIUaUECNKiBElxIgSYkQJMaKEGFFCjCghRpQQI0qIESXEzCjN7P8DQkQJMaKEGFHCRlcB/voHPECUELQG9+0NPGxG9xneehclbHAXJbDJGeB6ApuIEoJmiOeAAFFCkCAh5iLKMd4pUQ0C8mSgDAAAAABJRU5ErkJggg==" width="229" height="28" alt="" style="margin: 0 0 0 auto; display: block; "></span><u>0</u> 001</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">НЕ</p>
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;">0010</p>
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;">+</p>
+                </td>
+                <td style="width:102.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 001</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 011</p>
+                </td>
+                <td style="width:136.3pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Формирование старшего разряда частного. Сдвиг RGB и RGC</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">3</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:49;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAANCAYAAAAKeCiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABKSURBVEhL7dI7DgAgCARR7n9plYJY+Fn6nUmwoOPFWI186B1AIoBEAIkAEgEkAkgEkMgVKO9u3e78g1pIzkDVFwqg3RWqlswxERN4RFqmhhJbfwAAAABJRU5ErkJggg==" width="72" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:95.5pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>1011</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:50;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAAkCAYAAACkATUaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVHhe7dPhCsMgDEZR3/+lO/LDEYKxTaUBzT0QOo3Clm9tAAAAAAAAQNRlSvQnDjQKV4ePw8yCJfRDPQ22v/m2hLcv7J5ejwoJIoPWZ+292fptDx+JDDkSlndWPns9JIkMfRaWrHVpfW2fwp5FgtnQbW8W1t1Z7669hySjwdu9lXWkh0QyfF2a7ekS3r6we3qtq4xdfqz3PUuFtWq3fzehL2JQhez2dmMBYe+vZ+jV36hJ7VmPvbqEMxB8YYRfGOEXRvgAAAAAkKy1HwjA+wUVeYcDAAAAAElFTkSuQmCC" width="125" height="36" alt="" style="margin: 0 0 0 auto; display: block; "></span><u>1</u>101</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">0010</p>
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;">0100</p>
+                    <p style="margin-bottom:0pt; text-align:left; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                </td>
+                <td style="width:102.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 011</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 011</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 110</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                </td>
+                <td style="width:136.3pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:48;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAABCAYAAADuHp8EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAPSURBVBhXYwCC/6RjBgYAd88M9KLreCkAAAAASUVORK5CYII=" width="14" height="1" alt="" style="margin: 0 0 0 auto; display: block; "></span>ит. оч. остаток в сумматоре знаменатель наиб, восстанавливаем остаток п.2, сдвигая В и С с записью с младший разряд С 1=0</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">4</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:51;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAANCAYAAAAKeCiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABKSURBVEhL7dI7DgAgCARR7n9plYJY+Fn6nUmwoOPFWI186B1AIoBEAIkAEgEkAkgEkMgVKO9u3e78g1pIzkDVFwqg3RWqlswxERN4RFqmhhJbfwAAAABJRU5ErkJggg==" width="72" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:95.5pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>1011</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>1</u>111</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">0100</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:52;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAGCAYAAAAScLrtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAvSURBVEhLYyAB/IfSo2CIA1BEjkbmMACjETlMwGhEDiMwGpnDBMAichQPaczwHwAN1nuFzTratwAAAABJRU5ErkJggg==" width="116" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:102.6pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 110</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 110</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 100</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                </td>
+                <td style="width:136.3pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">Выполняем операцию аналогичную п.3</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">5</p>
+                </td>
+                <td style="width:88.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:54;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAANCAYAAAAKeCiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABKSURBVEhL7dI7DgAgCARR7n9plYJY+Fn6nUmwoOPFWI186B1AIoBEAIkAEgEkAkgEkMgVKO9u3e78g1pIzkDVFwqg3RWqlswxERN4RFqmhhJbfwAAAABJRU5ErkJggg==" width="72" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:95.5pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>1011</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>0100</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:55;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAAAgCAYAAADt7L8RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVHhe7dZBCsIwAEXB3P/SSqCCBEU3bV5hBj5ps3+QcXgcJxAhSogRJcSIEmJECTGihBhRQowoIUaUECNKiBElxIgSYkQJMTNKM7t+AABwE56vECNKiBElxIgSYkQJG30K8N874AQztjW4X//AyUQJQe/hffsGLiRKCHoFuJ7AJjPCdcBmgoQYQUKQKKFvjCd1Pg4BV8LZowAAAABJRU5ErkJggg==" width="229" height="32" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:56;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAGCAYAAAAScLrtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAvSURBVEhLYyAB/IfSo2CIA1BEjkbmMACjETlMwGhEDiMwGpnDBMAichQPaczwHwAN1nuFzTratwAAAABJRU5ErkJggg==" width="116" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; НЕ</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:57;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAfCAYAAAC4c6DCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVGhD7dDRCoAgEERR//+na5dmw0AkNTB25oL0pDSnqKsDX9bu/cwQQrDoER67hWAJwRICYoNo7hUCYoHo7hQCyg7xel9WiOFdfiELxvKWeGD2rNZ6c/Rsb/ZHfjPgy0YGpRtf92ZcaoCoN5ICIGqNpQLwhIDq0ZQAnhBQjKdHoAbwhGAJwRKCJQS0GaGUE2S2XaMCsr8DAAAAAElFTkSuQmCC" width="65" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span>0100</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:59;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVGhD7c4xDgQxCEPRuf+ld5UCCVmGMJoiKf6TKDAueAAAAAAAAADgiJ9MpevpLSZ7c4tR3b26ueyo6kHV9ap8yZ2qV+XL7pb3pcs0P6J6RPOup7puzqe9MM3dfhV9MLjHXc+ZdKPjel9zt19FHwzucddzum6+Vb2veeyaX6N6TPOq51Rdzae9MM3zrrcrVE9pHrt2dV9cb9F82gvTfLdfYfpk5Hmc6qb5tJfpzXWn2XHx1O65XSffXUfvMaHKs65T3VwGAAAAAADwzvP8AWDu5hqp3jkGAAAAAElFTkSuQmCC" width="93" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:102.6pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 100</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:58;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAfCAYAAAC4c6DCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVGhD7dDRCoAgEERR//+na5dmw0AkNTB25oL0pDSnqKsDX9bu/cwQQrDoER67hWAJwRICYoNo7hUCYoHo7hQCyg7xel9WiOFdfiELxvKWeGD2rNZ6c/Rsb/ZHfjPgy0YGpRtf92ZcaoCoN5ICIGqNpQLwhIDq0ZQAnhBQjKdHoAbwhGAJwRKCJQS0GaGUE2S2XaMCsr8DAAAAAElFTkSuQmCC" width="65" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:60;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7c7BCsUwCETR/v9P9+FCEBmNeYU2i3vARcYJeAEAAAAAAADAa+40RmWu27muk3c+RmWmyk23iyadV6ljJtlup8pN7MTcqTxnqmNU73Pq2Em2ersqe5I/6ansdf8c5vvYWf2Jqu403+2p+ZQ6yCeLee7kd6fqel6Ny2837R1JHZuz1btTdaf5096R1LE5q94xM/ltVM9M891e7ub3EapDY9Z14ijVbifPmeoYz+Mcpzsw73yiKndxHzu7uel20aQDAAAAAACwdl0/zyf1C1WPn8IAAAAASUVORK5CYII=" width="93" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>1001</p>
+                </td>
+                <td style="width:136.3pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:53;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAABCAYAAADuHp8EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAPSURBVBhXYwCC/6RjBgYAd88M9KLreCkAAAAASUVORK5CYII=" width="14" height="1" alt="" style="margin: 0 0 0 auto; display: block; "></span>Выполняем операцию формирования младшего разряда частного, сдвигая содержимое только регистра С с записью в младший разряд С 0=1</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Таблица изменения содержимого регистров по тактам:</p>
+    <p style="margin-top:10pt;">Деление <strong><em>БЕЗ восстановления</em></strong> остатка. В этом случае алгебраическое суммирование RGA и RGB осуществляется всегда. При этом, если в результате предыдущей операции B&gt;0, то в регистр частного заносят 1 и производят вычитание, а если B&lt;0, то в регистр частного заносят 0 и производят сложение.</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">Структура алгоритма деления без восстановления остатка</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:0;"><img src="data:image/png;base64,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" width="423" height="85" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:1;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAyCAYAAABoBTo6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVEhL7cxBCgAgCERR73/pYqDARGuKlvM3gfqyojZeOgEmASYBJgEmASYBpr8Ay3iQgWX2BPwg+yDOSpAeI7+IoCwCvEfgj7bHM48ogK6O0TUoMuv3dkq2MYn8QQAAAABJRU5ErkJggg==" width="12" height="50" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:14;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZgAAAAMCAYAAABfu6u0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVHhe7dWxCQAgEATB779pTRQMTIR7TGZga9gCgAdjBQBxJgNAmz0ZowGghdEA0Oo6mfM+kiQlAoAYgwEgylgAiDMWAKKMBYCoPRZzAeCHqgkZUK5g90U+xwAAAABJRU5ErkJggg==" width="408" height="12" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:15;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAJ8CAYAAADUAXC8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVFhH7cbBEQAwCIAw91/axjlKHhzDXk5DQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8MPM/MAc/l5oxGmkGwAAAAASUVORK5CYII=" width="2" height="636" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:17;"><img src="data:image/png;base64,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" width="298" height="224" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:5;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAiCAYAAAAQ9/ptAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVFhH7c9JCgAhDAVR73/p7pUgEpOvYOyhHrhKxLIAAADAc02ckWh+hBWkhn7qQ3Wu7KayYpTIOld2U1kxUWQ7i3bTWTFRZD+L9lNZIV7g7H4qLzqaWee4UYQXuHInzWycFzy6k2Y2Lgquc29nm/bxldNTdrZSHlZ2HkMNfdWHVHwIAPAzpdzke3CQ9CZpmwAAAABJRU5ErkJggg==" width="52" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:6;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAiCAYAAADroA+yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVGhD7c5BCgQxCETR3P/SM7gISLAqnVm0GfgPJKBRagAAAADo8hEVqv5Jharvqp0Loma7nfmuf572WrggarbbyW+m9tStV6lwwQVf++pGpu5dwYVTs6qvbmTq3hVmOFer6k/UztN/LVw4Nav66kam7l3BhVOzqq9uZOreFVw4NXM7zq97r3Dh1MzthNN7V3Dh1Gy3o7i9NjPUWqHqn9Sq+hMFAAAA4B+M8QW286RczrRUHQAAAABJRU5ErkJggg==" width="66" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:7;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAABwCAYAAAADkm7aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVHhe7dMxCoAwEADB/P/TikEliIV2W8zAkUu93AD+2853LqY3073QI06YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk6YOGHihIkTJk7YM87xFyziLQ4RawxXE3PFECZojUPMdTHixAgTJk6YMHHiwHdj7CCg4R/BYVYXAAAAAElFTkSuQmCC" width="103" height="112" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:3;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAABtCAYAAADESbN7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACeSURBVGhD7dBBCgMhEABB///pBEN22RS5j4cuEMeTzaz8en3vcYWoEBWiQlSIClEhKkSFqBAVokJUiApRISpEhagQFaJCVIgKUSEqRIXovJA9TJ+Pe5hWiApRISpEhagQFaJCVIgKUSEqRIWoEBWiQlSIClEhKkSFyJD9Hon7FzLi+fHYNrbr49GI7Rky6trE+DbGI7bjQo5wTMiwtd4ZLZlnbvG5rwAAAABJRU5ErkJggg==" width="34" height="109" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:4;"><img src="data:image/png;base64,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" width="176" height="95" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:9;"><img src="data:image/png;base64,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" width="176" height="95" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:10;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAfCAYAAADTNyzSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABQSURBVDhP7Y9BCgAgCAT9/6cLoWBb1Kyb1FyEdUdQAtqYab6Qobrw3MNKNUGXXLCEJbsSMLAOcOYKZlnBBQsuLOjcClgKyxOUjoU0R+UAkQ44izfJI4l6YwAAAABJRU5ErkJggg==" width="12" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:8;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAACVCAYAAABsHBtsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVFhH7cxBCsAgDABB///plkALIVWzXsvuRdFMxqLrOXECkoAkIAlIApKAJCAJSAKSgCQgCUgCkoAkIAlIApKAJCAJSAKSgPR7MPvcvsWlDrRLKpotqG8t+JS3VDwFUQXb4egdyKAto2OAOwaLxrgB28GuUqbTpSMAAAAASUVORK5CYII=" width="12" height="149" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:11;"><img src="data:image/png;base64,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" width="176" height="95" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:12;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAcCAYAAABVo158AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABVSURBVDhP7c9BCkAhCEVR97/p4kGCpaWFg6DupH55gk+LSlvDfRDpMvDcD6NcgMtxwALdmQfwrYA8sIBqBrA3AeKLGVbxaxIuAZLIHUZbw9wRyIioAigLMs7ndApuAAAAAElFTkSuQmCC" width="12" height="28" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:13;"><img src="data:image/png;base64,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" width="522" height="40" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:16;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAcCAYAAABVo158AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVDhP7cxLCgAgCEVR97/pQkgwP/mIJoF3EpknShrrhGuA1ADpN8CPdiEC26wCfHdADyLg0sjiEHAZSJPfNDwCzoIyAdCydAVeRDQB7kQyztCl2RgAAAAASUVORK5CYII=" width="12" height="28" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:2;"><img src="data:image/png;base64,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" width="463" height="168" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:20;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAiCAYAAADroA+yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVGhD7c5BCgQxCETR3P/SM7gISLAqnVm0GfgPJKBRagAAAADo8hEVqv5Jharvqp0Loma7nfmuf572WrggarbbyW+m9tStV6lwwQVf++pGpu5dwYVTs6qvbmTq3hVmOFer6k/UztN/LVw4Nav66kam7l3BhVOzqq9uZOreFVw4NXM7zq97r3Dh1MzthNN7V3Dh1Gy3o7i9NjPUWqHqn9Sq+hMFAAAA4B+M8QW286RczrRUHQAAAABJRU5ErkJggg==" width="66" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:19;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAMCAYAAACdrrgZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABGSURBVFhH7dIxCgAgDEPR3v/SiqBS0MUlKfIfBKFjYjxo84XYKH4FQhRvRPEm/HqTXDzRZjsO0LsuAz2GKIIhimAE/CiiA2Iwd4m3/eUmAAAAAElFTkSuQmCC" width="96" height="12" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;">&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:18;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAcCAYAAABVo158AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVDhP7cxLCgAgCEVR97/pQkgwP/mIJoF3EpknShrrhGuA1ADpN8CPdiEC26wCfHdADyLg0sjiEHAZSJPfNDwCzoIyAdCydAVeRDQB7kQyztCl2RgAAAAASUVORK5CYII=" width="12" height="28" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:21;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAiCAYAAADroA+yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVGhD7dBBCsAgDAVR73/ptosKIjH5uqmp88BVIjgWAAAAAF+7Js5INE/FClED+YhHnSu7KVgRSlydK7spWBFRXDuLdtOwIqK4fhbtp2AFeGGz+yl4sdHMOmmNHu+FrdzZ3myUFzq6s73ZqCi0zr2d7bSPXjk9ZWdLyoOVnfTUwCM+QsVHvH79EQAAHK+UGy9YcJB77L9mAAAAAElFTkSuQmCC" width="66" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:22;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgoAAAAiCAYAAAA+ofEnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARcSURBVHhe7daBbio7DIThvv9Ln3u8G6vWdJxktz1cCv8nWSX2BAoKKB9//aEoiqIoijJ1+AMAAFDF/eC8JnBRAAAAIu4H5zWBiwIAABBxPzivCVwUAACAiPvBeU3gogAAAETcD85rAhcFAAAg4n5wXhO4KAAAABH3g/OawEUBAACIuB+c1wQuCgAAQMT94LwmcFEA8I+53xl+e4DnFt/RuCSE0QI+f7zjb61X9erv71no58znfsrPoatd3b7Zc9zZg/cyzsZhtIDPH4/K9X67fE+v+N6eFZ95z30mO59Tl8n+bKZme/Cexnk4jBZwHgwVvVc9J6/83vB7dOdwdj5ns6TzO3vwvsZ5OYwW4MUZ0XOSPZ1pf7dS1w9u5npXXNlXX6fWjtkeN9OeVur6See13Hy3p5XcrFbq+qrOV/k610yuZ/NVJtSZ1s6802Vme1fPGTRzZw/eV5yFv3UYLeCrOB96RrS3Wqe7uaC9utbZFVf3av7K/sxqftavNLNap1Xmbs89V9D+bk7lXHO6DqvMbJ3ZrJ09qeslN3e63NX+TPcaQGecmcNoAZ/iXHRnQ2erdfoXufzr5juu7tX8lf2Z1fysX2lmtU6rzN2ey4S7OWd37866WuVT7btM10tu7nTP0+3dmXUF7Bpn5jBawFdxPmZnJOc10+3ZyWVvlatW85mrezV/ZX/m6h7XS26tvZQzN689l7nbm2Xu5JwuM9ubs24edNbltb9ah9XcyVytmTuZnT1ANc7MYbQAL86InpPa07mu0yzXPQ66VjnX2nElG+rz39mbf+vj/JuPk1vPem4eas9l7vbqunscull93Okyrl97bh5+op+9WlVdu7mjudW+1TxoZmcPUI0zcxgtwIszUs/J1XXqcprtch03X+1Ju7nk8rvPkZmad73k1rW3Wge3/qlern8q53QZ7a/Wajfv+rWn81l2xuVme3PWzYPOV3lAjTNzGC28u+4sRL/Orq7Td3OazXU3056zm0suv/scNaN73HO49WyProNb/1TPZcLdnLO7d7VWu/lVzq0rnXe63Gz/bBbcfLUnrOZ4H+O8HEYL+PojEetVb7VOd3Mhe7WSroPrObu55PK7z1EzuifXtV/noc7CzlppJtztuUy4m3MyU3Nu3yyj2dDlXS/pOtSezoLb48xyOzM3v9oPXR/vaZyVw2gBpzgTtRzNdJXcrFbq+sH1a09rxuWjZlw+a0Wz7rFW1c20f6W+u79WcrNaqeurOl/l67xWN6tqz2V0HWpupxyXi1KzWajzWh2XjQKqcS4OowXgVcT3uvtuz2bP5lH/63dfZ7b/u88N/F/G2T2MFoBXsfpe/5bvffyfj/hfv/s6q72PeA/ATxvfi8NoAcBzid+nR/xGPep1gN9kfC8OowUAAHCK+8F5TeCiAAAARNwPzmsCFwUAACDifnBeE7goAAAAEfeD85rARQEAAIi4H5zXhPMBRVEURVGUFgAAAAAAwGUfH/8Br0aOSy9Eyu8AAAAASUVORK5CYII=" width="522" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt; text-align:center;"><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:23;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABKSURBVDhP7cxLCgAgCEVR97/p4kGC+cdJk+4kMk8UtM7Z7oNOKcCjXvDANasA7gbIgQdMEmnsAhSBMP5NwhQgDcoYtJa5EXgS0QaVUinXFjvMZQAAAABJRU5ErkJggg==" width="12" height="20" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; margin-top:-10pt; text-align:left; display:block; position:absolute; z-index:24;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAAAoCAYAAAD39rjkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIvSURBVHhe7dKBasMwDATQ/v9Pdz3rBK6QE6XxqKD3wLCclaFl90g8dXQunFNPkSvQGatOjmMi16A7PG94LfIZdMiqZBiL3IMuWaVUKtkEXbJKqVSyCbpklVKpZBN0ySqlUskm6JJVSqWSTdAlq5RKJZugS1YplUo2QZesUiqVbIIuWaUalQq7HB3pjf+ngVEf2CnulWXSC/9HA6M+sFO21yqXHvj/GRj1gZ2yvc7yeOfP8X5+nnOI2fxcOSvZLM7syp2fTrjTwKgP7JTtleUxiz9feXYxy57nLD5HR7P+c5bPdy6b64K7DYz6wE5xr0+ys/n47LL3ZvG9+HxkNRvz6lwn3G1g1Ad2yk6UzfjJZHmcX83Msney9zKVWZ/J5irvfwt3Gxj1gZ0qe+2Yi3fZXMyyd7KTqd6t5lZ5B9xtYNQHdqrsVZ1zq3nPV78r5nE2ezfLoJpX5zrhbgOjPrBTZS+fi7Ord7NZ8PzovVmczd7NMqjm1blOuNvAqA/sVN3LZ+fjeTTfR/Fufo7vHM26LINqXp3rhLsNjL4Pu2TnzGp2zrP7WbxbvTPnZye6eu/HrfIuuNfA6LfpO9yHbzga9cLod+kb7IHvOBr1wui34O+ej9zHbzkw+i34u/3IHvyeAyORe9Alq5RKJZugS1YplUo2QZesUiqVbIIuWaVUKtkEXbJKqVSyCbpklTKMRT6DDlmV3vFa5Bp0hyfFMZEadMaqc2xuno7O2RH5b4/HH0c9he2d+j1/AAAAAElFTkSuQmCC" width="149" height="40" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">Пример: (49:5)<span style="line-height:115%; font-size:9.33pt;"><sub>10</sub></span> выполнить по схеме без восстановление остатка</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">Таблица изменения состояния регистров будет иметь вид:</p>
+    <table style="margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse;">
+        <tbody>
+            <tr>
+                <td style="width:15.9pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">№</p>
+                </td>
+                <td style="width:67.15pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">RGA</p>
+                </td>
+                <td style="width:88.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">RGB</p>
+                </td>
+                <td style="width:88.45pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">RGC</p>
+                </td>
+                <td style="width:178.8pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Операция</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">1</p>
+                </td>
+                <td style="width:67.15pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:29;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAADECAYAAAC1B/CNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAkSURBVDhP7cbBDQAADIJA91/a4hhNuAch6DIOHDhw4MDB00kONKnDPXFpOOIAAAAASUVORK5CYII=" width="2" height="196" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:30;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAABCAYAAAA1pTUmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAPSURBVBhXYwCC/7TBDP8BB44W6h2LZFUAAAAASUVORK5CYII=" width="23" height="1" alt="" style="margin: 0 0 0 auto; display: block; "></span>1011</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:31;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAGCCAYAAADKcRJIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVEhL7caxDQAwCMAw/n+amhu6xkOUYS+noaGhoaGhoaGhoaGh4X9mHj2tgI504YKaAAAAAElFTkSuQmCC" width="2" height="386" alt="" style="margin: 0 0 0 auto; display: block; "></span>0101</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">0110</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">+</p>
+                </td>
+                <td style="width:88.45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 001</p>
+                </td>
+                <td style="width:178.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Запись исходных данных. В RGA делитель записываем прямым и дополнительным кодом</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">2</p>
+                </td>
+                <td style="width:67.15pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:28;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAGCAYAAADQQP5pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAfSURBVChTY6AC+A+l6QpAlo4ciwefb2EStMZAwMAAAA2YIt6SLMkjAAAAAElFTkSuQmCC" width="28" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:35;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAjCAYAAADPPrcpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dLbCsMwDAPQ/P9Pd/GDQQg7w1tJmkYHTJdLqS3WREREROS5Lirjz6NEQ2MoxxgNrDAS/k/hMtm+4T1cR7VUpQG8y++N1r+eTVf5eGWI7K79zs6WqzQzGsLWWMjX/DR8d6lRM3w2GuLb3exdfm+5qCHe+2ddOXsEawoL8RmWyfYN7+EaaxtZs1sNcReFQY4dHFkIXkdTCJ1C6BRC5yHsUFNM/dguFApRIAGFElAoIm/V2geleKxUr/tSWAAAAABJRU5ErkJggg==" width="67" height="35" alt="" style="margin: 0 0 0 auto; display: block; "></span><u>1011</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:34;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAfCAYAAACWGkMVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7dZJCoAwFETB3P/SDqCQhSZf241QBX2EB902yzHgBfFAQEAQEBAEBAQBAUFAQBAQEAQEBAEBQUBAEBAQBAQEgT0gM5sPAIBfceEgICAICAgCAoKiq1gEBEWVgAQFA7NgBAQDo2DEAwV30QgICq6iEQ880IdzDijqwxEPvCAeCAkIvtXaChVm+Ah9NDILAAAAAElFTkSuQmCC" width="208" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span>0001</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; НЕ</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">0010</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">+</p>
+                </td>
+                <td style="width:88.45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 001</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 011</p>
+                </td>
+                <td style="width:178.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Формирование старшего разряда частного</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">3</p>
+                </td>
+                <td style="width:67.15pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:25;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAGCAYAAADQQP5pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAfSURBVChTY6AC+A+l6QpAlo4ciwefb2EStMZAwMAAAA2YIt6SLMkjAAAAAElFTkSuQmCC" width="28" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:37;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAjCAYAAADPPrcpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dLbCsMwDAPQ/P9Pd/GDQQg7w1tJmkYHTJdLqS3WREREROS5Lirjz6NEQ2MoxxgNrDAS/k/hMtm+4T1cR7VUpQG8y++N1r+eTVf5eGWI7K79zs6WqzQzGsLWWMjX/DR8d6lRM3w2GuLb3exdfm+5qCHe+2ddOXsEawoL8RmWyfYN7+EaaxtZs1sNcReFQY4dHFkIXkdTCJ1C6BRC5yHsUFNM/dguFApRIAGFElAoIm/V2geleKxUr/tSWAAAAABJRU5ErkJggg==" width="67" height="35" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:36;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAfCAYAAACWGkMVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7dZJCoAwFETB3P/SDqCQhSZf241QBX2EB902yzHgBfFAQEAQEBAEBAQBAUFAQBAQEAQEBAEBQUBAEBAQBAQEgT0gM5sPAIBfceEgICAICAgCAoKiq1gEBEWVgAQFA7NgBAQDo2DEAwV30QgICq6iEQ880IdzDijqwxEPvCAeCAkIvtXaChVm+Ah9NDILAAAAAElFTkSuQmCC" width="208" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span><u>1011</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">1101</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; НЕ</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">1010</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">+</p>
+                </td>
+                <td style="width:88.45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 011</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 110</p>
+                </td>
+                <td style="width:178.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Т.к. остаток в сумматоре &Delta;&gt;0 в последующем такте выполняем операцию сложения</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">4</p>
+                </td>
+                <td style="width:67.15pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:33;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAAGCAYAAABQM8l6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAsSURBVEhLYxgFBMF/KD0KqABAgTkaoFQCo4FJZTAaoFQGGAEKExjFZGOG/wDjdlqmeSNbQgAAAABJRU5ErkJggg==" width="82" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:88.4pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>0101</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:39;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAjCAYAAADPPrcpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dLbCsMwDAPQ/P9Pd/GDQQg7w1tJmkYHTJdLqS3WREREROS5Lirjz6NEQ2MoxxgNrDAS/k/hMtm+4T1cR7VUpQG8y++N1r+eTVf5eGWI7K79zs6WqzQzGsLWWMjX/DR8d6lRM3w2GuLb3exdfm+5qCHe+2ddOXsEawoL8RmWyfYN7+EaaxtZs1sNcReFQY4dHFkIXkdTCJ1C6BRC5yHsUFNM/dguFApRIAGFElAoIm/V2geleKxUr/tSWAAAAABJRU5ErkJggg==" width="67" height="35" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:38;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAfCAYAAACWGkMVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7dZJCoAwFETB3P/SDqCQhSZf241QBX2EB902yzHgBfFAQEAQEBAEBAQBAUFAQBAQEAQEBAEBQUBAEBAQBAQEgT0gM5sPAIBfceEgICAICAgCAoKiq1gEBEWVgAQFA7NgBAQDo2DEAwV30QgICq6iEQ880IdzDijqwxEPvCAeCAkIvtXaChVm+Ah9NDILAAAAAElFTkSuQmCC" width="208" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span>1111</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; НЕ</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">1111</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">+</p>
+                </td>
+                <td style="width:88.45pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 110</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 100</p>
+                </td>
+                <td style="width:178.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Выполняем операции аналогичные п.3</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">5</p>
+                </td>
+                <td style="width:67.15pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:32;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAAGCAYAAABQM8l6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAsSURBVEhLYxgFBMF/KD0KqABAgTkaoFQCo4FJZTAaoFQGGAEKExjFZGOG/wDjdlqmeSNbQgAAAABJRU5ErkJggg==" width="82" height="6" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                </td>
+                <td style="width:88.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><u>0101</u></p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:41;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAjCAYAAADPPrcpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dLbCsMwDAPQ/P9Pd/GDQQg7w1tJmkYHTJdLqS3WREREROS5Lirjz6NEQ2MoxxgNrDAS/k/hMtm+4T1cR7VUpQG8y++N1r+eTVf5eGWI7K79zs6WqzQzGsLWWMjX/DR8d6lRM3w2GuLb3exdfm+5qCHe+2ddOXsEawoL8RmWyfYN7+EaaxtZs1sNcReFQY4dHFkIXkdTCJ1C6BRC5yHsUFNM/dguFApRIAGFElAoIm/V2geleKxUr/tSWAAAAABJRU5ErkJggg==" width="67" height="35" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:40;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAfCAYAAACWGkMVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7dZJCoAwFETB3P/SDqCQhSZf241QBX2EB902yzHgBfFAQEAQEBAEBAQBAUFAQBAQEAQEBAEBQUBAEBAQBAQEgT0gM5sPAIBfceEgICAICAgCAoKiq1gEBEWVgAQFA7NgBAQDo2DEAwV30QgICq6iEQ880IdzDijqwxEPvCAeCAkIvtXaChVm+Ah9NDILAAAAAElFTkSuQmCC" width="208" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span>0100</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:26;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAfCAYAAAC4c6DCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVGhD7dDRCoAgEERR//+na5dmw0AkNTB25oL0pDSnqKsDX9bu/cwQQrDoER67hWAJwRICYoNo7hUCYoHo7hQCyg7xel9WiOFdfiELxvKWeGD2rNZ6c/Rsb/ZHfjPgy0YGpRtf92ZcaoCoN5ICIGqNpQLwhIDq0ZQAnhBQjKdHoAbwhGAJwRKCJQS0GaGUE2S2XaMCsr8DAAAAAElFTkSuQmCC" width="65" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:27;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVGhD7c4xDgQxCEPRuf+ld5UCCVmGMJoiKf6TKDAueAAAAAAAAADgiJ9MpevpLSZ7c4tR3b26ueyo6kHV9ap8yZ2qV+XL7pb3pcs0P6J6RPOup7puzqe9MM3dfhV9MLjHXc+ZdKPjel9zt19FHwzucddzum6+Vb2veeyaX6N6TPOq51Rdzae9MM3zrrcrVE9pHrt2dV9cb9F82gvTfLdfYfpk5Hmc6qb5tJfpzXWn2XHx1O65XSffXUfvMaHKs65T3VwGAAAAAADwzvP8AWDu5hqp3jkGAAAAAElFTkSuQmCC" width="93" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; НЕ</p>
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">0100</p>
+                </td>
+                <td style="width:88.45pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;">&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>&nbsp;&nbsp;</u> 100</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:42;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAfCAYAAAC4c6DCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVGhD7dDRCoAgEERR//+na5dmw0AkNTB25oL0pDSnqKsDX9bu/cwQQrDoER67hWAJwRICYoNo7hUCYoHo7hQCyg7xel9WiOFdfiELxvKWeGD2rNZ6c/Rsb/ZHfjPgy0YGpRtf92ZcaoCoN5ICIGqNpQLwhIDq0ZQAnhBQjKdHoAbwhGAJwRKCJQS0GaGUE2S2XaMCsr8DAAAAAElFTkSuQmCC" width="65" height="31" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0;"><u>1</u>&nbsp; 001</p>
+                </td>
+                <td style="width:178.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0;">Выполняем операцию по формированию младшего разряда частного</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p><span style="height:0pt; text-align:left; display:block; position:absolute; z-index:43;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7c7BCsUwCETR/v9P9+FCEBmNeYU2i3vARcYJeAEAAAAAAADAa+40RmWu27muk3c+RmWmyk23iyadV6ljJtlup8pN7MTcqTxnqmNU73Pq2Em2ersqe5I/6ansdf8c5vvYWf2Jqu403+2p+ZQ6yCeLee7kd6fqel6Ny2837R1JHZuz1btTdaf5096R1LE5q94xM/ltVM9M891e7ub3EapDY9Z14ijVbifPmeoYz+Mcpzsw73yiKndxHzu7uel20aQDAAAAAACwdl0/zyf1C1WPn8IAAAAASUVORK5CYII=" width="93" height="34" alt="" style="margin: 0 0 0 auto; display: block; "></span>&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;"><br style="page-break-before:always; clear:both;"></p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+</body>
+
+</html>

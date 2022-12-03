@@ -12,11 +12,14 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.adlemgames.pbk.databinding.ActivityMainBinding
+import com.adlemgames.pbk.interfaces.BackButtonHandlerInterface
+import com.adlemgames.pbk.interfaces.OnBackClickListener
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import java.lang.ref.WeakReference
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BackButtonHandlerInterface {
 
     private lateinit var bottomNav: BottomNavigationView
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -97,5 +100,40 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    private val backClickListenersList: ArrayList<WeakReference<OnBackClickListener>> = ArrayList()
+
+    override fun addBackClickListener(onBackClickListener: OnBackClickListener?) {
+        backClickListenersList.add(WeakReference(onBackClickListener))
+    }
+
+    override fun removeBackClickListener(onBackClickListener: OnBackClickListener) {
+        val iterator: MutableIterator<WeakReference<OnBackClickListener>> =
+            backClickListenersList.iterator()
+        while (iterator.hasNext()) {
+            val weakRef: WeakReference<OnBackClickListener> = iterator.next()
+            if (weakRef.get() === onBackClickListener) {
+                iterator.remove()
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        if (!fragmentsBackKeyIntercept()) {
+            super.onBackPressed()
+        }
+    }
+
+    private fun fragmentsBackKeyIntercept(): Boolean {
+        var isIntercept = false
+        for (weakRef in backClickListenersList) {
+            val onBackClickListener: OnBackClickListener? = weakRef.get()
+            if (onBackClickListener != null) {
+                val isFragmIntercept = onBackClickListener.onBackClick()
+                if (!isIntercept) isIntercept = isFragmIntercept
+            }
+        }
+        return isIntercept
     }
 }

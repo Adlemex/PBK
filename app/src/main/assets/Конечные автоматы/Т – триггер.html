@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title> </title>
+	<style>
+        body {
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-size: 11pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .TableofFigures {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            line-height: 115%;
+            font-size: 11pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+<p style="margin-bottom:0pt; text-align:center; line-height:normal; font-size:16pt;"><strong><span style="font-family:'Times New Roman';">Т &ndash; триггер</span></strong></p>
+<p style="margin-bottom:0pt; text-indent:35.4pt; line-height:normal; font-size:14pt;"><span style="font-family:'Times New Roman';">У Т &ndash; триггера единичный сигнал на входе изменяет содержимое триггера на противоположное.</span></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">Логическая схема и условное обозначение имеет вид:</span></p>
+<p style="margin-bottom:0pt; line-height:normal; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+<p><img src="data:image/png;base64,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" width="314" height="153" alt=""><img src="data:image/png;base64,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" width="275" height="152" alt=""></p>
+</body>
+
+</html>
