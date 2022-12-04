@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Web/PBK/app/src/main/res/layout/calc_keyboard.xml" value="0.19166666666666668" />
+        <entry key="..\:/Web/PBK/app/src/main/res/layout/fragment_calculate.xml" value="0.19166666666666668" />
+        <entry key="..\:/Web/PBK/app/src/main/res/layout/fragment_steps_calc.xml" value="0.19166666666666668" />
+        <entry key="..\:/Web/PBK/app/src/main/res/layout/step_item.xml" value="0.5" />
+        <entry key="..\:/Web/PBK/app/src/main/res/layout/tables_keyboard.xml" value="0.19166666666666668" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="Android" />
