@@ -120,7 +120,6 @@
         android:layout_margin="1dp"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_columnSpan="2"
         android:text="D" />
 
     <Button
@@ -128,6 +127,8 @@
         android:id="@+id/button_0"
         android:layout_margin="1dp"
         android:layout_width="70dp"
+        android:layout_row="3"
+        android:layout_column="0"
         android:layout_height="70dp"
         android:text="0" />
 

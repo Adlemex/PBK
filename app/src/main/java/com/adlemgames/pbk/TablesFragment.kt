@@ -43,6 +43,10 @@ class TablesFragment : Fragment() {
 
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE)
