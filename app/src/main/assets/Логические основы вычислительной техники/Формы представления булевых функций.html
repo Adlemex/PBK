@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li,
+        table {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:16pt;"><strong><span style="font-family:'Times New Roman';">Формы представления булевых функций</span></strong></p>
+    <p style="margin-bottom:0pt; text-indent:18pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">Любая булева функция может быть представлена в виде:</span></p>
+    <ol style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; line-height:115%; padding-left:2.5pt; font-family:'Times New Roman'; font-size:14pt;">Аналитического выражения</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; line-height:115%; padding-left:2.5pt; font-family:'Times New Roman'; font-size:14pt;">Таблицы соответствий</li>
+        <li class="ListParagraph" style="margin-left:33.5pt; margin-bottom:0pt; line-height:115%; padding-left:2.5pt; font-family:'Times New Roman'; font-size:14pt;">n &ndash; мерного кубического пространства</li>
+    </ol>
+    <p style="margin-left:18pt; margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">Например: логической функции 3-х переменных F=f(x</span><span style="line-height:115%; font-family:'Times New Roman'; font-size:9.33pt;"><sub>1</sub></span><span style="font-family:'Times New Roman';">; x</span><span style="line-height:115%; font-family:'Times New Roman'; font-size:9.33pt;"><sub>2</sub></span><span style="font-family:'Times New Roman';">; x</span><span style="line-height:115%; font-family:'Times New Roman'; font-size:9.33pt;"><sub>3</sub></span><span style="font-family:'Times New Roman';">), представленной в форме таблицы соответствий:</span></p>
+    <table style="margin-bottom:0pt; border-collapse:collapse;">
+        <tbody>
+            <tr>
+                <td style="width:15.9pt; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.4pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">x</span><span style="font-family:'Times New Roman'; font-size:9.33pt;"><sub>1</sub></span></p>
+                </td>
+                <td style="width:68.8pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-left:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.4pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">x</span><span style="font-family:'Times New Roman'; font-size:9.33pt;"><sub>2</sub></span></p>
+                </td>
+                <td style="width:68.8pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-left:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.4pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">x</span><span style="font-family:'Times New Roman'; font-size:9.33pt;"><sub>3</sub></span></p>
+                </td>
+                <td style="width:68.8pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.4pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:15.9pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.4pt; vertical-align:top;">
+                    <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">F</span></p>
+                </td>
+                <td style="width:68.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.35pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.35pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+                <td style="width:42.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">1</span></p>
+                </td>
+                <td style="width:42.4pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:middle;">
+                    <p style="margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0; font-size:14pt;"><span style="font-family:'Times New Roman';">0</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">Соответствует аналитическое выражение, соответствующее всем комбинациям логических переменных, при которых функция принимает значение:</span></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAAAmCAYAAADk3nE6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATdSURBVHhe7ZsNldUwEIVXAAYwgAEMoAAFOMABFrCABkzgAjPQb5fhhGyaJs1Mm/Dud86cvp+8m8ltmunP7pMQQgghhBBCCCGEEEIIIYQQQogyvxwjilJfHrEKpdw9Akqfj8YqlHL3COFLyePREEIIIYQQQgghhBBCCCGEEEKI+fjeEZ+3EEIIcTPvt/i6BX+O8uPP+zy+bcH3n7YQQggxAR+3YGGunVGzqL99eSmEEOJuvmzBwv3u+V0ZzsqFEEJMws8tSv+5w5m4obNtIYSYBBZkFm3uY6fwef7Z1VA4ONN/8/zuhQ9b8KC0dnVQwlMrJ0qb5wutD4Rb23rnuqKv6LXO7da2Ebmuogmzz9WocUOk9i50WnrwyGRt3RHeMFhysrDcLFeiNTdPrZxIbaN15/MMotbOO9fVfeX3pluD24i1dhG5rqKZM+NcjRz3FZ7uwgJNB5iJ8YR1SmXswX7fEjWoXFaVLTdMYsvnRFrdanhq5URqG2gc+cVEoeLX8M41cuyR2ga/5xZhTYerTtrUiMh1Fc0cNGabq5HjjtQ+hA6ZnNZRmkhvp6nGUbRihYUzn1ETPLVyIrWZ6Fx6laCvowUoxzvXVX1lEUF3Dxahu+aqsYqmMfNcjRx3pPYrqA50VqqAR5XzKuyywy5DRvDUyonU5syPKl6CIkv04J3rqr4CvpYevLNg9x4DEbmuomnMPFcjxx2p/Qo7s6bTHCrHDNSKSy+eWjmR2lCa9C2X8iW8c13Z170FGl9LC3qNiFxX0UyZda5Gjjva039gwtJZaYL2TlpArzVaYQJQwc/s9BxPrZxIbeDyC/30MoxJsndZWsM715V9BS5z01sinMicOXGJyHUVzZRZ52rkuKM9/Qumsmh7dsTkb40WaMfOxpS0wORFhWp3VOlatWhDYckP5ho9eaJL8LoXFhQbJ332FEDD01No1YNeb6/yFT07DjgueJ0uOi14+wqtmj2+XuXpbHM1wkvjKk+fsU7YzgQ7nJw4cCw3jCFXvuM1W4N7SnxH5PRq8Z52bJkItMvNN3q1aYemaZ8tmFR1djqTq3Xn9+Za8xR69YDPaMu25m2vtpevnGEzbvpsvU/Zm+uRr9CryXvasd3ztVfTy9O752qvFu9px3bPS6NXe9hTxDDUBkv0GBuNGcaWwRqWa2oG0IZqx3c5Z7RS8Ml2Ss6o9tmDwSYH/bZyJtc9T6FXD/Lx73l7JteUs76iw297fn8m15qvMDr+kq+jmqvO1dFxT3X8U0EwNI9ZYIClfMh7r/rRHrNyzmilUNCYFCVGtDlL2NNtgX7ziVDD01MY9RX2vL3TV05eWvMHb19h1NuSr3d6Sr/034qnpxFeGnd6+t+wt+NGoeJ6Q6Ul11n+amePKE8Nb2/l6wuevj66p498/F9CxI7jEini9hG52mXWLLenSkQuMBHeyld/Xx/Z00c//i/Be8ehl9+j8oZqTj+zEnEwQLS38tWfR/M00ktjdk8vwXPHUQXT+09R5rLjWu6z3YX3wQBXeCtf/X19JE91/F8ERtt9I8wYwbR4KEGgx2WNB0yGVDe6oo/g6akR5a189ff1UT2NmqOwkqeXYE93LUZgx6VahGdVNM3Z8fTUiPTW9GZnJV9Na3Z0/AshhBBCCCGEEEIIIYQQQgghxHmenn4DS08BrfrM5nkAAAAASUVORK5CYII=" width="366" height="38" alt=""></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="height:0pt; display:block; position:absolute; z-index:6;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAlCAYAAADWSWD3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFHSURBVFhH7ZVhrYMwFEYxgwtMoAELWMABDlCAAgxgAAMYQECX0/AlXR8voWzcbUlPQkhv++O0fLcU7gfJ0lZkaSuytBVZ2oosbcVp6W3b3DzPbl3XvfIMdeZZdzenpZEqisKVZflHjDF15r9KGvq+92K8Q1QfhmGv3EuSdHiiiom+QFVVfmxBciNO0+Ql67r246Zp/Jg8W5EsDQgjqlh0XbfP2HBJWpHQY9F8IZekw2zztuaStGIRxiSGmjZGky7Lss+8TrK0oqFGjG8TwbxqNKvWv4NkaZ2uhHSbIPYfrPmY9DiOXjC+LbSRo2uPzRGPowhd5bQ0zYcYT3xbkFfqYVOyAa1HOo7PK5yW1ifmfQQnyXzccGyQ3/vRZq+SnOmrIP2uv+Yt0siRe0XiJ04aubZtnzL90Xv6G8jSVmRpK7K0FVnaBuceZfkoOHz6gdsAAAAASUVORK5CYII=" width="45" height="37" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="font-family:'Times New Roman';">Что n &ndash; мерном кубе соответствует вершинам, на которых функция F = 1:</span></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="height:0pt; display:block; position:absolute; z-index:2;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAADlCAYAAAB59yYeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAlSURBVEhL7cbBDQAADIJA91/a4hoN9yAEXcaBAwcOHDhw8HiSA+aU5BzBeDWtAAAAAElFTkSuQmCC" width="2" height="229" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:13;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAYAAAAtmaJzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVGhD7ZYBjYUwEEQxgwtMoAELSMEBCvCBAQxgAAFcX8MmPdIe3X8Jyf7sSxpKd1hmgADN+aU0cM2/Dg9nFQ9nFQ9nFQ9nFQ9XYtu2c13XuH1CowV0tdoSH4XDZNu2cfR9T5M4z5nRaOE4jnMcx6hD/x/IpgqHKQ7BgIAhDLPOXNBoAX3XdbHGeD3cMAxZY8uyxHW2gka773tck7vK/PVwpZOKOQIJGi2B2JcLUTpWQ+gRulSSe8xSUkMabY6neg2hR+hSCS8H5NM0XSu/SQ1ptDme6jWEHqFLJR7Oajh5EZROmtY02hxP9RpCj9BFAXJe13fkTs3zfK3otHeovx5O/h4wmCLr3DFBo71D/fVwfIfkL4KPMMbFbPpRBo0WqMtAw7Gy/9eFKBF6hC5KMM0jxZVlYBgDOTRa0eRG7mI88VE4K3g4q3g4q3g4q3g4q8Rwjkma5geFjyQK06wQWAAAAABJRU5ErkJggg==" width="55" height="36" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="height:0pt; display:block; position:absolute; z-index:15;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAYAAAAtmaJzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFWSURBVGhD7ZZRDYQwDEAxgwtMoAELSMEBCvCBAQxgAAFc30ITbmFk5edupC9Zbre1rG8QRrW/lAqO/utwuVJxuVJxuVJxuVJxuTuWZQkth9xYYuZ5zr5uisdy27btfd9zgb1t22P0mtxYhOq6Do044uk/lcTNLMdiTdOExWl3BefGEsc8m6CwKcgxTt+K5EmmgXVdw2K6o/RTBVtiu64L87HENE1hnF8rkieZBiiSQrQI0u/uRm5sak43iOtYkTybXEyqqCtSsVeP5BnLGmck7/dyvEiYG4bhGPnGssYZyXO5JJaFU7GvltOXRuo6ljXOSN7v5YA5jowYvavjOB4j+Ujef8jpFwwyZ3Scu2tF8uxyFKCNdL5A9H9cRG4sZ6F+yXBgM69iTw5wkFy7HLufanEhVzHa4lgEefx0Hjkkn/JIrhRcrlRcrlRcrlRcrlSCnFMkVfUB509MS2VKTQUAAAAASUVORK5CYII=" width="55" height="36" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="data:image/png;base64,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" width="247" height="240" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:3;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVEAAAABCAYAAABnj50BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAXSURBVDhPYwCC/6N4FI/iUTyKycEM/wG0Ak+/bSgcQwAAAABJRU5ErkJggg==" width="337" height="1" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:1;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAACSCAYAAAC9rNN6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVHhe7dKxCcAAEMSw33/phIOs4CZIjRfwQez5ChmTkTMZOZORMxk5k5EzGTmTkTMZOZORMxk5k5EzGakNZjJSBiNnMnImI2cyciYjZzJyJiNnMnImI2cyciYjZzJyJiNnMnImI2cyciYjtcFMRspg5ExGzmTkTEbOZORMRs5k5ExGzmTkTEbOZORMRs5k5ExGzmTkTEZqg5mMlMHImYycyciZjJzJyJmMnMnImYycyciZjJzJyJmMnMnImYycyciZjNQGMxkpg5EzGTmTkTMZOZORMxk5k5EzGTmTkTMZOZORMxk5k5EzGTmTkTMZOZOR2mAmI2UwciYjZzJyJiNnMnImI2cyciYjZzJyJiNnMnImI2cyciYjZzJyJiO1wUxGymDkTEbOZORMRs5k5ExGzmTkTEbOZORMRs5k5ExGzmTkTEbOZORMRs5kpDaYyUgZjJzJyJmMnMnImYycyciZjJzJyJmMnMnImYycyciZjJzJyJmMnMlIbTCTkTIYOZORMxk5k5EzGTmTkTMZOZORMxnwB3cvkhGYaHOiX/gAAAAASUVORK5CYII=" width="154" height="146" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:4;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAlCAYAAADWSWD3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEfSURBVFhH7ZbhDYQgDEZZxi1cwhlcwRXcwA2cwAlcwAVcwAUcgMtH+BLOIxchR/GSvoQQij8e0DYa+4eotBQqLYVKS6HSUqi0FLelz/O027bZ4zh85B3EsY/vSnNbGlLGGNs0zYcY1ohj/1HSYJomJ4Y5hPF5nn2kLEnS4Y0yTfgCbdu6tQTJhbiuq5Psus6t+753a+SzFMnSAMIQZVqM4+h3ZMiSZkpwSBRfSJZ0mNuYpcmSZlqEaRJjWZav+7kkSzM1WIjXbkKGYXCy+K66NG+Xkuwm6CIxqkvzua/dggeJtb2q0ig+iGFcu8W+7y4eK8qq0kgDCGCOwfzFAUKqSuei0p5i0pBlDXD86v+k+E2XQKWlUGkpVFoKlZbB2hdEfTL6pqSNEgAAAABJRU5ErkJggg==" width="45" height="37" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:5;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAlCAYAAADWSWD3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVFhH7ZYBzYMwEEYxgwtMoAELWMABDlCAAgxgAAMYQED/vIZLuo4llLWX/cm9pCG9su0BX49V7h9i0lqYtBYmrYVJa2HSWtyWPo7Drevq9n0/K69QZ53zSnNbGqmqqlxd129izKmz/lPSMI6jF+MYIvVpms5KWZKkwzsqMZEn0DSNn2uQvBGXZfGSbdv6edd1fk6etUiWBoQRlVgMw3Cu6PBIWiIhQ2PzhTySDrPNUZtH0hKLMCYx8zy/XNi2befK9yRLSzRkI8bdRKCbSK3v+6xPJFla7q4ISTehi3yCzsI5uUj6Jh45Px53C7mQT22Pz+Xs47el2XyIMeJuQV6pX0VANi3iubgtTQy4oxyvYDOyHm848szISb6gXYBsidd7MWkRLvHiKSItGY9Hrv8nReNRCpPWwqS1MGktTFoH5/4AeCAq1cRWJf0AAAAASUVORK5CYII=" width="45" height="37" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:7;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVChTjcpBCgAgDAPB/v/Tih5CbTfFgT0lAVZpVM85RMdaQydKaHQJjS6hceqiwSU0uh50oBo65Sw6n74M54gNMQVvkUxe37AAAAAASUVORK5CYII=" width="13" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:8;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVChTjcpBCgAgDAPB/v/Tih5CbTfFgT0lAVZpVM85RMdaQydKaHQJjS6hceqiwSU0uh50oBo65Sw6n74M54gNMQVvkUxe37AAAAAASUVORK5CYII=" width="13" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:9;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVChTjcpBCgAgDAPB/v/Tih5CbTfFgT0lAVZpVM85RMdaQydKaHQJjS6hceqiwSU0uh50oBo65Sw6n74M54gNMQVvkUxe37AAAAAASUVORK5CYII=" width="13" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:10;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVChTjcpBCgAgDAPB/v/Tih5CbTfFgT0lAVZpVM85RMdaQydKaHQJjS6hceqiwSU0uh50oBo65Sw6n74M54gNMQVvkUxe37AAAAAASUVORK5CYII=" width="13" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:11;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVChTjcpBCgAgDAPB/v/Tih5CbTfFgT0lAVZpVM85RMdaQydKaHQJjS6hceqiwSU0uh50oBo65Sw6n74M54gNMQVvkUxe37AAAAAASUVORK5CYII=" width="13" height="13" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:12;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAYAAAAtmaJzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFoSURBVGhD7ZZhrYQwEIQxgwtMoAELSMEBCvCBAQxgAAG8nYZJ+nq3ZXsJP0r2S5rrdcswU0hpc76UBlz91+HhasXD1YqHqxUPVyseLse2baHdgTnruprmAqtujp/DHcdxjuMIgbPv+2v0EwRq2zY0zMN89DXjVl0LyFYcDsa6rgsGciYwD3WYJTCPcBhHP8aqa0U0RKWAfd/Djbn6ORPDMIR6GmJZljCOX1Kia0U0RKUA3BimaThnQqsxCHRIia4V0SgLl6KZ4OrHr2SMdh25q1sQjWfCYSNBbZqma+Q/2nXkrm5BNDycimbi1eG4aWgGczVwV7cgGs+EA6hha0/hU53n+Rr5JKdrRTSeC8eTBsLEcBxPVyOna0U0ysPBLBsux6mC/2PD+GbxxIEPNuoMFn/ACTXQcrpWRKM8HFZUa6lpBMTrxzrCwew3Yp20fVuMO34KVwserlY8XK14uFrxcLUSwjlV0jR/+7pMS+p7LW4AAAAASUVORK5CYII=" width="55" height="36" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="height:0pt; display:block; position:absolute; z-index:14;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAYAAAAtmaJzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFsSURBVGhD7ZbhjYMwDIVZhi1YghlYgVHYgAnYgwVYgAUYgPMXYYnr4SOGX67ySVHTxM95r4XSav9SKjjmX0cJF5USLiolXFRKuKiUcBbLsuzzPKfXHKjLqfX2tXgUjoPruk6jbVuapLllZtu2ve/7VEe9hbfvHWRzheMgJJhVMI8J1pmfob5pmrTHsMJ5++YgOlE66Lru8rBpmtI6r8q6rmlNP33mVjhP31xEJ0oHlF8Z1CCYVAjEezVsacHTNxfRiTKTq0vnDHuWebD23/a1EJ0oM+GGp3wYhmPlN3cmrP23fS1EJ8pMSrio4fTmtg66M2Htv+1rITpROqCcn/ZP9NMfx/FY+Qv7/wV42tdCdKJ0oP80OPSMrvMtWLBvhXvT10J0onTAM0v/cfBgxYwauHrQsq+DGrT6/mzY2zcH0YraCUa4TPgWGJjAzBVaczU+TXv65vAoXBRKuKiUcFEp4aJSwkUlhSuEpKp+AHEkJAopbr8zAAAAAElFTkSuQmCC" width="55" height="36" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="height:0pt; display:block; position:absolute; z-index:16;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAYAAAAtmaJzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFjSURBVGhD7ZbhrYMwDIRZhi1YghlYgVHYgAnYgwVYgAUYgPoiLOW1cZsr748rf1LUNLkjvoAIzfmjNODq/xwRzisRzisRzisRzisR7h3btqX2CWjWdf137Tu+DnccxzmOIy5w9n1/jb6CItu2TQ066NEvFc5oa0A2OhwW67ouLY5mhYMO89gEBZuCgjGOvsJoaxGfOAn2fU+L6Y6ib4UbhqFY2LIsaRy/CqOtRXziJEAgFKJFwG6Fs+Z0g3AdhdHWIj5x3sAqqvSY5eQ+RssgPnHewFoYLwfMTdN0jfwl9zFaBvGJ8wbWwhHOazh9EVhF5XOMlkF84rzBp6JwZDyjd2qe52uE09YiPnHeAHYrnH7BoMAcHccdUxhtLeITJwkK0AY7vlb0f14EzkL9ksEhjHkt9vlQZrS1iFfcJLhTVisVjUdK51EwCi/BaGv4KpwXIpxXIpxXIpxXIpxXUrjAJU3zAFy5JAqtTfQxAAAAAElFTkSuQmCC" width="55" height="36" alt="" style="margin: 0 0 0 auto; display: block; "></span><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p class="ListParagraph" style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
+    <p>&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+
+</body>
+
+</html>

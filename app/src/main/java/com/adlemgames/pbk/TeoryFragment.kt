@@ -28,30 +28,42 @@ class TeoryFragment : Fragment(), RecycleAdapterTeory.Callback, OnBackClickListe
     // This property is only valid between onCreateView and
     // onDestroyView.
     var teoryes: MutableList<Teory> = mutableListOf(
-        Teory("Конечные автоматы", R.drawable.ic_baseline_calc_500, "Конечные автоматы",
+        Teory("Конечные автоматы", R.drawable.business_target, "Конечные автоматы",
         mutableListOf(
-            Teory("D-триггер", R.drawable.ic_baseline_upcoming_24, "D-триггер.html", null),
-            Teory("Анализ конечных автоматов", R.drawable.ic_baseline_analytics_24, "Анализ конечных автоматов.html", null),
-            Teory("Минимизация автоматов", R.drawable.ic_baseline_upcoming_24, "Минимизация автоматов.html", null),
-            Teory("Основные положения", R.drawable.ic_baseline_home_24, "Основные положения.html", null),
-            Teory("Представление конечных автоматов", R.drawable.ic_baseline_preview_24, "Представление конечных автоматов.html", null),
-            Teory("Система конечных автоматов", R.drawable.ic_baseline_preview_24, "Система конечных автоматов.html", null),
-            Teory("Т – триггер", R.drawable.ic_baseline_preview_24, "Т – триггер.html", null),
-            Teory("Типы конечных автоматов", R.drawable.ic_baseline_preview_24, "Типы конечных автоматов.html", null),
-            Teory("Триггер как конечный автомат", R.drawable.ic_baseline_preview_24, "Триггер как конечный автомат.html", null),
-            Teory("Триггеры", R.drawable.ic_baseline_preview_24, "Триггеры.html", null),
+            Teory("D-триггер", R.drawable.target, "D-триггер.html", null),
+            Teory("Анализ конечных автоматов", R.drawable.analysis, "Анализ конечных автоматов.html", null),
+            Teory("Минимизация автоматов", R.drawable.loss, "Минимизация автоматов.html", null),
+            Teory("Основные положения", R.drawable.bank, "Основные положения.html", null),
+            Teory("Представление конечных автоматов", R.drawable.globe, "Представление конечных автоматов.html", null),
+            Teory("Система конечных автоматов", R.drawable.strategy, "Система конечных автоматов.html", null),
+            Teory("Т – триггер", R.drawable.target, "Т – триггер.html", null),
+            Teory("Типы конечных автоматов", R.drawable.price_tag, "Типы конечных автоматов.html", null),
+            Teory("Триггер как конечный автомат", R.drawable.check_mark, "Триггер как конечный автомат.html", null),
+            Teory("Триггеры", R.drawable.keynote, "Триггеры.html", null),
             )
         ),
-        Teory("Машинные методы деления", R.drawable.ic_baseline_calc_500, "Машинные методы деления",
+        Teory("Машинные методы деления", R.drawable.suitcase, "Машинные методы деления",
         mutableListOf(
-            Teory("Блок схема организации вычислений имеет вид", R.drawable.ic_baseline_upcoming_24, "Блок схема организации вычислений имеет вид.html", null),
-            Teory("Деление в дополнительных кодах", R.drawable.ic_baseline_analytics_24, "Деление в дополнительных кодах.html", null),
-            Teory("Машинные методы деления", R.drawable.ic_baseline_upcoming_24, "Машинные методы деления.html", null),
-            Teory("Методы ускоренного выполнения операции умножения", R.drawable.ic_baseline_home_24, "Методы ускоренного выполнения операции умножения.html", null),
-            Teory("Одновременное умножение на 2 разряда", R.drawable.ic_baseline_preview_24, "Одновременное умножение на 2 разряда.html", null),
-            Teory("Схема ускоренного умножения", R.drawable.ic_baseline_preview_24, "Схема ускоренного умножения.html", null),
+            Teory("Блок схема организации вычислений имеет вид", R.drawable.contract, "Блок схема организации вычислений имеет вид.html", null),
+            Teory("Деление в дополнительных кодах", R.drawable.presentation, "Деление в дополнительных кодах.html", null),
+            Teory("Машинные методы деления", R.drawable.bar_chart, "Машинные методы деления.html", null),
+            Teory("Ускоренное выполнени умножения", R.drawable.bar_chart_up, "Методы ускоренного выполнения операции умножения.html", null),
+            Teory("Одновременное умножение на 2 разряда", R.drawable.binoculars, "Одновременное умножение на 2 разряда.html", null),
+            Teory("Схема ускоренного умножения", R.drawable.business_chart, "Схема ускоренного умножения.html", null),
             )
         ),
+        Teory("Регистры", R.drawable.calculator, "Регистры.html", null),
+        Teory("Логические основы вычислительной техники", R.drawable.goal, "Логические основы вычислительной техники",
+        mutableListOf(
+            Teory("Двоичные переменные и булевы функции", R.drawable.briefcase, "Двоичные переменные и булевы функции.html", null),
+            Teory("Метод карт Карно", R.drawable.check_mark, "Метод карт Карно.html", null),
+            Teory("Метод Квайна – Мак", R.drawable.check_mark, "Метод Квайна – Мак.html", null),
+            Teory("Минимизация логических выражений", R.drawable.revenue_down, "Минимизация логических выражений.html", null),
+            Teory("Нормальные формы представления булевых функций", R.drawable.search_file, "Нормальные формы представления булевых функций.html", null),
+            Teory("Основные законы булевой алгебра", R.drawable.communication, "Основные законы булевой алгебра.html", null),
+            Teory("Представление логических выражений в различных баз", R.drawable.start_up, "Представление логических выражений в различных баз.html", null),
+            Teory("Формы представления булевых функций", R.drawable.hierarchy, "Формы представления булевых функций.html", null),
+        )),
     )
     lateinit var adapter: RecycleAdapterTeory
     private val binding get() = _binding!!
@@ -80,6 +92,7 @@ class TeoryFragment : Fragment(), RecycleAdapterTeory.Callback, OnBackClickListe
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (requireActivity() as BackButtonHandlerInterface).addBackClickListener(this)
+        setHasOptionsMenu(true)
         binding.recycle.layoutManager = LinearLayoutManager(requireContext())
         binding.recycle.adapter = adapter
     }
@@ -118,9 +131,10 @@ class TeoryFragment : Fragment(), RecycleAdapterTeory.Callback, OnBackClickListe
             val toolbar = (activity as AppCompatActivity?)!!.supportActionBar!!
             toolbar.title = "Теория"
             toolbar.setDisplayHomeAsUpEnabled(false)
-            return true
+            findNavController().navigate(R.id.to_teory)
+            return false
         }
-        return super.onOptionsItemSelected(menuItem)
+        return false
     }
 
     override fun onBackClick(): Boolean {

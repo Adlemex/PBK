@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 13pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: avoid;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 13pt;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading7 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .Heading8 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000
+        }
+
+        .Heading9 {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: left;
+            page-break-inside: auto;
+            page-break-after: auto;
+            line-height: 115%;
+            widows: 2;
+            orphans: 2;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 8pt
+        }
+
+        .BlockText {
+            margin-right: 72pt;
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyText {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyText2 {
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyText3 {
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 8pt
+        }
+
+        .BodyTextFirstIndent {
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextFirstIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            text-indent: 10.5pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent2 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 200%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .BodyTextIndent3 {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 8pt
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Closing {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Date {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .DocumentMap {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            background-color: #000080
+        }
+
+        .E-mailSignature {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .EndnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .EnvelopeAddress {
+            margin-left: 144pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .EnvelopeReturn {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 10pt
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .FootnoteText {
+            margin-bottom: 10pt;
+            text-align: left;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 9pt
+        }
+
+        .HTMLAddress {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-style: italic
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index2 {
+            margin-left: 10pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index3 {
+            margin-left: 20pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index4 {
+            margin-left: 30pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index5 {
+            margin-left: 40pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index6 {
+            margin-left: 50pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index7 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index8 {
+            margin-left: 70pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Index9 {
+            margin-left: 80pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .IndexHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold
+        }
+
+        .List {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List2 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List3 {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List4 {
+            margin-left: 72pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .List5 {
+            margin-left: 90pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListBullet5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue {
+            margin-left: 18pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue2 {
+            margin-left: 36pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue3 {
+            margin-left: 54pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue4 {
+            margin-left: 72pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListContinue5 {
+            margin-left: 90pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber {
+            margin-left: 18pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber2 {
+            margin-left: 39pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber3 {
+            margin-left: 60pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber4 {
+            margin-left: 81pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListNumber5 {
+            margin-left: 102pt;
+            margin-bottom: 10pt;
+            text-indent: -18pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Macro {
+            widows: 0;
+            orphans: 0;
+            font-family: 'Courier New';
+            font-size: 12pt
+        }
+
+        .MessageHeader {
+            margin-left: 54pt;
+            margin-bottom: 10pt;
+            text-indent: -54pt;
+            line-height: 115%;
+            border: 0.75pt solid #000000;
+            padding: 1pt;
+            font-family: Arial;
+            font-size: 12pt;
+            background-color: #cccccc
+        }
+
+        .NormalWeb {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt
+        }
+
+        .NormalIndent {
+            margin-left: 35.4pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .NoteHeading {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .PlainText {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        .Salutation {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Signature {
+            margin-left: 216pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Subtitle {
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOAHeading {
+            margin-top: 6pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 12pt
+        }
+
+        .TOC1 {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC2 {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC3 {
+            margin-left: 42pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC4 {
+            margin-left: 63pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC5 {
+            margin-left: 84pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC6 {
+            margin-left: 105pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC7 {
+            margin-left: 126pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC8 {
+            margin-left: 147pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TOC9 {
+            margin-left: 168pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TableofAuthorities {
+            margin-left: 21pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .TableofFigures {
+            margin-bottom: 10pt;
+            text-indent: -10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt
+        }
+
+        .Title {
+            margin-top: 12pt;
+            margin-bottom: 3pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Arial;
+            font-size: 16pt;
+            font-weight: bold
+        }
+
+        span.CommentReference {
+            font-size: 10.5pt
+        }
+
+        span.Emphasis {
+            font-style: italic
+        }
+
+        span.EndnoteReference {
+            vertical-align: super
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #800080
+        }
+
+        span.FootnoteReference {
+            vertical-align: super
+        }
+
+        span.HTMLCite {
+            font-style: italic
+        }
+
+        span.HTMLCode {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLDefinition {
+            font-style: italic
+        }
+
+        span.HTMLKeyboard {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLSample {
+            font-family: 'Courier New'
+        }
+
+        span.HTMLTypewriter {
+            font-family: 'Courier New';
+            font-size: 10pt
+        }
+
+        span.HTMLVariable {
+            font-style: italic
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #0000ff
+        }
+
+        span.Strong {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:16pt;"><strong><span style="font-family:'Times New Roman';">Основные законы булевой алгебра</span></strong></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">На основании определения основных операций можно убедиться в справедливости следующих законов:</span></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">1. Коммутативный (переместительный):</span></p>
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAS8AAAAnCAYAAABe+s4BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPqSURBVHhe7ZqPjdRMDEevABqgARqgga8CKqADOqAFWqCGrwm6oBnIO2FpFGU388eTbJT3JGsve4nnN7bHk+TuTURERERERERERERERERERERERERERERERERERERERERERETk9fm42NfFfi72+99xyffF/izGOY/gmv8X+/x+VA9jPvO7Bv/fFmOsH3yx4r/F9rQeSZbe1jgB426NuUVPDeCf7369H51HRv32cNdabGVqfriwtHJi/BzfM+lncC7iaoni//B+tE+cX9r62vKcs8nU+2Uxzlkn/hEUKufzWUNoCKupgdC+VxezCW1hvfXbwp1rsZVyTCw9P0ykdMQxC4ZuyIJhd6VDPoNruJYg7IFPzu3ptrFDYOvFiQbGr2mizI+AtdqnxVrI0hvj10C+2OlayKiBszhLe1Zu0VbWWK21kqW3len5wWE4x3GPMyYf4p7BwkJwL6GTZKwhKTXaCRrnttre3LbI0Mt5+ODzGRQE5zG/VjJq4CzO0h5jjuSWDZFzW62HDL09TM9PdEe6b88iBa7FzyMIEGP0Bh/YdfBBs1xDY+xZuDPJ0ktcn+2MUSBb49SSUQNn0aud5kGOep4E7laLI7GaWltxWzlyV7TXnPBNkEZ4lAA6+sjCnUWW3r3mxG42WhgZNXAWvdojP1grd6vFkVhNra1wjo0sAJrTlsCRR5oSgoyf8g4PvQT2FcnU+yiG7Ih8Tw5HyKqBM+jVTtPnmmd3tY+4Wy2OxGpabeGMphOddWQRsLDwQTcP8M93Nd19j0hAGXCS0dIU0cb1rdb6wh4y9JZQOGXxQegbIbMGjmZUO08KPQsqI7c0hMhfi/WQobcnVlNrizslJhCTG32hFn5ikgSop1tvEXcfkQCOy0ZZA3MlCa3WU+AZekvQgT8+AV8c9zbDILsGjuQs7Rm5PfKFfXYt1pKaHy4OhzQWnAJBwTm/gxiwFRY5zYpxsh5pgtCI4Xt9F/JqzNAbj+ZlnFuZXQMzeRXt1uI2U/MTt29YdOEgvscpi6TnbgNoViF0PcYIZQLw26vvKGboJekRWz57fI7UQFzLJ4vgaEa0Z2ItbjM1P/GoQVdcX4zTR79rJSbBYssiFm6231nM0ht56r3tH6mBaJoYBXg0R9XvHtbiNq+SnyEI0IydmcmfseP3MkMviWcnPZv1zno3rEWpho59pb+EXU1vCzRP5ndXrEWphuD3PiadwdX0tsDuPfO9yatjLcpTWBwYj5+8Z+FPu6/M1fT2wNx4b3G3hWAtSjXlX0awnn8HOJKr6ZV6rEVpgscRAs//MV3hOf1qeqUea1FERERERERERERERERE5EK8vf0FpDkKvxr/IF4AAAAASUVORK5CYII=" width="303" height="39" alt=""></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">2. Ассоциативный (сочетательный):</span></p>
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,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" width="520" height="39" alt=""></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">3.</span><span style="font-family:'Times New Roman';">&nbsp;&nbsp;</span><span style="font-family:'Times New Roman';">Дистрибутивный (распределительный):</span></p>
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,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" width="533" height="39" alt=""></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="width:35.4pt; display:inline-block;">&nbsp;</span><span style="font-family:'Times New Roman';">4. Двойственности (законы де Моргана)</span></p>
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARQAAAApCAYAAAD049a+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPhSURBVHhe7ZuNjdQwEIWvABqgARqgASqgAjqgA1qgBWqgCbqgGci3tyNZlhN7/Jds/D5pdLeb2J73MraT6O5NCCGEEEIIIYQQQgghhBBC3Ih/N4qZpMbfixZS/eXiTFL5XCVmkhr/KGaRGjsXQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYS4Dh+3+P38WcKHLTj/8+OTGMm3LfD6y+OTeDW+P6MUrvfP91/P59MWP54RQjFSlCS7B8dLhWDQ3/dfi2ABIgfyihchjv3a4uvj0zm0+Oahxgd85p+7ODabWb7AXWsELVy/ks0anZzr0TnMN/uvQgsGASZ/+P0epcK9ojkvHD+eGFwoO3YEhnHhPFFCmBvh9a2UWh/wOy6UGYS5EqN8gbvXCOOUbNbejbqXb0koOoRaB5jLZ8RwjMgtFiSUM9kuWimMydgYSl5/togxY47AHNNRGiVwXqtvJfTyYRazfIG714hN7KPxaJ87J2ZKTZlwVjqEe8iJqhFtWNuUOLs1O5Na3ziX3NFQwtV9iKn1hUnEhKOgS7lrjQCT/mgjzh0/YrhvCKZzBvJyJKxFNOyJpl8K8Gy8vrGwmibP+4Sr+xBTU0/UyZ7OI67uTe3cskmf2oyPjpUy1Dc6oXNWVC+saKm2NnlakrOLERrH797VfhRe36wQYk05ru5DTE09oYU23g3objUSwjuS1GMJHrXeRQzzjQlvu0NtZ6mXQ/SJmS1YXibabsf4mQMttPeEh1rfWFS8i6yNU+PDbFrqCX1eTS3eXLVGDDTQNnwMRCffee94YiyvrjVFYzq2xFOrYQmx8N6ibXVngSqdjJxHHp4opZdvpbT4MJPZvsDdayTerOmzdaOGbjVFB7Za0oktAghmAAwAz8sx4J2AtacvjGiFPuiTn+TT8+8YvIzyrYQr+RBzpi9w9xqhDQsK+ug/7KeFbr7ZykSS4XMYRvC9dU7yXugzNq8FE02edqHOYqRvOTw+UMjkOiKPFGf6AivUCO2sX/T2oJtvJo6JH056bnf43oTXYMJ7icb8VK5nMNK3HKU+hLkQnlv0Ws70BVapERYT2vfS2NW3vUJDeOt7D/ruJZq+EN2aUy9G+naExwfO4XwW9V4Le46zfIFVaoS29NGLq/k2BW7fe5r4qtT4wA408s7gKqhG6ljONwSvMCFy1PhAoYTP8HdFNVLHEr4hkFt0HpcQ3PSi6IVp8YE2tOXupNdj55VQjdSxpG88zxG8fEL0qrT4QMHccSExVCN1LOmbiV5915EP+8ibOpb0jbfNS71x3kE+7CNv6pBvQgghhBBCCCGEENN4e/sPS2VWprNk620AAAAASUVORK5CYII=" width="276" height="41" alt=""></p>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><span style="font-family:'Times New Roman';">Для булевой алгебры справедливы свойства и тождества:</span></p>
+    <ul style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:29.44pt; margin-bottom:0pt; line-height:115%; padding-left:6.56pt; font-family:serif; font-size:14pt;"><span style="font-family:'Times New Roman';">Поглощение:</span></li>
+    </ul>
+    <p style="margin-bottom:0pt; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,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" width="614" height="39" alt=""></p>
+    <ul style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:29.44pt; margin-bottom:0pt; line-height:115%; padding-left:6.56pt; font-family:serif; font-size:14pt;"><span style="font-family:'Times New Roman';">Склеивание:</span></li>
+    </ul>
+    <p class="ListParagraph" style="margin-left:70.8pt; margin-bottom:0pt; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,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" width="396" height="46" alt=""></p>
+    <ul style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:29.44pt; margin-bottom:0pt; line-height:115%; padding-left:6.56pt; font-family:serif; font-size:14pt;"><span style="font-family:'Times New Roman';">Констант:</span></li>
+    </ul>
+    <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,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" width="191" height="71" alt=""></p>
+    <ul style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:29.44pt; margin-bottom:0pt; line-height:115%; padding-left:6.56pt; font-family:serif; font-size:14pt;"><span style="font-family:'Times New Roman';">Отрицания:</span></li>
+    </ul>
+    <p style="margin-left:18pt; margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATMAAAAzCAYAAAD7L+/qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARHSURBVHhe7dqBceM2EEZhF5AG0kAaSAOpIBWkg3SQFtJCakgT18U1c8fnu38GowElkARJwH7fzI5kSSbWWHIJUn6TJEmSJEmSJEmSNK5vO0KSJEmSJEmSJElnqX070xK6V60mLaHnanP2KiRJkiRJkiRJkiRJkiSN7dclfvvxVBOidr8v8cv7T9InQvP6e4n/lsg/Lf6/hOZCA/v6M6gfdfxnCZuaPo0/lvhzib+WsJnNifpRt3/ff/qBFRqvfXn/SfpkOKvbzObCyjonocdVGCtuXmeFJn0quTyxmc2D1Rg1K1dlUTY6nusD4pKKe0RbcV+CA/2j7hg2s7mUzYpLzZq87+rsg8pOwDJ8i9xc/ahsZnMp73Nyoq1JTdl3NbC1fyGgWb3694Isz1u/7clN1rWd5pkjeV5p5GZ2xxyOXrfsw8/24/Jb6hGMPqc1p+VMU6GIuVnNt3GlNB2CM9cais9nWlZnfJbxavcl1vTKE0wYDWZPME4rPk8+PI6g5xy26jkmny1rsSVaDhI+l1zW5EsAYs+JuIfedXycq9bYcqndO+cqkuLr5myIwYIBMjjxqlGl0HTYZ1o/V+qZJ82UHXFPbM2ZfHgcQc85bNVzTOa+VpOWaLliSL2INdl3CbZ7h951fJyr1tiyirp03yO5bIwk2XHopMhK5lXyWZ3l92rymb03UHvkeZUcHDyO5Mgc8jqXWny+pUHEDHVLvYg1IzSzmOlYiMtyzv0AGg2xZWcNumwSrWG7vL9n29Ejzyvk4OBxNHvnsLxntPVyYPS6zdbMMMuxULok5zQi4vGadguWjLUDmC7Mto8uI3vlebaRm9neOTxyMI9et5ZmVn5mhMYxy7FQuiTnNBviSKFIkG087uwsJ49uG73yPNvIzezIHObyYKvR68Yq4VV+LQ3vSrMcC6XLcs6NuKMdk6Jzwy84ANguXbmHI3nm2nxPbMmfz5MjjyPqVestjozJ3Je12BIt92FyEibWVp3Jn0ulURytY22+WoLmv9fp+x73QDLIkUSRG305+Pnj2XYPR/PkbEB+e2LLioS/mRx5HE3PWrc6OiZzX6tJS7SuAMiNqN0PZBt5/8oTwDM96libr5ZoOUHUnL7vkRhnG5JkEAY7iu2xnWyzxw5wRp5nGbWZ3TGHs9Qt9wTLq4rIvZ7ae3eY6ViIU3LmLJNVBs8pUH5mEKJ8n8G34vezrb0H9BV5nmWUZnbHHN4xZi/kSn6POeV1Dsg7zDinl+RMd2RDrJYYoFxW5yDMaywFM+BWuem/d2KvyrOXFKT81o/grH7XznXHHM5Wt1IOutQtf0P+nrvMOKeX5JwNEfmntWDjeY8EjpyJdnfbn67KsxdyIOe1uAPjXj2Hd4zZE/steaZuPOe1O804p5fkTINJkR5RNDoqg9/d3WfJc2R3zKF162/GOXU/kCRJkiRJkiRJkiRJkiRJkiRJkjSft7fvdI9uAY+I9ZMAAAAASUVORK5CYII=" width="307" height="51" alt=""></p>
+    <ul style="margin:0pt; padding-left:0pt;">
+        <li class="ListParagraph" style="margin-left:29.44pt; margin-bottom:0pt; line-height:115%; padding-left:6.56pt; font-family:serif; font-size:14pt;"><span style="font-family:'Times New Roman';">Идемподентности:</span></li>
+    </ul>
+    <p class="ListParagraph" style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:14pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVUAAAAlCAYAAADyWXpbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPWSURBVHhe7ZuNkdMwEEavABqgARqgASqgAjqgA1qgBWqgCbqgGfAjtzMZjy3rPzry3owmTmytPq/Wn5QcvIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIjINV+39vF2mMW7rdHnw7934/j82kr4srVPt8MpkDdyUQL60Ckib4D3r6/38FnKAL9t7fftMAtMhOsx11xqdGE+f7Z21PcIDI7rR5v9PWhjzFzzJ2dcX2qqNfmbyar6ZupaNQe9WP3+uurjAf2xNR7WvalgmPH52W40HvScHRciuTbHRFp1wc/XlsOvrX2/HU6FvHEfOYtMyQLWI3+AvtJ2VKB7eunrzUxdq+agFz3uj1o6qrGrlsOw/GM6GEoECGPhlQc4jCn1oCCOvlfGQMxck+uhiyTR9yopmHyO/hEwJvdzVQixIOVOcI/8wb5Yc9pVTOilrzczdc0c6xH0uD/OHdXYVcuhh74kYYwE4zhXWEA/3P0MzID4pa7fqosEkbgzSnbaowhTT01eTHAprfkbzar6anVRT1xfUue1YzEG18/eDFCvuT9ZQe39zWKoPgLTCFxKmOaZMWAIsRKU0qIrTPOsCEggyXw0qfxc5faKlvzNYFV9Nbq4NvqVzFfNWNGn9rmqIb790UqMNfo8XQ3G7wi1gc92Uzk7sRStujBO+u9XdPTweUlxjCKM82iHg+m3PDit+RvNqvpqdHEtfWgl9V4zVozzFkz1aWuQySEwP97WECa1NwZMoWVL3aoLjjQQt+Yr9SiO9MSC1PIVryV/5Ky0lS6ePeZ3BDW6ar7+Q81YjMFYq3/9h9o5ppaOauyqlTKkBkkSE0RgWi04/v3XaW6QeLUT30vX/p9YpXaGjyIWpShYcsb7miIJWvN3X6i5rcRUe81vb2bqWjUHvWi5vxmm2i3/PLBR/GzpY4eEUxO41mzCCBAZx4jOZZQuIFasRByzOq0GBcGiRB7iuISR+evBqvpm6lp9jlp52hqMABgerwSHcOxwe96HgFzoSwzGSP3l/YiRukgWMWKrX9qf688SfnYu1ecIJvxeY+n/8BqZvx6sqm+mrlljpWrv7FyqTy5PW4O4MwEieECQ+JzB78+VwA6LGKUTNFpXmFUkroQY/2iHe3Yu1eeMmOxYQUsYnb9WVtU3U9essSLW6Hrd87Q1iNkR/GgnxO+iBA0Hr4H4OH0po3WROAyVHWEpjI+2o4Xi7FyqTwo01tzn6Py1sqq+mbpmjZWqvbNzqT65zMxlDavrExEREREREREREREREREREREREREREREREREREZH/lZeXvw4g/uSpWozIAAAAAElFTkSuQmCC" width="341" height="37" alt=""></p>
+    <p>&nbsp;</p>
+    <p style="margin-top:10pt;">&nbsp;</p>
+
+</body>
+
+</html>

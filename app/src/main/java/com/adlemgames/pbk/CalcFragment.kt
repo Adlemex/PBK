@@ -116,7 +116,9 @@ class CalcFragment : Fragment() {
             binding.progressLoader.visibility = View.VISIBLE
             val client = OkHttpClient()
             val request: Request = Request.Builder()
-                .url("https://pbk-psu.ml/api/to_dec?num=" + binding.inputText.text + "&from_base=" + (binding.spinnerFrom.selectedItemPosition+2).toString())
+                .url("https://pbk-psu.ml/api/ch_bases?num=" + binding.inputText.text +
+                        "&from_base=" + (binding.spinnerFrom.selectedItemPosition+2).toString() +
+                        "&to_base=" + (binding.spinnerTo.selectedItemPosition+2).toString())
                 .get()
                 .build()
             client.newCall(request).enqueue(object : Callback {
@@ -155,14 +157,13 @@ class CalcFragment : Fragment() {
                             try {
                                 val result = Klaxon()
                                     .parse<Calc>(serverAnswer)
-                                    if (result!!.result != null) {
+                                if (result!!.result != null) {
                                         binding.itogText.text = result.result.toString()
                                         solving = result.steps!!
-                                    } else Toast.makeText(
+                                } else Toast.makeText(
                                         requireContext(),
                                         serverAnswer,
-                                        Toast.LENGTH_LONG
-                                    ).show()
+                                        Toast.LENGTH_LONG).show()
                             }
                             finally {
 
