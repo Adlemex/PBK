@@ -42,6 +42,11 @@
         android:label="@string/tables_fragment_label"
         tools:layout="@layout/fragment_tables"/>
     <fragment
+        android:id="@+id/BlocksFragment"
+        android:name="com.adlemgames.pbk.BlocksFragment"
+        android:label="@string/blocks_label"
+        tools:layout="@layout/fragment_blocks"/>
+    <fragment
         android:id="@+id/TablesResultFragment"
         android:name="com.adlemgames.pbk.TablesResultFragment"
         android:label="@string/tables_fragment_label"
@@ -69,4 +74,7 @@
     <action
         android:id="@+id/to_calc_steps"
         app:destination="@id/CalcStepsFragment" />
+    <action
+        android:id="@+id/to_blocks"
+        app:destination="@id/BlocksFragment" />
 </navigation>

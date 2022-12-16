@@ -21,6 +21,5 @@
         android:id="@+id/fr_blocks"
         android:icon="@drawable/ic_baseline_construction_24"
         android:orderInCategory="100"
-        android:title="Блоки"
-        android:visible="false" />
+        android:title="Блоки"/>
 </menu>

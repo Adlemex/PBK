@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity(), BackButtonHandlerInterface {
         val appBarConfiguration = AppBarConfiguration(setOf(
             R.id.TeoryFragment,
             R.id.CalcFragment,
-            R.id.TablesFragment))
+            R.id.TablesFragment,
+            R.id.BlocksFragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         bottomNav.selectedItemId = R.id.fr_calc
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity(), BackButtonHandlerInterface {
                     return@OnItemSelectedListener true
                 }
                 R.id.fr_blocks -> {
-                    //findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.to_other)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.to_blocks)
                     return@OnItemSelectedListener true
                 }
                 else -> {return@OnItemSelectedListener false}
