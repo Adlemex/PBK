@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Web/PBK/app/src/main/res/layout/block_inp.xml" value="1.25" />
         <entry key="..\:/Web/PBK/app/src/main/res/layout/calc_keyboard.xml" value="0.19166666666666668" />
         <entry key="..\:/Web/PBK/app/src/main/res/layout/fragment_calculate.xml" value="0.19166666666666668" />
         <entry key="..\:/Web/PBK/app/src/main/res/layout/fragment_steps_calc.xml" value="0.19166666666666668" />

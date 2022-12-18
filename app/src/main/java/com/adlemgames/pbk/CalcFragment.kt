@@ -177,9 +177,11 @@ class CalcFragment : Fragment() {
         }
         for(i in 2..16) list += i
         val staticAdapter = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
-        staticAdapter .setDropDownViewResource(R.layout.dropdown_item)
-        binding.spinnerTo.adapter = staticAdapter
-        binding.spinnerTo.setSelection(8, true)
+        val staticAdapter2 = ArrayAdapter(requireContext(), R.layout.spiner_item, listOf(10))
+        staticAdapter.setDropDownViewResource(R.layout.dropdown_item)
+        staticAdapter2.setDropDownViewResource(R.layout.dropdown_item)
+        binding.spinnerTo.adapter = staticAdapter2
+        //binding.spinnerTo.setSelection(8, true)
         binding.spinnerFrom.adapter = staticAdapter
         binding.spinnerFrom.setSelection(8, true)
         binding.spinnerFrom.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{

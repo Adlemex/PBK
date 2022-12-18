@@ -9,16 +9,17 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.*
 import android.view.View.OnTouchListener
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
+import com.adlemgames.pbk.blocks.Block
+import com.adlemgames.pbk.blocks.BlocksInterface
+import com.adlemgames.pbk.blocks.InpBlock
 import com.adlemgames.pbk.databinding.BlockAndBinding
 import com.adlemgames.pbk.databinding.FragmentBlocksBinding
+import kotlin.random.Random
 
 
-class BlocksFragment : Fragment() {
+class BlocksFragment : Fragment(), BlocksInterface {
 
     private var _binding: FragmentBlocksBinding? = null
     private var xDelta = 0
@@ -26,10 +27,13 @@ class BlocksFragment : Fragment() {
 
     private var mainLayout: ViewGroup? = null
     private val binding get() = _binding!!
-    val blocks = mutableListOf<View>()
-    val connections = mutableListOf<MutableList<View>>()
     private var dpCalculation = 1f
-    var selected: View? = null
+    companion object {
+        val blocks = mutableListOf<Block>()
+        val connections = mutableListOf<MutableList<View>>()
+        var selectedId: String? = null
+        var selectedItem: String? = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +51,9 @@ class BlocksFragment : Fragment() {
             binding.canvas.lines.removeLastOrNull()
             binding.canvas.invalidate()
         }
-        val items = mutableListOf(R.layout.block_and,
+        val items = mutableListOf(
+            R.layout.block_inp,
+            R.layout.block_and,
             R.layout.block_and_no,
             R.layout.block_no,
             R.layout.block_exclude_or,
@@ -74,12 +80,14 @@ class BlocksFragment : Fragment() {
     }
     fun rerender(){
         for (block in blocks){
+        /*
             val out = block.findViewById<ImageView>(R.id.output)
             val inp1 = block.findViewById<ImageView>(R.id.input1)
             val inp2 = block.findViewById<ImageView>(R.id.input2)
+            val state = block.findViewById<TextView>(R.id.state)
             out.setOnClickListener {
-                selected?.setBackgroundColor(Color.TRANSPARENT)
                 if (selected != null){
+                    (selected as ImageView).setColorFilter(Color.TRANSPARENT)
                     val sparent = (selected!!.parent as View)
                     connections.add(mutableListOf(selected!!, it))
                     binding.canvas.draw(selected!!.x+sparent.x+(selected!!.height/2),
@@ -90,11 +98,11 @@ class BlocksFragment : Fragment() {
                     return@setOnClickListener
                 }
                 selected = it
-                it.setBackgroundColor(Color.GREEN)
+                (it as ImageView).setColorFilter(Color.GREEN)
             }
             inp1?.setOnClickListener {
-                selected?.setBackgroundColor(Color.TRANSPARENT)
                 if (selected != null){
+                    (selected as ImageView).setColorFilter(Color.TRANSPARENT)
                     val sparent = (selected!!.parent as View)
                     connections.add(mutableListOf(selected!!, it))
                     binding.canvas.draw(selected!!.x+sparent.x+(selected!!.height/2),
@@ -105,11 +113,11 @@ class BlocksFragment : Fragment() {
                     return@setOnClickListener
                 }
                 selected = it
-                it.setBackgroundColor(Color.GREEN)
+                (it as ImageView).setColorFilter(Color.GREEN)
             }
             inp2?.setOnClickListener {
-                selected?.setBackgroundColor(Color.TRANSPARENT)
                 if (selected != null){
+                    (selected as ImageView).setColorFilter(Color.TRANSPARENT)
                     val sparent = (selected!!.parent as View)
                     connections.add(mutableListOf(selected!!, it))
                     binding.canvas.draw(selected!!.x+sparent.x+(selected!!.height/2),
@@ -120,8 +128,21 @@ class BlocksFragment : Fragment() {
                     return@setOnClickListener
                 }
                 selected = it
-                it.setBackgroundColor(Color.GREEN)
+                (it as ImageView).setColorFilter(Color.GREEN)
             }
+            state?.setOnClickListener {
+                val text = (it as TextView)
+                val cur_state = text.text.toString().toInt()
+                if (cur_state == 1) {
+                    text.text = "0"
+                    text.setBackgroundColor(Color.RED)
+                }
+                else {
+                    text.text = "1"
+                    text.setBackgroundColor(Color.GREEN)
+                }
+
+            }*/
         }
     }
     fun recalc_connections(){
@@ -149,7 +170,6 @@ class BlocksFragment : Fragment() {
                 yDelta = y - lParams.topMargin
             }
             MotionEvent.ACTION_MOVE -> {
-                recalc_connections()
                 val layoutParams = view
                     .layoutParams as RelativeLayout.LayoutParams
                 layoutParams.leftMargin = x - xDelta
@@ -157,7 +177,9 @@ class BlocksFragment : Fragment() {
                 layoutParams.rightMargin = 0
                 layoutParams.bottomMargin = 0
                 view.layoutParams = layoutParams
+                recalc_connections()
             }
+            MotionEvent.ACTION_UP -> recalc_connections()
         }
         view.invalidate()
         true
@@ -195,7 +217,15 @@ class BlocksFragment : Fragment() {
                     (mainLayout as RelativeLayout).removeView(it)
                     return@setOnLongClickListener true
                 }
-                blocks.add(vview)
+                if (dragData.toString().toInt() == InpBlock.ID)
+                {
+                    val block = InpBlock(vview, Random.nextInt(1, 100).toString(), this)
+                    blocks.add(block)
+                }
+                else {
+                    val block = Block(vview, Random.nextInt(1, 100).toString(), this)
+                    blocks.add(block)
+                }
                 rerender()
                 layoutParams.topMargin = (event.y-20).toInt()
                 vview.layoutParams.width = (100 * dpCalculation).toInt()
@@ -208,5 +238,9 @@ class BlocksFragment : Fragment() {
             }
             else -> false
         }
+    }
+
+    override fun draw() {
+        recalc_connections()
     }
 }

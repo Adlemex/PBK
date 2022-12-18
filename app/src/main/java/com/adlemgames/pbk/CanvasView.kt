@@ -20,22 +20,22 @@ class CanvasView @JvmOverloads constructor(context: Context, attrs: AttributeSet
     var preview = mutableListOf(0f, 0f, 0f, 0f)
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        this.setOnTouchListener { v, event ->
-            if (event.action == MotionEvent.ACTION_DOWN){
-                startX = event.x
-                startY = event.y
-            }
-            if (event.action == MotionEvent.ACTION_MOVE){
-                preview = mutableListOf(startX, startY, event.x, event.y)
-                this.invalidate()
-            }
-            else if (event.action == MotionEvent.ACTION_UP){
-                draw(startX, startY, event.x, event.y)
-                preview = mutableListOf(0f, 0f, 0f, 0f)
-            }
-            performClick()
-            true
-        }
+        //this.setOnTouchListener { v, event ->
+        //    if (event.action == MotionEvent.ACTION_DOWN){
+        //        startX = event.x
+        //        startY = event.y
+        //    }
+        //    if (event.action == MotionEvent.ACTION_MOVE){
+        //        preview = mutableListOf(startX, startY, event.x, event.y)
+        //        this.invalidate()
+        //    }
+        //    else if (event.action == MotionEvent.ACTION_UP){
+        //        draw(startX, startY, event.x, event.y)
+        //        preview = mutableListOf(0f, 0f, 0f, 0f)
+        //    }
+        //    performClick()
+        //    true
+        //}
     }
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
