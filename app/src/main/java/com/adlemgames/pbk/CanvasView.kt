@@ -20,6 +20,7 @@ class CanvasView @JvmOverloads constructor(context: Context, attrs: AttributeSet
     var preview = mutableListOf(0f, 0f, 0f, 0f)
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
+        lines.clear()
         //this.setOnTouchListener { v, event ->
         //    if (event.action == MotionEvent.ACTION_DOWN){
         //        startX = event.x

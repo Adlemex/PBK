@@ -15,6 +15,7 @@ import xdroid.toaster.Toaster.toast
 open class Block(view: View, id: String, interfaces: BlocksInterface) {
     var type: String = ""
     val id = id
+    var cur_state: Boolean = false
     var selectedEl = ""
     var out: ImageView
     var input1: ImageView?
@@ -68,7 +69,12 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
         out.setColorFilter(color)
     }
     fun validate_conn(selected: Block){
-        toast(selectedItem + ">" + selectedEl)
+        //toast("$selectedItem>$selectedEl")
+        if (selectedItem != null) {
+            val trans = Transition(selected, selectedItem!!, this, selectedEl)
+            toast(trans.validate().toString())
+        }
+        /*
             when (selectedItem){
                 "out" -> {
                     selected.select_out(false)
@@ -124,7 +130,7 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
                     }
                     selected.selectedEl = ""
                 }
-        }
+        }*/
         selectedItem = ""
         selectedEl = ""
         selectedId = null
@@ -143,5 +149,10 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
             false -> Color.TRANSPARENT
         }
         input2?.setColorFilter(color)
+    }
+    fun deselect_all(){
+        select_out(false)
+        if (input1 != null) select_in1(false)
+        if (input2 != null) select_in2(false)
     }
 }

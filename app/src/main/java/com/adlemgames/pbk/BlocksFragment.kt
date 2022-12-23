@@ -11,9 +11,7 @@ import android.view.*
 import android.view.View.OnTouchListener
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.adlemgames.pbk.blocks.Block
-import com.adlemgames.pbk.blocks.BlocksInterface
-import com.adlemgames.pbk.blocks.InpBlock
+import com.adlemgames.pbk.blocks.*
 import com.adlemgames.pbk.databinding.BlockAndBinding
 import com.adlemgames.pbk.databinding.FragmentBlocksBinding
 import kotlin.random.Random
@@ -24,15 +22,26 @@ class BlocksFragment : Fragment(), BlocksInterface {
     private var _binding: FragmentBlocksBinding? = null
     private var xDelta = 0
     private var yDelta = 0
-
     private var mainLayout: ViewGroup? = null
     private val binding get() = _binding!!
     private var dpCalculation = 1f
     companion object {
         val blocks = mutableListOf<Block>()
-        val connections = mutableListOf<MutableList<View>>()
+        val connections = mutableListOf<Transition>()
         var selectedId: String? = null
         var selectedItem: String? = null
+        fun calc (){
+            for (i in 0..4)
+            for (block in blocks) {
+                if (block.type == "and") (block as AndBlock).calc()
+                if (block.type == "and_no") (block as AndNoBlock).calc()
+                if (block.type == "or") (block as OrBlock).calc()
+                if (block.type == "or_no") (block as OrNoBlock).calc()
+                if (block.type == "no") (block as InvBlock).calc()
+                if (block.type == "xor") (block as XOrBlock).calc()
+                if (block.type == "xor_no") (block as XOrNoBlock).calc()
+            }
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,10 +55,13 @@ class BlocksFragment : Fragment(), BlocksInterface {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentBlocksBinding.inflate(inflater, container, false)
+        blocks.clear()
+        connections.clear()
         mainLayout = binding.frameLayout2 as ViewGroup
         binding.undo.setOnClickListener {
-            binding.canvas.lines.removeLastOrNull()
-            binding.canvas.invalidate()
+            connections.removeLastOrNull()
+            this.recalc_connections()
+            calc()
         }
         val items = mutableListOf(
             R.layout.block_inp,
@@ -77,6 +89,10 @@ class BlocksFragment : Fragment(), BlocksInterface {
         binding.frameLayout2.setOnDragListener(dragListener)
         //binding.frameLayout2.addView(IV)
         return binding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
     fun rerender(){
         for (block in blocks){
@@ -148,14 +164,9 @@ class BlocksFragment : Fragment(), BlocksInterface {
     fun recalc_connections(){
         binding.canvas.lines.clear()
         for (connection in connections){
-            val sparent = (connection[0].parent as View)
-            val sparent2 = (connection[1].parent as View)
-            binding.canvas.lines.add(mutableListOf(
-                connection[0].x+sparent.x+(connection[0].height/2),
-                connection[0].y+sparent.y+(connection[0].width/2),
-                connection[1].x+sparent2.x+(connection[1].height/2),
-                connection[1].y+sparent2.y+(connection[1].width/2)))
+            connection.getValues()?.let { binding.canvas.lines.add(it) }
         }
+        calc()
         binding.canvas.invalidate()
     }
 
@@ -205,7 +216,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
             DragEvent.ACTION_DROP -> {
                 val item = event.clipData.getItemAt(0)
                 val dragData = item.text
-                Toast.makeText(requireContext(), dragData, Toast.LENGTH_SHORT).show()
+                /*Toast.makeText(requireContext(), dragData, Toast.LENGTH_SHORT).show()*/
                 val v = event.localState as View
                 view.invalidate()
                 val vview = View.inflate(requireContext(), dragData.toString().toInt(), null)
@@ -217,15 +228,18 @@ class BlocksFragment : Fragment(), BlocksInterface {
                     (mainLayout as RelativeLayout).removeView(it)
                     return@setOnLongClickListener true
                 }
-                if (dragData.toString().toInt() == InpBlock.ID)
-                {
-                    val block = InpBlock(vview, Random.nextInt(1, 100).toString(), this)
-                    blocks.add(block)
+                val block = when (dragData.toString().toInt()){
+                    InpBlock.ID -> InpBlock(vview, blocks.size.toString(), this)
+                    AndBlock.ID -> AndBlock(vview, blocks.size.toString(), this)
+                    AndNoBlock.ID -> AndNoBlock(vview, blocks.size.toString(), this)
+                    InvBlock.ID -> InvBlock(vview, blocks.size.toString(), this)
+                    OrBlock.ID -> OrBlock(vview, blocks.size.toString(), this)
+                    OrNoBlock.ID -> OrNoBlock(vview, blocks.size.toString(), this)
+                    XOrNoBlock.ID -> XOrNoBlock(vview, blocks.size.toString(), this)
+                    XOrBlock.ID -> XOrBlock(vview, blocks.size.toString(), this)
+                    else -> Block(vview, blocks.size.toString(), this)
                 }
-                else {
-                    val block = Block(vview, Random.nextInt(1, 100).toString(), this)
-                    blocks.add(block)
-                }
+                blocks.add(block)
                 rerender()
                 layoutParams.topMargin = (event.y-20).toInt()
                 vview.layoutParams.width = (100 * dpCalculation).toInt()

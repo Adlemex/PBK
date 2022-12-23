@@ -28,6 +28,7 @@ public class RecycleAdapterTeory extends RecyclerView.Adapter<RecycleAdapterTeor
     public interface Callback{
         void paragraph(Teory teory);
         void folder(Teory teory);
+        void click(Teory teory);
     }
 
     public RecycleAdapterTeory(Activity context, List<Teory> teoryList, Callback callback) {
@@ -49,9 +50,10 @@ public class RecycleAdapterTeory extends RecyclerView.Adapter<RecycleAdapterTeor
         holder.name.setText(teoryList.get(position).getName());
         holder.icon.setImageResource(teoryList.get(position).getDrawable());
         holder.itemView.setOnClickListener(view -> {
-            if (teoryList.get(position).getPath().contains(".html"))
-                callback.paragraph(teoryList.get(position));
-            else callback.folder(teoryList.get(position));
+            callback.click(teoryList.get(position));
+            //if (teoryList.get(position).getPath().contains(".html"))
+            //    callback.paragraph(teoryList.get(position));
+            //else callback.folder(teoryList.get(position));
         });
     }
 

@@ -11,6 +11,27 @@
         android:label="@string/teory_fragment_label"
         tools:layout="@layout/fragment_teory" />
     <fragment
+        android:id="@+id/TestFragment"
+        android:name="com.adlemgames.pbk.TestFragment"
+        android:label="@string/test_label"
+        tools:layout="@layout/fragment_test" >
+        <argument
+            android:name="data"
+            app:argType="com.adlemgames.pbk.models.TeoryTest[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/TestResultFragment"
+        android:name="com.adlemgames.pbk.TestResultFragment"
+        android:label="Результаты"
+        tools:layout="@layout/fragment_test_result" >
+        <argument
+            android:name="right"
+            app:argType="integer" />
+        <argument
+            android:name="all"
+            app:argType="integer" />
+    </fragment>
+    <fragment
         android:id="@+id/TeoryViewFragment"
         android:name="com.adlemgames.pbk.TeoryViewFragment"
         android:label="@string/teory_fragment_label"
@@ -77,4 +98,10 @@
     <action
         android:id="@+id/to_blocks"
         app:destination="@id/BlocksFragment" />
+    <action
+        android:id="@+id/to_test"
+        app:destination="@id/TestFragment" />
+    <action
+        android:id="@+id/to_test_result"
+        app:destination="@id/TestResultFragment" />
 </navigation>
