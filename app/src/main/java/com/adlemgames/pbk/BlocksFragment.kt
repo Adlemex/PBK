@@ -198,7 +198,22 @@ class BlocksFragment : Fragment(), BlocksInterface {
             }
             MotionEvent.ACTION_UP -> {
                 if (x*dpCalculation > 2400) {
-                    if (y*dpCalculation < 1160) binding.frameLayout2.removeView(view)
+                    if (y*dpCalculation < 1160) {
+                        for (block in blocks){
+                            if (block.out == view.findViewById(R.id.output)){
+                                connections.removeIf {
+                                    if (it.from?.id == block.id){
+                                        return@removeIf true
+                                    }
+                                    if (it.to?.id == block.id){
+                                        return@removeIf true
+                                    }
+                                    return@removeIf false
+                                }
+                            }
+                        }
+                        binding.frameLayout2.removeView(view)
+                    }
                 }
                 binding.delete.root.visibility = View.INVISIBLE
                 recalc_connections()
