@@ -36,7 +36,7 @@ class CalcStepsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.recycleview.layoutManager = LinearLayoutManager(requireContext())
-        binding.recycleview.adapter = StepsAdapter(requireContext(), args.steps)
+        binding.recycleview.adapter = StepsAdapter(requireContext(), args.blocks)
     }
     
     override fun onDestroyView() {

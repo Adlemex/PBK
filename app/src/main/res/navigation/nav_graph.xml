@@ -54,8 +54,8 @@
         android:label="@string/calc_fragment_label"
         tools:layout="@layout/fragment_steps_calc">
         <argument
-            android:name="steps"
-            app:argType="string[]" />
+            android:name="blocks"
+            app:argType="com.adlemgames.pbk.models.Calc$StepBlock[]" />
     </fragment>
     <fragment
         android:id="@+id/TablesFragment"

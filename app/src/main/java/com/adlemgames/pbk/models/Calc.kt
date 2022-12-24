@@ -1,10 +1,17 @@
 package com.adlemgames.pbk.models
 
+import android.os.Parcelable
 import com.beust.klaxon.Json
+import kotlinx.android.parcel.Parcelize
+
 
 data class Calc(
-    @Json(name = "result")
     val result: Any?,
-    @Json(name = "steps")
-    val steps: List<String>?,
-)
+    val blocks: List<StepBlock>?,
+){
+    @Parcelize
+    data class StepBlock(
+        val title: String,
+        val steps: List<String>
+    ) : Parcelable
+}

@@ -8,27 +8,24 @@ import com.adlemgames.pbk.adapters.StepsAdapter.ItemClickListener
 import android.view.ViewGroup
 import com.adlemgames.pbk.R
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.adlemgames.pbk.models.Calc
 
-class StepsAdapter internal constructor(context: Context?, steps: Array<Calc.StepBlock>) :
-    RecyclerView.Adapter<StepsAdapter.ViewHolder>() {
-    private val steps: Array<Calc.StepBlock>
+class StepAdapter internal constructor(context: Context?, steps: Array<String>) :
+    RecyclerView.Adapter<StepAdapter.ViewHolder>() {
+    private val steps: Array<String>
     private val mInflater: LayoutInflater
     private var mClickListener: ItemClickListener? = null
 
     // inflates the row layout from xml when needed
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = mInflater.inflate(R.layout.step_item, parent, false)
+        val view = mInflater.inflate(R.layout.in_step_item, parent, false)
         return ViewHolder(view)
     }
 
     // binds the data to the TextView in each row
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val step = steps[position]
-        holder.titleText.text = step.title
-        holder.stepRecycle.layoutManager = LinearLayoutManager(mInflater.context)
-        holder.stepRecycle.adapter = StepAdapter(mInflater.context, step.steps.toTypedArray())
+        holder.stepText.text = step
     }
 
     // total number of rows
@@ -39,21 +36,19 @@ class StepsAdapter internal constructor(context: Context?, steps: Array<Calc.Ste
     // stores and recycles views as they are scrolled off screen
     inner class ViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
-        var titleText: TextView
-        var stepRecycle: RecyclerView
+        var stepText: TextView
         override fun onClick(view: View) {
             if (mClickListener != null) mClickListener!!.onItemClick(view, adapterPosition)
         }
 
         init {
-            titleText = itemView.findViewById(R.id.block_title)
-            stepRecycle = itemView.findViewById(R.id.recycle_steps)
+            stepText = itemView.findViewById(R.id.step_text)
             itemView.setOnClickListener(this)
         }
     }
 
     // convenience method for getting data at click position
-    fun getItem(id: Int): Calc.StepBlock {
+    fun getItem(id: Int): String {
         return steps[id]
     }
 

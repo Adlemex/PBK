@@ -29,7 +29,7 @@ class CalcFragment : Fragment() {
 
     private var _binding: FragmentCalculateBinding? = null
     var keyboard: List<Button> = ArrayList<Button>()
-    var solving: List<String> = listOf()
+    var solving: List<Calc.StepBlock> = listOf()
     // This property is only valid between onCreateView and
     // onDestroyView.
     var text: String = ""
@@ -155,11 +155,12 @@ class CalcFragment : Fragment() {
                     val myRunnable = Runnable {
                         if (binding != null) {
                             try {
-                                val result = Klaxon()
+                                val res = Klaxon()
                                     .parse<Calc>(serverAnswer)
-                                if (result!!.result != null) {
-                                        binding.itogText.text = result.result.toString()
-                                        solving = result.steps!!
+                                if (res!!.result != null) {
+                                        binding.itogText.text = res.result.toString()
+                                    println(res.toString())
+                                        solving = res.blocks!!
                                 } else Toast.makeText(
                                         requireContext(),
                                         serverAnswer,
@@ -177,11 +178,11 @@ class CalcFragment : Fragment() {
         }
         for(i in 2..16) list += i
         val staticAdapter = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
-        val staticAdapter2 = ArrayAdapter(requireContext(), R.layout.spiner_item, listOf(10))
+        val staticAdapter2 = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
         staticAdapter.setDropDownViewResource(R.layout.dropdown_item)
         staticAdapter2.setDropDownViewResource(R.layout.dropdown_item)
         binding.spinnerTo.adapter = staticAdapter2
-        //binding.spinnerTo.setSelection(8, true)
+        binding.spinnerTo.setSelection(8, true)
         binding.spinnerFrom.adapter = staticAdapter
         binding.spinnerFrom.setSelection(8, true)
         binding.spinnerFrom.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
