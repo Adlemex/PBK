@@ -189,7 +189,6 @@ class BlocksFragment : Fragment(), BlocksInterface {
                 layoutParams.bottomMargin = 0
                 view.layoutParams = layoutParams
                 recalc_connections()
-                println("${x*dpCalculation}.....${y*dpCalculation}")
                 if (x*dpCalculation > 2400) {
                     if (y*dpCalculation < 1160) binding.delete.root.visibility = View.VISIBLE
                 }
@@ -212,6 +211,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
                                 }
                             }
                         }
+                        blocks.removeIf { it.out == view.findViewById(R.id.output) }
                         binding.frameLayout2.removeView(view)
                     }
                 }

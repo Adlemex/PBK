@@ -49,6 +49,11 @@
         android:label="@string/calc_fragment_label"
         tools:layout="@layout/fragment_calculate"/>
     <fragment
+        android:id="@+id/CalcActionsFragment"
+        android:name="com.adlemgames.pbk.CalcActionsFragment"
+        android:label="@string/calc_fragment_label"
+        tools:layout="@layout/fragment_calculate_act"/>
+    <fragment
         android:id="@+id/CalcStepsFragment"
         android:name="com.adlemgames.pbk.CalcStepsFragment"
         android:label="@string/calc_fragment_label"
@@ -95,6 +100,9 @@
     <action
         android:id="@+id/to_calc_steps"
         app:destination="@id/CalcStepsFragment" />
+    <action
+        android:id="@+id/to_calc_acts"
+        app:destination="@id/CalcActionsFragment" />
     <action
         android:id="@+id/to_blocks"
         app:destination="@id/BlocksFragment" />

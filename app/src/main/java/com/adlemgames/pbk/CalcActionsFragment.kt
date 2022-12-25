@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.adlemgames.pbk.databinding.FragmentCalculateActBinding
 import com.adlemgames.pbk.databinding.FragmentCalculateBinding
 import com.adlemgames.pbk.models.Calc
 import com.adlemgames.pbk.models.TruthTables
@@ -25,10 +26,9 @@ import java.io.IOException
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class CalcFragment : Fragment() {
+class CalcActionsFragment : Fragment() {
 
-    private var _binding: FragmentCalculateBinding? = null
-    var keyboard: List<Button> = ArrayList<Button>()
+    private var _binding: FragmentCalculateActBinding? = null
     var solving: List<Calc.StepBlock> = listOf()
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -42,85 +42,34 @@ class CalcFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentCalculateBinding.inflate(inflater, container, false)
+        _binding = FragmentCalculateActBinding.inflate(inflater, container, false)
         return binding.root
 
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        println(inpText)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.inputText.text = inpText
-        // region adding buttons
-        keyboard = listOf()
-        keyboard += binding.keyboard.button0
-        keyboard += binding.keyboard.button1
-        keyboard += binding.keyboard.button2
-        keyboard += binding.keyboard.button3
-        keyboard += binding.keyboard.button4
-        keyboard += binding.keyboard.button5
-        keyboard += binding.keyboard.button6
-        keyboard += binding.keyboard.button7
-        keyboard += binding.keyboard.button8
-        keyboard += binding.keyboard.button9
-        keyboard += binding.keyboard.buttonA
-        keyboard += binding.keyboard.buttonB
-        keyboard += binding.keyboard.buttonC
-        keyboard += binding.keyboard.buttonD
-        keyboard += binding.keyboard.buttonE
-        keyboard += binding.keyboard.buttonF
-        // endregion
-        hideButtons(10)
-        var list: List<Int> = ArrayList()
-        for (key in keyboard) key.setOnClickListener {
-            val buttonText = (it as Button).text.toString()
-            if (inpText.length > 20) {
-                Toast.makeText(requireContext(), "Слишком большое число", Toast.LENGTH_LONG).show()
-                return@setOnClickListener
-            }
-            binding.inputText.text = inpText + buttonText
-            binding.itogText.text = ""
-            inpText = binding.inputText.text.toString()
-            solving = listOf()
-        }
-        binding.keyboard.buttonAC.setOnClickListener {
-            binding.inputText.text = ""
-            inpText = ""
-            binding.itogText.text = ""
-            solving = listOf()
-        }
-        binding.change.setOnClickListener {
-            val one = binding.spinnerFrom.selectedItemPosition
-            val two = binding.spinnerTo.selectedItemPosition
-            binding.spinnerFrom.setSelection(two)
-            binding.spinnerTo.setSelection(one)
-            binding.itogText.text = ""
-            solving = listOf()
-        }
-        binding.keyboard.buttonClean.setOnClickListener {
-            if (inpText.isEmpty()) return@setOnClickListener
-            binding.inputText.text = inpText.subSequence(0, inpText.length-1)
-            binding.itogText.text = ""
-            inpText = inpText.subSequence(0, inpText.length-1) as String
-            solving = listOf()
-        }
+        val actions = mutableListOf(binding.plus, binding.minus, binding.divide, binding.multiply)
+        //for (act in actions){
+        //    (act as View).the
+        //}
         binding.solving.setOnClickListener {
             if (solving.isEmpty()) return@setOnClickListener
             val action = CalcStepsFragmentDirections.toCalcSteps(solving.toTypedArray())
             findNavController().navigate(action)
         }
-        binding.keyboard.buttonItog.setOnClickListener {
+        binding.buttonRes.setOnClickListener {
             binding.itogText.text = ""
             binding.progressLoader.visibility = View.VISIBLE
             val client = OkHttpClient()
             val request: Request = Request.Builder()
-                .url("https://pbk-psu.ml/api/ch_bases?num=" + binding.inputText.text +
-                        "&from_base=" + (binding.spinnerFrom.selectedItemPosition+2).toString() +
-                        "&to_base=" + (binding.spinnerTo.selectedItemPosition+2).toString())
+                .url("https://pbk-psu.ml/api/calc?num1=${binding.inputOneText.text}&num2=${binding.inputTwoText.text}&base1=" +
+                        "${binding.spinnerFrom.selectedItemPosition+2}&base2=${binding.spinnerTo.selectedItemPosition+2}&action=${"sum"}" +
+                        "&end_base=${binding.spinnerItog.selectedItemPosition+2}")
                 .get()
                 .build()
             client.newCall(request).enqueue(object : Callback {
@@ -178,18 +127,18 @@ class CalcFragment : Fragment() {
                 }
             })
         }
+        var list: List<Int> = ArrayList()
         for(i in 2..16) list += i
         val staticAdapter = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
-        val staticAdapter2 = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
         staticAdapter.setDropDownViewResource(R.layout.dropdown_item)
-        staticAdapter2.setDropDownViewResource(R.layout.dropdown_item)
-        binding.spinnerTo.adapter = staticAdapter2
-        binding.spinnerTo.setSelection(8, true)
         binding.spinnerFrom.adapter = staticAdapter
+        binding.spinnerTo.adapter = staticAdapter
+        binding.spinnerItog.adapter = staticAdapter
         binding.spinnerFrom.setSelection(8, true)
+        binding.spinnerTo.setSelection(8, true)
+        binding.spinnerItog.setSelection(8, true)
         binding.spinnerFrom.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                hideButtons(p2+2)
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -202,9 +151,5 @@ class CalcFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-    fun hideButtons(base: Int){
-        for (key in keyboard) key.isEnabled = false
-        for (i in 0 until base) keyboard.get(i).isEnabled = true
     }
 }
