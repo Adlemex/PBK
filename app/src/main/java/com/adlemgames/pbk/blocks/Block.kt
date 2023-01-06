@@ -36,6 +36,7 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
             selectedItem = "out"
             BlocksFragment.selectedId = this.id
         }
+        out.parent.increaseTouchArea(1000)
         input1 = view.findViewById<ImageView>(R.id.input1)
         input1?.setOnClickListener {
             select_in1(true)
@@ -48,7 +49,9 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
             selectedItem = "inp1"
             BlocksFragment.selectedId = this.id
         }
+        input1?.parent?.increaseTouchArea(1000)
         input2 = view.findViewById<ImageView>(R.id.input2)
+        input2?.parent?.increaseTouchArea(1000)
         input2?.setOnClickListener {
             select_in2(true)
             val selected = blocks.find { it.id == BlocksFragment.selectedId }
@@ -72,7 +75,7 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
         //toast("$selectedItem>$selectedEl")
         if (selectedItem != null) {
             val trans = Transition(selected, selectedItem!!, this, selectedEl)
-            toast(trans.validate().toString())
+            if (!trans.validate()) toast(trans.reason)
         }
         /*
             when (selectedItem){

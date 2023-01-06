@@ -116,14 +116,13 @@ class CalcFragment : Fragment() {
         binding.keyboard.buttonItog.setOnClickListener {
             binding.itogText.text = ""
             binding.progressLoader.visibility = View.VISIBLE
-            val client = OkHttpClient()
             val request: Request = Request.Builder()
                 .url("https://pbk-psu.ml/api/ch_bases?num=" + binding.inputText.text +
                         "&from_base=" + (binding.spinnerFrom.selectedItemPosition+2).toString() +
                         "&to_base=" + (binding.spinnerTo.selectedItemPosition+2).toString())
                 .get()
                 .build()
-            client.newCall(request).enqueue(object : Callback {
+            Client.okhttp_client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
                     e.printStackTrace()
                     val mainHandler = Handler(Looper.getMainLooper());

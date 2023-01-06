@@ -16,6 +16,7 @@ import com.adlemgames.pbk.interfaces.BackButtonHandlerInterface
 import com.adlemgames.pbk.interfaces.OnBackClickListener
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import okhttp3.Cache
 import java.lang.ref.WeakReference
 
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity(), BackButtonHandlerInterface {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Client.create(baseContext)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
         val mySharedPreferences = getSharedPreferences("intro", Context.MODE_PRIVATE)

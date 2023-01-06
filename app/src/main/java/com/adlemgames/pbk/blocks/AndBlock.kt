@@ -1,14 +1,28 @@
 package com.adlemgames.pbk.blocks
 
 import android.graphics.Color
+import android.graphics.Rect
 import android.provider.ContactsContract.CommonDataKinds.Im
+import android.view.TouchDelegate
 import android.view.View
+import android.view.ViewGroup
+import android.view.ViewParent
 import android.widget.ImageView
 import android.widget.TextView
 import com.adlemgames.pbk.BlocksFragment
 import com.adlemgames.pbk.R
 import xdroid.toaster.Toaster.toast
 fun Boolean.toInt() = if (this) 1 else 0
+fun ViewParent.increaseTouchArea(increaseBy: Int) {
+    val rect = Rect()
+    val view = this as View
+    view.getHitRect(rect)
+    rect.top -= increaseBy    // increase top hit area
+    rect.left -= increaseBy   // increase left hit area
+    rect.bottom += increaseBy // increase bottom hit area
+    rect.right += increaseBy  // increase right hit area
+    view.touchDelegate = TouchDelegate(rect, view)
+}
 class AndBlock(view: View, id: String, interfaces: BlocksInterface) : Block(view, id, interfaces) {
     val out_text: TextView
     init {

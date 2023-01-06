@@ -35,6 +35,6 @@ class XOrNoBlock(view: View, id: String, interfaces: BlocksInterface) : Block(vi
     }
 
     companion object {
-        const val ID = R.layout.block_or_no
+        const val ID = R.layout.block_exclude_or_no
     }
 }

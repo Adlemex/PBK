@@ -65,14 +65,13 @@ class CalcActionsFragment : Fragment() {
         binding.buttonRes.setOnClickListener {
             binding.itogText.text = ""
             binding.progressLoader.visibility = View.VISIBLE
-            val client = OkHttpClient()
             val request: Request = Request.Builder()
                 .url("https://pbk-psu.ml/api/calc?num1=${binding.inputOneText.text}&num2=${binding.inputTwoText.text}&base1=" +
                         "${binding.spinnerFrom.selectedItemPosition+2}&base2=${binding.spinnerTo.selectedItemPosition+2}&action=${"sum"}" +
                         "&end_base=${binding.spinnerItog.selectedItemPosition+2}")
                 .get()
                 .build()
-            client.newCall(request).enqueue(object : Callback {
+            Client.okhttp_client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
                     e.printStackTrace()
                     val mainHandler = Handler(Looper.getMainLooper());

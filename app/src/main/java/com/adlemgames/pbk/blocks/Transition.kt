@@ -52,7 +52,7 @@ class Transition(from: Block, item: String, to: Block, item2: String) {
         }
     }
     fun validate(): Boolean {
-        toast("$from_item>$to_item")
+        //toast("$from_item>$to_item")
         from?.deselect_all()
         to?.deselect_all()
         if (success){

@@ -73,12 +73,12 @@
         android:label="@string/blocks_label"
         tools:layout="@layout/fragment_blocks"/>
     <fragment
-        android:id="@+id/TablesResultFragment"
-        android:name="com.adlemgames.pbk.TablesResultFragment"
+        android:id="@+id/TabsResultFragment"
+        android:name="com.adlemgames.pbk.TabsResultFragment"
         android:label="@string/tables_fragment_label"
-        tools:layout="@layout/fragment_result_tables">
+        tools:layout="@layout/fragment_result_tabs">
         <argument
-            android:name="result"
+            android:name="exp"
             app:argType="string" />
     </fragment>
 
@@ -92,8 +92,8 @@
         android:id="@+id/to_tables"
         app:destination="@id/TablesFragment" />
     <action
-        android:id="@+id/to_result_tables"
-        app:destination="@id/TablesResultFragment" />
+        android:id="@+id/to_result_tabs"
+        app:destination="@id/TabsResultFragment" />
     <action
         android:id="@+id/to_view_teory"
         app:destination="@id/TeoryViewFragment" />

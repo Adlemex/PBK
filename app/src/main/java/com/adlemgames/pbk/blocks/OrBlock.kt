@@ -12,7 +12,7 @@ import xdroid.toaster.Toaster.toast
 class OrBlock(view: View, id: String, interfaces: BlocksInterface) : Block(view, id, interfaces) {
     val out_text: TextView
     init {
-        toast("added")
+        //toast("added")
         out_text = view.findViewById(R.id.out_text)
         super.type = "or"
     }

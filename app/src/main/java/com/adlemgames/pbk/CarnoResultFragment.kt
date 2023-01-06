@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class TablesResultFragment(exp: String) : Fragment() {
+class CarnoResultFragment(exp: String) : Fragment() {
     val exp = exp
     private var _binding: FragmentResultTablesBinding? = null
     // This property is only valid between onCreateView and
@@ -46,13 +46,13 @@ class TablesResultFragment(exp: String) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val req = Request.Builder()
-            .url("https://pbk-psu.ml/api/truth?funcs=$exp")
+            .url("https://pbk-psu.ml/api/karnaugh_map?funcs=$exp")
             .get()
             .cacheControl(CacheControl.Builder().maxStale(365, TimeUnit.DAYS).build())
             .build()
         Client.okhttp_client.newCall(req).enqueue(object: Callback{
             override fun onFailure(call: Call, e: IOException) {
-
+                e.printStackTrace()
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -61,9 +61,13 @@ class TablesResultFragment(exp: String) : Fragment() {
                 val myRunnable = Runnable {
                     binding.progressBar.visibility = View.INVISIBLE
                     if (response.code != 200){
-                        if (response.code < 450) toast("Ошибка в выражении")
-                        else toast("Ошибка на сервере")
-                        findNavController().navigateUp()
+                        when (response.code) {
+                            403 -> binding.textView3.text = "К сожалению символ ¬, пока не поддерживается"
+                            421 -> {
+                                binding.textView3.text = "Ошибка в выражении\n или в нем < 6 входов!"
+                            }
+                            else -> toast("Ошибка на сервере")
+                        }
                         return@Runnable
                     }
                     show(serverAnswer)
@@ -78,6 +82,7 @@ class TablesResultFragment(exp: String) : Fragment() {
         try {
             val result = Klaxon()
                 .parse<TruthTables>(res)
+            println(result)
             if (result != null) {
                 val BOOKSHELF_ROWS = result.data.size
                 val BOOKSHELF_COLUMNS = result.data[0].size

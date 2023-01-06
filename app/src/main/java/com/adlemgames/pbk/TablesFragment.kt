@@ -89,16 +89,13 @@ class TablesFragment : Fragment() {
             text = ""
         }
         binding.keyboard.buttonItog.setOnClickListener {
-            binding.progressLoader.visibility = View.VISIBLE
-            val client = OkHttpClient.Builder()
-                .cache(Cache(requireContext().cacheDir, 10L * 1024 * 1024))
-                .build()
-            val request: Request = Request.Builder()
+            //binding.progressLoader.visibility = View.VISIBLE
+            /*val request: Request = Request.Builder()
                 .url("https://pbk-psu.ml/api/truth?funcs=" + binding.inputText.text)
                 .get()
                 .cacheControl(CacheControl.Builder().maxStale(365, TimeUnit.DAYS).build())
                 .build()
-            client.newCall(request).enqueue(object : Callback {
+            Client.okhttp_client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
                     e.printStackTrace()
                 }
@@ -107,16 +104,17 @@ class TablesFragment : Fragment() {
                     val serverAnswer = response.body!!.string()
                     val mainHandler = Handler(Looper.getMainLooper());
 
-                    val myRunnable = Runnable {
-                        val action = TablesResultFragmentDirections.toResultTables(serverAnswer)
+                    val myRunnable = Runnable {*/
+                        val action = TabsResultFragmentDirections.toResultTabs(binding.inputText.text.toString())
                         findNavController().navigate(action)
-                    }
+                    /*}
                     mainHandler.post(myRunnable);
                 }
-            })
+            })*/
         }
         binding.keyboard.buttonClean.setOnClickListener {
             val textt = binding.inputText.text
+            if (textt.length == 0) return@setOnClickListener
             binding.inputText.text = textt.subSequence(0, textt.length-1)
             text = textt.subSequence(0, textt.length-1) as String
         }
