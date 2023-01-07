@@ -15,7 +15,9 @@
         android:theme="@style/Theme.ПБК"
         tools:targetApi="31">
         <activity android:name="com.adlemgames.pbk.Intro"
-        android:label="My Custom AppIntro" />
+        android:label="Intro" />
+        <activity android:name="com.adlemgames.pbk.BlockTutorial"
+        android:label="Blocks tutorial" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -2,6 +2,8 @@ package com.adlemgames.pbk
 
 import android.content.ClipData
 import android.content.ClipDescription
+import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.PointF
@@ -10,6 +12,8 @@ import android.os.Bundle
 import android.view.*
 import android.view.View.OnTouchListener
 import android.widget.*
+import androidx.core.view.marginEnd
+import androidx.core.view.marginStart
 import androidx.fragment.app.Fragment
 import com.adlemgames.pbk.blocks.*
 import com.adlemgames.pbk.databinding.BlockAndBinding
@@ -55,6 +59,11 @@ class BlocksFragment : Fragment(), BlocksInterface {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentBlocksBinding.inflate(inflater, container, false)
+
+        val mySharedPreferences = requireActivity().getSharedPreferences("block_tutorial", Context.MODE_PRIVATE)
+        if(!mySharedPreferences.contains("showed")) {
+            startActivity(Intent(requireContext(), BlockTutorial::class.java))
+        }
         blocks.clear()
         connections.clear()
         mainLayout = binding.frameLayout2 as ViewGroup
@@ -82,7 +91,10 @@ class BlocksFragment : Fragment(), BlocksInterface {
                 )
             }
             binding.linear.addView(view)
-            view.layoutParams = LinearLayout.LayoutParams((100 * dpCalculation).toInt(), (100 * dpCalculation).toInt())
+            val params = LinearLayout.LayoutParams((100 * dpCalculation).toInt(), (100 * dpCalculation).toInt())
+            params.rightMargin = (2 * dpCalculation).toInt()
+            params.leftMargin = (2 * dpCalculation).toInt()
+            view.layoutParams = params
             //img.layoutParams.height = 200;
             //img.layoutParams.width = 200;
         }
