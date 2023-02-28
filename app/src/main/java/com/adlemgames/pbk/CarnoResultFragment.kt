@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class CarnoResultFragment(exp: String) : Fragment() {
+class CarnoResultFragment(exp: String) : Fragment() { // фрагмент для показа карт карно
     val exp = exp
     private var _binding: FragmentResultTablesBinding? = null
     // This property is only valid between onCreateView and
@@ -45,7 +45,7 @@ class CarnoResultFragment(exp: String) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val req = Request.Builder()
+        val req = Request.Builder() // запрос на сервер
             .url("https://pbk-psu.ml/api/karnaugh_map?funcs=$exp")
             .get()
             .cacheControl(CacheControl.Builder().maxStale(365, TimeUnit.DAYS).build())
@@ -60,7 +60,7 @@ class CarnoResultFragment(exp: String) : Fragment() {
                 val mainHandler = Handler(Looper.getMainLooper());
                 val myRunnable = Runnable {
                     binding.progressBar.visibility = View.INVISIBLE
-                    if (response.code != 200){
+                    if (response.code != 200){ // если ошибка
                         when (response.code) {
                             403 -> binding.textView3.text = "К сожалению символ ¬, пока не поддерживается"
                             421 -> {
@@ -70,7 +70,7 @@ class CarnoResultFragment(exp: String) : Fragment() {
                         }
                         return@Runnable
                     }
-                    show(serverAnswer)
+                    show(serverAnswer) // показать карты карно
                 }
                 mainHandler.post(myRunnable);
             }
@@ -84,7 +84,7 @@ class CarnoResultFragment(exp: String) : Fragment() {
                 .parse<TruthTables>(res)
             println(result)
             if (result != null) {
-                val BOOKSHELF_ROWS = result.data.size
+                val BOOKSHELF_ROWS = result.data.size// как-то делает таблицу
                 val BOOKSHELF_COLUMNS = result.data[0].size
                 val tableLayout = binding.table
                 tableLayout.showDividers = LinearLayout.SHOW_DIVIDER_MIDDLE

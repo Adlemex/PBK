@@ -25,15 +25,15 @@ import java.util.*
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class TestFragment : Fragment() {
+class TestFragment : Fragment() { // фрагмент теста
 
     private var _binding: FragmentTestBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    val args: TestFragmentArgs by navArgs()
-    var right: Int = 0
+    val args: TestFragmentArgs by navArgs() // переданные данные
+    var right: Int = 0 // кол-во правильных
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,7 +52,7 @@ class TestFragment : Fragment() {
         draw(0)
     }
 
-    fun draw(pos: Int){
+    fun draw(pos: Int){ // рисуем вопросы
         binding.textView.text = args.data[pos].question
         binding.radioButton.text = args.data[pos].answers[0]
         binding.radioButton2.text = args.data[pos].answers[1]

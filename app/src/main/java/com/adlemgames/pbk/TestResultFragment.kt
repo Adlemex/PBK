@@ -26,7 +26,7 @@ import java.util.*
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class TestResultFragment : Fragment() {
+class TestResultFragment : Fragment() { // показ результата теста
 
     private var _binding: FragmentTestResultBinding? = null
 
@@ -51,7 +51,7 @@ class TestResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.result.text = "${args.right}/${args.all}"
-        if (args.right == args.all) binding.text.text = "Замечательно!"
+        if (args.right == args.all) binding.text.text = "Замечательно!"// мотивирующий текст
         else if (args.all - args.right <= 2) binding.text.text = "Чуть-чуть не хватило!"
         else binding.text.text = "Можно было лучше!"
     }

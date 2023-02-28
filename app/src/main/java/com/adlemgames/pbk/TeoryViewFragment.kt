@@ -22,7 +22,7 @@ import java.util.*
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class TeoryViewFragment : Fragment() {
+class TeoryViewFragment : Fragment() { // просмотр документа
 
     private var _binding: FragmentTeoryViewBinding? = null
 
@@ -57,11 +57,14 @@ class TeoryViewFragment : Fragment() {
         binding.web.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                injectCSS()
+                println(url)
+                injectCSS() // для темной темы
             }
         }
         binding.web.settings.javaScriptEnabled = true
-        binding.web.loadUrl("file:///android_asset/" + args.filePath)
+        //binding.web.loadUrl("file:///android_asset/" + args.filePath)
+        println(args.filePath)
+        binding.web.loadUrl("https://docs.google.com/viewer?url=https://pbk-psu.ml/teory/" + args.filePath + ".docx&embedded=true") // открыть документ
     }
     private fun injectCSS() {
         try {
@@ -69,7 +72,7 @@ class TeoryViewFragment : Fragment() {
                 Configuration.UI_MODE_NIGHT_YES -> "filter: invert(1);"
                 else -> ""
             }
-            binding.web.loadUrl(
+            binding.web.loadUrl( //магия css
                 "javascript:(function() {" +
                         "var css = 'img {display: inline; height: auto; max-width: 100%; " + string + "}'," +
                         "head = document.head || document.getElementsByTagName('head')[0]," +

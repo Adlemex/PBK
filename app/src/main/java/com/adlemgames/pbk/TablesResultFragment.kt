@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class TablesResultFragment(exp: String) : Fragment() {
+class TablesResultFragment(exp: String) : Fragment() {// фрагмент для показа таблиц истинности
     val exp = exp
     private var _binding: FragmentResultTablesBinding? = null
     // This property is only valid between onCreateView and
@@ -46,7 +46,7 @@ class TablesResultFragment(exp: String) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val req = Request.Builder()
-            .url("https://pbk-psu.ml/api/truth?funcs=$exp")
+            .url("https://pbk-psu.ml/api/truth?funcs=$exp")// запрос на сервер
             .get()
             .cacheControl(CacheControl.Builder().maxStale(365, TimeUnit.DAYS).build())
             .build()
@@ -60,13 +60,14 @@ class TablesResultFragment(exp: String) : Fragment() {
                 val mainHandler = Handler(Looper.getMainLooper());
                 val myRunnable = Runnable {
                     binding.progressBar.visibility = View.INVISIBLE
-                    if (response.code != 200){
-                        if (response.code < 450) toast("Ошибка в выражении")
+                    if (response.code != 200){// если ошибка
+                        if (response.code == 420) toast("Скобка не закрыта")
+                        else if (response.code == 421) toast("Ошибка в выражении")
                         else toast("Ошибка на сервере")
                         findNavController().navigateUp()
                         return@Runnable
                     }
-                    show(serverAnswer)
+                    show(serverAnswer)// показать таблицу
                 }
                 mainHandler.post(myRunnable);
             }
@@ -79,7 +80,7 @@ class TablesResultFragment(exp: String) : Fragment() {
             val result = Klaxon()
                 .parse<TruthTables>(res)
             if (result != null) {
-                val BOOKSHELF_ROWS = result.data.size
+                val BOOKSHELF_ROWS = result.data.size // как-то строим таблицу
                 val BOOKSHELF_COLUMNS = result.data[0].size
                 val tableLayout = binding.table
                 tableLayout.showDividers = LinearLayout.SHOW_DIVIDER_MIDDLE

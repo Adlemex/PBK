@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			h1, h2, h3, h4, h5, h6, p { margin:0pt 0pt 10pt }
+			li, table { margin-top:0pt; margin-bottom:10pt }
+			h1 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:16pt; font-weight:bold; color:#000000 }
+			h2 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:14pt; font-weight:bold; font-style:italic; color:#000000 }
+			h3 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:13pt; font-weight:bold; color:#000000 }
+			h4 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; font-style:normal; color:#000000 }
+			h5 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:13pt; font-weight:bold; font-style:italic; color:#000000 }
+			h6 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:11pt; font-weight:bold; font-style:normal; color:#000000 }
+			.Heading7 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:12pt; font-weight:normal; font-style:normal; color:#000000 }
+			.Heading8 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:12pt; font-weight:normal; font-style:italic; color:#000000 }
+			.Heading9 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:11pt; font-weight:normal; font-style:normal; color:#000000 }
+			.BalloonText { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:8pt }
+			.BlockText { margin-right:72pt; margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyText { margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyText2 { margin-bottom:6pt; line-height:200%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyText3 { margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:8pt }
+			.BodyTextFirstIndent { margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextFirstIndent2 { margin-left:18pt; margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextIndent { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextIndent2 { margin-left:18pt; margin-bottom:6pt; line-height:200%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextIndent3 { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:8pt }
+			.Caption { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Closing { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.CommentSubject { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold }
+			.CommentText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Date { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.DocumentMap { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt; background-color:#000080 }
+			.E-mailSignature { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.EndnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.EnvelopeAddress { margin-left:144pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.EnvelopeReturn { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Footer { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.FootnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:9pt }
+			.HTMLAddress { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-style:italic }
+			.HTMLPreformatted { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Header { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index1 { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index2 { margin-left:10pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index3 { margin-left:20pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index4 { margin-left:30pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index5 { margin-left:40pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index6 { margin-left:50pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index7 { margin-left:60pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index8 { margin-left:70pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index9 { margin-left:80pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.IndexHeading { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:14pt; font-weight:bold }
+			.List { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List4 { margin-left:72pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List5 { margin-left:90pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue2 { margin-left:36pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue3 { margin-left:54pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue4 { margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue5 { margin-left:90pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListParagraph { margin-left:36pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Macro { widows:0; orphans:0; font-family:'Courier New'; font-size:12pt }
+			.MessageHeader { margin-left:54pt; margin-bottom:10pt; text-indent:-54pt; line-height:115%; border:0.75pt solid #000000; padding:1pt; font-family:Arial; font-size:12pt; background-color:#cccccc }
+			.NormalWeb { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:12pt }
+			.NormalIndent { margin-left:35.4pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.NoteHeading { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.PlainText { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Salutation { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Signature { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Subtitle { margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOAHeading { margin-top:6pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOC1 { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC2 { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC3 { margin-left:42pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC4 { margin-left:63pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC5 { margin-left:84pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC6 { margin-left:105pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC7 { margin-left:126pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC8 { margin-left:147pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC9 { margin-left:168pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TableofAuthorities { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TableofFigures { margin-bottom:10pt; text-indent:-10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Title { margin-top:12pt; margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:16pt; font-weight:bold }
+			span.CommentReference { font-size:10.5pt }
+			span.Emphasis { font-style:italic }
+			span.EndnoteReference { vertical-align:super }
+			span.FollowedHyperlink { text-decoration:underline; color:#800080 }
+			span.FootnoteReference { vertical-align:super }
+			span.HTMLCite { font-style:italic }
+			span.HTMLCode { font-family:'Courier New'; font-size:10pt }
+			span.HTMLDefinition { font-style:italic }
+			span.HTMLKeyboard { font-family:'Courier New'; font-size:10pt }
+			span.HTMLSample { font-family:'Courier New' }
+			span.HTMLTypewriter { font-family:'Courier New'; font-size:10pt }
+			span.HTMLVariable { font-style:italic }
+			span.Hyperlink { text-decoration:underline; color:#0000ff }
+			span.Strong { font-weight:bold }
+		</style>
+	</head>
+	<body style="background:#ffffff">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; font-size: 16pt;"><strong>Запись положительных и отрицательных чисел</strong></p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Для изображения знака двоичных чисел используется знаковый &ndash; старший разряд. Для положительных чисел он принимается <em>нулем</em>, для отрицательных он принимается <em>единицей.</em> При этом наибольшее десятичное число, которое может быть записано с помощью n-битов, составляет 2<span style="font-size: 9.33pt;"><sup>n-1</sup></span>-1.</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Запись отрицательных чисел осуществляется методом дополнения, по которому 1 и 0 положительного числа заменяется на 0 и 1 при переходе к соответствующему отрицательному числе. Такая система записи называется записью с дополнением до 1 или записью обратным кодом. Например, число А = 01011 при записи обратным кодом А<span style="font-size: 9.33pt;"><sub>обр</sub></span>=10100. Очевидно, что А+ А<span style="font-size: 9.33pt;"><sub>обр</sub></span>=1.</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Наряду с дополнением до 1 используется запись с дополнением до2 или запись дополнительным кодом, что соответствует А<span style="font-size: 9.33pt;"><sub>доп</sub></span> = А<span style="font-size: 9.33pt;"><sub>обр</sub></span>+1. Очевидно, что А + А<span style="font-size: 9.33pt;"><sub>доп</sub></span>=2</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Например, число -6 при записи в обратном коде: А=<u>0</u> 110</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">А<span style="font-size: 9.33pt;"><sub>обр</sub></span><span style="font-size: 9.33pt;"><sub>&nbsp; </sub></span>= <u>1</u> 001<span style="width: 25.02pt; text-indent: 0pt; display: inline-block;">&nbsp;</span>А<span style="font-size: 9.33pt;"><sub>доп</sub></span><span style="font-size: 9.33pt;"><sub>&nbsp; </sub></span>= <u>1</u> 010, чему соответствует:</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">-1∙2<span style="font-size: 9.33pt;"><sup>3</sup></span>+0∙2<span style="font-size: 9.33pt;"><sup>2</sup></span>+1∙2<span style="font-size: 9.33pt;"><sup>1</sup></span>+0∙2<span style="font-size: 9.33pt;"><sup>0</sup></span>= -8+2 = -6</p>
+<p style="margin-top: 6pt; margin-bottom: 16pt;">При n=5 максимальное число равно 2<span style="line-height: 115%; font-size: 9.33pt;"><sup>5-1</sup></span>-1=15 &rarr; _&nbsp; <u>1</u>&nbsp; <u>1</u>&nbsp; <u>1</u>&nbsp; <u>1</u> = 15</p>
+<p class="ListParagraph" style="margin-top: 16pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Для числа 6 его дополнение равно 15 - 6 = 9 которому в двоичной системе соответствует 1001. Отсюда следует, что двоичный код дополнения 9 является обратным по отношению к цифровому коду, соответствующему числу 6 при заданном числе разрядов. При записи чисел в обратном коде максимальное число, которое получается с помощью двоичного цифрового ряда равно 2<span style="font-size: 9.33pt;"><sup>n</sup></span>-1, т.е. оно на единицу меньше числового значения полного дополнения.</p>
+<table style="margin-right: auto; margin-left: auto; margin-bottom: 0pt; border-collapse: collapse;">
+<tbody>
+<tr style="height: 24.95pt;">
+<td style="width: 8.35pt; border-right: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">&nbsp;</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;" colspan="4">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Запись в обр. коде</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;" colspan="4">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Запись в доп. коде</p>
+</td>
+</tr>
+<tr style="height: 17.55pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">число</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Код.зн</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>2</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>1</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>0</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Код.зн</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>2</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>1</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>0</sup></span></p>
+</td>
+</tr>
+<tr style="height: 17.95pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">7</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 17.65pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">6</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 9.55pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">5</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 9.95pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">4</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 16.75pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">3</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 16.45pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 16.15pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 16.45pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p style="margin-top: 6pt;">&nbsp;</p>
+<table style="margin-right: auto; margin-left: auto; margin-bottom: 0pt; border-collapse: collapse;">
+<tbody>
+<tr style="height: 24.95pt;">
+<td style="width: 8.35pt; border-right: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.4pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">&nbsp;</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;" colspan="4">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Запись в обр. коде</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;" colspan="4">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Запись в доп. коде</p>
+</td>
+</tr>
+<tr style="height: 17.55pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">число</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Код.зн</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>2</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>1</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>0</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">Код.зн</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>2</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>1</sup></span></p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">2<span style="font-size: 5.33pt;"><sup>0</sup></span></p>
+</td>
+</tr>
+<tr style="height: 17.95pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 17.65pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 9.55pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-2</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 9.95pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-3</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 16.75pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-4</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: justify; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 16.45pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-5</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+<tr style="height: 16.15pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-6</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+</tr>
+<tr style="height: 16.45pt;">
+<td style="width: 8.35pt; border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">-7</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">0</p>
+</td>
+<td style="border: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-align: center; line-height: normal; widows: 0; orphans: 0; font-size: 8pt;">1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Отсюда следует, что&nbsp; при записи нуля обратным кодом получается положительный и отрицательный нуль, а при записи дополнительным кодом &ndash; только одно нулевое значение.</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Нахождение модуля отрицательного двоичного числа осуществляется с учетом выражения А<span style="font-size: 9.33pt;"><sub>обр</sub></span>=А<span style="font-size: 9.33pt;"><sub>доп</sub></span>-1 и дальнейшим инвертированием. Таким образом, представление отрицательного числа в обратном коде дает точное значение этого числа, если вычислять цифровые коды с помощью знакового бита.</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Системы представления отрицательных чисел в обратном и дополнительном кодах широко используются в сумматорах АЛУ для выполнения арифметических операций. При этом операцию вычитания можно заменить операцией сложения.</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Например: Выполнить арифметическую операцию (-4) - (-3) = -1</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Представляем числа в обратном коде:</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;"><span style="height: 0pt; margin-top: -12pt; text-align: left; display: block; position: absolute; z-index: 1;"><img style="margin-top: 4.1pt; margin-left: 6.55pt; position: absolute;" src="data:image/png;base64,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" alt="" width="275" height="370" /></span>&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 12pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;"><span style="height: 0pt; margin-top: -6pt; text-align: left; display: block; position: absolute; z-index: 0;"><img style="margin-top: 38.75pt; margin-left: 160.75pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVDhPzcxBDsMwDANB///TLUivg8ASZKXtoQP4kJDiKLyS9xEfZ1amUhenNfV4Jep9upmnEZXolPk6QSWqMlHuhQ1xVGWi3As3RLlO7pUboknfp7fj/4XfuVMu6ngJ/M51cq9siKMqE+Ve2BBHVSbKvZCg0qebeZqj1qP+PKu5eELvkXXExDWy3ld+MvIvxngDSyTxK3vkEuYAAAAASUVORK5CYII=" alt="" width="20" height="20" /></span>&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 6pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-top: 6pt; margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Те же арифметические операции в дополнительном коде:</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;"><span style="height: 0pt; text-align: left; display: block; position: absolute; z-index: 3;"><img style="margin-top: 55.55pt; margin-left: 171.45pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVDhPzcxBDsMwDANB///TLUivg8ASZKXtoQP4kJDiKLyS9xEfZ1amUhenNfV4Jep9upmnEZXolPk6QSWqMlHuhQ1xVGWi3As3RLlO7pUboknfp7fj/4XfuVMu6ngJ/M51cq9siKMqE+Ve2BBHVSbKvZCg0qebeZqj1qP+PKu5eELvkXXExDWy3ld+MvIvxngDSyTxK3vkEuYAAAAASUVORK5CYII=" alt="" width="20" height="20" /></span><span style="height: 0pt; text-align: left; display: block; position: absolute; z-index: 4;"><img style="margin-top: 177.3pt; margin-left: 183pt; position: absolute;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACNSURBVDhPpczRDsMgDENR/v+nN9lcKkSikG5H4qG141H4JO8nPs6sTKUuTmvq8UrU+3QzTyMq0S3zdYJKVGWi3Asbolwn98qGKNfJvbIhmvR9eyf+P/idu+WijpfA71wn98qBOKoyUe6FA3FUZaLcCwkqfbqZpzlqPerPs5qLN/ReWUdMPCPr/eXFyBhfsL71J1hwDGsAAAAASUVORK5CYII=" alt="" width="20" height="18" /></span><span style="height: 0pt; text-align: left; display: block; position: absolute; z-index: 2;"><img style="margin-top: 21.55pt; margin-left: 9.1pt; position: absolute;" src="data:image/png;base64,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" alt="" width="291" height="301" /></span>(-4) - (-3) = -1</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 35.45pt; text-align: justify; line-height: normal;">Отсюда вытекают правила вычитания:</p>
+<ol style="margin: 0pt; padding-left: 0pt;">
+<li class="ListParagraph" style="margin-left: 68.95pt; margin-bottom: 0pt; text-align: justify; line-height: normal; padding-left: 2.5pt;">При вычитании двоичных чисел необходимо вычитаемое представить в обратном или дополнительном коде и после этого прибавить его к уменьшаемому.</li>
+<li class="ListParagraph" style="margin-left: 68.95pt; margin-bottom: 0pt; text-align: justify; line-height: normal; padding-left: 2.5pt;">Если при сложении отрицательных чисел в знаковом разряде возникает перенос, то при записи обратным кодом его необходимо прибавить к самому младшему биту.</li>
+<li class="ListParagraph" style="margin-left: 68.95pt; margin-bottom: 0pt; text-align: justify; line-height: normal; padding-left: 2.5pt;">При вычитании чисел в дополнительном коде необходимо постоянно прибавлять единицу к самому младшему биту суммы. Переносы, возникающие в знаковых битах, можно не учитывать.</li>
+</ol>
+<p>&nbsp;</p>
+<p style="margin-top: 10pt;">&nbsp;</p>
+</body>
+</html>

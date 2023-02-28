@@ -25,11 +25,11 @@ import java.io.IOException
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class CalcFragment : Fragment() {
+class CalcFragment : Fragment() { // фрагмент перевода систем счисления
 
     private var _binding: FragmentCalculateBinding? = null
-    var keyboard: List<Button> = ArrayList<Button>()
-    var solving: List<Calc.StepBlock> = listOf()
+    var keyboard: List<Button> = ArrayList<Button>() // список кнопок клавиатуру
+    var solving: List<Calc.StepBlock> = listOf() // пошаговые действия
     // This property is only valid between onCreateView and
     // onDestroyView.
     companion object {
@@ -56,7 +56,7 @@ class CalcFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.inputText.text = inpText
         // region adding buttons
-        keyboard = listOf()
+        keyboard = listOf()// добавляем кнопки
         keyboard += binding.keyboard.button0
         keyboard += binding.keyboard.button1
         keyboard += binding.keyboard.button2
@@ -76,7 +76,7 @@ class CalcFragment : Fragment() {
         // endregion
         hideButtons(10)
         var list: List<Int> = ArrayList()
-        for (key in keyboard) key.setOnClickListener {
+        for (key in keyboard) key.setOnClickListener { // листенер для кнопок
             val buttonText = (it as Button).text.toString()
             if (inpText.length > 20) {
                 Toast.makeText(requireContext(), "Слишком большое число", Toast.LENGTH_LONG).show()
@@ -87,13 +87,13 @@ class CalcFragment : Fragment() {
             inpText = binding.inputText.text.toString()
             solving = listOf()
         }
-        binding.keyboard.buttonAC.setOnClickListener {
+        binding.keyboard.buttonAC.setOnClickListener { // стирание
             binding.inputText.text = ""
             inpText = ""
             binding.itogText.text = ""
             solving = listOf()
         }
-        binding.change.setOnClickListener {
+        binding.change.setOnClickListener { //смена систем местами
             val one = binding.spinnerFrom.selectedItemPosition
             val two = binding.spinnerTo.selectedItemPosition
             binding.spinnerFrom.setSelection(two)
@@ -101,22 +101,22 @@ class CalcFragment : Fragment() {
             binding.itogText.text = ""
             solving = listOf()
         }
-        binding.keyboard.buttonClean.setOnClickListener {
+        binding.keyboard.buttonClean.setOnClickListener { // очистить предыдущий символ
             if (inpText.isEmpty()) return@setOnClickListener
             binding.inputText.text = inpText.subSequence(0, inpText.length-1)
             binding.itogText.text = ""
             inpText = inpText.subSequence(0, inpText.length-1) as String
             solving = listOf()
         }
-        binding.solving.setOnClickListener {
+        binding.solving.setOnClickListener { // кнопка решений
             if (solving.isEmpty()) return@setOnClickListener
             val action = CalcStepsFragmentDirections.toCalcSteps(solving.toTypedArray())
-            findNavController().navigate(action)
+            findNavController().navigate(action) // перейти к фрагменту который отображает шаги решения
         }
-        binding.keyboard.buttonItog.setOnClickListener {
+        binding.keyboard.buttonItog.setOnClickListener { // кнопка равно
             binding.itogText.text = ""
             binding.progressLoader.visibility = View.VISIBLE
-            val request: Request = Request.Builder()
+            val request: Request = Request.Builder()// запрос на сервер
                 .url("https://pbk-psu.ml/api/ch_bases?num=" + binding.inputText.text +
                         "&from_base=" + (binding.spinnerFrom.selectedItemPosition+2).toString() +
                         "&to_base=" + (binding.spinnerTo.selectedItemPosition+2).toString())
@@ -124,7 +124,7 @@ class CalcFragment : Fragment() {
                 .build()
             Client.okhttp_client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    e.printStackTrace()
+                    e.printStackTrace()// ошибка
                     val mainHandler = Handler(Looper.getMainLooper());
                     val myRunnable = Runnable {
                         Toast.makeText(requireContext(), "Произошла какая-то ошибка!", Toast.LENGTH_LONG).show()
@@ -155,11 +155,11 @@ class CalcFragment : Fragment() {
                     }
                     val myRunnable = Runnable {
                         if (binding != null) {
-                            try {
+                            try {//успешно
                                 val res = Klaxon()
                                     .parse<Calc>(serverAnswer)
                                 if (res!!.result != null) {
-                                        binding.itogText.text = res.result.toString()
+                                        binding.itogText.text = res.result.toString() // показываем результат
                                     println(res.toString())
                                         solving = res.blocks!!
                                 } else Toast.makeText(
@@ -177,7 +177,7 @@ class CalcFragment : Fragment() {
                 }
             })
         }
-        for(i in 2..16) list += i
+        for(i in 2..16) list += i // настраиваем спиннеры систем исчисления
         val staticAdapter = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
         val staticAdapter2 = ArrayAdapter(requireContext(), R.layout.spiner_item, list)
         staticAdapter.setDropDownViewResource(R.layout.dropdown_item)
@@ -202,7 +202,7 @@ class CalcFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    fun hideButtons(base: Int){
+    fun hideButtons(base: Int){ // скрыть кнопки которые недоступны в этой системе исчисления
         for (key in keyboard) key.isEnabled = false
         for (i in 0 until base) keyboard.get(i).isEnabled = true
     }

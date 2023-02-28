@@ -9,7 +9,7 @@ open class Teory(
     open val name: String,
     @DrawableRes open val drawable: Int,
     open val type: Types,
-    open val path: String,
+    open val path: String = name,
     open val child: List<Teory>?
 ) : Parcelable {
     enum class Types {
@@ -17,5 +17,6 @@ open class Teory(
         LIST,
         TEST,
         MULTI_TEST,
+        VIDEO,
     }
 }

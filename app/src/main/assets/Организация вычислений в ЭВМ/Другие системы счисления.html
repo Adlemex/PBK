@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			h1, h2, h3, h4, h5, h6, p { margin:0pt 0pt 10pt }
+			li, table { margin-top:0pt; margin-bottom:10pt }
+			h1 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:16pt; font-weight:bold; color:#000000 }
+			h2 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:14pt; font-weight:bold; font-style:italic; color:#000000 }
+			h3 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:13pt; font-weight:bold; color:#000000 }
+			h4 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:avoid; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; font-style:normal; color:#000000 }
+			h5 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:13pt; font-weight:bold; font-style:italic; color:#000000 }
+			h6 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:11pt; font-weight:bold; font-style:normal; color:#000000 }
+			.Heading7 { margin-top:12pt; margin-bottom:3pt; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:12pt; font-weight:normal; font-style:normal; color:#000000 }
+			.Heading8 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:'Times New Roman'; font-size:12pt; font-weight:normal; font-style:italic; color:#000000 }
+			.Heading9 { margin-top:12pt; margin-bottom:3pt; text-align:left; page-break-inside:auto; page-break-after:auto; line-height:115%; widows:2; orphans:2; font-family:Arial; font-size:11pt; font-weight:normal; font-style:normal; color:#000000 }
+			.BalloonText { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:8pt }
+			.BlockText { margin-right:72pt; margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyText { margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyText2 { margin-bottom:6pt; line-height:200%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyText3 { margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:8pt }
+			.BodyTextFirstIndent { margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextFirstIndent2 { margin-left:18pt; margin-bottom:6pt; text-indent:10.5pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextIndent { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextIndent2 { margin-left:18pt; margin-bottom:6pt; line-height:200%; font-family:'Times New Roman'; font-size:14pt }
+			.BodyTextIndent3 { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:8pt }
+			.Caption { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Closing { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.CommentSubject { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold }
+			.CommentText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Date { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.DocumentMap { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt; background-color:#000080 }
+			.E-mailSignature { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.EndnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.EnvelopeAddress { margin-left:144pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.EnvelopeReturn { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:10pt }
+			.Footer { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.FootnoteText { margin-bottom:10pt; text-align:left; line-height:115%; font-family:'Times New Roman'; font-size:9pt }
+			.HTMLAddress { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-style:italic }
+			.HTMLPreformatted { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Header { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index1 { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index2 { margin-left:10pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index3 { margin-left:20pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index4 { margin-left:30pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index5 { margin-left:40pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index6 { margin-left:50pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index7 { margin-left:60pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index8 { margin-left:70pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Index9 { margin-left:80pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.IndexHeading { margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:14pt; font-weight:bold }
+			.List { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List4 { margin-left:72pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.List5 { margin-left:90pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListBullet5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue2 { margin-left:36pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue3 { margin-left:54pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue4 { margin-left:72pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListContinue5 { margin-left:90pt; margin-bottom:6pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber2 { margin-left:39pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber3 { margin-left:60pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber4 { margin-left:81pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListNumber5 { margin-left:102pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.ListParagraph { margin-left:36pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Macro { widows:0; orphans:0; font-family:'Courier New'; font-size:12pt }
+			.MessageHeader { margin-left:54pt; margin-bottom:10pt; text-indent:-54pt; line-height:115%; border:0.75pt solid #000000; padding:1pt; font-family:Arial; font-size:12pt; background-color:#cccccc }
+			.NormalWeb { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:12pt }
+			.NormalIndent { margin-left:35.4pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.NoteHeading { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.PlainText { margin-bottom:10pt; line-height:115%; font-family:'Courier New'; font-size:10pt }
+			.Salutation { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Signature { margin-left:216pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Subtitle { margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOAHeading { margin-top:6pt; margin-bottom:10pt; line-height:115%; font-family:Arial; font-size:12pt }
+			.TOC1 { margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC2 { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC3 { margin-left:42pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC4 { margin-left:63pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC5 { margin-left:84pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC6 { margin-left:105pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC7 { margin-left:126pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC8 { margin-left:147pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TOC9 { margin-left:168pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TableofAuthorities { margin-left:21pt; margin-bottom:10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.TableofFigures { margin-bottom:10pt; text-indent:-10pt; line-height:115%; font-family:'Times New Roman'; font-size:14pt }
+			.Title { margin-top:12pt; margin-bottom:3pt; text-align:center; line-height:115%; font-family:Arial; font-size:16pt; font-weight:bold }
+			span.CommentReference { font-size:10.5pt }
+			span.Emphasis { font-style:italic }
+			span.EndnoteReference { vertical-align:super }
+			span.FollowedHyperlink { text-decoration:underline; color:#800080 }
+			span.FootnoteReference { vertical-align:super }
+			span.HTMLCite { font-style:italic }
+			span.HTMLCode { font-family:'Courier New'; font-size:10pt }
+			span.HTMLDefinition { font-style:italic }
+			span.HTMLKeyboard { font-family:'Courier New'; font-size:10pt }
+			span.HTMLSample { font-family:'Courier New' }
+			span.HTMLTypewriter { font-family:'Courier New'; font-size:10pt }
+			span.HTMLVariable { font-style:italic }
+			span.Hyperlink { text-decoration:underline; color:#0000ff }
+			span.Strong { font-weight:bold }
+		</style>
+	</head>
+	<body style="background:#ffffff">
+<p style="margin-bottom: 12pt; text-align: center; line-height: normal;"><strong>Другие системы счисления. Модификации двоичной системы</strong></p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">Двоичная система, в которой разряды могут быть 0 и 1 &ndash; основная. Однако в процессе анализа арифметических операций используются другие системы.</p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;"><u>Двоичная система счисления с цифрами 1,0,</u><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVDhPY/hPAvj37981OmlYvXo1QbxhwwaEhsLCQoK4oqKCin5YvHjxfyEhof+fPn2CikAAhoY3b97819HR+c/AwADGeDWAPGZgYPD/0aNH/yMiIghrQAYJCQmjGmCA+hrev38PFYEAFA1fv379v3Dhwv+ZmZn/2djYwBqMjIz+z5079/+FCxfAajBs+PPnD1YMVAiWh2t49uwZURiuwdTUlCiM4SRCgDwNQKKMePwvGQBfbPExIxph9QAAAABJRU5ErkJggg==" alt="" width="12" height="24" /></p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">В этой системе количество используемых символов превышает основание системы счисления. В таких системах изображение чисел не является однозначным (например число 2 может быть изображено 10 или 1<img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />), что позволяет на изображение чисел накладывать дополнительные условия.</p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;"><u>Троичная система счисления (1,0,</u><img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVDhPY/hPAvj37981OmlYvXo1QbxhwwaEhsLCQoK4oqKCin5YvHjxfyEhof+fPn2CikAAhoY3b97819HR+c/AwADGeDWAPGZgYPD/0aNH/yMiIghrQAYJCQmjGmCA+hrev38PFYEAFA1fv379v3Dhwv+ZmZn/2djYwBqMjIz+z5079/+FCxfAajBs+PPnD1YMVAiWh2t49uwZURiuwdTUlCiM4SRCgDwNQKKMePwvGQBfbPExIxph9QAAAABJRU5ErkJggg==" alt="" width="12" height="24" /><u>)</u>, где <img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" /> &rarr; -1</p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">Диапазон чисел, которые могут быть представлены в системе счисления:</p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">-1/2(3<span style="font-size: 9.33pt;"><sup>n</sup></span>-1)&divide;1/2(3<span style="font-size: 9.33pt;"><sup>n</sup></span>-1)</p>
+<p style="margin-top: 12pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">Порядок преобразования положительных десятичных чисел в троичную.</p>
+<ol style="margin: 0pt; padding-left: 0pt;">
+<li class="ListParagraph" style="margin-top: 12pt; margin-left: 0pt; margin-bottom: 0pt; text-indent: 17.85pt; text-align: justify; line-height: normal; list-style-position: inside;"><span style="width: 2.05pt; font: 7pt 'Times New Roman'; display: inline-block;"> </span>Выделяется целая часть числа так, чтобы оставшаяся дробная часть не выходила за пределы <span style="font-family: Symbol;"></span>1/2. Это значит, если дробная часть десятичного числа &le; 1/2, то целая часть выделяется с избытком.</li>
+<li class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 17.85pt; text-align: justify; line-height: normal; list-style-position: inside;"><span style="width: 2.05pt; font: 7pt 'Times New Roman'; display: inline-block;"> </span>Преобразование целой части десятичного числа выполняется путем последовательного деления исходного числа и целой части частного на 3 с выделением остатков. Так как остатки должны соответствовать выбранным цифрам троичной системы, то если остаток от деления в каком-либо цикле оказался равным 2, к частному записывается <img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />.</li>
+<li class="ListParagraph" style="margin-left: 0pt; margin-bottom: 0pt; text-indent: 17.85pt; text-align: justify; line-height: normal; list-style-position: inside;"><span style="width: 2.05pt; font: 7pt 'Times New Roman'; display: inline-block;"> </span>Преобразование дробной части десятичных чисел в троичные дроби выполняется путем последовательного умножения дробной части исходного числа и дробной части произведения на 3 с выделением целой части в качестве очередной цифры дробного троичного числа. Если произведение окажется в пределах <span style="font-family: Symbol;"></span>1/2, то целая часть произведения и (дробная часть) очередная цифра принимается равными 0, если произведение &gt; 1/2 - то целая часть произведения и очередная цифра принимаются равными 1, а дробная часть &ndash; произведению , уменьшенному на 1, если произведение меньше, чем&nbsp; -1/2, то целая часть произведения и очередная троичная цифра принимаются равным <img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />, а дробная, произведению, увеличенному на 1.</li>
+</ol>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">Пример: Дано 73,7</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">Т.к. 0,7&gt; 0,5, то целую часть принимаем 74, а дробную (-0,3)</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">Преобразуем целую часть:</p>
+<table style="margin-left: 12.2pt; margin-bottom: 0pt; border: 0.75pt solid #000000; border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="width: 228.45pt; border-right: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">Целая часть частного при делении на 3</p>
+</td>
+<td style="width: 228.45pt; border-left: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">74 25 8 3 1 0</p>
+</td>
+</tr>
+<tr>
+<td style="width: 228.45pt; border-top: 0.75pt solid #000000; border-right: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">Остаток</p>
+</td>
+<td style="width: 228.45pt; border-top: 0.75pt solid #000000; border-left: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />&nbsp; 1 <img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" /> 0 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 0pt; text-align: justify; line-height: normal;">(74)<span style="font-size: 9.33pt;"><sub>р=10</sub></span> = (10<img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />1<img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />)</p>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">Преобразуем дробную часть</p>
+<table style="margin-left: 12.2pt; margin-bottom: 0pt; border: 0.75pt solid #000000; border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="width: 228.45pt; border-right: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">Целая часть частного при умножении на 3</p>
+</td>
+<td style="width: 228.45pt; border-left: 0.75pt solid #000000; border-bottom: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAYCAYAAAAs7gcTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVDhPY/hPJPj3799OGitevXo1Xrx9+3aE4sLCQry4tbWVCm5+9+7dfw8Pj/+zZ8+GikAAhuK+vr7/vLy8/xkYGHAr/vXr139xcfH/ixYt+n/16lX8ikEAyAHTT58+JawYBkYVIwOY4smTJ0NFIABF8bFjx/5Pnz79v5qaGlgxBwfH/7q6OnBEgQCK4r9///7/8+cPVgwCWJ2BCwwmxUCijBj8////UABVbLKT5CyZUAAAAABJRU5ErkJggg==" alt="" width="11" height="24" />&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 0</p>
+</td>
+</tr>
+<tr style="height: 19.05pt;">
+<td style="width: 228.45pt; border-top: 0.75pt solid #000000; border-right: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">Дробная часть</p>
+</td>
+<td style="width: 228.45pt; border-top: 0.75pt solid #000000; border-left: 0.75pt solid #000000; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
+<p class="ListParagraph" style="margin-left: 0pt; margin-bottom: 12pt; text-align: center; line-height: normal; widows: 0; orphans: 0;">-0,3 0,4 -0,2 0,4</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ListParagraph" style="margin-left: 17.85pt; margin-bottom: 12pt; text-align: justify; line-height: normal;">(-0,3)<span style="font-size: 9.33pt;"><sub>р=10</sub></span> = (0,<img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAYCAYAAAAlBadpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAClSURBVDhP7ZLBCcMgGIW9uEIG8eQoHnSB3Lx0ggyRa85OYbZwg0zQgIivYiy5NAYDLS30g6fwfj74BQkuEmO8f5k8zzOMMdUcyuM4Qmtdzfvf7L2HUgpSytJsnMrWWnRdB0JIm8wYwzAMWJalXU7DfK/r2i4/+cs7n5OFEKXZqMrOOUzTBM55liml6Ps+dz592aqchgghvEyZn699xC/L6bhdS9QP4MowGwOK5bMAAAAASUVORK5CYII=" alt="" width="15" height="24" />10<img style="vertical-align: middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHcSURBVEhL7ZRPqwFRGMan1FjoLuwosVMKGxvfwVLJwjcQUtjYKim+ADZiRVnY4AsotlaUrNSI8icbf987550zYpxhc+ey8NRrnOd5z/EzZ+Zw8EZdLpefLwACNBqNl6WFrgDxePxlaaHPfAa22y34/X5IJBLUUVez2QSTyQSLxYI6j8rlcuB0OiEYDILFYoFMJkMTBkC5XAaj0Qgcxz0F2Gw24Ha7sY+UGkCxWASz2Qy73Q7Hw+EQ+6vVKo6vAMfjEf8JmTCZTJ4CdDodsNvtMJ1OIRwOqwLs93vMIpEIdSR5vV7Q6XRwOBzu74A4wOtyuXwKcKtkMqkKIAgCZq1WizqSAoEA+rPZjP0M/BVAvV7HbDweU0dSPp9HfzQaaQuQzWaZAGQLid9ut98L0O12tQUoFApMgFqthr7mW9Dr9TAjt/pW6XQa/fl8ri3AarXCLBQKUUeSz+dD/+E1lCUDxGIx6qhLBhDEV04pcXHweDxgtVqpA/ijBoMBzxuiO4DBYICBy+XCRXmeh2g0CpVKBQ8VWeQ78QigXq/HXnLUkrn9fp92SVqv13jAORwOKJVKYLPZcN75fMb8DoCYp9OJWUqxekjJCyslr63MmVvwn/oCfAaA+JF6VwEA/wvfPa7bZWlRMwAAAABJRU5ErkJggg==" alt="" width="32" height="24" />&hellip;)<span style="font-size: 9.33pt;"><sub>р=3</sub></span></p>
+<p style="margin-top: 12pt;">&nbsp;</p>
+<p style="margin-top: 10pt;">&nbsp;</p>
+</body>
+</html>

@@ -11,7 +11,7 @@ import com.github.appintro.AppIntroFragment
 import com.github.appintro.AppIntroPageTransformerType
 
 
-class Intro : AppIntro() {
+class Intro : AppIntro() { // главное интро
     lateinit var mySharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

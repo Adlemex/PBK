@@ -12,8 +12,8 @@ import com.adlemgames.pbk.BlocksFragment.Companion.selectedItem
 import com.adlemgames.pbk.R
 import xdroid.toaster.Toaster.toast
 
-open class Block(view: View, id: String, interfaces: BlocksInterface) {
-    var type: String = ""
+open class Block(view: View, id: String, interfaces: BlocksInterface) { // класс для блоков, остальные наследуют его
+    var type: String = "" // основные параметры
     val id = id
     var cur_state: Boolean = false
     var selectedEl = ""
@@ -24,7 +24,7 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
     var input2: ImageView?
     val interfaces = interfaces
     init {
-        out = view.findViewById<ImageView>(R.id.output)
+        out = view.findViewById<ImageView>(R.id.output) // настраиваем выход
         out.setOnClickListener {
             select_out(true)
             val selected = blocks.find { it.id == BlocksFragment.selectedId }
@@ -37,7 +37,7 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
             BlocksFragment.selectedId = this.id
         }
         out.parent.increaseTouchArea(1000)
-        input1 = view.findViewById<ImageView>(R.id.input1)
+        input1 = view.findViewById<ImageView>(R.id.input1)// настраиваем вход 1 если есть
         input1?.setOnClickListener {
             select_in1(true)
             val selected = blocks.find { it.id == BlocksFragment.selectedId }
@@ -50,7 +50,7 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
             BlocksFragment.selectedId = this.id
         }
         input1?.parent?.increaseTouchArea(1000)
-        input2 = view.findViewById<ImageView>(R.id.input2)
+        input2 = view.findViewById<ImageView>(R.id.input2)// настраиваем вход 2 если есть
         input2?.parent?.increaseTouchArea(1000)
         input2?.setOnClickListener {
             select_in2(true)
@@ -64,14 +64,14 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
             BlocksFragment.selectedId = this.id
         }
     }
-    fun select_out(state: Boolean) {
+    fun select_out(state: Boolean) { // нажали оут
         val color = when(state){
             true -> Color.GREEN
             false -> Color.TRANSPARENT
         }
         out.setColorFilter(color)
     }
-    fun validate_conn(selected: Block){
+    fun validate_conn(selected: Block){ // проверить возможно ли соединение
         //toast("$selectedItem>$selectedEl")
         if (selectedItem != null) {
             val trans = Transition(selected, selectedItem!!, this, selectedEl)
@@ -139,21 +139,21 @@ open class Block(view: View, id: String, interfaces: BlocksInterface) {
         selectedId = null
         interfaces.draw()
     }
-    fun select_in1(state: Boolean) {
+    fun select_in1(state: Boolean) { // выбран вход 1
         val color = when(state){
             true -> Color.GREEN
             false -> Color.TRANSPARENT
         }
         input1?.setColorFilter(color)
     }
-    fun select_in2(state: Boolean) {
+    fun select_in2(state: Boolean) { //выбран вход 2
         val color = when(state){
             true -> Color.GREEN
             false -> Color.TRANSPARENT
         }
         input2?.setColorFilter(color)
     }
-    fun deselect_all(){
+    fun deselect_all(){ // снять выделение со всего
         select_out(false)
         if (input1 != null) select_in1(false)
         if (input2 != null) select_in2(false)

@@ -24,11 +24,11 @@ import java.util.concurrent.TimeUnit
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class TablesFragment : Fragment() {
+class TablesFragment : Fragment() { // ввод лрогического выражения
 
     private var _binding: FragmentTablesBinding? = null
-    var keyboard: List<Button> = ArrayList<Button>()
-    var text: String = ""
+    var keyboard: List<Button> = ArrayList<Button>() // клавиатура
+    var text: String = "" // ввод
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -49,7 +49,7 @@ class TablesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE)
+        val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE) // для сохранения вода в переференсес
 
         if(prefs.contains("exp")) {
             binding.inputText.text = prefs.getString("exp", "B")
@@ -74,7 +74,7 @@ class TablesFragment : Fragment() {
         keyboard += binding.keyboard.buttonLeft
         keyboard += binding.keyboard.buttonRight
         // endregion
-        for (key in keyboard) key.setOnClickListener {
+        for (key in keyboard) key.setOnClickListener { // настраиваем кнопки
             val buttonText = (it as Button).text.toString()
             val textt = binding.inputText.text.toString()
             if (textt.length > 40) {
@@ -84,11 +84,11 @@ class TablesFragment : Fragment() {
             text = textt + buttonText
             binding.inputText.text = text
         }
-        binding.keyboard.buttonAC.setOnClickListener {
+        binding.keyboard.buttonAC.setOnClickListener { // очистить
             binding.inputText.text = ""
             text = ""
         }
-        binding.keyboard.buttonItog.setOnClickListener {
+        binding.keyboard.buttonItog.setOnClickListener { // равно
             //binding.progressLoader.visibility = View.VISIBLE
             /*val request: Request = Request.Builder()
                 .url("https://pbk-psu.ml/api/truth?funcs=" + binding.inputText.text)
@@ -105,14 +105,14 @@ class TablesFragment : Fragment() {
                     val mainHandler = Handler(Looper.getMainLooper());
 
                     val myRunnable = Runnable {*/
-                        val action = TabsResultFragmentDirections.toResultTabs(binding.inputText.text.toString())
+                        val action = TabsResultFragmentDirections.toResultTabs(binding.inputText.text.toString()) // переходим на фрагмент с результатами
                         findNavController().navigate(action)
                     /*}
                     mainHandler.post(myRunnable);
                 }
             })*/
         }
-        binding.keyboard.buttonClean.setOnClickListener {
+        binding.keyboard.buttonClean.setOnClickListener { // стереть предыдущий
             val textt = binding.inputText.text
             if (textt.length == 0) return@setOnClickListener
             binding.inputText.text = textt.subSequence(0, textt.length-1)
@@ -121,7 +121,7 @@ class TablesFragment : Fragment() {
     }
 
     override fun onPause() {
-        val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE)
+        val prefs: SharedPreferences = requireContext().getSharedPreferences("tables", Context.MODE_PRIVATE) // востанавливаем из переференсов ввод
         val edit = prefs.edit()
         edit.putString("exp", text)
         edit.apply()

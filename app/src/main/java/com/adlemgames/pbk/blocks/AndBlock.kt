@@ -12,7 +12,7 @@ import android.widget.TextView
 import com.adlemgames.pbk.BlocksFragment
 import com.adlemgames.pbk.R
 import xdroid.toaster.Toaster.toast
-fun Boolean.toInt() = if (this) 1 else 0
+fun Boolean.toInt() = if (this) 1 else 0 // нужно
 fun ViewParent.increaseTouchArea(increaseBy: Int) {
     val rect = Rect()
     val view = this as View
@@ -27,7 +27,7 @@ class AndBlock(view: View, id: String, interfaces: BlocksInterface) : Block(view
     val out_text: TextView
     init {
         out_text = view.findViewById(R.id.out_text)
-        super.type = "and"
+        super.type = "and" // блок и
     }
 
     fun calc(){
@@ -35,11 +35,11 @@ class AndBlock(view: View, id: String, interfaces: BlocksInterface) : Block(view
         for (conn in BlocksFragment.connections){
             if (conn.to?.id == this.id) connects.add(conn)
         }
-        if (connects.size == 2){
+        if (connects.size == 2){ // есть 2 соединения можно показывать результат
             out_text.visibility = View.VISIBLE
             val one = connects[0].from?.cur_state
             val two = connects[1].from?.cur_state
-            cur_state = two?.let { one?.and(it) } == true
+            cur_state = two?.let { one?.and(it) } == true // логика работы этого элемента
             out_text.text = two?.let { one?.and(it)?.toInt() }.toString()
         }
         else {
@@ -48,7 +48,7 @@ class AndBlock(view: View, id: String, interfaces: BlocksInterface) : Block(view
         }
     }
 
-    companion object {
+    companion object { // id этого блока
         const val ID = R.layout.block_and
     }
 }

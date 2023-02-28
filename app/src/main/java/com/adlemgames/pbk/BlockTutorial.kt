@@ -11,7 +11,7 @@ import com.github.appintro.AppIntroFragment
 import com.github.appintro.AppIntroPageTransformerType
 
 
-class BlockTutorial : AppIntro() {
+class BlockTutorial : AppIntro() { // туториал для блоков
     lateinit var mySharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

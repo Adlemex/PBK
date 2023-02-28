@@ -21,23 +21,23 @@ import com.adlemgames.pbk.databinding.FragmentBlocksBinding
 import kotlin.random.Random
 
 
-class BlocksFragment : Fragment(), BlocksInterface {
+class BlocksFragment : Fragment(), BlocksInterface { // фрагмент с блоками
 
     private var _binding: FragmentBlocksBinding? = null
-    private var xDelta = 0
+    private var xDelta = 0 // смещение нажатий
     private var yDelta = 0
     private var mainLayout: ViewGroup? = null
     private val binding get() = _binding!!
-    private var dpCalculation = 1f
-    companion object {
-        val blocks = mutableListOf<Block>()
-        val connections = mutableListOf<Transition>()
-        var selectedId: String? = null
-        var selectedItem: String? = null
-        fun calc (){
-            for (i in 0..4)
+    private var dpCalculation = 1f // дп разный для каждого экрана
+    companion object { // статик обьект
+        val blocks = mutableListOf<Block>() // список блоков
+        val connections = mutableListOf<Transition>() // список соединений
+        var selectedId: String? = null // id выбранного блока
+        var selectedItem: String? = null // что конкретно выбрано у блока
+        fun calc (){ // расчитать значения для всех обьекты
+            for (i in 0..4) // 4 раза на всякий случай, например если соединяли не по порядку
             for (block in blocks) {
-                if (block.type == "and") (block as AndBlock).calc()
+                if (block.type == "and") (block as AndBlock).calc() // для каждого блока
                 if (block.type == "and_no") (block as AndNoBlock).calc()
                 if (block.type == "or") (block as OrBlock).calc()
                 if (block.type == "or_no") (block as OrNoBlock).calc()
@@ -50,7 +50,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dpCalculation = resources.displayMetrics.density
+        dpCalculation = resources.displayMetrics.density // рассчитываем dp
     }
 
     override fun onCreateView(
@@ -60,19 +60,19 @@ class BlocksFragment : Fragment(), BlocksInterface {
         // Inflate the layout for this fragment
         _binding = FragmentBlocksBinding.inflate(inflater, container, false)
 
-        val mySharedPreferences = requireActivity().getSharedPreferences("block_tutorial", Context.MODE_PRIVATE)
+        val mySharedPreferences = requireActivity().getSharedPreferences("block_tutorial", Context.MODE_PRIVATE) // вспоминаем нужно ли показать туториал
         if(!mySharedPreferences.contains("showed")) {
             startActivity(Intent(requireContext(), BlockTutorial::class.java))
         }
-        blocks.clear()
+        blocks.clear() // очищаем списки, тк иногда сами не очищаются
         connections.clear()
         mainLayout = binding.frameLayout2 as ViewGroup
-        binding.undo.setOnClickListener {
+        binding.undo.setOnClickListener { // листенер для кнопки отмены
             connections.removeLastOrNull()
             this.recalc_connections()
             calc()
         }
-        val items = mutableListOf(
+        val items = mutableListOf( // какие бывают блоки
             R.layout.block_inp,
             R.layout.block_and,
             R.layout.block_and_no,
@@ -81,9 +81,9 @@ class BlocksFragment : Fragment(), BlocksInterface {
             R.layout.block_exclude_or_no,
             R.layout.block_or,
             R.layout.block_or_no)
-        for (item in items){
+        for (item in items){ // создаем блоки в меню их выбора
             val view = View.inflate(context, item, null)
-            view.setOnLongClickListener {
+            view.setOnLongClickListener { // листенер для перетягивания
                 it.startDragAndDrop(
                     ClipData("Drag", arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN), ClipData.Item(item.toString())),
                     View.DragShadowBuilder(it),
@@ -107,7 +107,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
         super.onDestroy()
     }
     fun rerender(){
-        for (block in blocks){
+        for (block in blocks){ // старая версия больше не используется
         /*
             val out = block.findViewById<ImageView>(R.id.output)
             val inp1 = block.findViewById<ImageView>(R.id.input1)
@@ -173,7 +173,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
             }*/
         }
     }
-    fun recalc_connections(){
+    fun recalc_connections(){ // перерисовываем соединения если появилось новое или изменилось положение блока
         binding.canvas.lines.clear()
         for (connection in connections){
             connection.getValues()?.let { binding.canvas.lines.add(it) }
@@ -182,7 +182,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
         binding.canvas.invalidate()
     }
 
-    val onTouchListener = OnTouchListener { view, event ->
+    val onTouchListener = OnTouchListener { view, event -> // листенер для перемещения блоков по полю, код со стэковерфлоу
         view.performClick()
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
@@ -236,7 +236,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
     }
 
 
-    val dragListener = View.OnDragListener { view, event ->
+    val dragListener = View.OnDragListener { view, event -> // тоже самое
         when (event.action) {
             DragEvent.ACTION_DRAG_STARTED -> {
                 event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
@@ -267,7 +267,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
                     (mainLayout as RelativeLayout).removeView(it)
                     return@setOnLongClickListener true
                 }
-                val block = when (dragData.toString().toInt()){
+                val block = when (dragData.toString().toInt()){ //определяем тип блока
                     InpBlock.ID -> InpBlock(vview, blocks.size.toString(), this)
                     AndBlock.ID -> AndBlock(vview, blocks.size.toString(), this)
                     AndNoBlock.ID -> AndNoBlock(vview, blocks.size.toString(), this)
@@ -278,7 +278,7 @@ class BlocksFragment : Fragment(), BlocksInterface {
                     XOrBlock.ID -> XOrBlock(vview, blocks.size.toString(), this)
                     else -> Block(vview, blocks.size.toString(), this)
                 }
-                blocks.add(block)
+                blocks.add(block) // добавляем блок на поле
                 rerender()
                 layoutParams.topMargin = (event.y-20).toInt()
                 vview.layoutParams.width = (100 * dpCalculation).toInt()

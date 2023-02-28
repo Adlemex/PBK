@@ -22,12 +22,12 @@ import okhttp3.*
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class TabsResultFragment : Fragment() {
+class TabsResultFragment : Fragment() { // сюда переходим с ввода логического выражения и тут вкладки с разными операциями
 
     private var _binding: FragmentResultTabsBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
-    val tabs = mutableListOf("Таблицы истинности", "Карты Карно", "Преобразования")
+    val tabs = mutableListOf("Таблицы истинности", "Карты Карно", "Преобразования") // названия вкладок
     private val binding get() = _binding!!
     val args: TabsResultFragmentArgs by navArgs()
     override fun onCreateView(
@@ -45,7 +45,7 @@ class TabsResultFragment : Fragment() {
 
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             tab.text = tabs[position]
-        }.attach()
+        }.attach() // аттачим таб медиатор
     }
     
     override fun onDestroyView() {
@@ -59,7 +59,7 @@ class TabsResultFragment : Fragment() {
         override fun createFragment(position: Int): Fragment {
             // Return a NEW fragment instance in createFragment(int)
 
-            val fragment = when (position){
+            val fragment = when (position){ // определяем куда перейти
                 0 -> TablesResultFragment(exp)
                 1 -> CarnoResultFragment(exp)
                 else -> ChangesResultFragment(exp)

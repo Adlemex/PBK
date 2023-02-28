@@ -43,7 +43,15 @@ class TestAdapter(context: Activity, questList: List<String>, callback: Callback
             toast(isChecked.toString())
         }
     }
+/*
 
+ AA     DDD     L       EEEE    M   M    X   X
+A  A    D  D    L       E       MM MM     X X
+AAAA    D  D    L       EEE     M M M      X
+A  A    D  D    L       E       M   M     X X
+A  A    DDD     LLLL    EEEE    M   M    X   X
+
+ */
     override fun getItemCount(): Int {
         return questList.size
     }

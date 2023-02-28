@@ -10,7 +10,7 @@ import android.view.View
 import java.text.AttributedCharacterIterator.Attribute
 
 class CanvasView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null,
-                                           defStyleAttr: Int = 0) :
+                                           defStyleAttr: Int = 0) : // что-то сложное со стэковерфлоу
     View(context, attrs, defStyleAttr){
     var startX: Float = 0f
     var startY: Float = 0f

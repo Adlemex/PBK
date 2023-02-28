@@ -39,7 +39,8 @@
                     android:id="@+id/input_one_text"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:maxLines="1"
-                    android:text="123"
+                    android:gravity="center"
+                    android:text=""
                     android:textSize="24sp" />
             </com.google.android.material.card.MaterialCardView>
 
@@ -50,14 +51,12 @@
 
                 <Button
                     android:id="@+id/plus"
-                    style="@style/Widget.Material3.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="+" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:id="@+id/minus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -65,7 +64,6 @@
                     android:text="-" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:id="@+id/divide"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,7 +71,6 @@
                     android:text="/" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:id="@+id/multiply"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -94,6 +91,7 @@
                     android:layout_width="match_parent"
                     android:inputType="text"
                     android:background="@null"
+                    android:gravity="center"
                     android:layout_height="match_parent"
                     android:id="@+id/input_two_text"
                     android:layout_gravity="center_vertical|center_horizontal"

@@ -15,7 +15,7 @@ import com.adlemgames.pbk.databinding.FragmentStepsCalcBinding
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class CalcStepsFragment : Fragment() {
+class CalcStepsFragment : Fragment() { // отобрадает шаги решения
 
     private var _binding: FragmentStepsCalcBinding? = null
     // This property is only valid between onCreateView and
@@ -36,7 +36,7 @@ class CalcStepsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.recycleview.layoutManager = LinearLayoutManager(requireContext())
-        binding.recycleview.adapter = StepsAdapter(requireContext(), args.blocks)
+        binding.recycleview.adapter = StepsAdapter(requireContext(), args.blocks) // из массива показать шаги
     }
     
     override fun onDestroyView() {

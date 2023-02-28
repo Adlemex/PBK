@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class ChangesResultFragment(exp: String) : Fragment() {
+class ChangesResultFragment(exp: String) : Fragment() {// фрагмент для показа действий с логическими выражениями
     val exp = exp
     private var _binding: FragmentResultLogicBinding? = null
     // This property is only valid between onCreateView and
@@ -47,7 +47,7 @@ class ChangesResultFragment(exp: String) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val req = Request.Builder()
+        val req = Request.Builder()// запрос на сервер
             .url("https://pbk-psu.ml/api/changes?funcs=$exp")
             .get()
             .cacheControl(CacheControl.Builder().maxStale(365, TimeUnit.DAYS).build())
@@ -61,13 +61,13 @@ class ChangesResultFragment(exp: String) : Fragment() {
                 val serverAnswer = response.body!!.string()
                 val mainHandler = Handler(Looper.getMainLooper());
                 val myRunnable = Runnable {
-                    binding.progressBar.visibility = View.INVISIBLE
+                    binding.progressBar.visibility = View.INVISIBLE// если ошибка
                     if (response.code == 421) binding.textView3.text = "Неверный ввод"
                     else if (response.code == 400) binding.textView3.text = "К сожалению символ ¬, пока не поддерживается"
                     else if (response.code == 412) binding.textView3.text = "Произошла ошибка"
                     else if (response.code == 404) binding.textView3.text = "Сервер не отвечает"
                     else if (response.code >= 500) binding.textView3.text = "Сервер не доступен"
-                    show(serverAnswer)
+                    show(serverAnswer)// показать ответ
                 }
                 mainHandler.post(myRunnable);
             }
@@ -80,7 +80,7 @@ class ChangesResultFragment(exp: String) : Fragment() {
             println(res)
             val result = Klaxon()
                 .parse<LogicChanges>(res)
-            if (result != null) {
+            if (result != null) { // показываем результаты
                 binding.result.visibility = View.VISIBLE
                 binding.sknf.text = result.sknf
                 binding.sdnf.text = result.sdnf
